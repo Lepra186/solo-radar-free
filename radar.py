@@ -22,6 +22,8 @@ from coin_filter import classify, is_coin
 from research_agent import analyze, report
 from github_discovery import gather as discover_github, refresh_tracked
 from project_watch import reconcile
+from discord_sources import fetch_channels as scan_discord
+from mining_scan_source import refresh as refresh_mining_scan, matches_for
 
 TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
 CHAT = os.getenv("TELEGRAM_CHAT_ID", "").strip()
@@ -208,45 +210,16 @@ def main():
         except Exception as exc:
             print("Telegram public source unavailable:", channel, type(exc).__name__)
 
-    # Optional Discord integration. Requires a bot invited to each selected
-    # channel with View Channel, Read Message History and message content access.
-    discord_token = os.getenv("DISCORD_BOT_TOKEN", "").strip()
-    discord_channels = [v.strip() for v in os.getenv("DISCORD_CHANNEL_IDS", "").split(",") if v.strip()]
-    if discord_token and discord_channels:
-        for channel in discord_channels[:10]:
-            if not channel.isdigit():
-                print("Discord invalid channel ID (must be numeric)")
-                continue
-            try:
-                req = urllib.request.Request(
-                    f"https://discord.com/api/v10/channels/{channel}/messages?limit=30",
-                    headers={"Authorization": "Bot " + discord_token,
-                             "User-Agent": "SOLO-Radar/1.2"})
-                with urllib.request.urlopen(req, timeout=20) as res:
-                    messages = json.load(res)
-                count = 0
-                for msg in messages:
-                    published = ts(msg.get("timestamp"))
-                    if not published or not timedelta(0) <= NOW - published <= timedelta(days=7):
-                        continue
-                    contents = [msg.get("content") or ""]
-                    for embed in msg.get("embeds", [])[:3]:
-                        contents.extend((embed.get("title") or "", embed.get("description") or ""))
-                    body = " ".join(contents).strip()[:1500]
-                    if len(body) < 15:
-                        continue
-                    results["dc:" + channel + ":" + msg["id"]] = {
-                        "title": body[:160], "body": body,
-                        "url": f"https://discord.com/channels/{msg.get('guild_id', '@me')}/{channel}/{msg['id']}",
-                        "source": "Discord — сообщение выбранного канала",
-                        "date": published.isoformat(), "kind": "announcement"}
-                    count += 1
-                ok += 1
-                print("Discord channel available:", channel, "messages:", count)
-            except Exception as exc:
-                print("Discord channel unavailable:", channel, type(exc).__name__)
-    else:
-        print("Discord not configured; optional DISCORD_BOT_TOKEN and DISCORD_CHANNEL_IDS")
+    # Discord requires an explicitly installed bot and permitted channel IDs.
+    discord_results, discord_status = scan_discord(
+        os.getenv("DISCORD_BOT_TOKEN", "").strip(),
+        os.getenv("DISCORD_CHANNEL_IDS", ""), NOW)
+    results.update(discord_results)
+    ok += discord_status["success"]
+    state["discord_status"] = discord_status
+    print("Discord discovery status:", discord_status["status"],
+          "authorized channels:", discord_status["success"],
+          "posts:", discord_status["items"])
 
     # Retain project-specific URLs only when explicitly present in the source.
     for candidate in results.values():
@@ -386,6 +359,22 @@ def main():
         breakdown[coin_class] = breakdown.get(coin_class, 0) + 1
     state["coin_filter_stats"] = breakdown
     print("Coin-only classification:", breakdown)
+
+    # Supplement known coin announcements with independent pool-directory clues.
+    # Never create coin alerts from pool data by itself.
+    pool_catalog, updated_pool_catalog = refresh_mining_scan(fetch, state, NOW)
+    if updated_pool_catalog:
+        state["mining_scan"] = pool_catalog
+    pool_matches = matches_for(seen,pool_catalog)
+    for coin_key,info in pool_matches.items():
+        seen[coin_key]["pool_evidence"] = info
+    state["mining_scan_status"] = {
+        "available":bool(pool_catalog.get("coins")),
+        "updated_this_run":updated_pool_catalog,
+        "matched_coin_records":len(pool_matches),
+        "attribution":"mining-scan.com"
+    }
+    print("Mining Scan reference:", state["mining_scan_status"])
 
     previous_watch = state.get("tracked_projects") or {}
     # Check selected GitHub projects for repository activity before deciding if
