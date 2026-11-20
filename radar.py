@@ -15,6 +15,7 @@ from telegram_sources import CHANNELS, parse_public_channel
 from gpu_assessment import assess, signal, description
 from solo_intel import summary, source_quality
 from telegram_commands import process_commands
+from project_links import from_text, format_links
 
 TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
 CHAT = os.getenv("TELEGRAM_CHAT_ID", "").strip()
@@ -231,6 +232,12 @@ def main():
     else:
         print("Discord not configured; optional DISCORD_BOT_TOKEN and DISCORD_CHANNEL_IDS")
 
+    # Retain project-specific URLs only when explicitly present in the source.
+    for candidate in results.values():
+        extracted = from_text(candidate.get("body") or "")
+        for kind, url in extracted.items():
+            candidate.setdefault("links", {}).setdefault(kind, url)
+
     if ok == 0:
         print("All discovery sources unavailable; no state baseline change")
         # Still write connection state so greeting isn't repeated.
@@ -263,6 +270,9 @@ def main():
                 + "Дата публикации/создания: " + (item["date"] or "не определена") + "\n\n"
                 + description(item["body"], NOW) + "\n\n"
                 + summary(item["body"]) + "\n\n"
+                + ("🔗 ССЫЛКИ ИЗ АНОНСА (НЕ ПРОВЕРЕНЫ):\n"
+                   + format_links(item.get("links")) + "\n\n"
+                   if format_links(item.get("links")) else "")
                 + "Надёжность источника: " + source_quality(item) + "\n\n"
                 + "⚠️ Это не подтверждённый запуск и не совет майнить.\n"
                 + item["url"]
