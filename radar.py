@@ -293,7 +293,10 @@ def main():
     stamp = NOW.isoformat(timespec="seconds")
     if ok:
         for key, item in results.items():
-            seen[key] = {"title": item["title"], "seen": seen.get(key, {}).get("seen", stamp)}
+            old = seen.get(key, {})
+            seen[key] = {"title": item["title"], "seen": old.get("seen", stamp),
+                         "url": item.get("url") or old.get("url"),
+                         "links": item.get("links") or old.get("links") or {}}
         if len(seen) > 6000:
             seen = dict(sorted(seen.items(), key=lambda x: x[1]["seen"], reverse=True)[:6000])
     state["last_scan"] = stamp
