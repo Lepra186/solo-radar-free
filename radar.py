@@ -16,9 +16,11 @@ from gpu_assessment import assess, signal, description
 from solo_intel import summary, source_quality
 from telegram_commands import process_commands
 from project_links import from_text, format_links
+from telegram_recipients import parse_recipients
 
 TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
 CHAT = os.getenv("TELEGRAM_CHAT_ID", "").strip()
+EXTRA_CHATS = os.getenv("TELEGRAM_EXTRA_CHAT_IDS", "").strip()
 STATE = Path("data/state.json")
 NOW = datetime.now(timezone.utc)
 PREVIOUSLY_REPORTED = ("neural engine byte", "quinvium", "nex chain", "retro boomer", "karlsen", "pearl")
@@ -33,18 +35,32 @@ def fetch(url):
     with urllib.request.urlopen(req, timeout=22) as res:
         return res.read().decode("utf-8", errors="replace")
 
-def notify(message):
-    if not TOKEN or not CHAT:
-        raise RuntimeError("Set both TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID in Actions secrets")
+def send_to_chat(message, chat_id):
     req = urllib.request.Request(
         f"https://api.telegram.org/bot{TOKEN}/sendMessage",
-        data=json.dumps({"chat_id": CHAT, "text": message,
+        data=json.dumps({"chat_id": chat_id, "text": message,
                          "disable_web_page_preview": True}).encode(),
         headers={"Content-Type": "application/json"}, method="POST")
     with urllib.request.urlopen(req, timeout=20) as res:
         response = json.load(res)
     if not response.get("ok"):
         raise RuntimeError("Telegram did not accept message")
+
+def notify(message):
+    if not TOKEN:
+        raise RuntimeError("Missing TELEGRAM_BOT_TOKEN secret")
+    recipients = parse_recipients(CHAT, EXTRA_CHATS)
+    sent = 0
+    for recipient in recipients:
+        try:
+            send_to_chat(message, recipient)
+            sent += 1
+        except Exception as exc:
+            print("Telegram delivery error for configured recipient:", type(exc).__name__)
+    if sent == 0:
+        raise RuntimeError("Message delivery failed for all authorized recipients")
+    print("Telegram delivery succeeded for", sent, "recipient(s)")
+
 
 class Topics(HTMLParser):
     def __init__(self):
@@ -286,7 +302,7 @@ def main():
     # Reply to commands from the authorized owner's chat after building the current snapshot.
     # A failed Telegram API request must not stop the scanning state from being saved.
     try:
-        process_commands(TOKEN, CHAT, state, results, NOW, notify)
+        process_commands(TOKEN, parse_recipients(CHAT, EXTRA_CHATS), state, results, NOW, send_to_chat)
     except Exception as exc:
         print("Telegram command check failed:", type(exc).__name__, str(exc)[:140])
 
