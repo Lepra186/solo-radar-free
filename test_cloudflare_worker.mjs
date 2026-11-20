@@ -82,11 +82,14 @@ test("reject unknown callback without disclosure",async()=>{
   assert.equal((await worker.fetch(req,env)).status,200);
 });
 
-test("source tabs exist for all connected services",()=>{
+test("main menu is compact without individual source buttons",()=>{
   const menu=renderMenu("home",state,now);
   for (const key of ["tg","gh","btt","pool","rss","dc"]) {
-    assert.ok(menu.reply_markup.inline_keyboard.flat().some(x=>x.callback_data==="source:"+key+":0"),key);
+    assert.ok(!menu.reply_markup.inline_keyboard.flat().some(x=>x.callback_data==="source:"+key+":0"),key);
   }
+  assert.match(menu.text,/Источники: GitHub, публичные Telegram-анонсы/);
+  assert.ok(menu.reply_markup.inline_keyboard.flat().some(x=>x.callback_data==="watch:0"));
+  assert.ok(menu.reply_markup.inline_keyboard.flat().some(x=>x.callback_data==="analysis"));
 });
 test("source browser lists only GPU PoW coin candidates",()=>{
   const s={topics:{
