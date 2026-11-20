@@ -301,10 +301,13 @@ def main():
 
     # Reply to commands from the authorized owner's chat after building the current snapshot.
     # A failed Telegram API request must not stop the scanning state from being saved.
-    try:
-        process_commands(TOKEN, parse_recipients(CHAT, EXTRA_CHATS), state, results, NOW, send_to_chat)
-    except Exception as exc:
-        print("Telegram command check failed:", type(exc).__name__, str(exc)[:140])
+    if os.getenv("TELEGRAM_WEBHOOK_URL", "").strip():
+        print("Webhook mode configured: command polling disabled to avoid getUpdates conflict")
+    else:
+        try:
+            process_commands(TOKEN, parse_recipients(CHAT, EXTRA_CHATS), state, results, NOW, send_to_chat)
+        except Exception as exc:
+            print("Telegram command check failed:", type(exc).__name__, str(exc)[:140])
 
     stamp = NOW.isoformat(timespec="seconds")
     if ok:
