@@ -32,7 +32,7 @@ def extract_links(text, limit=8):
 def mine_probability(miner_hashrate, network_hashrate, hours, block_seconds):
     """Poisson P(at least one block); equal *units* and independent valid shares."""
     nums = (miner_hashrate, network_hashrate, hours, block_seconds)
-    if any(not isinstance(x, (int, float)) or not math.isfinite(x) for x in nums):
+    if any(isinstance(x,bool) or not isinstance(x, (int, float)) or not math.isfinite(x) for x in nums):
         raise ValueError("finite numeric values required")
     if miner_hashrate < 0 or network_hashrate <= 0 or hours < 0 or block_seconds <= 0:
         raise ValueError("invalid mining parameters")
