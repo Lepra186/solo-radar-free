@@ -14,6 +14,8 @@ SERVICE=re.compile(r'\b(auto[- ]?profit|profit[- ]?switch(?:er|ing)?|dashboard|m
 SOFTWARE=re.compile(r'\b(mining software|gpu miner|cpu miner|miner (?:for|support(?:s|ing)?|release|v\d|version)|miner\s+v?\d+(?:\.\d+)*|mining tool|miner software|new miner|software release|one binary|no dev fee|dev fee|profit switching|auto switching)\b',re.I)
 NONPOW=re.compile(r'\b(proof[- ]of[- ]stake|pos[- ]only|bep[- ]?20|erc[- ]?20|solana token|pump\.fun|nft|airdrop|presale|ico|testnet only)\b',re.I)
 CPUASIC=re.compile(r'\b(cpu[- ]only|randomx|yespower|asic[- ]only|sha[- ]?256d?|scrypt)\b',re.I)
+GPU_EXCLUDED=re.compile(r'\b(?:not|non[- ]|no |without |never |unsupported |does not support |cannot |can.t )gpu[- ]?(?:mineable|mining|pow|support|compatible)|\bgpu[- ]?(?:mining|mineable|support)\s+(?:is\s+)?(?:not|disabled|unsupported|unavailable)\b',re.I)
+TESTNET_ONLY=re.compile(r'\b(?:testnet[- ]only|only\s+(?:a\s+)?testnet|no\s+mainnet\s+yet|mainnet\s+(?:not\s+)?(?:yet\s+)?(?:unreleased|not\s+launched|pending))\b',re.I)
 REPO_SOFTWARE=re.compile(r'(?:^|[/\-_])(miner|miners|mining[-_]?software|switcher|profit[-_]?switch|pool[-_]?proxy|dashboard|rig[-_]?manager)(?:$|[/\-_])',re.I)
 
 def classify(key,item):
@@ -28,6 +30,10 @@ def classify(key,item):
     # News pages are discovery signals, never a coin by themselves.
     if kind=='news' or key.startswith(('pool:','rss:')):
         return 'non_coin','news_or_pool_service'
+    if GPU_EXCLUDED.search(combined):
+        return 'unsupported_mining','explicit_gpu_exclusion'
+    if TESTNET_ONLY.search(combined):
+        return 'insufficient','mainnet_not_launched'
     if NONPOW.search(combined):
         return 'unsupported_mining','non_pow_or_token'
     # Some software releases incorrectly include [ANN] and the word coin.
