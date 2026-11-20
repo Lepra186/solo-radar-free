@@ -29,6 +29,7 @@ from network_evidence import update as update_network_evidence
 from discord_sources import fetch_channels as scan_discord
 from mining_scan_source import refresh as refresh_mining_scan, matches_for
 from pool_validation import update as update_pool_directory, match_pools, stratum_by_coin, parsed as parse_pool_time
+from coincalculators_source import update as update_coin_calculators, matched as match_coin_calculators
 
 TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
 CHAT = os.getenv("TELEGRAM_CHAT_ID", "").strip()
@@ -435,6 +436,25 @@ def main():
         "updated_this_run":backpow_updated,
         "source":"BackPoW"}
     print("Network evidence:",state["network_evidence_status"])
+
+    # Free network stats from another independent catalog. API does not
+    # provide per-coin freshness: never treat retrieval time as live telemetry.
+    calculator_catalog,calculator_changed=update_coin_calculators(fetch,state,NOW)
+    if calculator_changed:
+        state["coin_calculators"]=calculator_catalog
+    calculator_matches=match_coin_calculators(seen,calculator_catalog,NOW)
+    for key,item in seen.items():
+        if key in calculator_matches:
+            item["aggregator_network"]=calculator_matches[key]
+        else:
+            item.pop("aggregator_network",None)
+    state["coin_calculators_status"]={
+        "catalog_available":bool(calculator_catalog.get("coins")),
+        "matched":len(calculator_matches),
+        "live_network_verified":False,
+        "source":"CoinCalculators"
+    }
+    print("CoinCalculators reference:",state["coin_calculators_status"])
 
     # Public GitHub release history, strictly for already screened coin projects.
     # Releases provide development evidence, never proof of live mining.
