@@ -137,6 +137,7 @@ function linkButton(text, url) { return {text, url}; }
 function navRows() {
   return [
     [btn("🧠 Суточный ИИ-анализ", "analysis")],
+    [btn("🎯 Активное отслеживание", "tracked:0")],
     [btn("🪙 Монеты на наблюдении", "watch:0")],
     [btn("🆕 Последние находки", "recent:0"), btn("📊 Статус", "status")],
     [btn("📨 Telegram", "source:tg:0"),btn("💻 GitHub", "source:gh:0")],
@@ -251,6 +252,7 @@ export function renderMenu(view, state = {}, now = new Date()) {
         "NVIDIA / AMD • SOLO / пулы • накопление",
         "🕒 Последний скан: "+info.text+(info.stale?" ⚠️":""),
         "🪙 На наблюдении: "+list.length,
+        "🎯 Активно отслеживаем: "+Object.keys(state?.tracked_projects||{}).length,
         "",
         "🔎 ПРОЕКТЫ ДЛЯ ИЗУЧЕНИЯ",
         ...(previews.length?previews:["Подходящие записи пока не обнаружены."]),
@@ -305,6 +307,36 @@ export function renderMenu(view, state = {}, now = new Date()) {
     const result=sourceEntries(state,group)[index];
     if (!result) return renderMenu("source:"+group+":0",state,now);
     return renderProject(result,"source:"+group+":"+page);
+  }
+  const trackedMatch=/^tracked:(\d{1,3})$/.exec(view);
+  if (trackedMatch) {
+    const records=Object.entries(state?.tracked_projects||{})
+      .filter(([key])=>Boolean(state?.topics?.[key]))
+      .sort((a,b)=>(Number(b[1]?.score)||0)-(Number(a[1]?.score)||0));
+    const total=Math.max(1,Math.ceil(records.length/PAGE_SIZE));
+    const page=Math.min(Number(trackedMatch[1]),total-1);
+    const visible=records.slice(page*PAGE_SIZE,(page+1)*PAGE_SIZE);
+    const lines=["🎯 АКТИВНОЕ ОТСЛЕЖИВАНИЕ",
+      "Подписка внутри радара: внешние аккаунты не затрагиваются.",
+      "Отслеживаем: "+records.length+" • Страница "+(page+1)+"/"+total,""];
+    const rows=visible.map(([key,entry],i)=>{
+      const info=state.topics[key];
+      lines.push((page*PAGE_SIZE+i+1)+". "+textFor(info.title).slice(0,80),
+        "Источник: "+String(entry.source||"не определён"),
+        "Оценка данных: "+Number(entry.score||0),
+        ...projectFactLines(key,info,{compact:true}),"");
+      const globalIndex=list.findIndex(x=>x.key===key);
+      return [btn("🔎 Проект "+(page*PAGE_SIZE+i+1),
+        globalIndex>=0?"coin:"+globalIndex+":"+page+":w":"home")];
+    });
+    if(!visible.length)lines.push("Пока нет проектов, прошедших автоматический фильтр.");
+    const navigation=[];
+    if(page>0)navigation.push(btn("◀️","tracked:"+(page-1)));
+    if(page<total-1)navigation.push(btn("▶️","tracked:"+(page+1)));
+    if(navigation.length)rows.push(navigation);
+    rows.push([btn("🏠 Меню","home")]);
+    lines.push("⚠️ Сетевые данные и возможность продажи не подтверждены.");
+    return {text:lines.join("\n").slice(0,3900),reply_markup:{inline_keyboard:rows}};
   }
   const pageMatch = /^(watch|recent):(\d{1,3})$/.exec(view);
   if (pageMatch) {
@@ -444,7 +476,7 @@ export default {
         catch { /* harmless */ }
         return new Response("OK");
       }
-      if (!/^(home|status|help|analysis|watch:\d{1,3}|recent:\d{1,3}|coin:\d{1,5}:\d{1,3}:[rw]|source:(?:tg|gh|btt|pool|rss|dc|other):\d{1,3}|entry:(?:tg|gh|btt|pool|rss|dc|other):\d{1,5}:\d{1,3})$/.test(view)) {
+      if (!/^(home|status|help|analysis|tracked:\d{1,3}|watch:\d{1,3}|recent:\d{1,3}|coin:\d{1,5}:\d{1,3}:[rw]|source:(?:tg|gh|btt|pool|rss|dc|other):\d{1,3}|entry:(?:tg|gh|btt|pool|rss|dc|other):\d{1,5}:\d{1,3})$/.test(view)) {
         return new Response("OK");
       }
     } else if (command) {
