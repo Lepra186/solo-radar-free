@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-20T10:12:13+00:00",
+  "generated_at": "2026-11-20T10:47:59+00:00",
   "mode": "rules_only",
   "model": null,
   "candidate_count": 3,
-  "scan_updated_at": "2026-11-20T10:11:49+00:00",
+  "scan_updated_at": "2026-11-20T10:47:23+00:00",
   "summary": "Автоподбор по правилам без ИИ. Только кандидаты для дальнейшего изучения.",
   "picks": [
     {
@@ -14,13 +14,14 @@
       "algorithm": "Ethash",
       "published": null,
       "launch_claim": null,
-      "score": 6,
+      "score": 7,
       "mining_readiness": {
-        "stage": "activity_reported",
-        "label": "Есть сообщения об активности сети",
+        "stage": "rpc_head_reported",
+        "label": "Публичный RPC вернул свежий блок и правильный Chain ID",
         "evidence": [
           "Пулы в каталоге Mining Scan: 2",
-          "В каталоге есть недавняя отметка найденного блока"
+          "В каталоге есть недавняя отметка найденного блока",
+          "Публичный RPC вернул блок 97630 (Chain ID проверен)"
         ],
         "missing": [
           "Совместимость GTX 10xx / RTX 20xx–50xx, Stratum и выплаты не проверены",
@@ -69,7 +70,8 @@
           "network": false
         },
         "chain_height_progression": false,
-        "checked_at": "2026-11-20T10:11+00:00"
+        "rpc_height_progression": false,
+        "checked_at": "2026-11-20T10:47+00:00"
       },
       "economics": {
         "status": "insufficient_data",
@@ -130,11 +132,12 @@
       "algorithm": "Ethash",
       "published": "2026-11-13T23:04+00:00",
       "launch_claim": null,
-      "score": 4,
+      "score": 6,
       "mining_readiness": {
-        "stage": "announcement_only",
-        "label": "Только анонс или код проекта",
+        "stage": "rpc_head_reported",
+        "label": "Публичный RPC вернул свежий блок и правильный Chain ID",
         "evidence": [
+          "Публичный RPC вернул блок 37066 (Chain ID проверен)",
           "Есть свежий релиз проекта на GitHub"
         ],
         "missing": [
@@ -186,7 +189,8 @@
           "network": false
         },
         "chain_height_progression": false,
-        "checked_at": "2026-11-20T10:11+00:00"
+        "rpc_height_progression": false,
+        "checked_at": "2026-11-20T10:47+00:00"
       },
       "economics": {
         "status": "insufficient_data",
@@ -237,7 +241,7 @@
       },
       "rationale": "указан GPU-алгоритм: Ethash; упомянут майнинг/пул",
       "mining": "Работающий GPU-майнинг и выплаты не проверены",
-      "risks": "нет проверенной даты mainnet; репозиторий сам по себе не подтверждает mainnet"
+      "risks": "нет проверенной даты mainnet; рост цепи и PoW-майнинг ещё не проверены"
     },
     {
       "key": "btt:5600215",
@@ -247,11 +251,13 @@
       "algorithm": "Ethash",
       "published": null,
       "launch_claim": null,
-      "score": 3,
+      "score": 5,
       "mining_readiness": {
-        "stage": "announcement_only",
-        "label": "Только анонс или код проекта",
-        "evidence": [],
+        "stage": "rpc_head_reported",
+        "label": "Публичный RPC вернул свежий блок и правильный Chain ID",
+        "evidence": [
+          "Публичный RPC вернул блок 37066 (Chain ID проверен)"
+        ],
         "missing": [
           "Рабочий пул не проверен",
           "Свежие блоки сети не подтверждены",
@@ -301,7 +307,8 @@
           "network": false
         },
         "chain_height_progression": false,
-        "checked_at": "2026-11-20T10:11+00:00"
+        "rpc_height_progression": false,
+        "checked_at": "2026-11-20T10:47+00:00"
       },
       "economics": {
         "status": "insufficient_data",
@@ -350,7 +357,7 @@
         ],
         "note": "Сценарии энергии — не измерение GPU/рига. Доходность и продажа не подтверждены."
       },
-      "rationale": "указан GPU-алгоритм: Ethash",
+      "rationale": "указан GPU-алгоритм: Ethash; официально указанный публичный RPC вернул свежий блок и Chain ID",
       "mining": "Работающий GPU-майнинг и выплаты не проверены",
       "risks": "дата публикации/создания не установлена либо старая; нет проверенной даты mainnet"
     }
