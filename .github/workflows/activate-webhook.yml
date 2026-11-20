@@ -1,6 +1,8 @@
 name: Activate instant Telegram replies
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '17,47 * * * *'
   push:
     branches: [main]
     paths:
