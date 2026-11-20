@@ -45,6 +45,34 @@ class Economics(unittest.TestCase):
   rejected={"title":"good-mining/good-miner","body":"NVIDIA GPU miner for Ethash coin",
    "kind":"repository"}
   self.assertEqual(assess_economics("gh:1",rejected,NOW)["status"],"excluded")
+ def test_older_geforce_card_is_supported_as_measured_input(self):
+  older=dict(MEAS,device="GTX 1080 Ti",hashrate_hs=50e6)
+  econ=assess_economics("btt:1",dict(COIN,network_evidence=NETWORK,gpu_measurement=older),NOW)
+  self.assertEqual(econ["status"],"conditional_estimate")
+  self.assertEqual(econ["measured_devices"][0]["family"],"GTX 10xx")
+  self.assertAlmostEqual(econ["expected_coin_day"],0.05*1440*2*0.99)
+ def test_mixed_multigpu_rig_hashrate_is_sum_only_of_measurements(self):
+  cards=[
+   {"device":"GTX 1080 Ti","origin":"measured_hiveos","algorithm":"ethash",
+    "hashrate_hs":20e6,"measured_at":"2026-11-20T09:00:00Z"},
+   {"device":"RTX 3070","origin":"measured_hiveos","algorithm":"ethash",
+    "hashrate_hs":30e6,"measured_at":"2026-11-20T09:00:00Z"},
+   {"device":"RTX 4070 SUPER","origin":"measured_hiveos","algorithm":"ethash",
+    "hashrate_hs":40e6,"measured_at":"2026-11-20T09:00:00Z"},
+   {"device":"RTX 5070 Ti","origin":"measured_hiveos","algorithm":"ethash",
+    "hashrate_hs":10e6,"measured_at":"2026-11-20T09:00:00Z"}]
+  rig={"devices":cards,"wall_power_w":600,"pool_fee_fraction":0.01}
+  result=assess_economics("btt:1",dict(COIN,network_evidence=NETWORK,gpu_measurement=rig),NOW)
+  self.assertEqual(result["status"],"conditional_estimate")
+  self.assertEqual(result["measured_rig_hashrate_hs"],100e6)
+  self.assertEqual(len(result["measured_devices"]),4)
+  self.assertAlmostEqual(result["power_cost_eur_day"],1.44)
+ def test_incomplete_rig_never_reports_full_rig_yield(self):
+  rig={"devices":[dict(MEAS),dict(MEAS,device="RTX 2060",hashrate_hs=None)],
+       "wall_power_w":400,"pool_fee_fraction":0.01}
+  result=assess_economics("btt:1",dict(COIN,network_evidence=NETWORK,gpu_measurement=rig),NOW)
+  self.assertIsNone(result["expected_coin_day"])
+  self.assertFalse(result["gpu_measured"])
  def test_bad_inputs(self):
   self.assertIsNone(estimate_daily_coins(0,1000,2,60))
   self.assertIsNone(estimate_daily_coins(2000,1000,2,60))
