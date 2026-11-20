@@ -436,15 +436,75 @@
     },
     "gh-1459152764": {
       "title": "[GitHub] dhyabi2/nanotab — Metered payments on Nano (XNO) for AI agents: unlimited per-request payments with zero ledger blocks and zero ",
-      "seen": "2026-11-20T05:17:41+00:00"
+      "seen": "2026-11-20T05:17:41+00:00",
+      "repo_created": "2026-11-15T19:13:38Z",
+      "repo_updated": "2026-11-15T19:13:49Z",
+      "date": "2026-11-15T19:13:38Z",
+      "kind": "repository",
+      "url": "https://github.com/dhyabi2/nanotab",
+      "source": "GitHub — репозиторий (историческая запись)",
+      "body": "[GitHub] dhyabi2/nanotab — Metered payments on Nano (XNO) for AI agents: unlimited per-request payments with zero ledger blocks and zero  Metered payments on Nano (XNO) for AI agents: unlimited per-request payments with zero ledger blocks and zero proof-of-work until settlement. No scripts, no facilitator, no escrow. Pure Python.",
+      "facts": {
+        "algorithm": null,
+        "ticker": null,
+        "coin_name": null,
+        "gpu_mentioned": false,
+        "solo_mentioned": false,
+        "pool_mentioned": false,
+        "launch_claim_utc": null,
+        "publication_utc": null,
+        "repo_created_utc": "2026-11-15T19:13+00:00",
+        "repo_updated_utc": "2026-11-15T19:13+00:00"
+      },
+      "metadata_checked": true
     },
     "gh-1320069776": {
       "title": "[GitHub] ignotusnemo/parano1d-site — Official website for Parano1d, a proof-native Layer 1 ordered by proof of work.",
-      "seen": "2026-11-20T05:17:41+00:00"
+      "seen": "2026-11-20T05:17:41+00:00",
+      "repo_created": "2026-08-02T10:36:23Z",
+      "repo_updated": "2026-11-15T06:30:23Z",
+      "date": "2026-08-02T10:36:23Z",
+      "kind": "repository",
+      "url": "https://github.com/ignotusnemo/parano1d-site",
+      "source": "GitHub — репозиторий (историческая запись)",
+      "body": "[GitHub] ignotusnemo/parano1d-site — Official website for Parano1d, a proof-native Layer 1 ordered by proof of work. Official website for Parano1d, a proof-native Layer 1 ordered by proof of work.",
+      "facts": {
+        "algorithm": null,
+        "ticker": null,
+        "coin_name": null,
+        "gpu_mentioned": false,
+        "solo_mentioned": false,
+        "pool_mentioned": false,
+        "launch_claim_utc": null,
+        "publication_utc": null,
+        "repo_created_utc": "2026-08-02T10:36+00:00",
+        "repo_updated_utc": "2026-11-15T06:30+00:00"
+      },
+      "metadata_checked": true
     },
     "gh-1457675396": {
       "title": "[GitHub] SelenSeal/selen — SELEN — a private proof-of-work chain. Receivers and amounts sealed with ML-KEM-768 (FIPS 203). Node, explorer",
-      "seen": "2026-11-20T05:17:41+00:00"
+      "seen": "2026-11-20T05:17:41+00:00",
+      "repo_created": "2026-11-14T11:18:36Z",
+      "repo_updated": "2026-11-14T12:41:23Z",
+      "date": "2026-11-14T11:18:36Z",
+      "kind": "repository",
+      "url": "https://github.com/SelenSeal/selen",
+      "source": "GitHub — репозиторий (историческая запись)",
+      "body": "[GitHub] SelenSeal/selen — SELEN — a private proof-of-work chain. Receivers and amounts sealed with ML-KEM-768 (FIPS 203). Node, explorer SELEN — a private proof-of-work chain. Receivers and amounts sealed with ML-KEM-768 (FIPS 203). Node, explorer, browser wallet and miner in one Node.js program.",
+      "facts": {
+        "algorithm": null,
+        "ticker": null,
+        "coin_name": null,
+        "gpu_mentioned": false,
+        "solo_mentioned": false,
+        "pool_mentioned": false,
+        "launch_claim_utc": null,
+        "publication_utc": null,
+        "repo_created_utc": "2026-11-14T11:18+00:00",
+        "repo_updated_utc": "2026-11-14T12:41+00:00"
+      },
+      "metadata_checked": true
     },
     "gh-1185497235": {
       "title": "[GitHub] shemaiscard/digital-wallet-sim — Educational simulation of a digital wallet with BIP39 seed phrases, ECDSA key derivation, and Proof-of-Work mi",
@@ -461,7 +521,7 @@
     "gh:1463351639": {
       "title": "ennioyoyaku/denarius",
       "seen": "2026-11-20T05:22:56+00:00",
-      "last_seen": "2026-11-20T07:57:46+00:00",
+      "last_seen": "2026-11-20T07:58:05+00:00",
       "url": "https://github.com/ennioyoyaku/denarius",
       "links": {},
       "body": "ennioyoyaku/denarius A cryptocurrency node and wallet combining Tribus Proof of Work and Proof of Stake, with Fortuna Stakes, atomic swaps, optional Tor, and IPFS integration.",
@@ -486,7 +546,7 @@
     "gh:1458023319": {
       "title": "Sonic-Bound/Bound",
       "seen": "2026-11-20T05:22:56+00:00",
-      "last_seen": "2026-11-20T07:57:46+00:00",
+      "last_seen": "2026-11-20T07:58:05+00:00",
       "url": "https://github.com/Sonic-Bound/Bound",
       "links": {},
       "body": "Sonic-Bound/Bound A proof-of-work cryptocurrency written from scratch in C++20, with its own P2P network, wallet and Qt desktop app.",
@@ -511,7 +571,7 @@
     "gh:1461345643": {
       "title": "eXtremal-ik7/libpow",
       "seen": "2026-11-20T05:22:56+00:00",
-      "last_seen": "2026-11-20T07:57:46+00:00",
+      "last_seen": "2026-11-20T07:58:05+00:00",
       "url": "https://github.com/eXtremal-ik7/libpow",
       "links": {},
       "body": "eXtremal-ik7/libpow Proof-of-work, hashing, fixed-width bignum and ECDSA: the compute layer of a cryptocurrency node",
@@ -536,7 +596,7 @@
     "gh:1458248410": {
       "title": "Milkausikopistor/krevo",
       "seen": "2026-11-20T05:22:56+00:00",
-      "last_seen": "2026-11-20T07:57:46+00:00",
+      "last_seen": "2026-11-20T07:58:05+00:00",
       "url": "https://github.com/Milkausikopistor/krevo",
       "links": {},
       "body": "Milkausikopistor/krevo Proof-of-work BlockDAG cryptocurrency (10 blocks/s) with optional full-chain privacy, quantum-safe addresses and atomic swaps with Bitcoin. Reference node in JavaScript + compatible Rust node. Testnet only, not audited.",
@@ -561,7 +621,7 @@
     "gh:1457675396": {
       "title": "SelenSeal/selen",
       "seen": "2026-11-20T05:22:56+00:00",
-      "last_seen": "2026-11-20T07:57:46+00:00",
+      "last_seen": "2026-11-20T07:58:05+00:00",
       "url": "https://github.com/SelenSeal/selen",
       "links": {},
       "body": "SelenSeal/selen SELEN — a private proof-of-work chain. Receivers and amounts sealed with ML-KEM-768 (FIPS 203). Node, explorer, browser wallet and miner in one Node.js program.",
@@ -586,7 +646,7 @@
     "gh:1459152764": {
       "title": "dhyabi2/nanotab",
       "seen": "2026-11-20T05:22:56+00:00",
-      "last_seen": "2026-11-20T07:57:46+00:00",
+      "last_seen": "2026-11-20T07:58:05+00:00",
       "url": "https://github.com/dhyabi2/nanotab",
       "links": {},
       "body": "dhyabi2/nanotab Metered payments on Nano (XNO) for AI agents: unlimited per-request payments with zero ledger blocks and zero proof-of-work until settlement. No scripts, no facilitator, no escrow. Pure Python.",
@@ -611,7 +671,7 @@
     "pool:2026-11-19:0": {
       "title": "PoolPayCoin now has an announcement thread on BitcoinTalk -- specs, mining instructions and the real pool-pay.com Shop utility (NFTs, AI generation, p",
       "seen": "2026-11-20T05:22:56+00:00",
-      "last_seen": "2026-11-20T07:57:46+00:00",
+      "last_seen": "2026-11-20T07:58:05+00:00",
       "url": "https://pool-pay.com/",
       "links": {},
       "body": "PoolPayCoin now has an announcement thread on BitcoinTalk -- specs, mining instructions and the real pool-pay.com Shop utility (NFTs, AI generation, pool fee-waiver pass), all in one place.",
@@ -636,7 +696,7 @@
     "pool:2026-11-19:1": {
       "title": "Added a pool fee-waiver pass to the Shop at shop.pool-pay.com/subscription.html : pay with PPC or SOL (a week to a year, longer terms a bit cheaper pe",
       "seen": "2026-11-20T05:22:56+00:00",
-      "last_seen": "2026-11-20T07:57:46+00:00",
+      "last_seen": "2026-11-20T07:58:05+00:00",
       "url": "https://pool-pay.com/",
       "links": {},
       "body": "Added a pool fee-waiver pass to the Shop at shop.pool-pay.com/subscription.html : pay with PPC or SOL (a week to a year, longer terms a bit cheaper per day) and the pool fee is rebated straight back onto your balance as a bonus, automatically, every few minutes, on every coin you mine directly. Requires a free pool-pay.com account (same login as the main das",
@@ -661,7 +721,7 @@
     "pool:2026-11-18:2": {
       "title": "\"pool-pay.com Critters\" is now officially listed on Magic Eden , Solana's biggest NFT marketplace -- a real collection page with its own listings, off",
       "seen": "2026-11-20T05:22:56+00:00",
-      "last_seen": "2026-11-20T07:57:46+00:00",
+      "last_seen": "2026-11-20T07:58:05+00:00",
       "url": "https://pool-pay.com/",
       "links": {},
       "body": "\"pool-pay.com Critters\" is now officially listed on Magic Eden , Solana's biggest NFT marketplace -- a real collection page with its own listings, offers and trade history, not just an unverified mint. Minting new critters is still only through shop.pool-pay.com (pay with SOL or PPC); Magic Eden is for browsing and reselling what's already minted. Link added",
@@ -686,7 +746,7 @@
     "pool:2026-11-18:3": {
       "title": "Added AI generation to the Shop at shop.pool-pay.com/generate.html : buy a credit package with PPC or SOL, spend it on real Google AI generation (imag",
       "seen": "2026-11-20T05:22:56+00:00",
-      "last_seen": "2026-11-20T07:57:46+00:00",
+      "last_seen": "2026-11-20T07:58:05+00:00",
       "url": "https://pool-pay.com/",
       "links": {},
       "body": "Added AI generation to the Shop at shop.pool-pay.com/generate.html : buy a credit package with PPC or SOL, spend it on real Google AI generation (images, video, voice, music) — a redemption code is all you need, no account. Reference-image editing, a 9:16 mobile format toggle, a choice of 30 TTS voices, and a 360p/720p video resolution picker are all wired u",
@@ -711,7 +771,7 @@
     "pool:2026-11-19:4": {
       "title": "У PoolPayCoin появилась тема-анонс на BitcoinTalk — характеристики, инструкция по майнингу и реальная польза от магазина pool-pay.com (NFT, AI-генерац",
       "seen": "2026-11-20T05:22:56+00:00",
-      "last_seen": "2026-11-20T07:57:46+00:00",
+      "last_seen": "2026-11-20T07:58:05+00:00",
       "url": "https://pool-pay.com/",
       "links": {},
       "body": "У PoolPayCoin появилась тема-анонс на BitcoinTalk — характеристики, инструкция по майнингу и реальная польза от магазина pool-pay.com (NFT, AI-генерация, абонемент без комиссии на пуле) в одном месте.",
@@ -736,7 +796,7 @@
     "pool:2026-11-19:5": {
       "title": "В магазине появился абонемент без комиссии на пуле: shop.pool-pay.com/subscription.html . Оплата PPC или SOL (от недели до года, чем дольше срок — тем",
       "seen": "2026-11-20T05:22:56+00:00",
-      "last_seen": "2026-11-20T07:57:46+00:00",
+      "last_seen": "2026-11-20T07:58:05+00:00",
       "url": "https://pool-pay.com/",
       "links": {},
       "body": "В магазине появился абонемент без комиссии на пуле: shop.pool-pay.com/subscription.html . Оплата PPC или SOL (от недели до года, чем дольше срок — тем дешевле в пересчёте на день), комиссия пула автоматически возвращается бонусом на баланс каждые несколько минут, на любой монете, которую майните напрямую. Нужен бесплатный аккаунт pool-pay.com (тот же логин,",
@@ -761,7 +821,7 @@
     "pool:2026-11-18:6": {
       "title": "«pool-pay.com Critters» теперь официально в листинге на Magic Eden — крупнейшем NFT-маркетплейсе на Solana: настоящая страница коллекции со своими лис",
       "seen": "2026-11-20T05:22:56+00:00",
-      "last_seen": "2026-11-20T07:57:46+00:00",
+      "last_seen": "2026-11-20T07:58:05+00:00",
       "url": "https://pool-pay.com/",
       "links": {},
       "body": "«pool-pay.com Critters» теперь официально в листинге на Magic Eden — крупнейшем NFT-маркетплейсе на Solana: настоящая страница коллекции со своими листингами, офферами и историей сделок, а не непроверенный минт. Минтить новых критеров всё так же можно только через shop.pool-pay.com (оплата SOL или PPC); Magic Eden — для просмотра и перепродажи уже сминченног",
@@ -786,7 +846,7 @@
     "pool:2026-11-18:7": {
       "title": "Добавили AI-генерацию в магазин на shop.pool-pay.com/generate.html : покупаете пакет кредитов за PPC или SOL, тратите на настоящую генерацию через Goo",
       "seen": "2026-11-20T05:22:56+00:00",
-      "last_seen": "2026-11-20T07:57:46+00:00",
+      "last_seen": "2026-11-20T07:58:05+00:00",
       "url": "https://pool-pay.com/",
       "links": {},
       "body": "Добавили AI-генерацию в магазин на shop.pool-pay.com/generate.html : покупаете пакет кредитов за PPC или SOL, тратите на настоящую генерацию через Google AI (картинки, видео, голос, музыка) — нужен только код, аккаунт не требуется. Работают редактирование по референс-картинке, мобильный формат 9:16, выбор из 30 голосов озвучки и выбор разрешения видео (360p/",
@@ -811,7 +871,7 @@
     "gh:1465019884": {
       "title": "ofirfr246-lab/solverium",
       "seen": "2026-11-20T05:27:58+00:00",
-      "last_seen": "2026-11-20T07:57:46+00:00",
+      "last_seen": "2026-11-20T07:58:05+00:00",
       "url": "https://github.com/ofirfr246-lab/solverium",
       "links": {},
       "body": "ofirfr246-lab/solverium HyperClique: a proof-of-work puzzle based on hypercliques in pseudo-random 3-uniform hypergraphs, and the Solverium prototype cryptocurrency",
@@ -836,7 +896,7 @@
     "tg:miningrelease:281": {
       "title": "‼️ Coin Name: Neural Engine Byte Ticker: $NEB Algo: Nebhash",
       "seen": "2026-11-20T05:27:58+00:00",
-      "last_seen": "2026-11-20T07:57:46+00:00",
+      "last_seen": "2026-11-20T07:58:05+00:00",
       "url": "https://t.me/miningrelease/281",
       "links": {
         "website": "https://neuralenginebyte.org/",
@@ -1762,11 +1822,11 @@
       "date": null
     }
   },
-  "last_scan": "2026-11-20T07:57:46+00:00",
+  "last_scan": "2026-11-20T07:58:05+00:00",
   "telegram_update_offset": 229240560,
   "second_user_welcomed": true,
   "agent": {
-    "updated_at": "2026-11-20T07:57:46+00:00",
+    "updated_at": "2026-11-20T07:58:05+00:00",
     "total_scanned": 123,
     "items": [
       {
