@@ -24,7 +24,7 @@ class ExplorerTest(unittest.TestCase):
    with self.subTest(url=bad):self.assertIsNone(official_blockscout(bad))
  def test_explicit_link_not_guessed(self):
   self.assertEqual(candidate_from_readme(
-   "Explorer: https://exc.blockscout.com/blocks\\nPool: https://pool.example.org"),
+   "Explorer: https://exc.blockscout.com/blocks\nPool: https://pool.example.org"),
    "https://exc.blockscout.com")
   self.assertIsNone(candidate_from_readme("Use Ethash on a GPU with any miner"))
  def test_latest_blocks_timestamp_and_canonical(self):
