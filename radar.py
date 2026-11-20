@@ -22,6 +22,7 @@ from coin_filter import classify, is_coin
 from research_agent import analyze, report
 from github_discovery import gather as discover_github, refresh_tracked
 from project_watch import reconcile
+from mineability import evaluate_all
 from github_releases_source import check_releases
 from network_evidence import update as update_network_evidence
 from discord_sources import fetch_channels as scan_discord
@@ -399,6 +400,10 @@ def main():
     release_stats = check_releases(fetch,seen,NOW,limit=3)
     state["github_release_status"] = release_stats
     print("GitHub coin releases:",release_stats)
+
+    readiness_counts=evaluate_all(seen,NOW)
+    state["mining_readiness_counts"]=readiness_counts
+    print("GPU mining readiness:",readiness_counts)
 
     previous_watch = state.get("tracked_projects") or {}
     # Check selected GitHub projects for repository activity before deciding if
