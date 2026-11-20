@@ -23,6 +23,7 @@ from research_agent import analyze, report
 from github_discovery import gather as discover_github, refresh_tracked
 from project_watch import reconcile
 from github_releases_source import check_releases
+from network_evidence import update as update_network_evidence
 from discord_sources import fetch_channels as scan_discord
 from mining_scan_source import refresh as refresh_mining_scan, matches_for
 
@@ -376,6 +377,22 @@ def main():
         "attribution":"mining-scan.com"
     }
     print("Mining Scan reference:", state["mining_scan_status"])
+
+    # Independent keyless network snapshot. Match by provider's actual coin id
+    # and confirmed coin name, never by ambiguous ticker alone.
+    backpow, backpow_updated = update_network_evidence(fetch,seen,state,NOW)
+    if backpow_updated:
+        state["backpow"] = backpow
+    for evidence_key, record in (backpow.get("verified") or {}).items():
+        if evidence_key in seen and seen[evidence_key].get("coin_class")=="coin_candidate":
+            seen[evidence_key]["network_evidence"] = record
+    state["network_evidence_status"] = {
+        "available":bool(backpow.get("verified")),
+        "checked":backpow.get("attempted",0),
+        "matched":backpow.get("successful",0),
+        "updated_this_run":backpow_updated,
+        "source":"BackPoW"}
+    print("Network evidence:",state["network_evidence_status"])
 
     # Public GitHub release history, strictly for already screened coin projects.
     # Releases provide development evidence, never proof of live mining.
