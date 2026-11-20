@@ -31,14 +31,23 @@ class TelegramCommandTests(unittest.TestCase):
         ]
         output=[]
         with patch("telegram_commands.get_updates",return_value=messages):
-            count=process_commands("token","123",state,{"a":ITEM},NOW,output.append)
+            count=process_commands("token",["123"],state,{"a":ITEM},NOW,lambda text, chat:output.append((chat,text)))
         self.assertEqual(count,2)
         self.assertEqual(len(output),2)
+        self.assertTrue(all(chat=="123" for chat,_ in output))
         self.assertEqual(state["telegram_update_offset"],53)
+    def test_second_person_authorized(self):
+        updates=[{"update_id":61,"message":{"chat":{"id":456},"text":"/start"}}]
+        replies=[]
+        with patch("telegram_commands.get_updates",return_value=updates):
+            count=process_commands("token",["123","456"],{},{"a":ITEM},NOW,lambda text,chat:replies.append((chat,text)))
+        self.assertEqual(count,1)
+        self.assertEqual(replies[0][0],"456")
+        self.assertIn("GPU Coin launch",replies[0][1])
     def test_repeated_update_skipped(self):
         state={"telegram_update_offset":22}
         with patch("telegram_commands.get_updates",return_value=[
             {"update_id":21,"message":{"chat":{"id":123},"text":"/start"}}]):
-            self.assertEqual(process_commands("token","123",state,{},NOW,lambda _:self.fail("duplicate")),0)
+            self.assertEqual(process_commands("token",["123"],state,{},NOW,lambda *args:self.fail("duplicate")),0)
 if __name__=="__main__":
     unittest.main()
