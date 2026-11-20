@@ -115,9 +115,16 @@ def examine(key, item, now):
     # Prefer measured *growth* in height to marketing claims. Single
     # pool-catalog timestamps carry much weaker evidence.
     readiness=item.get("mining_readiness") or {}
-    if readiness.get("stage")=="height_advanced":
+    if readiness.get("stage")=="rpc_height_advanced":
+        score+=5
+        good.append("два последовательных чтения публичного RPC показали рост высоты")
+    elif readiness.get("stage")=="height_advanced":
         score+=4
         good.append("высота сети выросла между двумя снимками агрегатора")
+    elif readiness.get("stage")=="rpc_head_reported":
+        score+=2
+        good.append("официально указанный публичный RPC вернул свежий блок и Chain ID")
+        unknown.append("рост цепи и PoW-майнинг ещё не проверены")
     elif readiness.get("stage")=="activity_reported":
         score+=1
         unknown.append("активность сообщена внешним каталогом, не собственной нодой")
