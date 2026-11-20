@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-20T09:51:40+00:00",
+  "generated_at": "2026-11-20T10:08:17+00:00",
   "mode": "rules_only",
   "model": null,
   "candidate_count": 3,
-  "scan_updated_at": "2026-11-20T09:49:45+00:00",
+  "scan_updated_at": "2026-11-20T10:07:11+00:00",
   "summary": "Автоподбор по правилам без ИИ. Только кандидаты для дальнейшего изучения.",
   "picks": [
     {
@@ -14,7 +14,7 @@
       "algorithm": "Ethash",
       "published": null,
       "launch_claim": null,
-      "score": 5,
+      "score": 6,
       "mining_readiness": {
         "stage": "activity_reported",
         "label": "Есть сообщения об активности сети",
@@ -26,12 +26,50 @@
           "Совместимость GTX 10xx / RTX 20xx–50xx, Stratum и выплаты не проверены",
           "Ликвидность и возможность продажи не проверены"
         ],
-        "gpu_5070ti": "не проверена",
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        },
         "source_freshness": {
           "pool": true,
           "network": false
         },
-        "checked_at": "2026-11-20T09:49+00:00"
+        "chain_height_progression": false,
+        "checked_at": "2026-11-20T10:07+00:00"
       },
       "economics": {
         "status": "insufficient_data",
@@ -105,12 +143,50 @@
           "Совместимость GTX 10xx / RTX 20xx–50xx, Stratum и выплаты не проверены",
           "Ликвидность и возможность продажи не проверены"
         ],
-        "gpu_5070ti": "не проверена",
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        },
         "source_freshness": {
           "pool": false,
           "network": false
         },
-        "checked_at": "2026-11-20T09:49+00:00"
+        "chain_height_progression": false,
+        "checked_at": "2026-11-20T10:07+00:00"
       },
       "economics": {
         "status": "insufficient_data",
@@ -182,12 +258,50 @@
           "Совместимость GTX 10xx / RTX 20xx–50xx, Stratum и выплаты не проверены",
           "Ликвидность и возможность продажи не проверены"
         ],
-        "gpu_5070ti": "не проверена",
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        },
         "source_freshness": {
           "pool": false,
           "network": false
         },
-        "checked_at": "2026-11-20T09:49+00:00"
+        "chain_height_progression": false,
+        "checked_at": "2026-11-20T10:07+00:00"
       },
       "economics": {
         "status": "insufficient_data",
