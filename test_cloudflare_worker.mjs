@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import worker,{parseAllowed,commandOf,formatReply,renderMenu,candidatesFromState} from "./cloudflare-worker.mjs";
+import worker,{parseAllowed,commandOf,formatReply,renderMenu,candidatesFromState,projectSummary} from "./cloudflare-worker.mjs";
 
 const env={TELEGRAM_BOT_TOKEN:"test-not-real",TELEGRAM_CHAT_ID:"123",
   TELEGRAM_EXTRA_CHAT_IDS:"456",TELEGRAM_WEBHOOK_SECRET:"test-secret"};
@@ -116,4 +116,34 @@ test("pool news are identified as publications, not coins",()=>{
 test("authorized second user can access interactive menu",()=>{
   assert.ok(parseAllowed(env).has("812612452"));
   assert.ok(renderMenu("home",state,now).reply_markup.inline_keyboard.length>0);
+});
+
+test("GitHub list preview distinguishes repository creation from mainnet",()=>{
+  const s={topics:{"gh:123":{title:"example/chain",kind:"repository",url:"https://github.com/example/chain",
+    body:"GPU Ethash PoW blockchain",seen:"2026-11-20T06:00:00Z",
+    facts:{repo_created_utc:"2026-11-17T12:00:00Z",algorithm:"Ethash"}}}};
+  const page=renderMenu("source:gh:0",s,now);
+  assert.match(page.text,/Репозиторий создан: 2026-11-17 12:00 UTC/);
+  assert.match(page.text,/Алгоритм: Ethash/);
+  assert.doesNotMatch(page.text,/Заявлен mainnet/);
+  const detail=renderMenu("entry:gh:0:0",s,now);
+  assert.match(detail.text,/Mainnet: дата не указана/);
+});
+test("Telegram source list shows post timestamp and announced launch",()=>{
+  const s={topics:{"tg:miningrelease:301":{title:"NewCoin GPU KawPow",
+    body:"GPU KawPow PoW. Solo pool.",
+    date:"2026-11-20T04:00:00Z",seen:"2026-11-20T05:00:00Z",
+    facts:{publication_utc:"2026-11-20T04:00:00Z",launch_claim_utc:"2026-11-22T17:00:00Z",
+    algorithm:"KawPow",solo_mentioned:true,pool_mentioned:true}}}};
+  const page=renderMenu("source:tg:0",s,now);
+  assert.match(page.text,/Публикация: 2026-11-20 04:00 UTC/);
+  assert.match(page.text,/Заявлен mainnet: 2026-11-22 17:00 UTC/);
+  assert.match(page.text,/SOLO \/ пул/);
+});
+test("source first-page gives useful preview even when timestamp absent",()=>{
+  const s={topics:{"btt:554":{title:"New GPU PoW Coin KawPow",seen:"2026-11-20T03:00:00Z"}}};
+  const page=renderMenu("source:btt:0",s,now);
+  assert.match(page.text,/Публикация: дата не установлена/);
+  assert.match(page.text,/Алгоритм: KawPow/);
+  assert.ok(projectSummary("btt:554",s.topics["btt:554"]).length>=2);
 });
