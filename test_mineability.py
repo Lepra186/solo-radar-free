@@ -51,6 +51,22 @@ class MineabilityTests(unittest.TestCase):
        "blocks_increased":20,"last_observed_at":"2026-11-20T09:00:00Z"})
   result=evaluate("btt:1",record,NOW)
   self.assertNotEqual(result["stage"],"height_advanced")
+ def test_fresh_public_rpc_head_is_evidence_not_payout(self):
+  record=dict(COIN,rpc_evidence={
+     "provider":"public project JSON-RPC","chain_id":52401,
+     "last_block_height":37066,"last_block_time":"2026-11-20T09:40:00Z",
+     "checked_at":"2026-11-20T09:45:00Z"})
+  r=evaluate("btt:1",record,NOW)
+  self.assertEqual(r["stage"],"rpc_head_reported")
+  self.assertFalse(r["rpc_height_progression"])
+ def test_two_project_rpc_reads_can_upgrade(self):
+  record=dict(COIN,rpc_evidence={
+     "provider":"public project JSON-RPC","chain_id":52401,
+     "last_block_height":37100,"last_block_time":"2026-11-20T09:40:00Z",
+     "checked_at":"2026-11-20T09:45:00Z"},
+     rpc_progress={"source":"project public JSON-RPC",
+       "chain_id":52401,"blocks_increased":34,"last_checked":"2026-11-20T09:45:00Z"})
+  self.assertEqual(evaluate("btt:1",record,NOW)["stage"],"rpc_height_advanced")
  def test_no_coin_miner_application(self):
   record={"kind":"repository","title":"x/good-miner",
            "body":"NVIDIA GPU miner for Ethash coin and pool"}
