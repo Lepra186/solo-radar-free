@@ -203,7 +203,7 @@ export function renderMenu(view, state = {}, now = new Date()) {
       lines.push((i+1)+". "+textFor(p.title).slice(0,125),
         "Источник: "+String(p.source||"неизвестен"),
         "⚙️ "+String(p.algorithm||"Алгоритм неизвестен"),
-        "🚀 "+(shortDate(p.launch_claim)+" (заявлено)"||"Mainnet не подтверждён"),
+        "🚀 "+(p.launch_claim?(shortDate(p.launch_claim)+" (заявлено)"):"Mainnet не подтверждён"),
         "✅ "+String(p.rationale||"требуются данные").slice(0,160),
         "⚠️ "+String(p.risks||"риски требуют проверки").slice(0,140),"");
     }
