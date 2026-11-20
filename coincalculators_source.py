@@ -57,6 +57,8 @@ def directory(payload,now):
 
 def update(fetch,state,now):
     old=state.get("coin_calculators") or {}
+    retry=time_value(old.get("retry_after"))
+    if retry and now<retry:return old,False
     previous=time_value(old.get("observed_at"))
     if previous and timedelta(0)<=now-previous<CACHE:return old,False
     try:
@@ -64,7 +66,13 @@ def update(fetch,state,now):
         return result,True
     except Exception as exc:
         print("CoinCalculators unavailable:",type(exc).__name__,str(exc)[:90])
-        return old,False
+        # A discontinued API (HTTP 410) must not be retried on every cron tick.
+        from urllib.error import HTTPError
+        is_gone=isinstance(exc,HTTPError) and exc.code==410
+        return {"observed_at":now.isoformat(timespec="seconds"),
+                "retry_after":(now+timedelta(days=7 if is_gone else 1)).isoformat(timespec="seconds"),
+                "status":"endpoint_gone" if is_gone else "temporarily_unavailable",
+                "coins":[],"source":URL},True
 
 def matched(topics,catalog,now):
     seen=time_value(catalog.get("observed_at"))
