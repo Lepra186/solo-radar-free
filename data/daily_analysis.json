@@ -1,0 +1,65 @@
+{
+  "generated_at": "2026-11-20T08:01:53+00:00",
+  "mode": "rules_only",
+  "model": null,
+  "candidate_count": 4,
+  "scan_updated_at": "2026-11-20T07:58:42+00:00",
+  "summary": "Автоподбор по правилам без ИИ. Только кандидаты для дальнейшего изучения.",
+  "picks": [
+    {
+      "key": "btt:5599371",
+      "title": "[ANN] NEX Chain (NEXC) | Ethash PoW | GPU & CPU | Free Solo Miner | EVM + DEX",
+      "source": "Bitcointalk",
+      "url": "https://bitcointalk.org/index.php?topic=5599371.0",
+      "algorithm": "Ethash",
+      "published": null,
+      "launch_claim": null,
+      "score": 5,
+      "rationale": "указан GPU-алгоритм: Ethash; упомянут SOLO",
+      "mining": "Работающий GPU-майнинг и выплаты не проверены",
+      "risks": "дата публикации/создания не установлена либо старая; нет проверенной даты mainnet"
+    },
+    {
+      "key": "gh-1457186269",
+      "title": "[GitHub] Lakylife/quinvium — Quinvium (QU): a programmable proof-of-work blockchain with an EVM, GPU mining (Ethash), full node, wallet, ex",
+      "source": "GitHub",
+      "url": "https://github.com/Lakylife/quinvium",
+      "algorithm": "Ethash",
+      "published": "2026-11-13T23:04+00:00",
+      "launch_claim": null,
+      "score": 4,
+      "rationale": "указан GPU-алгоритм: Ethash; упомянут майнинг/пул",
+      "mining": "Работающий GPU-майнинг и выплаты не проверены",
+      "risks": "нет проверенной даты mainnet; репозиторий сам по себе не подтверждает mainnet"
+    },
+    {
+      "key": "btt:5596113",
+      "title": "[ANN][YSR] YSKAR - SHA-256d PoW | No premine | Mine on phone, CPU or GPU",
+      "source": "Bitcointalk",
+      "url": "https://bitcointalk.org/index.php?topic=5596113.0",
+      "algorithm": "SHA-256",
+      "published": null,
+      "launch_claim": null,
+      "score": 3,
+      "rationale": "указан GPU-алгоритм: SHA-256",
+      "mining": "Работающий GPU-майнинг и выплаты не проверены",
+      "risks": "дата публикации/создания не установлена либо старая; нет проверенной даты mainnet"
+    },
+    {
+      "key": "btt:5600215",
+      "title": "[ANN] Quinvium (QU) | GPU PoW (Ethash) | EVM smart contracts | No premine | Main",
+      "source": "Bitcointalk",
+      "url": "https://bitcointalk.org/index.php?topic=5600215.0",
+      "algorithm": "Ethash",
+      "published": null,
+      "launch_claim": null,
+      "score": 3,
+      "rationale": "указан GPU-алгоритм: Ethash",
+      "mining": "Работающий GPU-майнинг и выплаты не проверены",
+      "risks": "дата публикации/создания не установлена либо старая; нет проверенной даты mainnet"
+    }
+  ],
+  "watchouts": [
+    "Рыночная ликвидность, премайн и возможность майнинга не подтверждены"
+  ]
+}
