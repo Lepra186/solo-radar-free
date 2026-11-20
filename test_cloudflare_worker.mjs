@@ -190,7 +190,7 @@ test("daily AI menu and command show report with source links",()=>{
 test("daily report without key is labeled not AI and hides unknown launch",()=>{
  const data={mode:"rules_only",generated_at:"2026-11-20T08:10:00Z",
    summary:"Rule check",picks:[{key:"btt:111",title:"GPUPoW",source:"GitHub",risks:"unknown"}]};
- const result=renderMenu("analysis",{daily_analysis:data},now);
+ const result=renderMenu("analysis",{...state,daily_analysis:data},now);
  assert.match(result.text,/Правила \(без ИИ\)/);
  assert.match(result.text,/Mainnet не подтверждён/);
  assert.doesNotMatch(result.text,/null \(заявлено\)/);
