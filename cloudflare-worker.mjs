@@ -85,6 +85,53 @@ export function candidatesFromState(state) {
     .map(([key,item]) => ({key,item}))
     .sort((a,b)=>String(b.item?.last_seen || b.item?.seen || "").localeCompare(String(a.item?.last_seen || a.item?.seen || "")));
 }
+function shortDate(raw) {
+  if (!raw || typeof raw !== "string" || !Number.isFinite(Date.parse(raw))) return null;
+  return new Date(raw).toISOString().slice(0, 16).replace("T", " ") + " UTC";
+}
+function firstMatching(text, re) {
+  const match = re.exec(text || "");
+  return match ? match[1] : null;
+}
+function algFromText(text) {
+  return firstMatching(text, /\b(KawPow|Etchash|Ethash|ProgPoW|FishHash|Autolykos|Equihash|Octopus|Verthash|RandomX|SHA[\s-]?256d?)\b/i);
+}
+function projectFactLines(key, item, options={}) {
+  const group=sourceGroup(key,item);
+  const f=item?.facts || {};
+  const content=String(item?.body || item?.title || "");
+  const lines=[];
+  const created=shortDate(f.repo_created_utc || item.repo_created);
+  const publication=shortDate(f.publication_utc || item.date);
+  const updated=shortDate(f.repo_updated_utc || item.repo_updated);
+  const launch=shortDate(f.launch_claim_utc);
+  const algorithm=f.algorithm || algFromText(content);
+  const ticker=f.ticker || firstMatching(content,/\b(?:ticker|symbol)\s*:\s*\$?([A-Za-z0-9]{2,12})\b/i);
+  if (group==="gh") {
+    lines.push("📅 Репозиторий создан: "+(created || "дата не получена"));
+    if (updated && !options.compact) lines.push("🛠 Последнее обновление кода: "+updated);
+  } else {
+    lines.push("📅 Публикация: "+(publication || "дата не установлена"));
+  }
+  if (launch) lines.push("🚀 Заявлен mainnet: "+launch);
+  else if (!options.compact) lines.push("🚀 Mainnet: дата не указана");
+  if (algorithm) lines.push("⚙️ Алгоритм: "+algorithm);
+  else if (!options.compact) lines.push("⚙️ Алгоритм: не определён");
+  if (ticker && !options.compact) lines.push("🪙 Тикер: "+ticker.toUpperCase());
+  const solo=Boolean(f.solo_mentioned) || /\bsolo\b/i.test(content);
+  const pool=Boolean(f.pool_mentioned) || /\b(pool|stratum|pplns)\b/i.test(content);
+  if (solo || pool) lines.push("⛏️ Майнинг: "+[solo?"SOLO":"",pool?"пул":""].filter(Boolean).join(" / ")+" (упоминается)");
+  else if (!options.compact) lines.push("⛏️ SOLO/пул: не подтверждены");
+  const excerpt=String(item?.body || "").replace(/\s+/g," ").trim();
+  if (!options.compact && excerpt && excerpt!==item.title) lines.push("📝 "+excerpt.slice(0,200));
+  if (options.compact && !algorithm && !launch && !solo && !pool) {
+    const description=excerpt.replace(String(item?.title||""),"").trim();
+    if (description) lines.push("📝 "+description.slice(0,75));
+  }
+  return lines;
+}
+export function projectSummary(key,item) {return projectFactLines(key,item,{compact:true});}
+
 function btn(text, callback_data) { return {text, callback_data}; }
 function linkButton(text, url) { return {text, url}; }
 function navRows() {
@@ -182,11 +229,16 @@ export function renderMenu(view, state = {}, now = new Date()) {
       group==="tg"?"Анонсы Telegram требуют независимой проверки":
       group==="rss"?"Публикации могут быть не о новых монетах":
       group==="dc"?"Читаются только разрешённые каналы":"Дата запуска и GPU-совместимость не проверены";
+    const preview=items.slice(page*PAGE_SIZE,(page+1)*PAGE_SIZE).flatMap((x,i)=>[
+      (page*PAGE_SIZE+i+1)+". "+textFor(x.item.title).slice(0,90),
+      ...projectFactLines(x.key,x.item,{compact:true}), ""
+    ]);
     return {text:[SOURCE_LABELS[group]+" • ПУБЛИКАЦИИ", "",
       "Найдено записей: "+items.length+" • Страница "+(page+1)+"/"+pages,
       "🕒 Последняя проверка: "+info.text+(info.stale?" ⚠️":""),
-      "",items.length?"Выбери публикацию:":"Пока нет доступных публикаций.",
-      "", "⚠️ "+explanation+"."].join("\n"),
+      "",...(preview.length?preview:["Пока нет доступных публикаций."]),
+      "Нажми кнопку с номером для подробностей и ссылок.",
+      "", "⚠️ "+explanation+"."].join("\n").slice(0,3900),
       reply_markup:{inline_keyboard:rows}};
   }
   const entryMatch=/^entry:(tg|gh|btt|pool|rss|dc|other):(\d{1,5}):(\d{1,3})$/.exec(view);
@@ -222,8 +274,12 @@ export function renderMenu(view, state = {}, now = new Date()) {
     return {
       text: [heading, "", "Записей: "+pool.length+" • Страница "+(page+1)+"/"+totalPages,
         "🕒 Скан: "+info.text+(info.stale?" ⚠️":""),
-        "", ...(pool.length?["Выбери монету, чтобы открыть ссылки:"]:["Сейчас в этом разделе записей нет."]),
-        "", "⚠️ Записи не подтверждают возможность майнинга, листинг или рост цены."].join("\n"),
+        "", ...(pool.length?pool.slice(start,start+PAGE_SIZE).flatMap((x,i)=>[
+          (start+i+1)+". "+textFor(x.item.title).slice(0,85),
+          ...projectFactLines(x.key,x.item,{compact:true}), ""
+        ]):["Сейчас в этом разделе записей нет."]),
+        "Выбери номер кнопкой для ссылок.",
+        "⚠️ Даты mainnet — только заявления, не подтверждение работающей сети."].join("\n").slice(0,3900),
       reply_markup:{inline_keyboard:rows},
     };
   }
@@ -259,7 +315,8 @@ function renderProject(result,back) {
   return {
     text:["🔎 ПУБЛИКАЦИЯ • "+SOURCE_LABELS[group], "",
       textFor(item.title).slice(0,180), "",
-      "📅 Найдено: "+String(item.seen || "неизвестно").slice(0,19).replace("T"," "),
+      ...projectFactLines(key,item),
+      "👀 Впервые найдено радаром: "+(shortDate(item.seen) || "неизвестно"),
       "🔗 Доступных ссылок: "+links.length, "",
       "⚠️ "+note+" Проверяй кошельки, пулы и Discord перед использованием."].join("\n"),
     reply_markup:{inline_keyboard:rows}
