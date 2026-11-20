@@ -136,6 +136,28 @@ function projectFactLines(key, item, options={}) {
   else if (!options.compact) lines.push("⛏️ SOLO/пул: не подтверждены");
   const excerpt=String(item?.body || "").replace(/\s+/g," ").trim();
   if (!options.compact && excerpt && excerpt!==item.title) lines.push("📝 "+excerpt.slice(0,200));
+  const poolEvidence=item?.pool_evidence;
+  if (poolEvidence && !options.compact) {
+    const blocks=poolEvidence.blocks_48h_reported;
+    const pools=poolEvidence.pools_reported;
+    lines.push("🔎 Mining Scan: "+(
+      Number.isFinite(blocks)?blocks+" блоков за 48 ч (по данным пулов)":
+      "сведения о блоках не опубликованы"));
+    if (Number.isFinite(pools)) lines.push("🏊 Пулов в каталоге: "+pools);
+    lines.push("🕒 Данные каталога: "+(shortDate(poolEvidence.checked_at)||"время неизвестно"));
+  }
+  const network=item?.network_evidence;
+  if (network) {
+    const age=Number.isFinite(Date.parse(network.fetched_at))?
+      (Date.now()-Date.parse(network.fetched_at))/86400000:Infinity;
+    if(age>=0 && age<3) {
+      if(Number.isFinite(network.difficulty)) lines.push("📈 Сложность сети: "+Number(network.difficulty).toPrecision(5));
+      if(Number.isFinite(network.network_hashrate_hs))
+        lines.push("⚡ Сеть: "+Number(network.network_hashrate_hs).toPrecision(5)+" H/s");
+      if(Number.isFinite(network.block_reward)&&!options.compact) lines.push("🎁 Награда: "+network.block_reward+" монет/блок (BackPoW)");
+      if(!options.compact) lines.push("🔎 BackPoW: "+(shortDate(network.fetched_at)||"время неизвестно")+"; оценка, не проверка майнера");
+    }
+  }
   if (options.compact && !algorithm && !launch && !solo && !pool) {
     const description=excerpt.replace(String(item?.title||""),"").trim();
     if (description) lines.push("📝 "+description.slice(0,75));
