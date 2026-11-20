@@ -72,7 +72,7 @@ def update(fetch,state,now):
         payload=json.loads(fetch(URL))
         return parse_pool_directory(payload,now),True
     except Exception as exc:
-        print("Pool directory unavailable:",type(exc).__name__)
+        print("Pool directory unavailable:",type(exc).__name__,str(exc)[:135])
         return old,False
 
 def match_pools(topics,directory,now):
