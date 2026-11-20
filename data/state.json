@@ -345,6 +345,7 @@
         "stage": "announcement_only",
         "label": "Только анонс или код проекта",
         "evidence": [
+          "Публичный RPC вернул блок 37066 (Chain ID проверен)",
           "Есть свежий релиз проекта на GitHub"
         ],
         "missing": [
@@ -8205,7 +8206,9 @@
       "mining_readiness": {
         "stage": "announcement_only",
         "label": "Только анонс или код проекта",
-        "evidence": [],
+        "evidence": [
+          "Публичный RPC вернул блок 37066 (Chain ID проверен)"
+        ],
         "missing": [
           "Рабочий пул не проверен",
           "Свежие блоки сети не подтверждены",
@@ -10319,7 +10322,9 @@
       "mining_readiness": {
         "stage": "announcement_only",
         "label": "Только анонс или код проекта",
-        "evidence": [],
+        "evidence": [
+          "Публичный RPC вернул блок 37066 (Chain ID проверен)"
+        ],
         "missing": [
           "Рабочий пул не проверен",
           "Свежие блоки сети не подтверждены",
