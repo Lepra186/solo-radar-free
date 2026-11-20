@@ -7,8 +7,10 @@ on:
     branches: [main]
     paths:
       - 'radar.py'
+      - 'project_links.py'
+      - 'test_project_links.py'
       - 'telegram_commands.py'
-      - 'test_telegram_commands.py'
+      - 'test_telegram_commands.py test_project_links.py'
       - 'telegram_sources.py'
       - 'gpu_assessment.py'
       - 'solo_intel.py'
