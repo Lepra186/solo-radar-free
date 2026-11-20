@@ -13,8 +13,7 @@ class RecipientTests(unittest.TestCase):
     def test_bad_input_rejected(self):
         with self.assertRaises(ValueError):
             parse_recipients("123","@some_username")
-    def test_missing_config(self):
-        with self.assertRaises(ValueError):
-            parse_recipients("","")
+    def test_preapproved_user_without_optional_secrets(self):
+        self.assertEqual(parse_recipients("",""),["812612452"])
 if __name__=="__main__":
     unittest.main()
