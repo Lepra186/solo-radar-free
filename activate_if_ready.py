@@ -41,8 +41,8 @@ try:
         headers={"User-Agent": "SOLO-Radar-Setup"})
     with urllib.request.urlopen(req, timeout=20) as response:
         current = json.load(response).get("result", {}).get("url", "")
-    if current == url:
-        print("Webhook already active; no registration necessary")
+    if current == url and "callback_query" in current_updates:
+        print("Webhook already active with callback_query updates")
         sys.exit(0)
 except Exception as exc:
     print("NOT READY: Cannot inspect current Telegram webhook:", type(exc).__name__)
