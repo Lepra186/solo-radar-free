@@ -18,7 +18,7 @@ export function parseAllowed(env) {
 export function commandOf(message) {
   const first = String(message?.text || "").trim().split(/\s+/)[0].toLowerCase();
   const cmd = first.split("@")[0];
-  return ["/start", "/latest", "/status", "/help"].includes(cmd) ? cmd : null;
+  return ["/start", "/latest", "/status", "/help", "/analysis"].includes(cmd) ? cmd : null;
 }
 
 const GPU = /\b(gpu|nvidia|amd|radeon|cuda|opencl|ethash|etchash|kawpow|progpow|fishhash|autolykos|equihash|verthash)\b/i;
@@ -136,6 +136,7 @@ function btn(text, callback_data) { return {text, callback_data}; }
 function linkButton(text, url) { return {text, url}; }
 function navRows() {
   return [
+    [btn("🧠 Суточный ИИ-анализ", "analysis")],
     [btn("🪙 Монеты на наблюдении", "watch:0")],
     [btn("🆕 Последние находки", "recent:0"), btn("📊 Статус", "status")],
     [btn("📨 Telegram", "source:tg:0"),btn("💻 GitHub", "source:gh:0")],
@@ -178,12 +179,41 @@ export function renderMenu(view, state = {}, now = new Date()) {
         "🆕 Последние — недавно замеченные записи",
         "📊 Статус — время последнего сканирования",
         "🔗 В карточке проекта — ссылки на анонс, Discord, пул и другие ресурсы, если они сохранены.",
+        "🧠 ИИ-анализ — суточный отчёт. OpenAI включается после подключения API-ключа.",
         "",
-        "Команды: /start /latest /status /help",
+        "Команды: /start /latest /status /help /analysis",
         "⚠️ Найденные ссылки и заявления проектов не проверены на безопасность.",
       ].join("\n"),
       reply_markup:{inline_keyboard:[[btn("🏠 Меню","home")]]},
     };
+  }
+  if (view === "analysis") {
+    const daily=state?.daily_analysis || {};
+    const picks=Array.isArray(daily.picks)?daily.picks.slice(0,4):[];
+    const updated=shortDate(daily.generated_at) || "ещё нет данных";
+    const mode=daily.mode==="openai"?"OpenAI API":"Правила (без ИИ)";
+    const lines=[
+      "🧠 SOLO RADAR • СУТОЧНЫЙ АНАЛИЗ",
+      "Режим: "+mode,
+      "📅 Отчёт: "+updated,
+      "📂 Кандидатов просмотрено: "+String(daily.candidate_count||0),
+      "",String(daily.summary||"Первый отчёт ещё не сформирован."),""
+    ];
+    for (const [i,p] of picks.entries()) {
+      lines.push((i+1)+". "+textFor(p.title).slice(0,125),
+        "Источник: "+String(p.source||"неизвестен"),
+        "⚙️ "+String(p.algorithm||"Алгоритм неизвестен"),
+        "🚀 "+(shortDate(p.launch_claim)+" (заявлено)"||"Mainnet не подтверждён"),
+        "✅ "+String(p.rationale||"требуются данные").slice(0,160),
+        "⚠️ "+String(p.risks||"риски требуют проверки").slice(0,140),"");
+    }
+    lines.push("Не доказаны работающий майнинг, ликвидность или рост цены.",
+      "Отчёт обновляется GitHub Actions раз в сутки.");
+    const buttons=picks.map((p,i)=>{const url=cleanUrl(p.url);
+      return url?[linkButton("📄 Источник "+(i+1),url)]:[];
+    }).filter(row=>row.length);
+    buttons.push([btn("🔄 Проверить отчёт","analysis"),btn("🏠 Меню","home")]);
+    return {text:lines.join("\n").slice(0,3900),reply_markup:{inline_keyboard:buttons}};
   }
   if (view === "home") {
     // Give the user an immediately useful preview instead of raw hyperlinks.
@@ -352,8 +382,17 @@ function renderProject(result,back) {
 }
 // Backwards-compatible export for offline regression tests.
 export function formatReply(command,state,now=new Date()) {
-  const view=command==="/status"?"status":command==="/help"?"help":"home";
+  const view=command==="/status"?"status":command==="/help"?"help":command==="/analysis"?"analysis":"home";
   return renderMenu(view,state,now).text;
+}
+async function getDaily() {
+  const res=await fetch(
+    "https://raw.githubusercontent.com/Lepra186/solo-radar-free/main/data/daily_analysis.json",
+    {headers:{"User-Agent":"SOLO-Radar-Daily/1.0"},
+     cf:{cacheEverything:true,cacheTtl:60}}
+  );
+  if (!res.ok) throw Error("Daily analysis unavailable "+res.status);
+  return res.json();
 }
 async function getState() {
   const res=await fetch(STATE_URL,{
@@ -405,11 +444,11 @@ export default {
         catch { /* harmless */ }
         return new Response("OK");
       }
-      if (!/^(home|status|help|watch:\d{1,3}|recent:\d{1,3}|coin:\d{1,5}:\d{1,3}:[rw]|source:(?:tg|gh|btt|pool|rss|dc|other):\d{1,3}|entry:(?:tg|gh|btt|pool|rss|dc|other):\d{1,5}:\d{1,3})$/.test(view)) {
+      if (!/^(home|status|help|analysis|watch:\d{1,3}|recent:\d{1,3}|coin:\d{1,5}:\d{1,3}:[rw]|source:(?:tg|gh|btt|pool|rss|dc|other):\d{1,3}|entry:(?:tg|gh|btt|pool|rss|dc|other):\d{1,5}:\d{1,3})$/.test(view)) {
         return new Response("OK");
       }
     } else if (command) {
-      view=command==="/status"?"status":command==="/help"?"help":"home";
+      view=command==="/status"?"status":command==="/help"?"help":command==="/analysis"?"analysis":"home";
     } else {
       return new Response("OK");
     }
@@ -417,6 +456,10 @@ export default {
     if (view!=="help") {
       try {state=await getState();}
       catch {console.error("Snapshot unavailable");}
+    }
+    if (view==="analysis") {
+      try {state.daily_analysis=await getDaily();}
+      catch {console.error("Daily report unavailable");}
     }
     const reply=renderMenu(view,state);
     try {
