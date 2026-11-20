@@ -14,6 +14,12 @@ class TelegramCommandTests(unittest.TestCase):
         result=digest({"a":ITEM},NOW)
         self.assertIn("GPU Coin launch", result)
         self.assertIn("https://example.org/launch",result)
+    def test_history_when_current_empty(self):
+        old = {"topics":{"btt:5597781":{"title":"[ANN] FlintChain GPU Mining PoW mainnet","seen":"2026-11-20T04:00:00+00:00"}}}
+        answer = digest({}, NOW, old)
+        self.assertIn("На наблюдении", answer)
+        self.assertIn("FlintChain", answer)
+        self.assertIn("предыдущих сканирований", answer)
     def test_empty_digest(self):
         self.assertIn("пока нет",digest({},NOW))
     def test_private_owner_only(self):
