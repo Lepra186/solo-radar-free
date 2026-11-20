@@ -59,7 +59,7 @@ def signal(body, now=None):
     v = assess(body, now)
     if v["excluded"] or not (v["gpu"] and v["pow"]):
         return None
-    if v["launch_utc"] and (now or True):
+    if v["launch_utc"]:
         offset = v["launch_utc"] - (now or datetime.now(timezone.utc))
         if timedelta(hours=-24) <= offset <= timedelta(hours=72):
             return "EARLY"
