@@ -143,10 +143,12 @@ def analyze(topics, now=None, limit=8):
             continue
         # Old and new GitHub discovery paths may point to the same project.
         url=(c.get('url') or '').rstrip('/').lower()
-        if url and url in urls:
+        # GitHub duplicate IDs from legacy and current scanners are common.
+        # Do not merge unrelated ANN source records merely by a shared URL.
+        if c['source']=='GitHub' and url and url in urls:
             continue
         chosen.append(c)
-        if url: urls.add(url)
+        if c['source']=='GitHub' and url: urls.add(url)
         origin_counts[c['source']]=origin_counts.get(c['source'],0)+1
         if len(chosen)>=limit: break
     return chosen
