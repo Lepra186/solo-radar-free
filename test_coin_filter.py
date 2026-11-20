@@ -30,6 +30,14 @@ class CoinOnlyTests(unittest.TestCase):
         for key,record in good:
             with self.subTest(key=key):
                 self.assertTrue(is_coin(key,record),classify(key,record))
+    def test_explicitly_incompatible_gpu_claim(self):
+        record=item("[ANN] Example | KawPow GPU PoW coin mainnet",
+                    "KawPow mentioned for comparison; GPU mining is not supported.")
+        self.assertEqual(classify("btt:301",record)[1],"explicit_gpu_exclusion")
+    def test_mainnet_still_pending(self):
+        record=item("[ANN] Example GPU KawPow PoW coin",
+                    "GPU KawPow mining in testnet only, mainnet not launched")
+        self.assertEqual(classify("btt:302",record)[1],"mainnet_not_launched")
     def test_unknown_not_reported_as_coin(self):
         self.assertFalse(is_coin("gh:10",item("user/gpu-tool","GPU mining NVIDIA AMD")))
         self.assertEqual(classify("gh:10",item("user/gpu-tool","GPU mining NVIDIA AMD"))[0],"insufficient")
