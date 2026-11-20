@@ -319,9 +319,15 @@ def main():
     if ok:
         for key, item in results.items():
             old = seen.get(key, {})
-            seen[key] = {"title": item["title"], "seen": old.get("seen", stamp),
+            seen[key] = {"title": item["title"],
+                         "seen": old.get("seen", stamp),
+                         "last_seen": stamp,
                          "url": item.get("url") or old.get("url"),
-                         "links": item.get("links") or old.get("links") or {}}
+                         "links": item.get("links") or old.get("links") or {},
+                         "body": (item.get("body") or old.get("body") or item["title"])[:1600],
+                         "source": item.get("source") or old.get("source") or "",
+                         "kind": item.get("kind") or old.get("kind") or "",
+                         "date": item.get("date") or old.get("date")}
         if len(seen) > 6000:
             seen = dict(sorted(seen.items(), key=lambda x: x[1]["seen"], reverse=True)[:6000])
     state["last_scan"] = stamp
