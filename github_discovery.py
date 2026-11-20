@@ -12,9 +12,11 @@ QUERIES=(
     'gpu mining cryptocurrency created:>{date}',
     'pow coin mainnet created:>{date}',
     'kawpow OR ethash OR fishhash created:>{date}',
+    'gpu proof of work blockchain created:>{date}',
+    'gpu coin fair launch created:>{date}',
 )
 MAX_PER_QUERY=20
-MAX_CALLS=3
+MAX_CALLS=5
 
 def parse_date(raw):
     try:
