@@ -5,7 +5,10 @@ from datetime import datetime, timezone, timedelta
 from html.parser import HTMLParser
 from project_links import from_telegram_fragment
 
-CHANNELS = ("miningrelease", "mining_note", "kryptex_channel_en")
+CHANNELS = (
+    "miningrelease", "mining_note", "kryptex_channel_en",
+    "MiningPoolStatsApp", "woolypooly_news_eng", "rplant_pool_ann",
+)
 POST = re.compile(r'data-post=["\']([a-zA-Z0-9_]+)/(\d+)["\']')
 TIME = re.compile(r'<time\b[^>]*datetime=["\']([^"\']+)')
 
