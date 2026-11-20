@@ -397,17 +397,10 @@ def main():
         "engine": "rule_based_v1",
         "disclaimer": "GPU evidence and project claims only; no verified network or market data",
     }
-    strong = [entry for entry in shortlist if entry["score"] >= 6]
-    if strong and (not previous_report or NOW - previous_report >= timedelta(hours=6)):
-        try:
-            notify(report(strong, NOW, max_items=3))
-            state["agent_last_digest"] = stamp
-            print("Research agent: digest delivered; viable watchlist:", len(strong))
-        except Exception as exc:
-            print("Research agent: digest not delivered:", type(exc).__name__)
-    else:
-        print("Research agent: analyzed", len(seen), "records, candidates:", len(shortlist),
-              "digest skipped (no qualifying projects or cooldown)")
+    # Daily analytical notifications are handled by daily-ai.yml, not this frequent
+    # discovery scan. Keep fresh rule-based evidence in state for that job.
+    print("Research agent: analyzed", len(seen), "records; shortlist:", len(shortlist),
+          "daily delivery delegated to Daily OpenAI PoW Analyst")
 
     state["last_scan"] = stamp
     STATE.parent.mkdir(parents=True, exist_ok=True)
