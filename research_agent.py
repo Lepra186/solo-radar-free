@@ -137,11 +137,16 @@ def analyze(topics, now=None, limit=8):
         if candidate: examined.append(candidate)
     examined.sort(key=lambda c:(-c['score'], -(aware(c['published']).timestamp() if c['published'] else 0), c['key']))
     # Prevent one listing service from consuming all featured slots.
-    chosen=[]; origin_counts={}
+    chosen=[]; origin_counts={}; urls=set()
     for c in examined:
         if origin_counts.get(c['source'],0)>=3:
             continue
+        # Old and new GitHub discovery paths may point to the same project.
+        url=(c.get('url') or '').rstrip('/').lower()
+        if url and url in urls:
+            continue
         chosen.append(c)
+        if url: urls.add(url)
         origin_counts[c['source']]=origin_counts.get(c['source'],0)+1
         if len(chosen)>=limit: break
     return chosen
