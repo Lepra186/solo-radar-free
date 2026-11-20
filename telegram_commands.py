@@ -1,7 +1,7 @@
 """Telegram command polling for GitHub Actions scheduled runner.
 
 No long-running process: /start is answered on next workflow execution.
-Only the owner chat (TELEGRAM_CHAT_ID) is authorized.
+Only explicitly allowed Telegram chat IDs are authorized.
 """
 import json
 import os
@@ -97,8 +97,9 @@ def digest(results, now, state=None):
               "Ответ — после ближайшего GitHub Actions; возможны задержки."]
     return "\n".join(lines)[:3900]
 
-def process_commands(token, owner_chat, state, results, now, send):
+def process_commands(token, authorized_chats, state, results, now, send):
     """Keep offset even for unrelated or unauthorized commands. Return count."""
+    allowed = {str(id_) for id_ in authorized_chats}
     old_offset = int(state.get("telegram_update_offset", 0))
     updates = get_updates(token, old_offset)
     count = 0
@@ -112,7 +113,7 @@ def process_commands(token, owner_chat, state, results, now, send):
         msg = update.get("message") or {}
         chat_id = str((msg.get("chat") or {}).get("id", ""))
         command = command_name(msg)
-        if chat_id == str(owner_chat) and command:
+        if chat_id in allowed and command:
             if command in ("/start", "/latest"):
                 reply = digest(results, now, state)
             elif command == "/status":
@@ -128,7 +129,7 @@ def process_commands(token, owner_chat, state, results, now, send):
                          "/status — статус сканирования\n"
                          "/help — эта справка\n"
                          "Ответ не мгновенный: GitHub проверяет сообщения по расписанию.")
-            send(reply)
+            send(reply, chat_id)
             count += 1
         old_offset = update_id + 1
         state["telegram_update_offset"] = old_offset
