@@ -48,11 +48,39 @@ const LINK_BUTTONS = [
   ["explorer", "🔎 Блоки"],
   ["website", "🌐 Сайт"],
 ];
+export function sourceGroup(key, item={}) {
+  if (key.startsWith("btt:")) return "btt";
+  if (key.startsWith("gh:") || key.startsWith("gh-")) return "gh";
+  if (key.startsWith("pool:")) return "pool";
+  if (key.startsWith("tg:")) return "tg";
+  if (key.startsWith("rss:")) return "rss";
+  if (key.startsWith("dc:")) return "dc";
+  const name=String(item.source || "").toLowerCase();
+  if (name.includes("github")) return "gh";
+  if (name.includes("telegram")) return "tg";
+  return "other";
+}
+const SOURCE_LABELS={tg:"📨 Telegram",gh:"💻 GitHub",btt:"🗣️ Bitcointalk",pool:"⛏️ Пулы",rss:"📰 RSS",dc:"👥 Discord",other:"📂 Другое"};
+function potentialCoin(key,item) {
+  const text=String(item.body || item.title || "");
+  const title=String(item.title || "");
+  if (EXCLUDE.test(text) || SOFTWARE.test(title)) return false;
+  if (sourceGroup(key,item)==="pool" || sourceGroup(key,item)==="rss") return false;
+  const hasGpu = GPU.test(text);
+  const hasMining = POW.test(text) || /\b(coin name|ticker|mainnet|genesis)\b/i.test(text);
+  return hasGpu && hasMining;
+}
+export function sourceEntries(state, group) {
+  return Object.entries(state?.topics || {})
+    .filter(([key,item])=>sourceGroup(key,item)===group)
+    .map(([key,item])=>({key,item}))
+    .sort((a,b)=>String(b.item?.last_seen || b.item?.seen || "").localeCompare(String(a.item?.last_seen || a.item?.seen || "")));
+}
 export function candidatesFromState(state) {
   return Object.entries(state?.topics || {})
-    .filter(([, item]) => isCandidate(item?.title))
-    .map(([key, item]) => ({key, item}))
-    .sort((a, b) => String(b.item?.seen || "").localeCompare(String(a.item?.seen || "")));
+    .filter(([key,item]) => potentialCoin(key,item))
+    .map(([key,item]) => ({key,item}))
+    .sort((a,b)=>String(b.item?.last_seen || b.item?.seen || "").localeCompare(String(a.item?.last_seen || a.item?.seen || "")));
 }
 function btn(text, callback_data) { return {text, callback_data}; }
 function linkButton(text, url) { return {text, url}; }
@@ -60,6 +88,9 @@ function navRows() {
   return [
     [btn("🪙 Монеты на наблюдении", "watch:0")],
     [btn("🆕 Последние находки", "recent:0"), btn("📊 Статус", "status")],
+    [btn("📨 Telegram", "source:tg:0"),btn("💻 GitHub", "source:gh:0")],
+    [btn("🗣️ Bitcointalk", "source:btt:0"),btn("⛏️ Пулы", "source:pool:0")],
+    [btn("📰 RSS", "source:rss:0"),btn("👥 Discord", "source:dc:0")],
     [btn("ℹ️ Справка", "help")],
   ];
 }
@@ -122,6 +153,40 @@ export function renderMenu(view, state = {}, now = new Date()) {
       reply_markup:{inline_keyboard:navRows()},
     };
   }
+  const sourceMatch=/^source:(tg|gh|btt|pool|rss|dc|other):(\d{1,3})$/.exec(view);
+  if (sourceMatch) {
+    const group=sourceMatch[1], items=sourceEntries(state,group);
+    const pages=Math.max(1,Math.ceil(items.length/PAGE_SIZE));
+    const page=Math.min(Number(sourceMatch[2]),pages-1);
+    const rows=items.slice(page*PAGE_SIZE,(page+1)*PAGE_SIZE).map((x,i)=>[
+      btn((page*PAGE_SIZE+i+1)+". "+textFor(x.item.title).slice(0,40),
+          "entry:"+group+":"+(page*PAGE_SIZE+i)+":"+page)
+    ]);
+    const nav=[];
+    if (page>0) nav.push(btn("◀️", "source:"+group+":"+(page-1)));
+    if (pages>1) nav.push(btn((page+1)+"/"+pages,"noop"));
+    if (page<pages-1) nav.push(btn("▶️", "source:"+group+":"+(page+1)));
+    if (nav.length) rows.push(nav);
+    rows.push([btn("🏠 Главное меню","home")]);
+    const explanation=group==="gh"?"Репозиторий не доказывает запуск монеты":
+      group==="pool"?"Новости пула не доказывают возможность добычи":
+      group==="tg"?"Анонсы Telegram требуют независимой проверки":
+      group==="rss"?"Публикации могут быть не о новых монетах":
+      group==="dc"?"Читаются только разрешённые каналы":"Дата запуска и GPU-совместимость не проверены";
+    return {text:[SOURCE_LABELS[group]+" • ПУБЛИКАЦИИ", "",
+      "Найдено записей: "+items.length+" • Страница "+(page+1)+"/"+pages,
+      "🕒 Последняя проверка: "+info.text+(info.stale?" ⚠️":""),
+      "",items.length?"Выбери публикацию:":"Пока нет доступных публикаций.",
+      "", "⚠️ "+explanation+"."].join("\n"),
+      reply_markup:{inline_keyboard:rows}};
+  }
+  const entryMatch=/^entry:(tg|gh|btt|pool|rss|dc|other):(\d{1,5}):(\d{1,3})$/.exec(view);
+  if (entryMatch) {
+    const group=entryMatch[1], index=Number(entryMatch[2]), page=Number(entryMatch[3]);
+    const result=sourceEntries(state,group)[index];
+    if (!result) return renderMenu("source:"+group+":0",state,now);
+    return renderProject(result,"source:"+group+":"+page);
+  }
   const pageMatch = /^(watch|recent):(\d{1,3})$/.exec(view);
   if (pageMatch) {
     const isRecent = pageMatch[1] === "recent";
@@ -160,35 +225,37 @@ export function renderMenu(view, state = {}, now = new Date()) {
     const back=coinMatch[3]==="r"?"recent:":"watch:";
     const result=list[index];
     if (!result) return renderMenu("watch:0",state,now);
-    const {key,item}=result;
-    const links = [];
-    const announcement=announcementUrl(key,item);
-    if (announcement) links.push(linkButton("📄 Анонс",announcement));
-    for (const [kind,label] of LINK_BUTTONS) {
-      const u=cleanUrl(item?.links?.[kind]);
-      if (u) links.push(linkButton(label,u));
-    }
-    const rows=[];
-    for (let i=0;i<links.length;i+=2) rows.push(links.slice(i,i+2));
-    rows.push([btn("◀️ К списку", back+page),btn("🏠 Меню","home")]);
-    return {
-      text:[
-        "🪙 КАРТОЧКА GPU PoW-ПРОЕКТА",
-        "",
-        textFor(item.title).slice(0,180),
-        "",
-        "📅 Впервые замечен: "+String(item.seen||"неизвестно").slice(0,19).replace("T"," ")+" UTC",
-        "🔗 Ссылок найдено: "+links.length,
-        "",
-        "Открой первоисточник и проверь действительность пула, кошелька и Discord.",
-        "⚠️ Поддержка GPU, premine, сложность сети и возможность продажи не проверены.",
-      ].join("\n"),
-      reply_markup:{inline_keyboard:rows},
-    };
+    return renderProject(result,back+page);
   }
   return renderMenu("home",state,now);
 }
 
+function renderProject(result,back) {
+  const {key,item}=result;
+  const links=[];
+  const announcement=announcementUrl(key,item);
+  if (announcement) links.push(linkButton("📄 Первоисточник",announcement));
+  for (const [kind,label] of LINK_BUTTONS) {
+    const url=cleanUrl(item?.links?.[kind]);
+    if (url && url!==announcement) links.push(linkButton(label,url));
+  }
+  const rows=[];
+  for (let i=0;i<links.length;i+=2) rows.push(links.slice(i,i+2));
+  rows.push([btn("◀️ К списку",back),btn("🏠 Меню","home")]);
+  const kind=String(item.kind || "");
+  const group=sourceGroup(key,item);
+  const note=kind==="repository" || group==="gh"?"Код на GitHub не доказывает работающий mainnet.":
+    kind==="news" || ["pool","rss"].includes(group)?"Новость не подтверждает запуск GPU-монеты.":
+    "Данные из анонса не проверены.";
+  return {
+    text:["🔎 ПУБЛИКАЦИЯ • "+SOURCE_LABELS[group], "",
+      textFor(item.title).slice(0,180), "",
+      "📅 Найдено: "+String(item.seen || "неизвестно").slice(0,19).replace("T"," "),
+      "🔗 Доступных ссылок: "+links.length, "",
+      "⚠️ "+note+" Проверяй кошельки, пулы и Discord перед использованием."].join("\n"),
+    reply_markup:{inline_keyboard:rows}
+  };
+}
 // Backwards-compatible export for offline regression tests.
 export function formatReply(command,state,now=new Date()) {
   const view=command==="/status"?"status":command==="/help"?"help":"home";
@@ -244,7 +311,7 @@ export default {
         catch { /* harmless */ }
         return new Response("OK");
       }
-      if (!/^(home|status|help|watch:\d{1,3}|recent:\d{1,3}|coin:\d{1,5}:\d{1,3}:[rw])$/.test(view)) {
+      if (!/^(home|status|help|watch:\d{1,3}|recent:\d{1,3}|coin:\d{1,5}:\d{1,3}:[rw]|source:(?:tg|gh|btt|pool|rss|dc|other):\d{1,3}|entry:(?:tg|gh|btt|pool|rss|dc|other):\d{1,5}:\d{1,3})$/.test(view)) {
         return new Response("OK");
       }
     } else if (command) {
