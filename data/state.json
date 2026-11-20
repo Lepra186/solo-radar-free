@@ -397,7 +397,7 @@
         },
         "chain_height_progression": false,
         "rpc_height_progression": false,
-        "checked_at": "2026-11-20T14:18+00:00"
+        "checked_at": "2026-11-20T21:53+00:00"
       },
       "economics": {
         "status": "insufficient_data",
@@ -455,7 +455,7 @@
         "archived": false,
         "name": "Lakylife/quinvium"
       },
-      "last_repo_check": "2026-11-20T14:18:37+00:00",
+      "last_repo_check": "2026-11-20T21:53:49+00:00",
       "links": {
         "explorer": "https://explorer.quinvium.com"
       }
@@ -2344,7 +2344,7 @@
     "pool:2026-11-19:0": {
       "title": "PoolPayCoin now has an announcement thread on BitcoinTalk -- specs, mining instructions and the real pool-pay.com Shop utility (NFTs, AI generation, p",
       "seen": "2026-11-20T05:22:56+00:00",
-      "last_seen": "2026-11-20T14:18:37+00:00",
+      "last_seen": "2026-11-20T21:53:49+00:00",
       "url": "https://pool-pay.com/",
       "links": {},
       "body": "PoolPayCoin now has an announcement thread on BitcoinTalk -- specs, mining instructions and the real pool-pay.com Shop utility (NFTs, AI generation, pool fee-waiver pass), all in one place.",
@@ -2429,7 +2429,7 @@
     "pool:2026-11-19:1": {
       "title": "Added a pool fee-waiver pass to the Shop at shop.pool-pay.com/subscription.html : pay with PPC or SOL (a week to a year, longer terms a bit cheaper pe",
       "seen": "2026-11-20T05:22:56+00:00",
-      "last_seen": "2026-11-20T14:18:37+00:00",
+      "last_seen": "2026-11-20T21:53:49+00:00",
       "url": "https://pool-pay.com/",
       "links": {},
       "body": "Added a pool fee-waiver pass to the Shop at shop.pool-pay.com/subscription.html : pay with PPC or SOL (a week to a year, longer terms a bit cheaper per day) and the pool fee is rebated straight back onto your balance as a bonus, automatically, every few minutes, on every coin you mine directly. Requires a free pool-pay.com account (same login as the main das",
@@ -2514,7 +2514,7 @@
     "pool:2026-11-18:2": {
       "title": "\"pool-pay.com Critters\" is now officially listed on Magic Eden , Solana's biggest NFT marketplace -- a real collection page with its own listings, off",
       "seen": "2026-11-20T05:22:56+00:00",
-      "last_seen": "2026-11-20T14:18:37+00:00",
+      "last_seen": "2026-11-20T21:53:49+00:00",
       "url": "https://pool-pay.com/",
       "links": {},
       "body": "\"pool-pay.com Critters\" is now officially listed on Magic Eden , Solana's biggest NFT marketplace -- a real collection page with its own listings, offers and trade history, not just an unverified mint. Minting new critters is still only through shop.pool-pay.com (pay with SOL or PPC); Magic Eden is for browsing and reselling what's already minted. Link added",
@@ -2599,7 +2599,7 @@
     "pool:2026-11-18:3": {
       "title": "Added AI generation to the Shop at shop.pool-pay.com/generate.html : buy a credit package with PPC or SOL, spend it on real Google AI generation (imag",
       "seen": "2026-11-20T05:22:56+00:00",
-      "last_seen": "2026-11-20T14:18:37+00:00",
+      "last_seen": "2026-11-20T21:53:49+00:00",
       "url": "https://pool-pay.com/",
       "links": {},
       "body": "Added AI generation to the Shop at shop.pool-pay.com/generate.html : buy a credit package with PPC or SOL, spend it on real Google AI generation (images, video, voice, music) — a redemption code is all you need, no account. Reference-image editing, a 9:16 mobile format toggle, a choice of 30 TTS voices, and a 360p/720p video resolution picker are all wired u",
@@ -2684,7 +2684,7 @@
     "pool:2026-11-19:4": {
       "title": "У PoolPayCoin появилась тема-анонс на BitcoinTalk — характеристики, инструкция по майнингу и реальная польза от магазина pool-pay.com (NFT, AI-генерац",
       "seen": "2026-11-20T05:22:56+00:00",
-      "last_seen": "2026-11-20T14:18:37+00:00",
+      "last_seen": "2026-11-20T21:53:49+00:00",
       "url": "https://pool-pay.com/",
       "links": {},
       "body": "У PoolPayCoin появилась тема-анонс на BitcoinTalk — характеристики, инструкция по майнингу и реальная польза от магазина pool-pay.com (NFT, AI-генерация, абонемент без комиссии на пуле) в одном месте.",
@@ -2769,7 +2769,7 @@
     "pool:2026-11-19:5": {
       "title": "В магазине появился абонемент без комиссии на пуле: shop.pool-pay.com/subscription.html . Оплата PPC или SOL (от недели до года, чем дольше срок — тем",
       "seen": "2026-11-20T05:22:56+00:00",
-      "last_seen": "2026-11-20T14:18:37+00:00",
+      "last_seen": "2026-11-20T21:53:49+00:00",
       "url": "https://pool-pay.com/",
       "links": {},
       "body": "В магазине появился абонемент без комиссии на пуле: shop.pool-pay.com/subscription.html . Оплата PPC или SOL (от недели до года, чем дольше срок — тем дешевле в пересчёте на день), комиссия пула автоматически возвращается бонусом на баланс каждые несколько минут, на любой монете, которую майните напрямую. Нужен бесплатный аккаунт pool-pay.com (тот же логин,",
@@ -2854,7 +2854,7 @@
     "pool:2026-11-18:6": {
       "title": "«pool-pay.com Critters» теперь официально в листинге на Magic Eden — крупнейшем NFT-маркетплейсе на Solana: настоящая страница коллекции со своими лис",
       "seen": "2026-11-20T05:22:56+00:00",
-      "last_seen": "2026-11-20T14:18:37+00:00",
+      "last_seen": "2026-11-20T21:53:49+00:00",
       "url": "https://pool-pay.com/",
       "links": {},
       "body": "«pool-pay.com Critters» теперь официально в листинге на Magic Eden — крупнейшем NFT-маркетплейсе на Solana: настоящая страница коллекции со своими листингами, офферами и историей сделок, а не непроверенный минт. Минтить новых критеров всё так же можно только через shop.pool-pay.com (оплата SOL или PPC); Magic Eden — для просмотра и перепродажи уже сминченног",
@@ -2939,7 +2939,7 @@
     "pool:2026-11-18:7": {
       "title": "Добавили AI-генерацию в магазин на shop.pool-pay.com/generate.html : покупаете пакет кредитов за PPC или SOL, тратите на настоящую генерацию через Goo",
       "seen": "2026-11-20T05:22:56+00:00",
-      "last_seen": "2026-11-20T14:18:37+00:00",
+      "last_seen": "2026-11-20T21:53:49+00:00",
       "url": "https://pool-pay.com/",
       "links": {},
       "body": "Добавили AI-генерацию в магазин на shop.pool-pay.com/generate.html : покупаете пакет кредитов за PPC или SOL, тратите на настоящую генерацию через Google AI (картинки, видео, голос, музыка) — нужен только код, аккаунт не требуется. Работают редактирование по референс-картинке, мобильный формат 9:16, выбор из 30 голосов озвучки и выбор разрешения видео (360p/",
@@ -3100,7 +3100,7 @@
     "tg:miningrelease:281": {
       "title": "‼️ Coin Name: Neural Engine Byte Ticker: $NEB Algo: Nebhash",
       "seen": "2026-11-20T05:27:58+00:00",
-      "last_seen": "2026-11-20T14:18:37+00:00",
+      "last_seen": "2026-11-20T21:53:49+00:00",
       "url": "https://t.me/miningrelease/281",
       "links": {
         "website": "https://neuralenginebyte.org/",
@@ -3971,28 +3971,28 @@
       "coin_reason": "gpu_pow_coin_claim",
       "pool_evidence": {
         "source": "Mining Scan",
-        "checked_at": "2026-11-20T08:59:06Z",
+        "checked_at": "2026-11-20T21:54:02Z",
         "symbol": "NEXC",
         "name": "NEX Chain",
         "algorithm": "Ethash",
         "pools_reported": 2,
         "blocks_48h_reported": 0,
-        "last_block_at": "2026-11-20T08:46:09+00:00",
+        "last_block_at": "2026-11-20T21:38:07+00:00",
         "network_hashrate_reported": null,
         "network_hashrate_unit": null,
-        "total_miners_reported": null,
+        "total_miners_reported": 5,
         "note": "Каталог пулов, не независимая проверка mainnet или выплат"
       },
       "mining_readiness": {
         "stage": "rpc_height_advanced",
         "label": "Публичный RPC сообщил рост высоты сети",
         "evidence": [
-          "Пулы в каталоге Mining Scan: 2",
-          "В каталоге есть недавняя отметка найденного блока",
-          "Публичный RPC вернул блок 98344 (Chain ID проверен)",
-          "Высота RPC выросла на 714 между двумя чтениями"
+          "Публичный RPC вернул блок 100809 (Chain ID проверен)",
+          "Высота RPC выросла на 2465 между двумя чтениями"
         ],
         "missing": [
+          "Рабочий пул не проверен",
+          "Свежие блоки сети не подтверждены",
           "Совместимость GTX 10xx / RTX 20xx–50xx, Stratum и выплаты не проверены",
           "Ликвидность и возможность продажи не проверены"
         ],
@@ -4035,12 +4035,12 @@
           "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
         },
         "source_freshness": {
-          "pool": true,
+          "pool": false,
           "network": false
         },
         "chain_height_progression": false,
         "rpc_height_progression": true,
-        "checked_at": "2026-11-20T14:18+00:00"
+        "checked_at": "2026-11-20T21:53+00:00"
       },
       "economics": {
         "status": "insufficient_data",
@@ -4093,22 +4093,22 @@
         "provider": "public project JSON-RPC",
         "endpoint": "https://rpc.getnexwallet.com",
         "chain_id": 6396,
-        "last_block_height": 98344,
-        "last_block_hash": "0x85c5c83c848882b3cbf735df1bd05cdd5957b6a2257cc872c23eb57fc783a85c",
-        "last_block_time": "2026-11-20T14:18:20+00:00",
-        "difficulty_from_header": 11828740549,
-        "checked_at": "2026-11-20T14:18:37+00:00",
+        "last_block_height": 100809,
+        "last_block_hash": "0xd1a5da7e563a513a083b303ea6eb7f92bc1d2c8e86b0f799c86af104338717f2",
+        "last_block_time": "2026-11-20T21:53:46+00:00",
+        "difficulty_from_header": 16271561447,
+        "checked_at": "2026-11-20T21:53:49+00:00",
         "source_reference": "https://bitcointalk.org/index.php?topic=5599371.0",
         "note": "RPC chain ID совпал; это не независимый аудит PoW и не проверка выплат"
       },
       "rpc_progress": {
         "source": "project public JSON-RPC",
         "chain_id": 6396,
-        "first_height": 97630,
-        "last_height": 98344,
-        "blocks_increased": 714,
-        "first_checked": "2026-11-20T10:44:32+00:00",
-        "last_checked": "2026-11-20T14:18:37+00:00",
+        "first_height": 98344,
+        "last_height": 100809,
+        "blocks_increased": 2465,
+        "first_checked": "2026-11-20T14:18:37+00:00",
+        "last_checked": "2026-11-20T21:53:49+00:00",
         "note": "Рост между чтениями RPC; PoW и получение выплат не проверены"
       }
     },
@@ -8272,7 +8272,7 @@
         },
         "chain_height_progression": false,
         "rpc_height_progression": false,
-        "checked_at": "2026-11-20T14:18+00:00"
+        "checked_at": "2026-11-20T21:53+00:00"
       },
       "economics": {
         "status": "insufficient_data",
@@ -8911,7 +8911,7 @@
         },
         "chain_height_progression": false,
         "rpc_height_progression": false,
-        "checked_at": "2026-11-20T14:18+00:00"
+        "checked_at": "2026-11-20T21:53+00:00"
       },
       "economics": {
         "status": "insufficient_data",
@@ -10183,7 +10183,7 @@
     "gh:1457287638": {
       "title": "good-mining/good-miner",
       "seen": "2026-11-20T08:17:00+00:00",
-      "last_seen": "2026-11-20T14:18:37+00:00",
+      "last_seen": "2026-11-20T21:53:49+00:00",
       "url": "https://github.com/good-mining/good-miner",
       "links": {},
       "body": "good-mining/good-miner Rust cryptocurrency miner for NVIDIA, AMD and Intel GPUs and CPUs. One binary, auto profit switching, built-in dashboard. Windows and Linux.",
@@ -10274,7 +10274,7 @@
     "gh:1457186269": {
       "title": "Lakylife/quinvium",
       "seen": "2026-11-20T08:17:00+00:00",
-      "last_seen": "2026-11-20T14:18:37+00:00",
+      "last_seen": "2026-11-20T21:53:49+00:00",
       "url": "https://github.com/Lakylife/quinvium",
       "links": {
         "explorer": "https://explorer.quinvium.com"
@@ -10366,7 +10366,7 @@
         },
         "chain_height_progression": false,
         "rpc_height_progression": false,
-        "checked_at": "2026-11-20T14:18+00:00"
+        "checked_at": "2026-11-20T21:53+00:00"
       },
       "economics": {
         "status": "insufficient_data",
@@ -10415,12 +10415,12 @@
         ],
         "note": "Сценарии энергии — не измерение GPU/рига. Доходность и продажа не подтверждены."
       },
-      "last_repo_check": "2026-11-20T14:18:37+00:00"
+      "last_repo_check": "2026-11-20T21:53:49+00:00"
     },
     "gh:1449663269": {
       "title": "gacanga/crypto-connection-miner",
       "seen": "2026-11-20T08:17:00+00:00",
-      "last_seen": "2026-11-20T14:18:37+00:00",
+      "last_seen": "2026-11-20T21:53:49+00:00",
       "url": "https://github.com/gacanga/crypto-connection-miner",
       "links": {},
       "body": "gacanga/crypto-connection-miner Crypto Connection Miner (formerly GostMiner): free open-source miner, no dev fee - NVIDIA GPUs for GOSTcoin, Bitmark, Daler (Ting), Ycash, NEX Chain (Ethash) and Chipcoin; Chipcoin also on the CPU, including macOS on Apple Silicon. Windows, Linux, macOS. Made for the Crypto Connection pool (crypto-connection.net).",
@@ -10511,7 +10511,7 @@
     "gh:1455827083": {
       "title": "MrM002/NexusSwitch",
       "seen": "2026-11-20T08:17:00+00:00",
-      "last_seen": "2026-11-20T14:18:37+00:00",
+      "last_seen": "2026-11-20T21:53:49+00:00",
       "url": "https://github.com/MrM002/NexusSwitch",
       "links": {},
       "body": "MrM002/NexusSwitch ⚡ Open-Source Crypto Auto Profit-Switcher with a Self-Hosted Telegram Bot, Anti-Spike Filters & Live Profit Boost Tracking.",
@@ -10602,7 +10602,7 @@
     "gh:1457230305": {
       "title": "kobold-dev/kobold-miner",
       "seen": "2026-11-20T08:17:00+00:00",
-      "last_seen": "2026-11-20T14:18:37+00:00",
+      "last_seen": "2026-11-20T21:53:49+00:00",
       "url": "https://github.com/kobold-dev/kobold-miner",
       "links": {},
       "body": "kobold-dev/kobold-miner NVIDIA GPU miner for Pearl (PRL), Ravencoin (RVN), Parano1d (NOID) and Quantus (QTC), CPU miner for Monero and Zephyr (RandomX). Windows, Linux, HiveOS. GPG-signed builds.",
@@ -10859,7 +10859,7 @@
     "tg:rplant_pool_ann:300": {
       "title": "Nov 19 delist alphanumeric, cmusicai, bitmonero(BMR), kadikama, myt, zerqavon",
       "seen": "2026-11-20T08:50:53+00:00",
-      "last_seen": "2026-11-20T14:18:37+00:00",
+      "last_seen": "2026-11-20T21:53:49+00:00",
       "url": "https://t.me/rplant_pool_ann/300",
       "links": {
         "pool": "https://t.me/rplant_pool_ann"
@@ -11029,7 +11029,7 @@
     "gh:1452657235": {
       "title": "muhammad-ahmed-ssuet/muhammad-ahmed-ssuet.github.io",
       "seen": "2026-11-20T09:14:14+00:00",
-      "last_seen": "2026-11-20T14:18:37+00:00",
+      "last_seen": "2026-11-20T21:53:49+00:00",
       "url": "https://github.com/muhammad-ahmed-ssuet/muhammad-ahmed-ssuet.github.io",
       "links": {},
       "body": "muhammad-ahmed-ssuet/muhammad-ahmed-ssuet.github.io Secure a proof-of-useful-work GPU blockchain with auditable int8 matrix-product jobs for paid AI inference and rendering.",
@@ -11450,11 +11450,11 @@
       }
     }
   },
-  "last_scan": "2026-11-20T14:18:37+00:00",
+  "last_scan": "2026-11-20T21:53:49+00:00",
   "telegram_update_offset": 229240560,
   "second_user_welcomed": true,
   "agent": {
-    "updated_at": "2026-11-20T14:18:37+00:00",
+    "updated_at": "2026-11-20T21:53:49+00:00",
     "total_scanned": 137,
     "items": [
       {
@@ -11532,7 +11532,7 @@
       "name": "[ANN] NEX Chain (NEXC) | Ethash PoW | GPU & CPU | Free Solo Miner | EVM + DEX",
       "source": "Bitcointalk",
       "score": 11,
-      "last_reviewed": "2026-11-20T14:18:37+00:00",
+      "last_reviewed": "2026-11-20T21:53:49+00:00",
       "reason": "указан GPU-алгоритм: Ethash; упомянут SOLO",
       "status": "MONITOR"
     },
@@ -11540,7 +11540,7 @@
       "name": "[GitHub] Lakylife/quinvium — Quinvium (QU): a programmable proof-of-work blockchain with an EVM, GPU mining (Ethash), full node, wallet, ex",
       "source": "GitHub",
       "score": 5,
-      "last_reviewed": "2026-11-20T14:18:37+00:00",
+      "last_reviewed": "2026-11-20T21:53:49+00:00",
       "reason": "указан GPU-алгоритм: Ethash; упомянут майнинг/пул",
       "status": "MONITOR"
     },
@@ -11548,14 +11548,14 @@
       "name": "Lakylife/quinvium",
       "source": "GitHub",
       "score": 5,
-      "last_reviewed": "2026-11-20T14:18:37+00:00",
+      "last_reviewed": "2026-11-20T21:53:49+00:00",
       "reason": "указан GPU-алгоритм: Ethash; упомянут майнинг/пул",
       "status": "MONITOR"
     }
   },
   "tracking_stats": {
     "added": 0,
-    "removed": 1,
+    "removed": 0,
     "active": 3,
     "github_rechecked": 2
   },
@@ -11572,7 +11572,7 @@
     "items": 0
   },
   "mining_scan": {
-    "checked_at": "2026-11-20T08:59:06Z",
+    "checked_at": "2026-11-20T21:54:02Z",
     "stale": false,
     "source": "https://mining-scan.com/api/export/coins",
     "coins": [
@@ -11581,8 +11581,12 @@
         "name": "Ravencoin",
         "algorithm": "KawPow",
         "pools": 62,
-        "blocks_48h": 1365,
+        "blocks_48h": 1337,
         "last_block_at": "2026-11-17T23:14:27.786344+00:00",
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": 2062,
+        "asset_key": "legacy:rvn",
         "slug": "rvn"
       },
       {
@@ -11590,8 +11594,12 @@
         "name": "Ethereum Classic",
         "algorithm": "Etchash",
         "pools": 55,
-        "blocks_48h": 4087,
+        "blocks_48h": 4039,
         "last_block_at": "2026-10-30T07:12:18.045265+00:00",
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": 1796,
+        "asset_key": "legacy:etc",
         "slug": "etc"
       },
       {
@@ -11599,8 +11607,12 @@
         "name": "Zcash",
         "algorithm": "Equihash",
         "pools": 60,
-        "blocks_48h": 401,
-        "last_block_at": "2026-11-20T05:31:43.946922+00:00",
+        "blocks_48h": 381,
+        "last_block_at": "2026-11-20T19:54:14.408668+00:00",
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": 1131,
+        "asset_key": "legacy:zec",
         "slug": "zec"
       },
       {
@@ -11608,8 +11620,12 @@
         "name": "Ergo",
         "algorithm": "Autolykos",
         "pools": 24,
-        "blocks_48h": 886,
-        "last_block_at": "2026-11-20T08:04:09.608000+00:00",
+        "blocks_48h": 888,
+        "last_block_at": "2026-11-20T21:19:16.931000+00:00",
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": 430,
+        "asset_key": "legacy:erg",
         "slug": "erg"
       },
       {
@@ -11617,8 +11633,12 @@
         "name": "Zano",
         "algorithm": "ProgPowZ",
         "pools": 24,
-        "blocks_48h": 562,
+        "blocks_48h": 556,
         "last_block_at": null,
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": 404,
+        "asset_key": "legacy:zano",
         "slug": "zano"
       },
       {
@@ -11626,8 +11646,12 @@
         "name": "Grin",
         "algorithm": "ProgPoW | Cuckoo",
         "pools": 11,
-        "blocks_48h": 1199,
+        "blocks_48h": 1378,
         "last_block_at": null,
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": 181,
+        "asset_key": "legacy:grin",
         "slug": "grin"
       },
       {
@@ -11635,8 +11659,12 @@
         "name": "EthereumPOW",
         "algorithm": "Ethash",
         "pools": 15,
-        "blocks_48h": 1497,
+        "blocks_48h": 1512,
         "last_block_at": "2026-10-24T05:28:58.250328+00:00",
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": 106,
+        "asset_key": "legacy:ethw",
         "slug": "ethw"
       },
       {
@@ -11644,8 +11672,12 @@
         "name": "Neurai",
         "algorithm": "KawPow",
         "pools": 25,
-        "blocks_48h": 2281,
+        "blocks_48h": 2333,
         "last_block_at": "2026-09-09T21:57:12.926993+00:00",
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": 106,
+        "asset_key": "legacy:xna",
         "slug": "xna"
       },
       {
@@ -11653,8 +11685,12 @@
         "name": "Aeternity",
         "algorithm": "ProgPoW | Cuckoo",
         "pools": 4,
-        "blocks_48h": 866,
+        "blocks_48h": 856,
         "last_block_at": null,
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": 33,
+        "asset_key": "legacy:ae",
         "slug": "ae"
       },
       {
@@ -11664,6 +11700,10 @@
         "pools": 10,
         "blocks_48h": 0,
         "last_block_at": "2026-11-13T17:47:59.866584+00:00",
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": 27,
+        "asset_key": "legacy:yec",
         "slug": "yec"
       },
       {
@@ -11671,18 +11711,13 @@
         "name": "VARRR",
         "algorithm": "Equihash",
         "pools": 1,
-        "blocks_48h": 0,
-        "last_block_at": "2026-11-20T08:22:11.557316+00:00",
+        "blocks_48h": 33,
+        "last_block_at": "2026-11-20T12:11:02.721296+00:00",
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": 20,
+        "asset_key": "legacy:varrr",
         "slug": "varrr"
-      },
-      {
-        "symbol": "OCTA",
-        "name": "OctaSpace",
-        "algorithm": "Ethash",
-        "pools": 13,
-        "blocks_48h": 56,
-        "last_block_at": "2026-11-20T06:10:35.512021+00:00",
-        "slug": "octa"
       },
       {
         "symbol": "EXCC",
@@ -11691,43 +11726,37 @@
         "pools": 2,
         "blocks_48h": 0,
         "last_block_at": null,
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": 9,
+        "asset_key": "legacy:excc",
         "slug": "excc"
+      },
+      {
+        "symbol": "OCTA",
+        "name": "OctaSpace",
+        "algorithm": "Ethash",
+        "pools": 13,
+        "blocks_48h": 99,
+        "last_block_at": "2026-11-20T19:11:38.032844+00:00",
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": 8,
+        "asset_key": "legacy:octa",
+        "slug": "octa"
       },
       {
         "symbol": "NEOX",
         "name": "Neoxa",
         "algorithm": "KawPow",
         "pools": 17,
-        "blocks_48h": 28,
-        "last_block_at": "2026-11-20T08:49:12.339062+00:00",
+        "blocks_48h": 26,
+        "last_block_at": "2026-11-20T18:54:18.412252+00:00",
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": 5,
+        "asset_key": "legacy:neox",
         "slug": "neox"
-      },
-      {
-        "symbol": "ARRR",
-        "name": "Pirate Chain",
-        "algorithm": "Equihash",
-        "pools": 9,
-        "blocks_48h": 0,
-        "last_block_at": "2026-11-20T06:26:14.247049+00:00",
-        "slug": "arrr"
-      },
-      {
-        "symbol": "SPACE",
-        "name": "MicroVisionChain",
-        "algorithm": "Equihash",
-        "pools": 11,
-        "blocks_48h": 0,
-        "last_block_at": null,
-        "slug": "space"
-      },
-      {
-        "symbol": "ZER",
-        "name": "Zero",
-        "algorithm": "Equihash 192,7",
-        "pools": 7,
-        "blocks_48h": 0,
-        "last_block_at": "2026-11-20T08:42:37.402791+00:00",
-        "slug": "zer"
       },
       {
         "symbol": "NEXC",
@@ -11735,35 +11764,77 @@
         "algorithm": "Ethash",
         "pools": 2,
         "blocks_48h": 0,
-        "last_block_at": "2026-11-20T08:46:09+00:00",
+        "last_block_at": "2026-11-20T21:38:07+00:00",
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": 5,
+        "asset_key": "legacy:nexc",
         "slug": "nexc"
       },
       {
-        "symbol": "SATOX",
-        "name": "SatoxCoin",
-        "algorithm": "KawPow",
+        "symbol": "ARRR",
+        "name": "Pirate Chain",
+        "algorithm": "Equihash",
+        "pools": 10,
+        "blocks_48h": 223,
+        "last_block_at": "2026-11-20T13:32:15.985575+00:00",
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": 4,
+        "asset_key": "legacy:arrr",
+        "slug": "arrr"
+      },
+      {
+        "symbol": "SPACE",
+        "name": "MicroVisionChain",
+        "algorithm": "Equihash",
         "pools": 11,
-        "blocks_48h": 24,
-        "last_block_at": "2026-11-20T07:17:52.006247+00:00",
-        "slug": "satox"
+        "blocks_48h": 26,
+        "last_block_at": null,
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": 3,
+        "asset_key": "legacy:space",
+        "slug": "space"
       },
       {
         "symbol": "KRGN",
         "name": "Kerrigan",
         "algorithm": "Equihash 192,7",
         "pools": 20,
-        "blocks_48h": 2,
+        "blocks_48h": 11,
         "last_block_at": "2026-11-20T06:04:35.863250+00:00",
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": 2,
+        "asset_key": "legacy:krgn",
         "slug": "krgn"
       },
       {
-        "symbol": "ETHO",
-        "name": "Etho Protocol",
-        "algorithm": "Ethash",
-        "pools": 6,
+        "symbol": "ZER",
+        "name": "Zero",
+        "algorithm": "Equihash 192,7",
+        "pools": 7,
+        "blocks_48h": 34,
+        "last_block_at": "2026-11-20T21:25:31.688350+00:00",
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": 2,
+        "asset_key": "legacy:zer",
+        "slug": "zer"
+      },
+      {
+        "symbol": "FIRO",
+        "name": "Firo",
+        "algorithm": "FiroPoW",
+        "pools": 15,
         "blocks_48h": 0,
-        "last_block_at": null,
-        "slug": "etho"
+        "last_block_at": "2026-11-20T20:43:57.786864+00:00",
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": 2,
+        "asset_key": "legacy:firo",
+        "slug": "firo"
       },
       {
         "symbol": "NIR",
@@ -11772,6 +11843,10 @@
         "pools": 3,
         "blocks_48h": 0,
         "last_block_at": null,
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": 1,
+        "asset_key": "legacy:nir",
         "slug": "nir"
       },
       {
@@ -11779,18 +11854,26 @@
         "name": "Komodo",
         "algorithm": "Equihash",
         "pools": 7,
-        "blocks_48h": 0,
-        "last_block_at": "2026-11-20T07:18:36.731389+00:00",
+        "blocks_48h": 215,
+        "last_block_at": "2026-11-20T14:52:46.719501+00:00",
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": 1,
+        "asset_key": "legacy:kmd",
         "slug": "kmd"
       },
       {
-        "symbol": "ABRS",
-        "name": "auroraborealis",
+        "symbol": "SATOX",
+        "name": "SatoxCoin",
         "algorithm": "KawPow",
-        "pools": 6,
-        "blocks_48h": 0,
-        "last_block_at": "2026-11-20T08:47:09.121979+00:00",
-        "slug": "abrs"
+        "pools": 11,
+        "blocks_48h": 2186,
+        "last_block_at": "2026-11-20T15:02:22.206212+00:00",
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": 1,
+        "asset_key": "legacy:satox",
+        "slug": "satox"
       },
       {
         "symbol": "GAEL",
@@ -11798,17 +11881,12 @@
         "algorithm": "KawPow",
         "pools": 10,
         "blocks_48h": 0,
-        "last_block_at": "2026-11-20T04:35:45+00:00",
+        "last_block_at": "2026-11-20T19:18:43+00:00",
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": 1,
+        "asset_key": "legacy:gael",
         "slug": "gael"
-      },
-      {
-        "symbol": "FIRO",
-        "name": "Firo",
-        "algorithm": "FiroPoW",
-        "pools": 15,
-        "blocks_48h": 0,
-        "last_block_at": "2026-11-20T07:06:38.874591+00:00",
-        "slug": "firo"
       },
       {
         "symbol": "GLINK",
@@ -11816,16 +11894,37 @@
         "algorithm": "Equihash(144,5)",
         "pools": 5,
         "blocks_48h": 0,
-        "last_block_at": "2026-11-20T08:16:03.768377+00:00",
+        "last_block_at": "2026-11-20T20:58:54.872798+00:00",
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": 1,
+        "asset_key": "legacy:glink",
         "slug": "glink"
+      },
+      {
+        "symbol": "ETHO",
+        "name": "Etho Protocol",
+        "algorithm": "Ethash",
+        "pools": 6,
+        "blocks_48h": 0,
+        "last_block_at": null,
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": 0,
+        "asset_key": "legacy:etho",
+        "slug": "etho"
       },
       {
         "symbol": "CHIPS",
         "name": "CHIPS",
         "algorithm": "Equihash",
         "pools": 1,
-        "blocks_48h": 0,
-        "last_block_at": "2026-11-20T08:49:18.381136+00:00",
+        "blocks_48h": 3636,
+        "last_block_at": "2026-11-20T13:02:17.265837+00:00",
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": 0,
+        "asset_key": "legacy:chips",
         "slug": "chips"
       },
       {
@@ -11835,6 +11934,10 @@
         "pools": 7,
         "blocks_48h": 0,
         "last_block_at": null,
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": 0,
+        "asset_key": "legacy:egaz",
         "slug": "egaz"
       },
       {
@@ -11842,9 +11945,26 @@
         "name": "VDEX",
         "algorithm": "Equihash",
         "pools": 1,
-        "blocks_48h": 0,
-        "last_block_at": "2026-11-20T08:06:04.703136+00:00",
+        "blocks_48h": 32,
+        "last_block_at": "2026-11-20T11:23:25.847292+00:00",
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": 0,
+        "asset_key": "legacy:vdex",
         "slug": "vdex"
+      },
+      {
+        "symbol": "ABRS",
+        "name": "auroraborealis",
+        "algorithm": "KawPow",
+        "pools": 6,
+        "blocks_48h": 236,
+        "last_block_at": "2026-11-20T21:17:17.626984+00:00",
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": 0,
+        "asset_key": "legacy:abrs",
+        "slug": "abrs"
       },
       {
         "symbol": "VEIL",
@@ -11853,6 +11973,10 @@
         "pools": 3,
         "blocks_48h": 0,
         "last_block_at": null,
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": 0,
+        "asset_key": "legacy:veil",
         "slug": "veil"
       },
       {
@@ -11862,6 +11986,10 @@
         "pools": 9,
         "blocks_48h": 0,
         "last_block_at": null,
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": 0,
+        "asset_key": "legacy:vbc",
         "slug": "vbc"
       },
       {
@@ -11871,6 +11999,10 @@
         "pools": 5,
         "blocks_48h": 0,
         "last_block_at": null,
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": 0,
+        "asset_key": "legacy:btn",
         "slug": "btn"
       },
       {
@@ -11880,6 +12012,10 @@
         "pools": 6,
         "blocks_48h": 0,
         "last_block_at": null,
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": 0,
+        "asset_key": "legacy:lrs",
         "slug": "lrs"
       },
       {
@@ -11889,6 +12025,10 @@
         "pools": 3,
         "blocks_48h": 0,
         "last_block_at": null,
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": null,
+        "asset_key": "legacy:btm",
         "slug": "btm"
       },
       {
@@ -11898,6 +12038,10 @@
         "pools": 5,
         "blocks_48h": 0,
         "last_block_at": null,
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": null,
+        "asset_key": "legacy:iron",
         "slug": "iron"
       },
       {
@@ -11907,6 +12051,10 @@
         "pools": 1,
         "blocks_48h": null,
         "last_block_at": null,
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": null,
+        "asset_key": "legacy:sys",
         "slug": "sys"
       },
       {
@@ -11916,6 +12064,10 @@
         "pools": 1,
         "blocks_48h": 0,
         "last_block_at": null,
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": null,
+        "asset_key": "legacy:vbk",
         "slug": "vbk"
       },
       {
@@ -11925,6 +12077,10 @@
         "pools": 1,
         "blocks_48h": 0,
         "last_block_at": null,
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": null,
+        "asset_key": "legacy:kmdcl",
         "slug": "kmdcl"
       },
       {
@@ -11934,6 +12090,10 @@
         "pools": 2,
         "blocks_48h": null,
         "last_block_at": null,
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": null,
+        "asset_key": "legacy:evox",
         "slug": "evox"
       },
       {
@@ -11943,6 +12103,10 @@
         "pools": 2,
         "blocks_48h": 0,
         "last_block_at": null,
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": null,
+        "asset_key": "legacy:inf",
         "slug": "inf"
       },
       {
@@ -11952,6 +12116,10 @@
         "pools": 3,
         "blocks_48h": 0,
         "last_block_at": null,
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": null,
+        "asset_key": "legacy:arl",
         "slug": "arl"
       },
       {
@@ -11961,6 +12129,10 @@
         "pools": 4,
         "blocks_48h": 0,
         "last_block_at": null,
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": null,
+        "asset_key": "legacy:cms",
         "slug": "cms"
       },
       {
@@ -11970,6 +12142,10 @@
         "pools": 1,
         "blocks_48h": 0,
         "last_block_at": null,
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": null,
+        "asset_key": "legacy:xwp",
         "slug": "xwp"
       },
       {
@@ -11979,16 +12155,11 @@
         "pools": 2,
         "blocks_48h": null,
         "last_block_at": null,
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": null,
+        "asset_key": "legacy:mys",
         "slug": "mys"
-      },
-      {
-        "symbol": "DOGPU",
-        "name": "DogeGPU",
-        "algorithm": "KawPow",
-        "pools": 6,
-        "blocks_48h": null,
-        "last_block_at": null,
-        "slug": "dogpu"
       },
       {
         "symbol": "QKC",
@@ -11997,7 +12168,24 @@
         "pools": 1,
         "blocks_48h": 0,
         "last_block_at": null,
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": null,
+        "asset_key": "legacy:qkc",
         "slug": "qkc"
+      },
+      {
+        "symbol": "DOGPU",
+        "name": "DogeGPU",
+        "algorithm": "KawPow",
+        "pools": 6,
+        "blocks_48h": null,
+        "last_block_at": null,
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": null,
+        "asset_key": "legacy:dogpu",
+        "slug": "dogpu"
       },
       {
         "symbol": "CLO",
@@ -12006,6 +12194,10 @@
         "pools": 3,
         "blocks_48h": null,
         "last_block_at": null,
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": null,
+        "asset_key": "legacy:clo",
         "slug": "clo"
       },
       {
@@ -12015,6 +12207,10 @@
         "pools": 2,
         "blocks_48h": 0,
         "last_block_at": null,
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": null,
+        "asset_key": "legacy:anon",
         "slug": "anon"
       },
       {
@@ -12024,6 +12220,10 @@
         "pools": 1,
         "blocks_48h": 0,
         "last_block_at": null,
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": null,
+        "asset_key": "legacy:cdy",
         "slug": "cdy"
       },
       {
@@ -12033,6 +12233,10 @@
         "pools": 5,
         "blocks_48h": 0,
         "last_block_at": "2026-11-19T22:14:04.420227+00:00",
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": 0,
+        "asset_key": "legacy:zcl",
         "slug": "zcl"
       },
       {
@@ -12042,6 +12246,10 @@
         "pools": 1,
         "blocks_48h": 0,
         "last_block_at": null,
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": null,
+        "asset_key": "legacy:kiiro",
         "slug": "kiiro"
       },
       {
@@ -12051,16 +12259,11 @@
         "pools": 1,
         "blocks_48h": null,
         "last_block_at": null,
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": null,
+        "asset_key": "legacy:sqcn",
         "slug": "sqcn"
-      },
-      {
-        "symbol": "AION",
-        "name": "Aion",
-        "algorithm": "Equihash",
-        "pools": 1,
-        "blocks_48h": null,
-        "last_block_at": null,
-        "slug": "aion"
       },
       {
         "symbol": "EVR",
@@ -12069,7 +12272,24 @@
         "pools": 6,
         "blocks_48h": 0,
         "last_block_at": "2026-04-16T21:29:58.198406+00:00",
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": 0,
+        "asset_key": "legacy:evr",
         "slug": "evr"
+      },
+      {
+        "symbol": "AION",
+        "name": "Aion",
+        "algorithm": "Equihash",
+        "pools": 1,
+        "blocks_48h": null,
+        "last_block_at": null,
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": null,
+        "asset_key": "legacy:aion",
+        "slug": "aion"
       },
       {
         "symbol": "FREN",
@@ -12078,6 +12298,10 @@
         "pools": 10,
         "blocks_48h": 0,
         "last_block_at": null,
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": null,
+        "asset_key": "legacy:fren",
         "slug": "fren"
       },
       {
@@ -12087,6 +12311,10 @@
         "pools": 1,
         "blocks_48h": null,
         "last_block_at": null,
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": null,
+        "asset_key": "legacy:cau",
         "slug": "cau"
       },
       {
@@ -12096,6 +12324,10 @@
         "pools": 7,
         "blocks_48h": null,
         "last_block_at": null,
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": null,
+        "asset_key": "legacy:ctxc",
         "slug": "ctxc"
       },
       {
@@ -12105,6 +12337,10 @@
         "pools": 1,
         "blocks_48h": null,
         "last_block_at": null,
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": null,
+        "asset_key": "legacy:sero",
         "slug": "sero"
       },
       {
@@ -12114,6 +12350,10 @@
         "pools": 1,
         "blocks_48h": null,
         "last_block_at": null,
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": null,
+        "asset_key": "legacy:aipg",
         "slug": "aipg"
       },
       {
@@ -12123,16 +12363,11 @@
         "pools": 1,
         "blocks_48h": 0,
         "last_block_at": null,
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": null,
+        "asset_key": "legacy:scc",
         "slug": "scc"
-      },
-      {
-        "symbol": "AVS",
-        "name": "Aves",
-        "algorithm": "Ethash",
-        "pools": 5,
-        "blocks_48h": null,
-        "last_block_at": null,
-        "slug": "avs"
       },
       {
         "symbol": "BTCZ",
@@ -12141,7 +12376,24 @@
         "pools": 8,
         "blocks_48h": 0,
         "last_block_at": "2026-11-05T23:39:40.948087+00:00",
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": 0,
+        "asset_key": "legacy:btcz",
         "slug": "btcz"
+      },
+      {
+        "symbol": "AVS",
+        "name": "Aves",
+        "algorithm": "Ethash",
+        "pools": 5,
+        "blocks_48h": null,
+        "last_block_at": null,
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": null,
+        "asset_key": "legacy:avs",
+        "slug": "avs"
       },
       {
         "symbol": "BUCK",
@@ -12150,6 +12402,10 @@
         "pools": 3,
         "blocks_48h": 0,
         "last_block_at": null,
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": null,
+        "asset_key": "legacy:buck",
         "slug": "buck"
       },
       {
@@ -12159,6 +12415,10 @@
         "pools": 3,
         "blocks_48h": 0,
         "last_block_at": null,
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": null,
+        "asset_key": "legacy:zerc",
         "slug": "zerc"
       },
       {
@@ -12168,6 +12428,10 @@
         "pools": 3,
         "blocks_48h": null,
         "last_block_at": null,
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": null,
+        "asset_key": "legacy:hush",
         "slug": "hush"
       },
       {
@@ -12177,6 +12441,10 @@
         "pools": 1,
         "blocks_48h": null,
         "last_block_at": null,
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": null,
+        "asset_key": "legacy:kawa",
         "slug": "kawa"
       },
       {
@@ -12186,6 +12454,10 @@
         "pools": 1,
         "blocks_48h": 0,
         "last_block_at": null,
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": null,
+        "asset_key": "legacy:mcl",
         "slug": "mcl"
       },
       {
@@ -12195,14 +12467,18 @@
         "pools": 1,
         "blocks_48h": null,
         "last_block_at": null,
+        "network_hashrate": null,
+        "network_hashrate_unit": null,
+        "total_miners": null,
+        "asset_key": "legacy:shc",
         "slug": "shc"
       }
     ],
-    "fetched_at": "2026-11-20T08:58:51+00:00"
+    "fetched_at": "2026-11-20T21:53:49+00:00"
   },
   "mining_scan_status": {
     "available": true,
-    "updated_this_run": false,
+    "updated_this_run": true,
     "matched_coin_records": 1,
     "attribution": "mining-scan.com"
   },
@@ -12257,36 +12533,36 @@
       "last_stage": "announcement_only",
       "project_group": null,
       "last_alert_marker": "",
-      "checked_at": "2026-11-20T14:18:37+00:00"
+      "checked_at": "2026-11-20T21:53:49+00:00"
     },
     "btt:5599371": {
       "last_stage": "rpc_height_advanced",
       "project_group": "rpc-chain-6396",
       "last_alert_marker": "rpc-chain-6396",
-      "checked_at": "2026-11-20T14:18:37+00:00"
+      "checked_at": "2026-11-20T21:53:49+00:00"
     },
     "btt:5600215": {
       "last_stage": "announcement_only",
       "project_group": null,
       "last_alert_marker": "",
-      "checked_at": "2026-11-20T14:18:37+00:00"
+      "checked_at": "2026-11-20T21:53:49+00:00"
     },
     "btt:5592609": {
       "last_stage": "announcement_only",
       "project_group": null,
       "last_alert_marker": "",
-      "checked_at": "2026-11-20T14:18:37+00:00"
+      "checked_at": "2026-11-20T21:53:49+00:00"
     },
     "gh:1457186269": {
       "last_stage": "announcement_only",
       "project_group": null,
       "last_alert_marker": "",
-      "checked_at": "2026-11-20T14:18:37+00:00"
+      "checked_at": "2026-11-20T21:53:49+00:00"
     }
   },
   "pool_directory": {
-    "fetched_at": "2026-11-20T14:18:37+00:00",
-    "retry_after": "2026-11-20T15:18:37+00:00",
+    "fetched_at": "2026-11-20T21:53:49+00:00",
+    "retry_after": "2026-11-20T22:53:49+00:00",
     "status": "source_unavailable",
     "pools": [],
     "source": "https://mining-scan.com/api/export/pools"
@@ -12326,7 +12602,7 @@
   },
   "evm_rpc": {
     "quinvium": {
-      "checked_at": "2026-11-20T14:18:37+00:00",
+      "checked_at": "2026-11-20T21:53:49+00:00",
       "status": "unavailable",
       "rpc": {
         "provider": "public project JSON-RPC",
@@ -12342,17 +12618,17 @@
       }
     },
     "nexchain": {
-      "checked_at": "2026-11-20T14:18:37+00:00",
+      "checked_at": "2026-11-20T21:53:49+00:00",
       "status": "active",
       "rpc": {
         "provider": "public project JSON-RPC",
         "endpoint": "https://rpc.getnexwallet.com",
         "chain_id": 6396,
-        "last_block_height": 98344,
-        "last_block_hash": "0x85c5c83c848882b3cbf735df1bd05cdd5957b6a2257cc872c23eb57fc783a85c",
-        "last_block_time": "2026-11-20T14:18:20+00:00",
-        "difficulty_from_header": 11828740549,
-        "checked_at": "2026-11-20T14:18:37+00:00",
+        "last_block_height": 100809,
+        "last_block_hash": "0xd1a5da7e563a513a083b303ea6eb7f92bc1d2c8e86b0f799c86af104338717f2",
+        "last_block_time": "2026-11-20T21:53:46+00:00",
+        "difficulty_from_header": 16271561447,
+        "checked_at": "2026-11-20T21:53:49+00:00",
         "source_reference": "https://bitcointalk.org/index.php?topic=5599371.0",
         "note": "RPC chain ID совпал; это не независимый аудит PoW и не проверка выплат"
       }
