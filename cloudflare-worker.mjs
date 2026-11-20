@@ -255,6 +255,7 @@ export function renderMenu(view, state = {}, now = new Date()) {
         "⚙️ "+String(p.algorithm||"Алгоритм неизвестен"),
         "🚀 "+(p.launch_claim?(shortDate(p.launch_claim)+" (заявлено)"):"Mainnet не подтверждён"),
         "✅ "+String(p.rationale||"требуются данные").slice(0,160),
+        "🧪 "+String(p?.mining_readiness?.label||"Добыча не проверена").slice(0,110),
         "⚠️ "+String(p.risks||"риски требуют проверки").slice(0,140),"");
     }
     lines.push("Не доказаны работающий майнинг, ликвидность или рост цены.",
