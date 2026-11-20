@@ -177,6 +177,21 @@ function projectFactLines(key, item, options={}) {
       else lines.push("  Stratum: нет подтверждённого адреса для монеты");
     }
   }
+  const explorer=item?.explorer_evidence;
+  if (explorer && !options.compact) {
+    lines.push("🔎 Публичный Blockscout (связь с PoW-сетью не подтверждена):");
+    lines.push("  Обозреватель: "+String(explorer.explorer||"неизвестно").slice(0,120));
+    if(Number.isInteger(explorer.last_block_height)) lines.push(
+      "  Последняя индексированная высота: "+explorer.last_block_height);
+    if(explorer.last_block_time) lines.push("  Последний блок по обозревателю: "+
+      String(explorer.last_block_time).slice(0,19)+" UTC");
+  }
+  const explorerChange=item?.explorer_progress;
+  if(explorerChange && !options.compact && Number.isInteger(explorerChange.delta_blocks) &&
+      explorerChange.delta_blocks>0){
+    lines.push("📈 Индекс обозревателя вырос на "+explorerChange.delta_blocks+
+      " блоков (не подтверждает PoW и идентичность монеты)");
+  }
   const chainProgress=item?.chain_progress;
   if(chainProgress && !options.compact &&
        Number.isFinite(chainProgress.blocks_increased) &&
@@ -279,6 +294,10 @@ export function renderMenu(view, state = {}, now = new Date()) {
         "🧪 Активность сети по внешним данным: "+
             Number(state?.mining_readiness_counts?.activity_reported||0),
         "📈 Рост высоты между снимками: "+Number(state?.mining_readiness_counts?.height_advanced||0),
+        "🔎 Blockscout: "+Number(state?.public_explorer_status?.explorers_reporting_recent_blocks||0)+
+          " обозревателей со свежими блоками",
+        "📊 Рост индекса Blockscout: "+Number(state?.explorer_progress_stats?.increased||0)+
+          " (привязка к PoW не доказана)",
         "📡 Сетевые снимки: "+Number(state?.chain_progress_stats?.eligible||0)+
           " доступно для сравнения",
         "💶 Расчёты добычи: "+Number(state?.mining_economics_counts?.conditional_estimate||0)+
