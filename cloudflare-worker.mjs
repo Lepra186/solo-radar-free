@@ -65,17 +65,29 @@ export function sourceGroup(key, item={}) {
 }
 const SOURCE_LABELS={tg:"📨 Telegram",gh:"💻 GitHub",btt:"🗣️ Bitcointalk",pool:"⛏️ Пулы",rss:"📰 RSS",dc:"👥 Discord",other:"📂 Другое"};
 function potentialCoin(key,item) {
-  const text=String(item.body || item.title || "");
-  const title=String(item.title || "");
-  if (EXCLUDE.test(text) || SOFTWARE.test(title)) return false;
-  if (sourceGroup(key,item)==="pool" || sourceGroup(key,item)==="rss") return false;
-  const hasGpu = GPU.test(text);
-  const hasMining = POW.test(text) || /\b(coin name|ticker|mainnet|genesis)\b/i.test(text);
-  return hasGpu && hasMining;
+  if (item?.coin_class) return item.coin_class === "coin_candidate";
+  const title=String(item?.title||"");
+  const content=(title+" "+String(item?.body||title)).slice(0,2500);
+  const kind=String(item?.kind||"");
+  if(kind==="news" || /^(pool:|rss:)/.test(key)) return false;
+  if(/\b(proof[- ]of[- ]stake|pos[- ]only|bep[- ]?20|erc[- ]?20|solana token|pump\.fun|nft|airdrop|presale|ico|testnet only)\b/i.test(content)) return false;
+  const standaloneCoin=/\b(coin|cryptocurrency|blockchain|mainnet|genesis block|ticker|symbol|native currency|network launch|network start|chain)\b/i.test(content);
+  const announced=/(\[ann\]|\[pre-ann\]|coin\s*name\s*:|ticker\s*:|mainnet|genesis)/i.test(title);
+  const algo=/\b(kawpow|ethash|etchash|progpow|fishhash|autolykos|equihash|octopus|verthash|firopow|zelhash|cuckoocycle|ubqhash)\b/i.test(content);
+  const software=/\b(mining software|gpu miner|cpu miner|miner (?:for|support(?:s|ing)?|release|v\d|version)|miner\s+v?\d+(?:\.\d+)*|mining tool|miner software|new miner|software release|one binary|no dev fee|dev fee|profit switching|auto switching)\b/i;
+  const service=/\b(auto[- ]?profit|profit[- ]?switch(?:er|ing)?|dashboard|mining calculator|hashrate calculator|rental|cloud mining|pool service|exchange ecosystem|wallet app|management software|firmware|driver|benchmark|monitoring bot|telegram bot|stratum proxy|api service)\b/i;
+  if((software.test(title)||service.test(title)) && !(announced&&standaloneCoin&&algo)) return false;
+  const name=String(item?.github?.name||title).split(" — ")[0];
+  if ((kind==="repository"||/^(gh:|gh-)/.test(key)) &&
+      /(?:^|[/\-_])(miner|miners|mining[-_]?software|switcher|profit[-_]?switch|pool[-_]?proxy|dashboard)(?:$|[/\-_])/i.test(name)) return false;
+  if(/\b(cpu[- ]only|randomx|yespower|asic[- ]only|sha[- ]?256d?|scrypt)\b/i.test(content)&&!algo) return false;
+  const gpu=algo||/\b(gpu[- ]?mineable|gpu[- ]?mining|gpu[- ]?pow|gpu[- ]?friendly|gpu[- ]?coin|gpu[- ]?mined|gpu[- ]?based|gpu[- ]?and[- ]?cpu|graphics cards?)\b/i.test(content);
+  const pow=/\b(proof[- ]of[- ]work|pow|mineable|block reward|gpu mining)\b/i.test(content)||algo;
+  return Boolean(gpu&&pow&&standaloneCoin);
 }
 export function sourceEntries(state, group) {
   return Object.entries(state?.topics || {})
-    .filter(([key,item])=>sourceGroup(key,item)===group)
+    .filter(([key,item])=>sourceGroup(key,item)===group && potentialCoin(key,item))
     .map(([key,item])=>({key,item}))
     .sort((a,b)=>String(b.item?.last_seen || b.item?.seen || "").localeCompare(String(a.item?.last_seen || a.item?.seen || "")));
 }
@@ -190,7 +202,9 @@ export function renderMenu(view, state = {}, now = new Date()) {
   }
   if (view === "analysis") {
     const daily=state?.daily_analysis || {};
-    const picks=Array.isArray(daily.picks)?daily.picks.slice(0,4):[];
+    const picks=(Array.isArray(daily.picks)?daily.picks:[])
+      .filter(p=>p?.key && state?.topics?.[p.key] && potentialCoin(p.key,state.topics[p.key]))
+      .slice(0,4);
     const updated=shortDate(daily.generated_at) || "ещё нет данных";
     const mode=daily.mode==="openai"?"OpenAI API":"Правила (без ИИ)";
     const lines=[
@@ -311,7 +325,7 @@ export function renderMenu(view, state = {}, now = new Date()) {
   const trackedMatch=/^tracked:(\d{1,3})$/.exec(view);
   if (trackedMatch) {
     const records=Object.entries(state?.tracked_projects||{})
-      .filter(([key])=>Boolean(state?.topics?.[key]))
+      .filter(([key])=>Boolean(state?.topics?.[key]) && potentialCoin(key,state.topics[key]))
       .sort((a,b)=>(Number(b[1]?.score)||0)-(Number(a[1]?.score)||0));
     const total=Math.max(1,Math.ceil(records.length/PAGE_SIZE));
     const page=Math.min(Number(trackedMatch[1]),total-1);
