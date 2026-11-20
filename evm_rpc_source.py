@@ -17,12 +17,14 @@ from datetime import datetime,timezone,timedelta
 NETWORKS={
  "quinvium":{
   "url":"https://rpc.quinvium.com",
+  "explorer_url":"https://explorer.quinvium.com",
   "chain_id":52401,
   "keys":("gh:1457186269","gh-1457186269","btt:5600215"),
   "name":"Quinvium","reference":"https://github.com/Lakylife/quinvium/blob/main/README.md"
  },
  "nexchain":{
   "url":"https://rpc.getnexwallet.com",
+  "explorer_url":"https://explorer.getnexwallet.com",
   "chain_id":6396,
   "keys":("btt:5599371",),
   "name":"NEX Chain","reference":"https://bitcointalk.org/index.php?topic=5599371.0"
@@ -97,6 +99,12 @@ def update(topics,state,now,caller=transport):
                    if k in topics and isinstance(topics[k],dict)
                    and topics[k].get("coin_class")=="coin_candidate"]
         if not matching:continue
+        # These are first-party published explorer links, not connections
+        # verified by the scanner. Never infer a URL from the coin ticker.
+        for key in matching:
+            links=topics[key].setdefault("links",{})
+            if isinstance(links,dict):
+                links.setdefault("explorer",config["explorer_url"])
         old=previous.get(network_id) or {}
         previous_checked=time_value(old.get("checked_at"))
         if previous_checked and timedelta(0)<=now-previous_checked<RETRY:
