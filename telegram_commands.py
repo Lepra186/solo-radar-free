@@ -8,6 +8,7 @@ import os
 import urllib.request
 from datetime import datetime, timezone
 from gpu_assessment import assess, signal
+from project_links import format_links
 
 def get_updates(token, offset):
     body = json.dumps({"offset": offset, "timeout": 0, "limit": 100,
@@ -72,7 +73,10 @@ def digest(results, now, state=None):
             label = "🚀 Ранний анонс" if category == "EARLY" else "🪙 Пул / накопление" if category == "HOLD" else "🔎 Кандидат"
             lines += [f"{i}. {label}",
                       str(item.get("title", "Без названия"))[:125],
-                      str(item.get("url") or "Нет ссылки")[:300], ""]
+                      str(item.get("url") or "Нет ссылки")[:300]]
+            if format_links(item.get("links")):
+                lines.append(format_links(item["links"]))
+            lines.append("")
     else:
         lines.append("Новых подтверждённых кандидатов в доступных источниках нет.")
         historical = _history_candidates(state)
