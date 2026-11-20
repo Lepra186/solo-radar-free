@@ -7,9 +7,11 @@ on:
     branches: [main]
     paths:
       - 'radar.py'
+      - 'coin_filter.py'
+      - 'test_coin_filter.py'
       - 'github_discovery.py'
       - 'project_watch.py'
-      - 'test_discovery_watch.py'
+      - 'test_discovery_watch.py test_coin_filter.py'
       - 'research_agent.py'
       - 'daily_ai.py'
       - 'test_research_agent.py'
