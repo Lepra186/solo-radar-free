@@ -235,7 +235,7 @@ test("coin detail exposes honest rig-power sensitivity without fake income",()=>
  const s={topics:{"btt:80":project}};
  const page=renderMenu("coin:0:0:w",s,now);
  assert.match(page.text,/200 Вт → 0\.48 €\/сут/);
- assert.match(page.text,/Добыча за сутки: данных для расчёта недостаточно/);
+ assert.match(page.text,/Добыча за сутки: нет замеров карт и\/или сетевых данных/);
  assert.match(page.text,/Чистая прибыль: нельзя определить/);
  assert.doesNotMatch(page.text,/ожидаемая прибыль.*100/i);
 });
