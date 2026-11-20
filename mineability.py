@@ -55,6 +55,17 @@ def evaluate(key,item,now):
     if fresh_pool and recent(pool.get("last_block_at"),now,BLOCK_MAX_AGE):
         activity=True
         evidence.append("В каталоге есть недавняя отметка найденного блока")
+    # Pool-directory rows are pool-wide. A matched coin listing or recorded
+    # Stratum address is a research lead, never proof of shares or payouts.
+    validated=item.get("pool_validation") or {}
+    for pool_info in (validated.get("pools") or [])[:3]:
+        if not isinstance(pool_info,dict) or not pool_info.get("pool_metrics_fresh"):
+            continue
+        listing=True
+        evidence.append("Пул перечисляет тикер монеты: "+str(pool_info.get("name") or "неизвестный")[:55])
+        if pool_info.get("stratum_endpoints"):
+            evidence.append("Опубликован Stratum-адрес; соединение и выплаты не проверены")
+        break
     if fresh_net and network_height is not None and network_height>0:
         activity=True
         evidence.append("BackPoW сообщает высоту цепи: "+str(int(network_height)))
