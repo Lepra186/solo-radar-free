@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-20T08:19:12+00:00",
+  "generated_at": "2026-11-20T08:44:30+00:00",
   "mode": "rules_only",
   "model": null,
-  "candidate_count": 6,
-  "scan_updated_at": "2026-11-20T08:18:22+00:00",
+  "candidate_count": 3,
+  "scan_updated_at": "2026-11-20T08:43:28+00:00",
   "summary": "Автоподбор по правилам без ИИ. Только кандидаты для дальнейшего изучения.",
   "picks": [
     {
@@ -33,30 +33,17 @@
       "risks": "нет проверенной даты mainnet; репозиторий сам по себе не подтверждает mainnet"
     },
     {
-      "key": "gh:1457186269",
-      "title": "Lakylife/quinvium",
-      "source": "GitHub",
-      "url": "https://github.com/Lakylife/quinvium",
+      "key": "btt:5600215",
+      "title": "[ANN] Quinvium (QU) | GPU PoW (Ethash) | EVM smart contracts | No premine | Main",
+      "source": "Bitcointalk",
+      "url": "https://bitcointalk.org/index.php?topic=5600215.0",
       "algorithm": "Ethash",
-      "published": "2026-11-13T23:04+00:00",
+      "published": null,
       "launch_claim": null,
-      "score": 4,
-      "rationale": "указан GPU-алгоритм: Ethash; упомянут майнинг/пул",
+      "score": 3,
+      "rationale": "указан GPU-алгоритм: Ethash",
       "mining": "Работающий GPU-майнинг и выплаты не проверены",
-      "risks": "нет проверенной даты mainnet; репозиторий сам по себе не подтверждает mainnet"
-    },
-    {
-      "key": "gh:1449663269",
-      "title": "gacanga/crypto-connection-miner",
-      "source": "GitHub",
-      "url": "https://github.com/gacanga/crypto-connection-miner",
-      "algorithm": "Ethash",
-      "published": "2026-11-07T19:13+00:00",
-      "launch_claim": null,
-      "score": 4,
-      "rationale": "указан GPU-алгоритм: Ethash; упомянут майнинг/пул",
-      "mining": "Работающий GPU-майнинг и выплаты не проверены",
-      "risks": "нет проверенной даты mainnet; репозиторий сам по себе не подтверждает mainnet"
+      "risks": "дата публикации/создания не установлена либо старая; нет проверенной даты mainnet"
     }
   ],
   "watchouts": [
