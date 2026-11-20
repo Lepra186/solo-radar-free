@@ -8,6 +8,7 @@ from datetime import datetime, timezone, timedelta
 from urllib.parse import urlparse
 from gpu_assessment import assess
 from project_facts import get_facts
+from coin_filter import is_coin
 
 APP = re.compile(r'\b(miner\s*v?\d+(?:\.\d+)*|software release|driver|farm management|'
                  r'benchmark|mining calculator|exchange|rental service)\b', re.I)
@@ -50,7 +51,7 @@ def valid_url(url):
 def examine(key, item, now):
     title = str(item.get('title') or '')[:180]
     content = str(item.get('body') or title)[:2000]
-    if not title or APP.search(title) or NEGATIVE.search(title):
+    if not title or not is_coin(key,item) or APP.search(title) or NEGATIVE.search(title):
         return None
     if item.get('kind') == 'news' or origin(key) in ('Пул', 'RSS'):
         return None  # News informs discovery, but isn't inherently a new coin.
