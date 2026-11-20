@@ -17,7 +17,7 @@ TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
 CHAT = os.getenv("TELEGRAM_CHAT_ID", "").strip()
 STATE = Path("data/state.json")
 NOW = datetime.now(timezone.utc)
-KNOWN = {"neb", "qu", "nexc", "tape", "pearl", "karlsen", "kls"}
+PREVIOUSLY_REPORTED = ("neural engine byte", "quinvium", "nex chain", "retro boomer", "karlsen", "pearl")
 HEADERS = {"User-Agent": "SOLO-Radar/1.2 (+personal PoW announcements)"}
 BTT = ("https://bitcointalk.org/index.php?board=159.0",
        "https://bitcointalk.org/index.php?board=159.40")
@@ -272,6 +272,8 @@ def main():
         sent = 0
         for points, key, item in candidates:
             if points < 8 or sent >= 3:
+                continue
+            if any(name in item["body"].lower() for name in PREVIOUSLY_REPORTED):
                 continue
             # Require both mining/PoW and GPU evidence; otherwise don't waste user alerts.
             if not re.search(r"\b(pow|proof.of.work|mining|mineable|coin name)\b", item["body"], re.I):
