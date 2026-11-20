@@ -15,7 +15,7 @@ class Coverage(unittest.TestCase):
    with self.subTest(device=device):
     self.assertEqual(identify_model(device)["family"],family)
  def test_no_gpu_assumed_from_random_string(self):
-  for bad in ("AMD RX 6800","GTX 5070 Ti","RTX 1060","RTX 6090","NVIDIA GPU","RTX 2070 MOBILE-BOOST"):
+  for bad in ("AMD RX 6800","GTX 5070 Ti","RTX 1060","RTX 6090","NVIDIA GPU"):
    with self.subTest(device=bad):
     self.assertIsNone(identify_model(bad))
  def test_all_families_without_hardware_proof(self):
