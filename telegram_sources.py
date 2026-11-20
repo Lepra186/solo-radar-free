@@ -3,6 +3,7 @@ import html
 import re
 from datetime import datetime, timezone, timedelta
 from html.parser import HTMLParser
+from project_links import from_telegram_fragment
 
 CHANNELS = ("miningrelease", "mining_note", "kryptex_channel_en")
 POST = re.compile(r'data-post=["\']([a-zA-Z0-9_]+)/(\d+)["\']')
@@ -66,5 +67,6 @@ def parse_public_channel(body, channel, now=None):
             "source": f"Telegram / @{channel} — сторонний анонс",
             "date": published.isoformat(),
             "kind": "announcement",
+            "links": from_telegram_fragment(fragment),
         }
     return found
