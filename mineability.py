@@ -1,10 +1,11 @@
 """Evidence-based readiness for GPU PoW accumulation, independent of advertising.
 
-No status implies that RTX 5070 Ti mining, withdrawals, exchange execution or
+No status implies that any GTX 10xx / RTX 20xx–50xx mining, withdrawals, exchange execution or
 profit is proven. Network and pool catalog data may be incomplete and stale.
 """
 from datetime import datetime,timezone,timedelta
 from coin_filter import is_coin
+from gpu_families import summary as gpu_family_summary
 
 POOL_MAX_AGE=timedelta(hours=12)
 NETWORK_MAX_AGE=timedelta(hours=48)
@@ -32,7 +33,7 @@ def number(raw):
 def evaluate(key,item,now):
     if not is_coin(key,item):
         return {"stage":"excluded","label":"Не GPU PoW-монета",
-                "evidence":[],"missing":[],"gpu_5070ti":"не проверена"}
+                "evidence":[],"missing":[],"gpu_family_coverage":gpu_family_summary(item)}
     evidence=[]; missing=[]
     pool=item.get("pool_evidence") or {}
     network=item.get("network_evidence") or {}
@@ -77,7 +78,7 @@ def evaluate(key,item,now):
         evidence.append("Есть свежий релиз проекта на GitHub")
     if not listing:missing.append("Рабочий пул не проверен")
     if not activity:missing.append("Свежие блоки сети не подтверждены")
-    missing.append("RTX 5070 Ti, подключение Stratum и фактические выплаты не проверены")
+    missing.append("Совместимость GTX 10xx / RTX 20xx–50xx, Stratum и выплаты не проверены")
     missing.append("Ликвидность и возможность продажи не проверены")
     if activity:
         stage,label="activity_reported","Есть сообщения об активности сети"
