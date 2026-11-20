@@ -489,7 +489,7 @@ def main():
 
     economic_counts=calculate_all(seen,NOW)
     state["mining_economics_counts"]=economic_counts
-    print("5070 Ti economics:",economic_counts)
+    print("All-generation GPU rig economics:",economic_counts)
 
     previous_watch = state.get("tracked_projects") or {}
     # Check selected GitHub projects for repository activity before deciding if
