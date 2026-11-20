@@ -15,6 +15,8 @@ POOL = re.compile(r"\b(pool|pool mining|pplns|pps\+?|stratum|miner|flight sheet|
 NEGATIVE = re.compile(r"\b(ico|presale|airdrop|staking|nft|testnet only)\b", re.I)
 CPU_ONLY = re.compile(r"\b(cpu.only|cpu[- ]only|randomx|yespower)\b", re.I)
 ASIC_ONLY = re.compile(r"\b(asic[- ]only|sha[- ]?256d?\s+asic)\b", re.I)
+GPU_DENIED = re.compile(r'\b(?:no|not|non[- ]|without|unsupported|cannot|does not support)\s+gpu(?:[- ]?(?:mining|mineable|support))?\b|\bgpu(?:[- ]?(?:mining|mineable|support))?\s+(?:is\s+)?(?:not supported|disabled|unavailable|unsupported)\b',re.I)
+MAINNET_PENDING = re.compile(r'\b(?:testnet[- ]only|only\s+(?:a\s+)?testnet|mainnet\s+(?:not\s+launched|pending|unreleased)|no\s+mainnet\s+yet)\b',re.I)
 NO_PREMINE = re.compile(r"\b(no[\s-]?premine|zero[\s-]?premine|0%\s*premine)\b", re.I)
 
 # Accept only explicitly marked UTC timestamps, not bare dates or inferred time zones.
@@ -36,15 +38,15 @@ def extract_utc_launch(body):
 
 def assess(body, now=None):
     now = now or datetime.now(timezone.utc)
-    gpu = bool(GPU.search(body))
+    gpu = bool(GPU.search(body)) and not bool(GPU_DENIED.search(body))
     pow_ = bool(POW.search(body))
     solo = bool(SOLO.search(body))
     launch = bool(START.search(body))
     pool = bool(POOL.search(body))
-    exclude = bool(NEGATIVE.search(body)) or (bool(CPU_ONLY.search(body)) and not gpu) or (bool(ASIC_ONLY.search(body)) and not gpu)
+    exclude = bool(GPU_DENIED.search(body) or MAINNET_PENDING.search(body) or NEGATIVE.search(body)) or (bool(CPU_ONLY.search(body)) and not gpu) or (bool(ASIC_ONLY.search(body)) and not gpu)
     time = extract_utc_launch(body)
     score = (5 if gpu else 0) + (3 if pow_ else 0) + (2 if launch else 0) + (2 if solo else 0) + (2 if pool else 0) + (1 if NO_PREMINE.search(body) else 0)
-    if time:
+    if time and not exclude:
         delta = time - now
         if timedelta(hours=-24) <= delta <= timedelta(hours=72):
             score += 4
@@ -57,8 +59,8 @@ def signal(body, now=None):
     v = assess(body, now)
     if v["excluded"] or not (v["gpu"] and v["pow"]):
         return None
-    if v["launch_utc"] and now:
-        offset = v["launch_utc"] - now
+    if v["launch_utc"] and (now or True):
+        offset = v["launch_utc"] - (now or datetime.now(timezone.utc))
         if timedelta(hours=-24) <= offset <= timedelta(hours=72):
             return "EARLY"
     if v["score"] >= 10 and v["launch"] and v["pool"]:
