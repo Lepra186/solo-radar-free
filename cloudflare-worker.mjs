@@ -186,6 +186,17 @@ function projectFactLines(key, item, options={}) {
       if(missing.length) lines.push("📋 Не хватает: "+missing.slice(0,3).join(", "));
     }
   }
+  const aggregator=item?.aggregator_network;
+  if(aggregator && !options.compact) {
+    lines.push("📊 CoinCalculators (справочно, время сетевого показателя неизвестно):");
+    if(Number.isFinite(aggregator.network_hashrate_hs_reported))
+      lines.push("  Хешрейт сети: "+Number(aggregator.network_hashrate_hs_reported).toPrecision(5)+" H/s (по данным агрегатора)");
+    if(Number.isFinite(aggregator.block_reward_reported))
+      lines.push("  Награда: "+aggregator.block_reward_reported+" монет/блок (заявлено агрегатором)");
+    if(Number.isFinite(aggregator.block_time_seconds_reported))
+      lines.push("  Время блока: "+aggregator.block_time_seconds_reported+" секунд (по данным агрегатора)");
+    lines.push("⚠️ Для расчёта добычи данные требуют проверки актуальности и замера GPU.");
+  }
   const network=item?.network_evidence;
   if (network) {
     const age=Number.isFinite(Date.parse(network.fetched_at))?
