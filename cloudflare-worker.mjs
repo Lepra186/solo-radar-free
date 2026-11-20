@@ -145,6 +145,12 @@ export function renderMenu(view, state = {}, now = new Date()) {
         "🪙 Накопление монет для возможной продажи",
         "",
         "📂 Проектов на наблюдении: " + list.length,
+        "📨 Telegram: " + sourceEntries(state,"tg").length +
+          "  •  💻 GitHub: " + sourceEntries(state,"gh").length,
+        "🗣️ Bitcointalk: " + sourceEntries(state,"btt").length +
+          "  •  ⛏️ Пулы: " + sourceEntries(state,"pool").length,
+        "📰 RSS: " + sourceEntries(state,"rss").length +
+          "  •  👥 Discord: " + sourceEntries(state,"dc").length,
         "🕒 Последний скан: " + info.text + (info.stale ? " ⚠️" : ""),
         "",
         "Выбери раздел кнопкой ниже.",
