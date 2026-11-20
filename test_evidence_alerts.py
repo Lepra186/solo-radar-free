@@ -17,7 +17,7 @@ class EvidenceAlerts(unittest.TestCase):
   before={"btt:1":{"last_stage":"announcement_only","last_alert_marker":""}}
   events,history=transitions({"btt:1":COIN},before,NOW)
   self.assertEqual(len(events),1)
-  self.assertIn("Не проверены RTX 5070 Ti",events[0][2])
+  self.assertIn("GTX 10xx / RTX 20xx–50xx",events[0][2])
   confirmed(history,events[0][0],events[0][1])
   next_events,_=transitions({"btt:1":COIN},history,NOW)
   self.assertEqual(next_events,[])
@@ -27,6 +27,16 @@ class EvidenceAlerts(unittest.TestCase):
   before={"btt:1":{"last_stage":"announcement_only","last_alert_marker":marker}}
   events,_=transitions({"btt:1":COIN},before,NOW)
   self.assertEqual(events,[])
+ def test_chain_growth_upgrade_sends_once(self):
+  stronger={**COIN,"chain_progress":{"source":"BackPoW","coin_id":"NEX Chain","last_height":250},
+       "mining_readiness":{"stage":"height_advanced",
+              "evidence":["Высота блокчейна выросла на 12 блоков"]}}
+  previous={"btt:1":{"last_stage":"activity_reported","last_alert_marker":""}}
+  notices,next_state=transitions({"btt:1":stronger},previous,NOW)
+  self.assertEqual(len(notices),1)
+  self.assertIn("BackPoW",notices[0][2])
+  confirmed(next_state,notices[0][0],notices[0][1])
+  self.assertEqual(transitions({"btt:1":stronger},next_state,NOW)[0],[])
  def test_no_miner_software(self):
   bad={"title":"goodminer/gpu-miner","body":"GPU miner for Ethash coin",
        "kind":"repository","mining_readiness":{"stage":"activity_reported"}}
