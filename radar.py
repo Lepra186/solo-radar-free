@@ -338,7 +338,7 @@ def main():
         if not key.startswith("gh-") or previous.get("repo_created") or previous.get("metadata_checked"):
             continue
         label = str(previous.get("title") or "")
-        found = re.search(r"(?:\\[GitHub\\]\\s*)?([A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+)", label)
+        found = re.search(r"([A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+)", label)
         if not found:
             continue
         full_name = found.group(1)
