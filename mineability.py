@@ -114,6 +114,8 @@ def evaluate(key,item,now):
         stage,label="rpc_height_advanced","Публичный RPC сообщил рост высоты сети"
     elif progressed:
         stage,label="height_advanced","Зафиксирован рост высоты сети по двум снимкам"
+    elif rpc_fresh:
+        stage,label="rpc_head_reported","Публичный RPC вернул свежий блок и правильный Chain ID"
     elif activity:
         stage,label="activity_reported","Есть сообщения об активности сети"
     elif listing:
