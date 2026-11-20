@@ -14,6 +14,8 @@ def evidence_id(item):
         str(pool.get("blocks_48h_reported") or ""),
         str(net.get("source") or ""),str(net.get("coin_id") or ""),
         str(net.get("last_block_height") or "")]
+    progress=item.get("chain_progress") or {}
+    parts.extend([str(progress.get("coin_id") or ""),str(progress.get("last_height") or "")])
     return "|".join(parts)
 
 def transitions(topics,previous,now,max_messages=2):
@@ -23,21 +25,24 @@ def transitions(topics,previous,now,max_messages=2):
         if not isinstance(item,dict) or not is_coin(key,item):continue
         verdict=item.get("mining_readiness") or {}
         current=str(verdict.get("stage") or "announcement_only")
-        marker=evidence_id(item) if current=="activity_reported" else ""
+        marker=evidence_id(item) if current in ("activity_reported","height_advanced") else ""
         old=known.get(key)
         # Initial scan is a baseline, not a claimed new on-chain event.
-        if isinstance(old,dict) and current=="activity_reported" and marker:
+        if isinstance(old,dict) and current in ("activity_reported","height_advanced") and marker:
             prior=str(old.get("last_stage") or "")
             announced=str(old.get("last_alert_marker") or "")
-            if prior!="activity_reported" and marker!=announced and len(notices)<max_messages:
+            is_upgrade=(current=="height_advanced" and prior!="height_advanced") or (
+                current=="activity_reported" and prior not in ("activity_reported","height_advanced"))
+            if is_upgrade and marker!=announced and len(notices)<max_messages:
                 evidence=verdict.get("evidence") or []
                 note=("🧪 SOLO RADAR • ИЗМЕНИЛАСЬ АКТИВНОСТЬ\n\n"+
                     str(item.get("title") or "GPU PoW монета")[:150]+"\n"+
-                    "Источник данных: "+str((item.get("pool_evidence") or {}).get("source")
+                    "Источник данных: "+str((item.get("chain_progress") or {}).get("source")
+                        or (item.get("pool_evidence") or {}).get("source")
                         or (item.get("network_evidence") or {}).get("source") or "не уточнён")+"\n"+
                     "Сообщается: "+("; ".join(str(x)[:130] for x in evidence[:3]) or
                                       "есть внешние сведения о блоках")+"\n"+
-                    "⚠️ Не проверены RTX 5070 Ti, подключение к пулу, выплаты и продажа.\n"+
+                    "⚠️ Не проверены совместимость GTX 10xx / RTX 20xx–50xx, подключение к пулу, выплаты и продажа.\n"+
                     str(item.get("url") or "")[:330])
                 notices.append((key,marker,note[:1400]))
         remembered=old if isinstance(old,dict) else {}
