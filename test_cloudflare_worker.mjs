@@ -195,3 +195,15 @@ test("daily report without key is labeled not AI and hides unknown launch",()=>{
  assert.match(result.text,/Mainnet не подтверждён/);
  assert.doesNotMatch(result.text,/null \(заявлено\)/);
 });
+
+test("active tracked list is accessible from main menu",()=>{
+ const s={topics:{"btt:42":{title:"GPU KawPow PoW coin",body:"GPU KawPow PoW solo mining",
+    seen:"2026-11-20T05:00:00Z"}},
+    tracked_projects:{"btt:42":{name:"GPU KawPow PoW coin",source:"Bitcointalk",score:7,status:"MONITOR"}}};
+ const home=renderMenu("home",s,now);
+ assert.match(home.text,/Активно отслеживаем: 1/);
+ assert.ok(home.reply_markup.inline_keyboard.flat().some(x=>x.callback_data==="tracked:0"));
+ const page=renderMenu("tracked:0",s,now);
+ assert.match(page.text,/GPU KawPow PoW coin/);
+ assert.ok(page.reply_markup.inline_keyboard.flat().some(x=>x.callback_data==="home"));
+});
