@@ -329,6 +329,39 @@ def main():
     except Exception as exc:
         print("Telegram command check failed:", type(exc).__name__, str(exc)[:140])
 
+    # Gradually enrich legacy GitHub records created by an older radar version.
+    # Limit API calls per scan to avoid GitHub unauthenticated rate limits.
+    enriched = 0
+    for key, previous in list(seen.items()):
+        if enriched >= 3:
+            break
+        if not key.startswith("gh-") or previous.get("repo_created") or previous.get("metadata_checked"):
+            continue
+        label = str(previous.get("title") or "")
+        found = re.search(r"(?:\\[GitHub\\]\\s*)?([A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+)", label)
+        if not found:
+            continue
+        full_name = found.group(1)
+        try:
+            repo = json.loads(fetch("https://api.github.com/repos/" + full_name))
+            created = repo.get("created_at")
+            if created:
+                previous["repo_created"] = created
+                previous["repo_updated"] = repo.get("pushed_at") or repo.get("updated_at")
+                previous["date"] = created
+                previous["kind"] = "repository"
+                previous["url"] = repo.get("html_url") or "https://github.com/" + full_name
+                previous["source"] = "GitHub — репозиторий (историческая запись)"
+                previous["body"] = (label + " " + str(repo.get("description") or ""))[:1600]
+                previous["facts"] = get_facts(previous["body"],repo_created=created,
+                    repo_updated=previous["repo_updated"],kind="repository")
+            previous["metadata_checked"] = True
+            enriched += 1
+        except Exception as exc:
+            print("Legacy GitHub metadata unavailable:", type(exc).__name__)
+            break
+    print("Legacy GitHub records enriched:", enriched)
+
     stamp = NOW.isoformat(timespec="seconds")
     if ok:
         for key, item in results.items():
