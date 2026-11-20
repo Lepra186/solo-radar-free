@@ -14,6 +14,7 @@ from urllib.parse import quote
 from telegram_sources import CHANNELS, parse_public_channel
 from gpu_assessment import assess, signal, description
 from solo_intel import summary, source_quality
+from telegram_commands import process_commands
 
 TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
 CHAT = os.getenv("TELEGRAM_CHAT_ID", "").strip()
@@ -270,6 +271,13 @@ def main():
     elif ok:
         state["baseline_done"] = True
         print("Baseline saved; old entries suppressed.")
+
+    # Reply to commands from the authorized owner's chat after building the current snapshot.
+    # A failed Telegram API request must not stop the scanning state from being saved.
+    try:
+        process_commands(TOKEN, CHAT, state, results, NOW, notify)
+    except Exception as exc:
+        print("Telegram command check failed:", type(exc).__name__, str(exc)[:140])
 
     stamp = NOW.isoformat(timespec="seconds")
     if ok:
