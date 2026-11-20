@@ -60,6 +60,7 @@ def transitions(topics,previous,now,max_messages=2):
         remembered=old if isinstance(old,dict) else {}
         known[key]={
           "last_stage":current,
+          "project_group":("rpc-chain-"+str(rpc.get("chain_id"))) if rpc.get("chain_id") else None,
           "last_alert_marker":remembered.get("last_alert_marker",""),
           "checked_at":now.isoformat(timespec="seconds")}
     # Keep only records for current verified candidate topics.
@@ -69,4 +70,10 @@ def transitions(topics,previous,now,max_messages=2):
 def confirmed(known,key,marker):
     if key in known:
         known[key]["last_alert_marker"]=marker
+        # A single network can have ANN and GitHub records in the same scan.
+        # Once delivered, suppress all duplicates of the same RPC chain.
+        if marker.startswith("rpc-chain-"):
+            for value in known.values():
+                if value.get("project_group")==marker:
+                    value["last_alert_marker"]=marker
     return known
