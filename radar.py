@@ -25,6 +25,7 @@ from project_watch import reconcile
 from mineability import evaluate_all
 from mining_economics import calculate_all
 from gpu_readme_evidence import enrich as enrich_gpu_readmes
+from bitcointalk_threads import enrich as enrich_btt_threads
 from github_releases_source import check_releases
 from network_evidence import update as update_network_evidence
 from chain_progress import reconcile as reconcile_chain_progress
@@ -357,6 +358,7 @@ def main():
                          "github": item.get("github") or old.get("github") or {},
                          "gpu_support_evidence": old.get("gpu_support_evidence") or [],
                          "gpu_support_checked_at": old.get("gpu_support_checked_at"),
+                         "thread_evidence": old.get("thread_evidence") or {},
                          "coin_class": classify(key, item)[0],
                          "coin_reason": classify(key, item)[1]}
         if len(seen) > 6000:
@@ -479,6 +481,10 @@ def main():
     release_stats = check_releases(fetch,seen,NOW,limit=3)
     state["github_release_status"] = release_stats
     print("GitHub coin releases:",release_stats)
+
+    forum_details=enrich_btt_threads(fetch,seen,NOW,limit=3)
+    state["bitcointalk_thread_status"]=forum_details
+    print("Bitcointalk coin thread analysis:",forum_details)
 
     model_clues=enrich_gpu_readmes(fetch,seen,NOW,limit=2)
     state["gpu_support_status"]=model_clues
