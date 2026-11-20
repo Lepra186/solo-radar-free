@@ -13,6 +13,7 @@ from email.utils import parsedate_to_datetime
 from urllib.parse import quote
 from telegram_sources import CHANNELS, parse_public_channel
 from gpu_assessment import assess, signal, description
+from solo_intel import summary, source_quality
 
 TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
 CHAT = os.getenv("TELEGRAM_CHAT_ID", "").strip()
@@ -259,6 +260,8 @@ def main():
                 + "Источник: " + item["source"] + "\n"
                 + "Дата публикации/создания: " + (item["date"] or "не определена") + "\n\n"
                 + description(item["body"], NOW) + "\n\n"
+                + summary(item["body"]) + "\n\n"
+                + "Надёжность источника: " + source_quality(item) + "\n\n"
                 + "⚠️ Это не подтверждённый запуск и не совет майнить.\n"
                 + item["url"]
             )
