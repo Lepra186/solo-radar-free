@@ -224,3 +224,18 @@ test("mining software and switching tools never appear as mineable coins",()=>{
  const gh=renderMenu("source:gh:0",s,now);
  assert.match(gh.text,/Пока нет доступных публикаций/);
 });
+
+test("coin detail exposes honest rig-power sensitivity without fake income",()=>{
+ const project={title:"[ANN] ExampleCoin GPU PoW Ethash mainnet",body:"GPU Ethash PoW blockchain coin",
+   economics:{status:"insufficient_data",expected_coin_day:null,net_eur_day:null,
+      tariff_eur_kwh:0.10,energy_scenarios_eur_day:[
+        {wall_power_w:150,eur_day:0.36},{wall_power_w:200,eur_day:0.48},
+        {wall_power_w:250,eur_day:0.60},{wall_power_w:300,eur_day:0.72}],
+      required:["замер RTX 5070 Ti на этом алгоритме (HiveOS)","награда за блок"]}};
+ const s={topics:{"btt:80":project}};
+ const page=renderMenu("coin:0:0:w",s,now);
+ assert.match(page.text,/200 Вт → 0\.48 €\/сут/);
+ assert.match(page.text,/Добыча за сутки: данных для расчёта недостаточно/);
+ assert.match(page.text,/Чистая прибыль: нельзя определить/);
+ assert.doesNotMatch(page.text,/ожидаемая прибыль.*100/i);
+});
