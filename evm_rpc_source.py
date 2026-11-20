@@ -100,12 +100,18 @@ def update(topics,state,now,caller=transport):
         old=previous.get(network_id) or {}
         previous_checked=time_value(old.get("checked_at"))
         if previous_checked and timedelta(0)<=now-previous_checked<RETRY:
-            if old.get("rpc") and old.get("rpc",{}).get("last_block_height"):
+            if old.get("status")=="active" and old.get("rpc") and old.get("rpc",{}).get("last_block_height"):
                 result=old["rpc"]
-                # Existing observations are not new scans; do not claim
-                # growth on a repeated cached snapshot.
+                # Cached successful observations are visible, but are never
+                # counted as new RPC reads or as new height progression.
+                summary["available"]+=1
                 for key in matching:
                     topics[key]["rpc_evidence"]=result
+                    topics[key].pop("rpc_progress",None)
+            else:
+                for key in matching:
+                    topics[key].pop("rpc_evidence",None)
+                    topics[key].pop("rpc_progress",None)
             samples[network_id]=old
             continue
         summary["rpc_checks"]+=1
