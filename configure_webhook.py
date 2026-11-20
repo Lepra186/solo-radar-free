@@ -19,7 +19,7 @@ if not (1 <= len(secret) <= 256) or not all(x.isascii() and (x.isalnum() or x in
 payload = json.dumps({
     "url": url,
     "secret_token": secret,
-    "allowed_updates": ["message"],
+    "allowed_updates": ["message", "callback_query"],
     "drop_pending_updates": False,
 }).encode()
 req = urllib.request.Request(
