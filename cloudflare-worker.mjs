@@ -174,6 +174,11 @@ export function renderMenu(view, state = {}, now = new Date()) {
         "🕒 Сканирование: " + info.text + (info.stale?" ⚠️ устарело":""),
         "🔍 Записей в истории: " + Object.keys(state?.topics || {}).length,
         "🪙 GPU PoW на наблюдении: " + list.length,
+        "👥 Discord: "+(state?.discord_status?.status==="active"?
+          "подключён, каналов "+state.discord_status.success:
+          "ожидает подключения"),
+        "⛏ Mining Scan: "+(state?.mining_scan_status?.available?
+          "данные пулов получены":"нет свежих данных"),
         "",
         "Поиск монет выполняет GitHub Actions. Его запуск может задерживаться.",
       ].join("\n"),
