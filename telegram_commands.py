@@ -43,18 +43,18 @@ def digest(results, now):
     lines = ["📡 SOLO RADAR — ОБЗОР GPU PoW",
              "Поиск NVIDIA и AMD, без привязки к модели карты.",
              f"Записей в текущем скане: {len(results)}",
-             f"Предварительных GPU/SOLO-кандидатов: {len(ranked)}",
+             f"Предварительных GPU PoW-кандидатов: {len(ranked)}",
              ""]
     if recent:
         for i, (_, category, item) in enumerate(recent, 1):
-            lines.append(f"{i}. {'🚀 Ранний анонс' if category == 'EARLY' else '🔎 Кандидат'}")
+            lines.append(f"{i}. {'🚀 Ранний анонс' if category == 'EARLY' else '🪙 Пул / накопление' if category == 'HOLD' else '🔎 Кандидат'}")
             lines.append(str(item.get("title", "Без названия"))[:125])
             lines.append(str(item.get("url") or "Нет ссылки")[:300])
             lines.append("")
     else:
         lines += ["Подходящих кандидатов в доступных источниках пока нет.",
                   "Это не означает, что новые монеты не запускаются: часть площадок может быть недоступна.", ""]
-    lines += ["⚠️ Сложность, SOLO-пул, premine и ликвидность не подтверждены.",
+    lines += ["⚠️ Накопление не гарантирует продажу с прибылью; сложность, premine и ликвидность не подтверждены.",
               "Команды: /start, /latest, /status, /help.",
               "Ответ приходит после ближайшей проверки GitHub Actions."]
     return "\n".join(lines)[:3900]
