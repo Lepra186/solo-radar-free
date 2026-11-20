@@ -32,7 +32,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -70,7 +107,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -108,7 +182,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -146,7 +257,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -202,7 +350,7 @@
         "missing": [
           "Рабочий пул не проверен",
           "Свежие блоки сети не подтверждены",
-          "RTX 5070 Ti, подключение Stratum и фактические выплаты не проверены",
+          "Совместимость GTX 10xx / RTX 20xx–50xx, Stratum и выплаты не проверены",
           "Ликвидность и возможность продажи не проверены"
         ],
         "gpu_5070ti": "не проверена",
@@ -290,7 +438,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -328,7 +513,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -366,7 +588,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -404,7 +663,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -442,7 +738,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -480,7 +813,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -518,7 +888,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -556,7 +963,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -594,7 +1038,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -632,7 +1113,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -670,7 +1188,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -708,7 +1263,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -746,7 +1338,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -784,7 +1413,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -822,7 +1488,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -860,7 +1563,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -898,7 +1638,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -936,7 +1713,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -974,7 +1788,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -1013,7 +1864,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -1052,7 +1940,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -1091,7 +2016,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -1130,7 +2092,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -1169,7 +2168,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -1208,7 +2244,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -1248,7 +2321,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -1288,7 +2398,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -1328,7 +2475,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -1368,7 +2552,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -1408,7 +2629,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -1448,7 +2706,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -1488,7 +2783,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -1528,7 +2860,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -1567,7 +2936,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -1614,7 +3020,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -1654,7 +3097,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -1694,7 +3174,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -1734,7 +3251,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -1774,7 +3328,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -1814,7 +3405,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -1854,7 +3482,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -1894,7 +3559,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -1934,7 +3636,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -1974,7 +3713,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -2031,7 +3807,7 @@
           "В каталоге есть недавняя отметка найденного блока"
         ],
         "missing": [
-          "RTX 5070 Ti, подключение Stratum и фактические выплаты не проверены",
+          "Совместимость GTX 10xx / RTX 20xx–50xx, Stratum и выплаты не проверены",
           "Ликвидность и возможность продажи не проверены"
         ],
         "gpu_5070ti": "не проверена",
@@ -2121,7 +3897,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -2161,7 +3974,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -2201,7 +4051,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -2241,7 +4128,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -2281,7 +4205,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -2321,7 +4282,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -2361,7 +4359,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -2401,7 +4436,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -2441,7 +4513,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -2481,7 +4590,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -2521,7 +4667,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -2561,7 +4744,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -2601,7 +4821,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -2641,7 +4898,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -2681,7 +4975,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -2721,7 +5052,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -2761,7 +5129,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -2801,7 +5206,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -2841,7 +5283,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -2881,7 +5360,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -2921,7 +5437,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -2961,7 +5514,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -3001,7 +5591,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -3041,7 +5668,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -3081,7 +5745,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -3121,7 +5822,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -3161,7 +5899,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -3201,7 +5976,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -3241,7 +6053,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -3281,7 +6130,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -3321,7 +6207,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -3361,7 +6284,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -3401,7 +6361,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -3441,7 +6438,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -3481,7 +6515,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -3521,7 +6592,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -3561,7 +6669,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -3601,7 +6746,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -3641,7 +6823,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -3681,7 +6900,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -3721,7 +6977,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -3761,7 +7054,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -3801,7 +7131,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -3841,7 +7208,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -3881,7 +7285,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -3921,7 +7362,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -3961,7 +7439,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -4001,7 +7516,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -4041,7 +7593,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -4083,7 +7672,7 @@
         "missing": [
           "Рабочий пул не проверен",
           "Свежие блоки сети не подтверждены",
-          "RTX 5070 Ti, подключение Stratum и фактические выплаты не проверены",
+          "Совместимость GTX 10xx / RTX 20xx–50xx, Stratum и выплаты не проверены",
           "Ликвидность и возможность продажи не проверены"
         ],
         "gpu_5070ti": "не проверена",
@@ -4173,7 +7762,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -4213,7 +7839,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -4253,7 +7916,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -4293,7 +7993,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -4333,7 +8070,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -4373,7 +8147,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -4415,7 +8226,7 @@
         "missing": [
           "Рабочий пул не проверен",
           "Свежие блоки сети не подтверждены",
-          "RTX 5070 Ti, подключение Stratum и фактические выплаты не проверены",
+          "Совместимость GTX 10xx / RTX 20xx–50xx, Stratum и выплаты не проверены",
           "Ликвидность и возможность продажи не проверены"
         ],
         "gpu_5070ti": "не проверена",
@@ -4505,7 +8316,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -4545,7 +8393,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -4585,7 +8470,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -4625,7 +8547,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -4665,7 +8624,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -4705,7 +8701,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -4745,7 +8778,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -4785,7 +8855,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -4824,7 +8931,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -4863,7 +9007,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -4883,7 +9064,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -4901,7 +9119,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -4921,7 +9176,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -4961,7 +9253,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -5001,7 +9330,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -5041,7 +9407,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -5087,7 +9490,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -5135,7 +9575,7 @@
         "missing": [
           "Рабочий пул не проверен",
           "Свежие блоки сети не подтверждены",
-          "RTX 5070 Ti, подключение Stratum и фактические выплаты не проверены",
+          "Совместимость GTX 10xx / RTX 20xx–50xx, Stratum и выплаты не проверены",
           "Ликвидность и возможность продажи не проверены"
         ],
         "gpu_5070ti": "не проверена",
@@ -5231,7 +9671,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -5277,7 +9754,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -5323,7 +9837,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -5363,7 +9914,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -5403,7 +9991,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -5445,7 +10070,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -5485,7 +10147,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -5531,7 +10230,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
@@ -5571,7 +10307,44 @@
         "label": "Не GPU PoW-монета",
         "evidence": [],
         "missing": [],
-        "gpu_5070ti": "не проверена"
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
       },
       "economics": {
         "status": "excluded",
