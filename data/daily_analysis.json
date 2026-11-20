@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-20T10:47:59+00:00",
+  "generated_at": "2026-11-20T10:57:40+00:00",
   "mode": "rules_only",
   "model": null,
   "candidate_count": 3,
-  "scan_updated_at": "2026-11-20T10:47:23+00:00",
+  "scan_updated_at": "2026-11-20T10:51:47+00:00",
   "summary": "Автоподбор по правилам без ИИ. Только кандидаты для дальнейшего изучения.",
   "picks": [
     {
@@ -14,7 +14,7 @@
       "algorithm": "Ethash",
       "published": null,
       "launch_claim": null,
-      "score": 7,
+      "score": 8,
       "mining_readiness": {
         "stage": "rpc_head_reported",
         "label": "Публичный RPC вернул свежий блок и правильный Chain ID",
@@ -71,7 +71,7 @@
         },
         "chain_height_progression": false,
         "rpc_height_progression": false,
-        "checked_at": "2026-11-20T10:47+00:00"
+        "checked_at": "2026-11-20T10:51+00:00"
       },
       "economics": {
         "status": "insufficient_data",
@@ -132,7 +132,7 @@
       "algorithm": "Ethash",
       "published": "2026-11-13T23:04+00:00",
       "launch_claim": null,
-      "score": 6,
+      "score": 7,
       "mining_readiness": {
         "stage": "rpc_head_reported",
         "label": "Публичный RPC вернул свежий блок и правильный Chain ID",
@@ -190,7 +190,7 @@
         },
         "chain_height_progression": false,
         "rpc_height_progression": false,
-        "checked_at": "2026-11-20T10:47+00:00"
+        "checked_at": "2026-11-20T10:51+00:00"
       },
       "economics": {
         "status": "insufficient_data",
@@ -251,7 +251,7 @@
       "algorithm": "Ethash",
       "published": null,
       "launch_claim": null,
-      "score": 5,
+      "score": 6,
       "mining_readiness": {
         "stage": "rpc_head_reported",
         "label": "Публичный RPC вернул свежий блок и правильный Chain ID",
@@ -308,7 +308,7 @@
         },
         "chain_height_progression": false,
         "rpc_height_progression": false,
-        "checked_at": "2026-11-20T10:47+00:00"
+        "checked_at": "2026-11-20T10:51+00:00"
       },
       "economics": {
         "status": "insufficient_data",
@@ -357,7 +357,7 @@
         ],
         "note": "Сценарии энергии — не измерение GPU/рига. Доходность и продажа не подтверждены."
       },
-      "rationale": "указан GPU-алгоритм: Ethash; официально указанный публичный RPC вернул свежий блок и Chain ID",
+      "rationale": "указан GPU-алгоритм: Ethash; есть ссылка на обозреватель из объявления",
       "mining": "Работающий GPU-майнинг и выплаты не проверены",
       "risks": "дата публикации/создания не установлена либо старая; нет проверенной даты mainnet"
     }
