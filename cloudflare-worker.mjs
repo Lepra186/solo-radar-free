@@ -177,6 +177,21 @@ function projectFactLines(key, item, options={}) {
       else lines.push("  Stratum: нет подтверждённого адреса для монеты");
     }
   }
+  const rpc=item?.rpc_evidence;
+  if(rpc && !options.compact && Number.isInteger(rpc.last_block_height)) {
+    lines.push("🔌 Публичный RPC (проектом опубликован; не проверка награды майнеру):");
+    lines.push("  Chain ID: "+rpc.chain_id+" • Высота: "+rpc.last_block_height);
+    lines.push("  Время блока: "+String(rpc.last_block_time||"неизвестно").slice(0,19)+" UTC");
+    if(Number.isFinite(rpc.difficulty_from_header))
+      lines.push("  Сложность из заголовка: "+rpc.difficulty_from_header);
+    lines.push("  "+String(rpc.endpoint||""));
+  }
+  const rpcChange=item?.rpc_progress;
+  if(rpcChange && !options.compact && Number.isInteger(rpcChange.blocks_increased) &&
+       rpcChange.blocks_increased>0) {
+    lines.push("📈 Зафиксирован рост RPC: +"+rpcChange.blocks_increased+
+      " блоков между чтениями (не подтверждает выплаты)");
+  }
   const explorer=item?.explorer_evidence;
   if (explorer && !options.compact) {
     lines.push("🔎 Публичный Blockscout (связь с PoW-сетью не подтверждена):");
@@ -294,6 +309,9 @@ export function renderMenu(view, state = {}, now = new Date()) {
         "🧪 Активность сети по внешним данным: "+
             Number(state?.mining_readiness_counts?.activity_reported||0),
         "📈 Рост высоты между снимками: "+Number(state?.mining_readiness_counts?.height_advanced||0),
+        "🔌 Прямой RPC: "+Number(state?.evm_rpc_stats?.available||0)+
+          " сети со свежими/кешированными данными",
+        "📈 Рост высоты по RPC: "+Number(state?.evm_rpc_stats?.height_advanced||0),
         "🔎 Blockscout: "+Number(state?.public_explorer_status?.explorers_reporting_recent_blocks||0)+
           " обозревателей со свежими блоками",
         "📊 Рост индекса Blockscout: "+Number(state?.explorer_progress_stats?.increased||0)+
