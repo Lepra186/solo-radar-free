@@ -1,165 +1,254 @@
 #!/usr/bin/env python3
-"""SOLO Radar: scheduled Bitcointalk scouting; standard library only."""
-import os, re, json, html, urllib.request
+"""SOLO Radar: free scheduled candidate discovery with explicit uncertainty."""
+import os
+import re
+import json
+import html
+import urllib.request
+import xml.etree.ElementTree as ET
 from html.parser import HTMLParser
 from pathlib import Path
 from datetime import datetime, timezone, timedelta
+from email.utils import parsedate_to_datetime
+from urllib.parse import quote
 
-BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
-CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "").strip()
-STATE_FILE = Path("data/state.json")
-BOARDS = (
-    "https://bitcointalk.org/index.php?board=159.0",
-    "https://bitcointalk.org/index.php?board=159.40",
-)
+TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
+CHAT = os.getenv("TELEGRAM_CHAT_ID", "").strip()
+STATE = Path("data/state.json")
+NOW = datetime.now(timezone.utc)
+KNOWN = {"neb", "qu", "nexc", "tape", "pearl", "karlsen", "kls"}
+HEADERS = {"User-Agent": "SOLO-Radar/1.2 (+personal PoW announcements)"}
+BTT = ("https://bitcointalk.org/index.php?board=159.0",
+       "https://bitcointalk.org/index.php?board=159.40")
+RSS = ("https://2miners.com/blog/feed/",)
+POOL_NEWS = ("https://pool-pay.com/",)
+
+def fetch(url):
+    req = urllib.request.Request(url, headers=HEADERS)
+    with urllib.request.urlopen(req, timeout=22) as res:
+        return res.read().decode("utf-8", errors="replace")
+
+def notify(message):
+    if not TOKEN or not CHAT:
+        raise RuntimeError("Set both TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID in Actions secrets")
+    req = urllib.request.Request(
+        f"https://api.telegram.org/bot{TOKEN}/sendMessage",
+        data=json.dumps({"chat_id": CHAT, "text": message,
+                         "disable_web_page_preview": True}).encode(),
+        headers={"Content-Type": "application/json"}, method="POST")
+    with urllib.request.urlopen(req, timeout=20) as res:
+        response = json.load(res)
+    if not response.get("ok"):
+        raise RuntimeError("Telegram did not accept message")
 
 class Topics(HTMLParser):
     def __init__(self):
         super().__init__()
-        self.topic = None
-        self.parts = []
-        self.items = {}
-
+        self.current = None
+        self.text = []
+        self.topics = {}
     def handle_starttag(self, tag, attrs):
-        if tag != "a":
-            return
-        link = dict(attrs).get("href", "")
-        m = re.search(r"[?&]topic=(\d+)(?:\.\d+)?", link)
-        if m:
-            self.topic = m.group(1)
-            self.parts = []
-
-    def handle_data(self, text):
-        if self.topic is not None:
-            self.parts.append(text)
-
+        if tag == "a":
+            m = re.search(r"[?&]topic=(\d+)", dict(attrs).get("href", ""))
+            if m:
+                self.current, self.text = m.group(1), []
+    def handle_data(self, data):
+        if self.current:
+            self.text.append(data)
     def handle_endtag(self, tag):
-        if tag == "a" and self.topic is not None:
-            title = html.unescape(" ".join("".join(self.parts).split()))
+        if tag == "a" and self.current:
+            title = " ".join(html.unescape("".join(self.text)).split())
             if 12 <= len(title) <= 180:
-                self.items[self.topic] = title
-            self.topic = None
-            self.parts = []
+                self.topics[self.current] = title
+            self.current = None
 
-def request(url, payload=None):
-    data = json.dumps(payload).encode() if payload is not None else None
-    req = urllib.request.Request(
-        url, data=data, method="POST" if data is not None else "GET",
-        headers={"User-Agent": "Mozilla/5.0 SOLO-Radar/1.0", "Content-Type": "application/json"},
-    )
-    with urllib.request.urlopen(req, timeout=25) as result:
-        return result.read().decode("utf-8", errors="replace")
+def ts(value):
+    if not value:
+        return None
+    try:
+        return datetime.fromisoformat(value.replace("Z", "+00:00")).astimezone(timezone.utc)
+    except ValueError:
+        try:
+            return parsedate_to_datetime(value).astimezone(timezone.utc)
+        except (ValueError, TypeError, IndexError):
+            return None
 
-def send(text):
-    result = json.loads(request(
-        f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage",
-        {"chat_id": CHAT_ID, "text": text, "disable_web_page_preview": True}
-    ))
-    if not result.get("ok"):
-        raise RuntimeError("Telegram refused the message")
-
-def score(title):
-    value = title.lower()
-    points = 0
-    for pattern, weight in (
-        (r"\b(pow|proof.of.work|mineable)\b", 3),
-        (r"\b(gpu|nvidia|cuda|ethash|kawpow|progpow|blake3)\b", 4),
-        (r"\b(mainnet|launch|genesis)\b", 3),
-        (r"\b(solo)\b", 2),
-        (r"\b(fair.launch|no.premine)\b", 2),
+def eligible(text):
+    t = text.lower()
+    if re.search(r"\b(ico|presale|airdrop|meme.?token|staking|nft)\b", t):
+        return -10
+    score = 0
+    for regex, points in (
+        (r"\b(pow|proof.of.work|mineable|mining)\b", 3),
+        (r"\b(gpu|nvidia|cuda|ethash|kawpow|progpow|blake3|autolykos)\b", 5),
+        (r"\b(mainnet|genesis|launch|new.pool|solo)\b", 2),
+        (r"\b(fair.launch|no.premine|0%.premine)\b", 2),
     ):
-        if re.search(pattern, value):
-            points += weight
-    if re.search(r"\b(ico|presale|airdrop|staking|token.sale)\b", value):
-        points -= 9
-    if re.search(r"\b(cpu.only|randomx|yespower)\b", value) and not re.search(r"\bgpu\b", value):
-        points -= 5
-    return points
+        if re.search(regex, t):
+            score += points
+    if re.search(r"\b(cpu.only|randomx|yespower|sha.?256.asic)\b", t) and "gpu" not in t:
+        score -= 8
+    return score
+
+def analyze(text):
+    t = text.lower()
+    gpu = bool(re.search(r"\b(gpu|nvidia|cuda|ethash|kawpow|progpow|blake3|autolykos)\b", t))
+    solo = bool(re.search(r"\bsolo\b", t))
+    premine = "заявлено отсутствие" if re.search(r"(no.premine|0%.premine|zero.premine)", t) else "не проверен"
+    return (
+        f"RTX 5070 Ti: {'GPU упоминается; совместимость НЕ проверена' if gpu else 'совместимость не подтверждена'}\n"
+        f"SOLO: {'упоминается; доступность НЕ проверена' if solo else 'не подтверждено'}\n"
+        f"Premine: {premine}\n"
+        "Mainnet и точное время: не подтверждены\n"
+        "Сложность и шанс блока: нет измерений\n"
+        "Биржа и ликвидность: не проверены"
+    )
 
 def main():
-    if not BOT_TOKEN or not CHAT_ID:
-        raise RuntimeError(
-            "Telegram is not configured: check both GitHub Actions secrets "
-            "TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID."
-        )
-
-    state = {"topics": {}, "initialized": False}
-    if STATE_FILE.exists():
+    if not TOKEN or not CHAT:
+        raise RuntimeError("Telegram secrets missing: TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID")
+    state = {"initialized": False, "baseline_done": False, "topics": {}}
+    if STATE.exists():
         try:
-            saved = json.loads(STATE_FILE.read_text(encoding="utf-8"))
+            saved = json.loads(STATE.read_text(encoding="utf-8"))
             if isinstance(saved, dict):
                 state.update(saved)
-        except (ValueError, OSError):
+        except (OSError, ValueError):
             pass
 
-    # Connection diagnostic runs independently of public-source availability.
     if not state.get("initialized"):
-        send("✅ SOLO Radar подключён к Telegram. Поиск работает по расписанию; сигналы обозначаются как непроверенные.")
+        notify("✅ SOLO Radar подключён. Источники: GitHub, Bitcointalk (если доступен), RSS 2Miners и новости пулов. Кандидаты будут помечены как непроверенные.")
         state["initialized"] = True
 
-    found = {}
-    good = 0
-    for page in BOARDS:
-        try:
-            p = Topics()
-            p.feed(request(page))
-            found.update({"btt-" + key: title for key, title in p.items.items()})
-            good += 1
-        except Exception as exc:
-            print("Unavailable Bitcointalk source:", page, type(exc).__name__)
+    results = {}
+    ok = 0
 
-    # Fallback: discover newly updated PoW code repositories.
-    # GitHub commits are NOT evidence of a mainnet launch.
+    # GitHub: newly created repos only. An update is not mainnet evidence.
     try:
-        from urllib.parse import quote
-        since = (datetime.now(timezone.utc) - timedelta(days=10)).date().isoformat()
-        query = quote(f'"proof of work" cryptocurrency pushed:>{since}', safe='')
-        data = json.loads(request("https://api.github.com/search/repositories?q=" + query + "&sort=updated&order=desc&per_page=30"))
+        since = (NOW - timedelta(days=7)).date().isoformat()
+        q = quote(f'cryptocurrency proof of work created:>{since}')
+        data = json.loads(fetch("https://api.github.com/search/repositories?q=" + q
+                                + "&sort=created&order=desc&per_page=50"))
         for item in data.get("items", []):
             name = item.get("full_name", "")
-            desc = (item.get("description") or "").replace("\n", " ")
-            if name:
-                found["gh-" + str(item["id"])] = "[GitHub] " + name + " — " + desc[:110]
-        good += 1
-        print("GitHub repository fallback: available")
+            created = ts(item.get("created_at"))
+            if not name or not created or NOW - created > timedelta(days=7):
+                continue
+            description = (item.get("description") or "")[:350]
+            results["gh:" + str(item["id"])] = {
+                "title": name, "body": f"{name} {description}",
+                "url": item.get("html_url") or "https://github.com/" + name,
+                "source": "GitHub — новый репозиторий, НЕ запуск сети",
+                "date": created.isoformat(), "kind": "repository"}
+        ok += 1
+        print("GitHub source OK:", len(results))
     except Exception as exc:
-        print("GitHub search fallback unavailable:", type(exc).__name__)
+        print("GitHub source unavailable:", repr(exc)[:140])
 
-    previous = state.get("topics", {})
-    new = [(key, title) for key, title in found.items() if key not in previous]
-    if good:
-        if not state.get("baseline_done"):
-            state["baseline_done"] = True
-            print("Baseline created; old projects will not be sent as new alerts.")
-        else:
-            ranking = sorted(((score(title), key, title) for key, title in new), reverse=True)
-            for points, key, title in [item for item in ranking if item[0] >= 7][:5]:
-                if key.startswith("btt-"):
-                    url = f"https://bitcointalk.org/index.php?topic={key[4:]}.0"
-                else:
-                    url = "https://github.com/" + title.split(" — ", 1)[0].replace("[GitHub] ", "")
-                send(
-                    "🔎 НОВЫЙ PoW-КАНДИДАТ — НЕ ПРОВЕРЕН\n\n"
-                    + title + "\n"
-                    + "Оценка заголовка: " + str(points) + " (не прогноз прибыли).\n\n"
-                    + "⚠️ Не подтверждены время mainnet, GPU/SOLO, premine, сложность и возможность продажи. "
-                    + "Наличие репозитория не означает запуск монеты.\n"
-                    + url
-                )
-    else:
-        print("All public sources unavailable. Telegram diagnostic sent; next scan will retry.")
+    # Bitcointalk: these pages are frequently blocked to scheduled cloud workers.
+    for url in BTT:
+        try:
+            parser = Topics()
+            parser.feed(fetch(url))
+            for topic, title in parser.topics.items():
+                results["btt:" + topic] = {
+                    "title": title, "body": title,
+                    "url": f"https://bitcointalk.org/index.php?topic={topic}.0",
+                    "source": "Bitcointalk ANN — дата первого сообщения не проверена",
+                    "date": None, "kind": "announcement"}
+            ok += 1
+            print("Bitcointalk source OK:", len(parser.topics))
+        except Exception as exc:
+            print("Bitcointalk unavailable:", type(exc).__name__)
 
-    stamp = datetime.now(timezone.utc).isoformat(timespec="seconds")
-    for key, title in found.items():
-        previous[key] = {"title": title, "seen": previous.get(key, {}).get("seen", stamp)}
-    if len(previous) > 5000:
-        previous = dict(sorted(previous.items(), key=lambda item: item[1]["seen"], reverse=True)[:5000])
+    # Industry RSS: publications are news evidence, not proof of actual block production.
+    for url in RSS:
+        try:
+            feed = ET.fromstring(fetch(url))
+            count = 0
+            for item in feed.findall(".//item"):
+                title = (item.findtext("title") or "").strip()
+                link = (item.findtext("link") or "").strip()
+                published = ts(item.findtext("pubDate"))
+                description = re.sub(r"<[^>]+>", " ", item.findtext("description") or "")
+                if not title or not link or not published:
+                    continue
+                if NOW - published > timedelta(days=7) or published > NOW + timedelta(days=1):
+                    continue
+                results["rss:" + link] = {
+                    "title": title, "body": title + " " + html.unescape(description[:400]),
+                    "url": link, "source": "2Miners — публикация",
+                    "date": published.isoformat(), "kind": "news"}
+                count += 1
+            ok += 1
+            print("2Miners RSS OK:", count)
+        except Exception as exc:
+            print("2Miners RSS unavailable:", type(exc).__name__)
 
-    state["topics"] = previous
+    # Pool operator announcement pages: keep distinct from exchange listings.
+    for url in POOL_NEWS:
+        try:
+            raw = fetch(url)
+            plain = html.unescape(re.sub(r"<[^>]+>", " ", raw))
+            plain = " ".join(plain.split())
+            count = 0
+            for match in re.finditer(r"2026-\d{2}-\d{2}\s*[—–-]\s*", plain):
+                date = ts(match.group(0)[:10])
+                if date and timedelta(0) <= NOW - date <= timedelta(days=7):
+                    snippet = plain[match.end():match.end()+360].split("2026-", 1)[0].strip()
+                    if snippet:
+                        key = "pool:" + match.group(0)[:10] + ":" + str(count)
+                        results[key] = {"title": snippet[:150], "body": snippet,
+                                        "url": url, "source": "Pool operator — публичное обновление",
+                                        "date": date.isoformat(), "kind": "news"}
+                        count += 1
+            ok += 1
+            print("Pool operator news OK:", count)
+        except Exception as exc:
+            print("Pool operator source unavailable:", type(exc).__name__)
+
+    if ok == 0:
+        print("All discovery sources unavailable; no state baseline change")
+        # Still write connection state so greeting isn't repeated.
+    seen = state.setdefault("topics", {})
+    unseen = [(key, item) for key, item in results.items() if key not in seen]
+    if ok and state.get("baseline_done"):
+        candidates = sorted(((eligible(item["body"]), key, item)
+                             for key, item in unseen), key=lambda x: x[0], reverse=True)
+        sent = 0
+        for points, key, item in candidates:
+            if points < 8 or sent >= 3:
+                continue
+            # Require both mining/PoW and GPU evidence; otherwise don't waste user alerts.
+            if not re.search(r"\b(pow|proof.of.work|mining|mineable)\b", item["body"], re.I):
+                continue
+            if not re.search(r"\b(gpu|nvidia|cuda|ethash|kawpow|progpow|blake3|autolykos)\b", item["body"], re.I):
+                continue
+            notify(
+                "🔎 SOLO RADAR — КАНДИДАТ, НЕ ПРОВЕРЕН\n\n"
+                + item["title"][:160] + "\n"
+                + "Источник: " + item["source"] + "\n"
+                + "Дата публикации/создания: " + (item["date"] or "не определена") + "\n\n"
+                + analyze(item["body"]) + "\n\n"
+                + "⚠️ Это повод изучить проект, НЕ сигнал начинать майнинг.\n"
+                + item["url"]
+            )
+            sent += 1
+        print("Alerts sent:", sent)
+    elif ok:
+        state["baseline_done"] = True
+        print("Baseline saved; old entries suppressed.")
+
+    stamp = NOW.isoformat(timespec="seconds")
+    if ok:
+        for key, item in results.items():
+            seen[key] = {"title": item["title"], "seen": seen.get(key, {}).get("seen", stamp)}
+        if len(seen) > 6000:
+            seen = dict(sorted(seen.items(), key=lambda x: x[1]["seen"], reverse=True)[:6000])
     state["last_scan"] = stamp
-    STATE_FILE.parent.mkdir(exist_ok=True, parents=True)
-    STATE_FILE.write_text(json.dumps(state, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"Source pages: {good}; topics: {len(found)}; new: {len(new)}")
+    STATE.parent.mkdir(parents=True, exist_ok=True)
+    STATE.write_text(json.dumps(state, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(f"Sources available: {ok}, items: {len(results)}, new items: {len(unseen)}")
 
 if __name__ == "__main__":
     main()
