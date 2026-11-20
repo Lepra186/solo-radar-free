@@ -27,6 +27,7 @@ from mining_economics import calculate_all
 from gpu_readme_evidence import enrich as enrich_gpu_readmes
 from github_releases_source import check_releases
 from network_evidence import update as update_network_evidence
+from chain_progress import reconcile as reconcile_chain_progress
 from discord_sources import fetch_channels as scan_discord
 from mining_scan_source import refresh as refresh_mining_scan, matches_for
 from pool_validation import update as update_pool_directory, match_pools, stratum_by_coin, parsed as parse_pool_time
@@ -440,6 +441,19 @@ def main():
         "updated_this_run":backpow_updated,
         "source":"BackPoW"}
     print("Network evidence:",state["network_evidence_status"])
+
+    # Two or more canonical network height snapshots are needed to report
+    # chain progression; a single last-block claim is insufficient.
+    chain_growth, chain_history, chain_stats = reconcile_chain_progress(
+        seen,state.get("chain_height_history"),NOW)
+    for key,item in seen.items():
+        if key in chain_growth:
+            item["chain_progress"]=chain_growth[key]
+        else:
+            item.pop("chain_progress",None)
+    state["chain_height_history"]=chain_history
+    state["chain_progress_stats"]=chain_stats
+    print("Chain height progression:",chain_stats)
 
     # Free network stats from another independent catalog. API does not
     # provide per-coin freshness: never treat retrieval time as live telemetry.
