@@ -88,7 +88,7 @@ def evaluate(key,item,now):
         stage,label="announcement_only","Только анонс или код проекта"
     return {
         "stage":stage,"label":label,"evidence":evidence[:5],
-        "missing":missing,"gpu_5070ti":"не проверена",
+        "missing":missing,"gpu_family_coverage":gpu_family_summary(item),
         "source_freshness":{"pool":fresh_pool,"network":fresh_net},
         "checked_at":now.isoformat(timespec="minutes")
     }
