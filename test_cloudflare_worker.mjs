@@ -173,3 +173,25 @@ test("home handles missing metadata without guessing dates",()=>{
  assert.match(home.text,/дата не получена/);
  assert.doesNotMatch(home.text,/Заявлен mainnet:/);
 });
+
+test("daily AI menu and command show report with source links",()=>{
+ const data={mode:"openai",generated_at:"2026-11-20T08:10:00Z",candidate_count:5,
+  summary:"Отобрать несколько ранних PoW проектов",
+  picks:[{title:"ExampleCoin GPU KawPow",source:"Telegram",algorithm:"KawPow",
+          launch_claim:"2026-11-21T12:00:00Z",rationale:"есть новый анонс",
+          risks:"нет реального хешрейта",url:"https://t.me/example/42"}]};
+ const result=renderMenu("analysis",{daily_analysis:data},now);
+ assert.match(result.text,/OpenAI API/);
+ assert.match(result.text,/ExampleCoin/);
+ assert.ok(result.reply_markup.inline_keyboard.flat().some(x=>x.url==="https://t.me/example/42"));
+ assert.ok(renderMenu("home",state,now).reply_markup.inline_keyboard.flat().some(x=>x.callback_data==="analysis"));
+ assert.equal(commandOf({text:"/analysis"}),"/analysis");
+});
+test("daily report without key is labeled not AI and hides unknown launch",()=>{
+ const data={mode:"rules_only",generated_at:"2026-11-20T08:10:00Z",
+   summary:"Rule check",picks:[{title:"GPUPoW",source:"GitHub",risks:"unknown"}]};
+ const result=renderMenu("analysis",{daily_analysis:data},now);
+ assert.match(result.text,/Правила \(без ИИ\)/);
+ assert.match(result.text,/Mainnet не подтверждён/);
+ assert.doesNotMatch(result.text,/null \(заявлено\)/);
+});
