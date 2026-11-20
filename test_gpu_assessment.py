@@ -29,6 +29,15 @@ class GPUAssessmentTests(unittest.TestCase):
         self.assertEqual(signal(sample, NOW), "EARLY")
     def test_not_only_cpu(self):
         self.assertIsNone(signal("CPU only RandomX proof of work mainnet launch with pool", NOW))
+    def test_gpu_explicitly_denied_not_early(self):
+        s="New GPU KawPow PoW coin mainnet launch 2026-11-21 10:30 UTC; GPU mining not supported"
+        self.assertIsNone(signal(s,NOW))
+        self.assertTrue(assess(s,NOW)["excluded"])
+    def test_pending_mainnet_not_early(self):
+        s="New GPU PoW coin mainnet launch 2026-11-21 10:30 UTC; mainnet pending"
+        self.assertIsNone(signal(s,NOW))
+    def test_unknown_time_reference_not_early(self):
+        self.assertNotEqual(signal("GPU PoW mainnet launch 2020-01-01 10:30 UTC"),"EARLY")
     def test_vendor_independent(self):
         self.assertNotIn("5070", description("GPU PoW mining", NOW))
 
