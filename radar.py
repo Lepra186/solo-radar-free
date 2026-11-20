@@ -17,6 +17,7 @@ from solo_intel import summary, source_quality
 from telegram_commands import process_commands
 from project_links import from_text, format_links
 from telegram_recipients import parse_recipients
+from project_facts import get_facts
 
 TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
 CHAT = os.getenv("TELEGRAM_CHAT_ID", "").strip()
@@ -140,7 +141,9 @@ def main():
                 "title": name, "body": f"{name} {description}",
                 "url": item.get("html_url") or "https://github.com/" + name,
                 "source": "GitHub — новый репозиторий, НЕ запуск сети",
-                "date": created.isoformat(), "kind": "repository"}
+                "date": created.isoformat(), "kind": "repository",
+                "repo_created": item.get("created_at"),
+                "repo_updated": item.get("pushed_at") or item.get("updated_at") }
         ok += 1
         print("GitHub source OK:", len(results))
     except Exception as exc:
@@ -338,7 +341,15 @@ def main():
                          "body": (item.get("body") or old.get("body") or item["title"])[:1600],
                          "source": item.get("source") or old.get("source") or "",
                          "kind": item.get("kind") or old.get("kind") or "",
-                         "date": item.get("date") or old.get("date")}
+                         "date": item.get("date") or old.get("date"),
+                         "facts": get_facts(
+                             item.get("body") or old.get("body") or item["title"],
+                             publication=item.get("date") or old.get("date"),
+                             repo_created=item.get("repo_created") or old.get("repo_created"),
+                             repo_updated=item.get("repo_updated") or old.get("repo_updated"),
+                             kind=item.get("kind") or old.get("kind") or ""),
+                         "repo_created": item.get("repo_created") or old.get("repo_created"),
+                         "repo_updated": item.get("repo_updated") or old.get("repo_updated")}
         if len(seen) > 6000:
             seen = dict(sorted(seen.items(), key=lambda x: x[1]["seen"], reverse=True)[:6000])
     state["last_scan"] = stamp
