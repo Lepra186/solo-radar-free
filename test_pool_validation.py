@@ -49,6 +49,18 @@ class Pools(unittest.TestCase):
   self.assertEqual(checked,1)
   self.assertEqual(info["pools"][0]["stratum_endpoints"],["stratum+tcp://pool.example:3333"])
   self.assertEqual(visits,["https://mining-scan.com/pools/newpool.example/coins"])
+ def test_stale_pool_catalog_throttled(self):
+  calls=[]
+  stale={"meta":{"generated_at":"2026-11-01T09:00:00Z","stale":False},"data":[POOL]}
+  def fetch(url):
+   calls.append(url)
+   return json.dumps(stale)
+  result,changed=update(fetch,{},NOW)
+  self.assertTrue(changed)
+  self.assertEqual(result["status"],"source_unavailable")
+  next_result,changed=update(fetch,{"pool_directory":result},NOW)
+  self.assertFalse(changed)
+  self.assertEqual(len(calls),1)
  def test_stale_cache_refresh(self):
   count=[]
   def fetch(url):
