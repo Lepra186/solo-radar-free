@@ -12,6 +12,10 @@ class SOLOIntelTests(unittest.TestCase):
         for args in ((101,100,1,60), (10,0,1,60), (10,100,-1,60), (10,100,1,0)):
             with self.assertRaises(ValueError):
                 mine_probability(*args)
+    def test_probability_rejects_boolean_numbers(self):
+        for args in ((True,100,1,60),(10,False,1,60),(10,100,True,60),(10,100,1,False)):
+            with self.assertRaises(ValueError):
+                mine_probability(*args)
     def test_declared_not_verified(self):
         body = "GPU PoW, block reward: 19 NEB, block time: 2 minutes; premine 12%"
         facts = extract_declared_facts(body)

@@ -4,6 +4,7 @@ No status implies that any GTX 10xx / RTX 20xx–50xx mining, withdrawals, excha
 profit is proven. Network and pool catalog data may be incomplete and stale.
 """
 from datetime import datetime,timezone,timedelta
+import math
 from coin_filter import is_coin
 from gpu_families import summary as gpu_family_summary
 
@@ -27,7 +28,7 @@ def recent(raw,now,max_age):
 
 def number(raw):
     if isinstance(raw,bool) or not isinstance(raw,(int,float)):return None
-    if raw!=raw or raw<0:return None
+    if not math.isfinite(raw) or raw<0:return None
     return raw
 
 def evaluate(key,item,now):
