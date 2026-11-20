@@ -8,6 +8,8 @@ on:
     paths:
       - 'radar.py'
       - 'telegram_sources.py'
+      - 'gpu_assessment.py'
+      - 'test_gpu_assessment.py'
       - 'test_telegram_sources.py'
       - '.github/workflows/solo-radar.yml'
 permissions:
@@ -27,11 +29,13 @@ jobs:
         with:
           python-version: '3.12'
       - name: Test announcement parser
-        run: python -m unittest -v test_telegram_sources.py
+        run: python -m unittest -v test_telegram_sources.py test_gpu_assessment.py
       - name: Check announcements and notify Telegram
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+          DISCORD_CHANNEL_IDS: ${{ secrets.DISCORD_CHANNEL_IDS }}
         run: python radar.py
       - name: Remember seen announcements
         run: |
