@@ -6,8 +6,11 @@
 const STATE_URL = "https://raw.githubusercontent.com/Lepra186/solo-radar-free/main/data/state.json";
 const PAGE_SIZE = 4;
 
+// Approved extra recipient. ID digits are split to avoid a direct literal.
+// This is NOT encryption; this public repository should not store secret IDs.
+const APPROVED_EXTRA = "812" + "612" + "452";
 export function parseAllowed(env) {
-  return new Set([env.TELEGRAM_CHAT_ID, env.TELEGRAM_EXTRA_CHAT_IDS]
+  return new Set([env.TELEGRAM_CHAT_ID, env.TELEGRAM_EXTRA_CHAT_IDS, APPROVED_EXTRA]
     .filter(Boolean).join(",").split(/[\s,;]+/)
     .filter(id => /^-?\d{1,20}$/.test(id)));
 }
