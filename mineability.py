@@ -67,6 +67,18 @@ def evaluate(key,item,now):
         if pool_info.get("stratum_endpoints"):
             evidence.append("Опубликован Stratum-адрес; соединение и выплаты не проверены")
         break
+    chain=item.get("chain_progress") or {}
+    progress_stamped=date_value(chain.get("last_observed_at"))
+    progressed=bool(
+        chain.get("source")=="BackPoW" and
+        isinstance(chain.get("blocks_increased"),int) and not isinstance(chain.get("blocks_increased"),bool)
+        and chain["blocks_increased"]>0 and progress_stamped
+        and timedelta(0)<=now-progress_stamped<=NETWORK_MAX_AGE
+        and fresh_net and network.get("coin_id")==chain.get("coin_id")
+    )
+    if progressed:
+        evidence.append("Между снимками BackPoW высота выросла на "+
+                        str(chain["blocks_increased"])+" блоков")
     if fresh_net and network_height is not None and network_height>0:
         activity=True
         evidence.append("BackPoW сообщает высоту цепи: "+str(int(network_height)))
@@ -80,7 +92,9 @@ def evaluate(key,item,now):
     if not activity:missing.append("Свежие блоки сети не подтверждены")
     missing.append("Совместимость GTX 10xx / RTX 20xx–50xx, Stratum и выплаты не проверены")
     missing.append("Ликвидность и возможность продажи не проверены")
-    if activity:
+    if progressed:
+        stage,label="height_advanced","Зафиксирован рост высоты сети по двум снимкам"
+    elif activity:
         stage,label="activity_reported","Есть сообщения об активности сети"
     elif listing:
         stage,label="pool_listed","Пулы перечислены, добыча не подтверждена"
@@ -90,6 +104,7 @@ def evaluate(key,item,now):
         "stage":stage,"label":label,"evidence":evidence[:5],
         "missing":missing,"gpu_family_coverage":gpu_family_summary(item),
         "source_freshness":{"pool":fresh_pool,"network":fresh_net},
+        "chain_height_progression":progressed,
         "checked_at":now.isoformat(timespec="minutes")
     }
 
