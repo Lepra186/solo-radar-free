@@ -71,6 +71,10 @@ class MineabilityTests(unittest.TestCase):
   record={"kind":"repository","title":"x/good-miner",
            "body":"NVIDIA GPU miner for Ethash coin and pool"}
   self.assertEqual(evaluate("gh:22",record,NOW)["stage"],"excluded")
+ def test_infinite_pool_metrics_do_not_claim_activity(self):
+  record=dict(COIN,pool_evidence={"checked_at":"2026-11-20T09:00:00Z",
+      "pools_reported":float("inf"),"blocks_48h_reported":float("inf")})
+  self.assertEqual(evaluate("btt:1",record,NOW)["stage"],"announcement_only")
  def test_bulk_status(self):
   subjects={"btt:1":dict(COIN),"gh:22":{"title":"x/miner","body":"GPU miner for ETH","kind":"repository"}}
   counts=evaluate_all(subjects,NOW)
