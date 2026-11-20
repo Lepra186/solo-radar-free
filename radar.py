@@ -92,37 +92,61 @@ def main():
         except (ValueError, OSError):
             pass
 
+    # Connection diagnostic runs independently of public-source availability.
+    if not state.get("initialized"):
+        send("✅ SOLO Radar подключён к Telegram. Поиск работает по расписанию; сигналы обозначаются как непроверенные.")
+        state["initialized"] = True
+
     found = {}
     good = 0
     for page in BOARDS:
         try:
             p = Topics()
             p.feed(request(page))
-            found.update(p.items)
+            found.update({"btt-" + key: title for key, title in p.items.items()})
             good += 1
         except Exception as exc:
-            print("Unavailable source:", page, type(exc).__name__)
+            print("Unavailable Bitcointalk source:", page, type(exc).__name__)
 
-    if not good:
-        print("No source available; will retry next run.")
-        return
+    # Fallback: discover newly updated PoW code repositories.
+    # GitHub commits are NOT evidence of a mainnet launch.
+    try:
+        from urllib.parse import quote
+        query = quote('"proof of work" cryptocurrency pushed:>2026-11-01', safe='')
+        data = json.loads(request("https://api.github.com/search/repositories?q=" + query + "&sort=updated&order=desc&per_page=30"))
+        for item in data.get("items", []):
+            name = item.get("full_name", "")
+            desc = (item.get("description") or "").replace("\\n", " ")
+            if name:
+                found["gh-" + str(item["id"])] = "[GitHub] " + name + " — " + desc[:110]
+        good += 1
+        print("GitHub repository fallback: available")
+    except Exception as exc:
+        print("GitHub search fallback unavailable:", type(exc).__name__)
 
     previous = state.get("topics", {})
     new = [(key, title) for key, title in found.items() if key not in previous]
-    if not state.get("initialized"):
-        send("✅ SOLO Radar подключён. Слежу за новыми PoW-анонсами. Старые темы при первом запуске не рассылаю.")
-        state["initialized"] = True
+    if good:
+        if not state.get("baseline_done"):
+            state["baseline_done"] = True
+            print("Baseline created; old projects will not be sent as new alerts.")
+        else:
+            ranking = sorted(((score(title), key, title) for key, title in new), reverse=True)
+            for points, key, title in [item for item in ranking if item[0] >= 7][:5]:
+                if key.startswith("btt-"):
+                    url = f"https://bitcointalk.org/index.php?topic={key[4:]}.0"
+                else:
+                    url = "https://github.com/" + title.split(" — ", 1)[0].replace("[GitHub] ", "")
+                send(
+                    "🔎 НОВЫЙ PoW-КАНДИДАТ — НЕ ПРОВЕРЕН\\n\\n"
+                    + title + "\\n"
+                    + "Оценка заголовка: " + str(points) + " (не прогноз прибыли).\\n\\n"
+                    + "⚠️ Не подтверждены время mainnet, GPU/SOLO, premine, сложность и возможность продажи. "
+                    + "Наличие репозитория не означает запуск монеты.\\n"
+                    + url
+                )
     else:
-        ranking = sorted(((score(title), key, title) for key, title in new), reverse=True)
-        for points, key, title in [item for item in ranking if item[0] >= 7][:5]:
-            send(
-                "🔎 НОВЫЙ PoW-КАНДИДАТ — НЕ ПРОВЕРЕН\n\n"
-                + title + "\n"
-                + "Оценка заголовка: " + str(points) + " (не прогноз прибыли).\n\n"
-                + "⚠️ Не подтверждены время mainnet, GPU/SOLO, premine, сложность и возможность продажи. "
-                + "Не запускай неизвестный майнер без проверки.\n"
-                + f"https://bitcointalk.org/index.php?topic={key}.0"
-            )
+        print("All public sources unavailable. Telegram diagnostic sent; next scan will retry.")
 
     stamp = datetime.now(timezone.utc).isoformat(timespec="seconds")
     for key, title in found.items():
