@@ -146,6 +146,15 @@ function projectFactLines(key, item, options={}) {
     if (Number.isFinite(pools)) lines.push("🏊 Пулов в каталоге: "+pools);
     lines.push("🕒 Данные каталога: "+(shortDate(poolEvidence.checked_at)||"время неизвестно"));
   }
+  const readiness=item?.mining_readiness;
+  if (readiness && readiness.stage !== "excluded") {
+    lines.push("🧪 Проверка добычи: "+String(readiness.label||"неизвестно"));
+    if(!options.compact) {
+      for(const point of (readiness.evidence||[]).slice(0,3)) lines.push("✓ "+String(point).slice(0,110));
+      lines.push("🎮 RTX 5070 Ti: совместимость и выплаты не проверены");
+      for(const point of (readiness.missing||[]).slice(0,2)) lines.push("• "+String(point).slice(0,110));
+    }
+  }
   const network=item?.network_evidence;
   if (network) {
     const age=Number.isFinite(Date.parse(network.fetched_at))?
@@ -196,6 +205,8 @@ export function renderMenu(view, state = {}, now = new Date()) {
         "🕒 Сканирование: " + info.text + (info.stale?" ⚠️ устарело":""),
         "🔍 Записей в истории: " + Object.keys(state?.topics || {}).length,
         "🪙 GPU PoW на наблюдении: " + list.length,
+        "🧪 Активность сети по внешним данным: "+
+            Number(state?.mining_readiness_counts?.activity_reported||0),
         "👥 Discord: "+(state?.discord_status?.status==="active"?
           "подключён, каналов "+state.discord_status.success:
           "ожидает подключения"),
