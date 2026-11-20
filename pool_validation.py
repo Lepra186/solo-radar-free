@@ -65,15 +65,21 @@ def parse_pool_directory(payload,now):
 
 def update(fetch,state,now):
     old=state.get("pool_directory") or {}
+    retry=parsed(old.get("retry_after"))
+    if retry and now<retry:return old,False
     t=parsed(old.get("fetched_at"))
-    if t and timedelta(0)<=now-t<CACHE:
+    if old.get("status")!="source_unavailable" and t and timedelta(0)<=now-t<CACHE:
         return old,False
     try:
         payload=json.loads(fetch(URL))
         return parse_pool_directory(payload,now),True
     except Exception as exc:
         print("Pool directory unavailable:",type(exc).__name__,str(exc)[:135])
-        return old,False
+        # Source can publish old data while its documented API stays online.
+        # Don't hammer the endpoint; never re-label last-known rows as current.
+        return {"fetched_at":now.isoformat(timespec="seconds"),
+                "retry_after":(now+timedelta(hours=1)).isoformat(timespec="seconds"),
+                "status":"source_unavailable","pools":[],"source":URL},True
 
 def match_pools(topics,directory,now):
     generated=parsed(directory.get("generated_at"))
