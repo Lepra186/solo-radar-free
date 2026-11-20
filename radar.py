@@ -384,9 +384,13 @@ def main():
     # Read-only cross-check of pools already associated with a coin by full
     # name plus ticker. Do not use pool-wide block totals as coin data.
     pool_dir, pool_dir_changed = update_pool_directory(fetch,state,NOW)
-    if pool_dir_changed:
-        state["pool_directory"] = pool_dir
     pool_checks = match_pools(seen,pool_dir,NOW)
+    # Store ONLY the relevant pools: raw export can have thousands of records,
+    # which would bloat state.json and exceed GitHub Content API limits.
+    if pool_dir_changed:
+        needed={(p["id"],p["domain"]) for info in pool_checks.values() for p in info["pools"]}
+        state["pool_directory"]={**pool_dir,"pools":[p for p in pool_dir.get("pools",[])
+            if (p["id"],p["domain"]) in needed][:30]}
     last_details = parse_pool_time(state.get("pool_stratum_checked_at"))
     details_due = not last_details or not timedelta(0)<=NOW-last_details<timedelta(hours=6)
     requests=0
