@@ -5,6 +5,7 @@ Never log token, chat IDs or webhook authentication secret.
 """
 import os
 import sys
+import json
 import urllib.request
 import urllib.error
 
@@ -34,5 +35,17 @@ if status != 403:
     sys.exit(0)
 
 print("Worker authenticated webhook endpoint is reachable (403 as expected).")
+try:
+    req = urllib.request.Request(
+        "https://api.telegram.org/bot" + os.environ["TELEGRAM_BOT_TOKEN"] + "/getWebhookInfo",
+        headers={"User-Agent": "SOLO-Radar-Setup"})
+    with urllib.request.urlopen(req, timeout=20) as response:
+        current = json.load(response).get("result", {}).get("url", "")
+    if current == url:
+        print("Webhook already active; no registration necessary")
+        sys.exit(0)
+except Exception as exc:
+    print("NOT READY: Cannot inspect current Telegram webhook:", type(exc).__name__)
+    sys.exit(0)
 os.environ["TELEGRAM_WEBHOOK_URL"] = url
 import configure_webhook
