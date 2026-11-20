@@ -67,6 +67,24 @@ def evaluate(key,item,now):
         if pool_info.get("stratum_endpoints"):
             evidence.append("Опубликован Stratum-адрес; соединение и выплаты не проверены")
         break
+    rpc=item.get("rpc_evidence") or {}
+    rpc_progress=item.get("rpc_progress") or {}
+    rpc_checked=date_value(rpc.get("checked_at"))
+    rpc_head=date_value(rpc.get("last_block_time"))
+    rpc_fresh=bool(rpc_checked and rpc_head and
+       timedelta(0)<=now-rpc_checked<=timedelta(hours=3) and
+       timedelta(0)<=now-rpc_head<=BLOCK_MAX_AGE)
+    if rpc_fresh:
+        evidence.append("Публичный RPC вернул блок "+str(rpc.get("last_block_height"))+
+                        " (Chain ID проверен)")
+    rpc_growth=bool(rpc_fresh and rpc_progress.get("source")=="project public JSON-RPC"
+         and rpc_progress.get("chain_id")==rpc.get("chain_id")
+         and isinstance(rpc_progress.get("blocks_increased"),int)
+         and rpc_progress["blocks_increased"]>0 and
+         date_value(rpc_progress.get("last_checked"))==rpc_checked)
+    if rpc_growth:
+        evidence.append("Высота RPC выросла на "+str(rpc_progress["blocks_increased"])+
+                        " между двумя чтениями")
     chain=item.get("chain_progress") or {}
     progress_stamped=date_value(chain.get("last_observed_at"))
     progressed=bool(
@@ -92,7 +110,9 @@ def evaluate(key,item,now):
     if not activity:missing.append("Свежие блоки сети не подтверждены")
     missing.append("Совместимость GTX 10xx / RTX 20xx–50xx, Stratum и выплаты не проверены")
     missing.append("Ликвидность и возможность продажи не проверены")
-    if progressed:
+    if rpc_growth:
+        stage,label="rpc_height_advanced","Публичный RPC сообщил рост высоты сети"
+    elif progressed:
         stage,label="height_advanced","Зафиксирован рост высоты сети по двум снимкам"
     elif activity:
         stage,label="activity_reported","Есть сообщения об активности сети"
@@ -105,6 +125,7 @@ def evaluate(key,item,now):
         "missing":missing,"gpu_family_coverage":gpu_family_summary(item),
         "source_freshness":{"pool":fresh_pool,"network":fresh_net},
         "chain_height_progression":progressed,
+        "rpc_height_progression":rpc_growth,
         "checked_at":now.isoformat(timespec="minutes")
     }
 
