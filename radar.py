@@ -28,6 +28,7 @@ from github_releases_source import check_releases
 from network_evidence import update as update_network_evidence
 from discord_sources import fetch_channels as scan_discord
 from mining_scan_source import refresh as refresh_mining_scan, matches_for
+from pool_validation import update as update_pool_directory, match_pools, stratum_by_coin, parsed as parse_pool_time
 
 TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
 CHAT = os.getenv("TELEGRAM_CHAT_ID", "").strip()
@@ -379,6 +380,41 @@ def main():
         "attribution":"mining-scan.com"
     }
     print("Mining Scan reference:", state["mining_scan_status"])
+
+    # Read-only cross-check of pools already associated with a coin by full
+    # name plus ticker. Do not use pool-wide block totals as coin data.
+    pool_dir, pool_dir_changed = update_pool_directory(fetch,state,NOW)
+    if pool_dir_changed:
+        state["pool_directory"] = pool_dir
+    pool_checks = match_pools(seen,pool_dir,NOW)
+    last_details = parse_pool_time(state.get("pool_stratum_checked_at"))
+    details_due = not last_details or not timedelta(0)<=NOW-last_details<timedelta(hours=6)
+    requests=0
+    if details_due and pool_checks:
+        for pool_info in list(pool_checks.values())[:2]:
+            requests+=stratum_by_coin(fetch,pool_info,limit=2)
+        state["pool_stratum_checked_at"]=NOW.isoformat(timespec="seconds")
+    for pool_key,existing in seen.items():
+        if pool_key not in pool_checks:
+            existing.pop("pool_validation",None)
+            continue
+        old_info=existing.get("pool_validation") or {}
+        new_info=pool_checks[pool_key]
+        if not details_due:
+            for row in new_info["pools"]:
+                previous_row=next((old for old in old_info.get("pools",[])
+                    if old.get("id")==row["id"] and old.get("domain")==row["domain"]),None)
+                if previous_row and previous_row.get("stratum_endpoints"):
+                    row["stratum"]=previous_row.get("stratum","не подтверждён")
+                    row["stratum_endpoints"]=previous_row["stratum_endpoints"]
+        existing["pool_validation"]=new_info
+    state["pool_validation_status"]={
+        "directory_available":bool(pool_dir.get("pools")),
+        "coin_matches":len(pool_checks),
+        "stratum_requests":requests,
+        "source":"Mining Scan; pool-wide metrics are not coin-specific"
+    }
+    print("Coin pool validation:",state["pool_validation_status"])
 
     # Independent keyless network snapshot. Match by provider's actual coin id
     # and confirmed coin name, never by ambiguous ticker alone.
