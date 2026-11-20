@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-20T08:01:53+00:00",
+  "generated_at": "2026-11-20T08:19:12+00:00",
   "mode": "rules_only",
   "model": null,
-  "candidate_count": 4,
-  "scan_updated_at": "2026-11-20T07:58:42+00:00",
+  "candidate_count": 6,
+  "scan_updated_at": "2026-11-20T08:18:22+00:00",
   "summary": "Автоподбор по правилам без ИИ. Только кандидаты для дальнейшего изучения.",
   "picks": [
     {
@@ -33,30 +33,30 @@
       "risks": "нет проверенной даты mainnet; репозиторий сам по себе не подтверждает mainnet"
     },
     {
-      "key": "btt:5596113",
-      "title": "[ANN][YSR] YSKAR - SHA-256d PoW | No premine | Mine on phone, CPU or GPU",
-      "source": "Bitcointalk",
-      "url": "https://bitcointalk.org/index.php?topic=5596113.0",
-      "algorithm": "SHA-256",
-      "published": null,
+      "key": "gh:1457186269",
+      "title": "Lakylife/quinvium",
+      "source": "GitHub",
+      "url": "https://github.com/Lakylife/quinvium",
+      "algorithm": "Ethash",
+      "published": "2026-11-13T23:04+00:00",
       "launch_claim": null,
-      "score": 3,
-      "rationale": "указан GPU-алгоритм: SHA-256",
+      "score": 4,
+      "rationale": "указан GPU-алгоритм: Ethash; упомянут майнинг/пул",
       "mining": "Работающий GPU-майнинг и выплаты не проверены",
-      "risks": "дата публикации/создания не установлена либо старая; нет проверенной даты mainnet"
+      "risks": "нет проверенной даты mainnet; репозиторий сам по себе не подтверждает mainnet"
     },
     {
-      "key": "btt:5600215",
-      "title": "[ANN] Quinvium (QU) | GPU PoW (Ethash) | EVM smart contracts | No premine | Main",
-      "source": "Bitcointalk",
-      "url": "https://bitcointalk.org/index.php?topic=5600215.0",
+      "key": "gh:1449663269",
+      "title": "gacanga/crypto-connection-miner",
+      "source": "GitHub",
+      "url": "https://github.com/gacanga/crypto-connection-miner",
       "algorithm": "Ethash",
-      "published": null,
+      "published": "2026-11-07T19:13+00:00",
       "launch_claim": null,
-      "score": 3,
-      "rationale": "указан GPU-алгоритм: Ethash",
+      "score": 4,
+      "rationale": "указан GPU-алгоритм: Ethash; упомянут майнинг/пул",
       "mining": "Работающий GPU-майнинг и выплаты не проверены",
-      "risks": "дата публикации/создания не установлена либо старая; нет проверенной даты mainnet"
+      "risks": "нет проверенной даты mainnet; репозиторий сам по себе не подтверждает mainnet"
     }
   ],
   "watchouts": [
