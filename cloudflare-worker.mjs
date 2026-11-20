@@ -148,13 +148,10 @@ function btn(text, callback_data) { return {text, callback_data}; }
 function linkButton(text, url) { return {text, url}; }
 function navRows() {
   return [
-    [btn("🧠 Суточный ИИ-анализ", "analysis")],
+    [btn("🧠 Суточный анализ", "analysis")],
     [btn("🎯 Активное отслеживание", "tracked:0")],
     [btn("🪙 Монеты на наблюдении", "watch:0")],
     [btn("🆕 Последние находки", "recent:0"), btn("📊 Статус", "status")],
-    [btn("📨 Telegram", "source:tg:0"),btn("💻 GitHub", "source:gh:0")],
-    [btn("🗣️ Bitcointalk", "source:btt:0"),btn("⛏️ Пулы", "source:pool:0")],
-    [btn("📰 RSS", "source:rss:0"),btn("👥 Discord", "source:dc:0")],
     [btn("ℹ️ Справка", "help")],
   ];
 }
@@ -192,7 +189,7 @@ export function renderMenu(view, state = {}, now = new Date()) {
         "🆕 Последние — недавно замеченные записи",
         "📊 Статус — время последнего сканирования",
         "🔗 В карточке проекта — ссылки на анонс, Discord, пул и другие ресурсы, если они сохранены.",
-        "🧠 ИИ-анализ — суточный отчёт. OpenAI включается после подключения API-ключа.",
+        "🧠 Суточный анализ — отбор монет по проверяемым правилам, без OpenAI.",
         "",
         "Команды: /start /latest /status /help /analysis",
         "⚠️ Найденные ссылки и заявления проектов не проверены на безопасность.",
@@ -273,10 +270,9 @@ export function renderMenu(view, state = {}, now = new Date()) {
         "Даты репозиториев ≠ даты запуска сети.",
         "Mainnet указывается только по заявлению разработчика.",
         "",
-        "📨 Telegram: "+sourceEntries(state,"tg").length+
-          "  •  💻 GitHub: "+sourceEntries(state,"gh").length,
-        "🗣️ Bitcointalk: "+sourceEntries(state,"btt").length+
-          "  •  ⛏️ Пулы: "+sourceEntries(state,"pool").length,
+        "🔎 Источники: GitHub, публичные Telegram-анонсы,",
+        "Bitcointalk, майнинг-пулы и RSS.",
+        "Discord — если настроен доступ к каналам.",
         "",
         "⚠️ GPU-совместимость, premine и возможность продажи не проверены."
       ].join("\n").slice(0,3900),
