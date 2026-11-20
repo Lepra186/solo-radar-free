@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-20T10:08:17+00:00",
+  "generated_at": "2026-11-20T10:12:13+00:00",
   "mode": "rules_only",
   "model": null,
   "candidate_count": 3,
-  "scan_updated_at": "2026-11-20T10:07:11+00:00",
+  "scan_updated_at": "2026-11-20T10:11:49+00:00",
   "summary": "Автоподбор по правилам без ИИ. Только кандидаты для дальнейшего изучения.",
   "picks": [
     {
@@ -69,7 +69,7 @@
           "network": false
         },
         "chain_height_progression": false,
-        "checked_at": "2026-11-20T10:07+00:00"
+        "checked_at": "2026-11-20T10:11+00:00"
       },
       "economics": {
         "status": "insufficient_data",
@@ -186,7 +186,7 @@
           "network": false
         },
         "chain_height_progression": false,
-        "checked_at": "2026-11-20T10:07+00:00"
+        "checked_at": "2026-11-20T10:11+00:00"
       },
       "economics": {
         "status": "insufficient_data",
@@ -301,7 +301,7 @@
           "network": false
         },
         "chain_height_progression": false,
-        "checked_at": "2026-11-20T10:07+00:00"
+        "checked_at": "2026-11-20T10:11+00:00"
       },
       "economics": {
         "status": "insufficient_data",
