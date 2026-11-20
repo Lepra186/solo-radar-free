@@ -161,6 +161,16 @@ function projectFactLines(key, item, options={}) {
       else lines.push("  Stratum: нет подтверждённого адреса для монеты");
     }
   }
+  const chainProgress=item?.chain_progress;
+  if(chainProgress && !options.compact &&
+       Number.isFinite(chainProgress.blocks_increased) &&
+       chainProgress.blocks_increased>0) {
+    lines.push("📈 Цепь выросла: +"+chainProgress.blocks_increased+
+      " блоков между двумя снимками BackPoW");
+    lines.push("📅 Снимки: "+(shortDate(chainProgress.first_observed_at)||"нет даты")+
+      " → "+(shortDate(chainProgress.last_observed_at)||"нет даты"));
+    lines.push("⚠️ Рост сообщён агрегатором; собственной нодой не проверен");
+  }
   const readiness=item?.mining_readiness;
   if (readiness && readiness.stage !== "excluded") {
     lines.push("🧪 Проверка добычи: "+String(readiness.label||"неизвестно"));
@@ -252,6 +262,7 @@ export function renderMenu(view, state = {}, now = new Date()) {
         "🪙 GPU PoW на наблюдении: " + list.length,
         "🧪 Активность сети по внешним данным: "+
             Number(state?.mining_readiness_counts?.activity_reported||0),
+        "📈 Рост высоты между снимками: "+Number(state?.mining_readiness_counts?.height_advanced||0),
         "💶 Расчёты добычи: "+Number(state?.mining_economics_counts?.conditional_estimate||0)+
            " с проверенными входными данными",
         "👥 Discord: "+(state?.discord_status?.status==="active"?
