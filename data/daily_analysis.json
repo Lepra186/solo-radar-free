@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-20T10:57:40+00:00",
+  "generated_at": "2026-11-20T16:56:17+00:00",
   "mode": "rules_only",
   "model": null,
   "candidate_count": 3,
-  "scan_updated_at": "2026-11-20T10:51:47+00:00",
+  "scan_updated_at": "2026-11-20T14:18:37+00:00",
   "summary": "Автоподбор по правилам без ИИ. Только кандидаты для дальнейшего изучения.",
   "picks": [
     {
@@ -14,14 +14,15 @@
       "algorithm": "Ethash",
       "published": null,
       "launch_claim": null,
-      "score": 8,
+      "score": 11,
       "mining_readiness": {
-        "stage": "rpc_head_reported",
-        "label": "Публичный RPC вернул свежий блок и правильный Chain ID",
+        "stage": "rpc_height_advanced",
+        "label": "Публичный RPC сообщил рост высоты сети",
         "evidence": [
           "Пулы в каталоге Mining Scan: 2",
           "В каталоге есть недавняя отметка найденного блока",
-          "Публичный RPC вернул блок 97630 (Chain ID проверен)"
+          "Публичный RPC вернул блок 98344 (Chain ID проверен)",
+          "Высота RPC выросла на 714 между двумя чтениями"
         ],
         "missing": [
           "Совместимость GTX 10xx / RTX 20xx–50xx, Stratum и выплаты не проверены",
@@ -70,8 +71,8 @@
           "network": false
         },
         "chain_height_progression": false,
-        "rpc_height_progression": false,
-        "checked_at": "2026-11-20T10:51+00:00"
+        "rpc_height_progression": true,
+        "checked_at": "2026-11-20T14:18+00:00"
       },
       "economics": {
         "status": "insufficient_data",
@@ -132,12 +133,11 @@
       "algorithm": "Ethash",
       "published": "2026-11-13T23:04+00:00",
       "launch_claim": null,
-      "score": 7,
+      "score": 5,
       "mining_readiness": {
-        "stage": "rpc_head_reported",
-        "label": "Публичный RPC вернул свежий блок и правильный Chain ID",
+        "stage": "announcement_only",
+        "label": "Только анонс или код проекта",
         "evidence": [
-          "Публичный RPC вернул блок 37066 (Chain ID проверен)",
           "Есть свежий релиз проекта на GitHub"
         ],
         "missing": [
@@ -190,7 +190,7 @@
         },
         "chain_height_progression": false,
         "rpc_height_progression": false,
-        "checked_at": "2026-11-20T10:51+00:00"
+        "checked_at": "2026-11-20T14:18+00:00"
       },
       "economics": {
         "status": "insufficient_data",
@@ -241,7 +241,7 @@
       },
       "rationale": "указан GPU-алгоритм: Ethash; упомянут майнинг/пул",
       "mining": "Работающий GPU-майнинг и выплаты не проверены",
-      "risks": "нет проверенной даты mainnet; рост цепи и PoW-майнинг ещё не проверены"
+      "risks": "нет проверенной даты mainnet; репозиторий сам по себе не подтверждает mainnet"
     },
     {
       "key": "btt:5600215",
@@ -251,13 +251,11 @@
       "algorithm": "Ethash",
       "published": null,
       "launch_claim": null,
-      "score": 6,
+      "score": 4,
       "mining_readiness": {
-        "stage": "rpc_head_reported",
-        "label": "Публичный RPC вернул свежий блок и правильный Chain ID",
-        "evidence": [
-          "Публичный RPC вернул блок 37066 (Chain ID проверен)"
-        ],
+        "stage": "announcement_only",
+        "label": "Только анонс или код проекта",
+        "evidence": [],
         "missing": [
           "Рабочий пул не проверен",
           "Свежие блоки сети не подтверждены",
@@ -308,7 +306,7 @@
         },
         "chain_height_progression": false,
         "rpc_height_progression": false,
-        "checked_at": "2026-11-20T10:51+00:00"
+        "checked_at": "2026-11-20T14:18+00:00"
       },
       "economics": {
         "status": "insufficient_data",
