@@ -146,6 +146,21 @@ function projectFactLines(key, item, options={}) {
     if (Number.isFinite(pools)) lines.push("🏊 Пулов в каталоге: "+pools);
     lines.push("🕒 Данные каталога: "+(shortDate(poolEvidence.checked_at)||"время неизвестно"));
   }
+  const poolValidation=item?.pool_validation;
+  if(poolValidation && !options.compact) {
+    lines.push("🏊 Пулы по данным Mining Scan (кандидаты по тикеру; не подтверждение работы):");
+    for(const p of (poolValidation.pools||[]).slice(0,3)) {
+      lines.push("• "+String(p.name||p.domain).slice(0,70)+
+        (p.pool_metrics_fresh?" • свежие общие метрики":" • свежесть метрик не подтверждена"));
+      const scheme=(p.payout_schemes_poolwide||[]).slice(0,4).join("/");
+      if(scheme)lines.push("  Схемы пула: "+scheme+" (НЕ подтверждены для этой монеты)");
+      if(Number.isFinite(p.fee_percent_poolwide))lines.push(
+        "  Комиссия пула: "+p.fee_percent_poolwide+"% (не обязательно для этой монеты)");
+      if(p.stratum_endpoints?.length)lines.push(
+        "  Stratum указан: "+String(p.stratum_endpoints[0]).slice(0,125)+" (не проверен)");
+      else lines.push("  Stratum: нет подтверждённого адреса для монеты");
+    }
+  }
   const readiness=item?.mining_readiness;
   if (readiness && readiness.stage !== "excluded") {
     lines.push("🧪 Проверка добычи: "+String(readiness.label||"неизвестно"));
