@@ -1,0 +1,103 @@
+{
+  "topics": {
+    "gh-1443601267": {
+      "title": "[GitHub] genoryn/genoryn — Genoryn Krypton (GNR): quantum-resistant (post-quantum), private-by-default proof-of-work cryptocurrency. Bitc",
+      "seen": "2026-11-20T05:17:41+00:00"
+    },
+    "gh-1454673734": {
+      "title": "[GitHub] chessproofofwork/somecryptochessproject — a cryptocurrency whose proof of work is winning chess games",
+      "seen": "2026-11-20T05:17:41+00:00"
+    },
+    "gh-1259091135": {
+      "title": "[GitHub] Tarcoin/tarcoin — TARCOIN (TAR) is a fully decentralized, UTXO-based cryptocurrency built on a battle-tested Proof-of-Work archi",
+      "seen": "2026-11-20T05:17:41+00:00"
+    },
+    "gh-1319606050": {
+      "title": "[GitHub] pars5555/pcoin — PCoin (PCN) - the coin anyone can mine. Independent Layer-1 blockchain: Bitcoin Core fork with RandomX CPU-fri",
+      "seen": "2026-11-20T05:17:41+00:00"
+    },
+    "gh-1457186269": {
+      "title": "[GitHub] Lakylife/quinvium — Quinvium (QU): a programmable proof-of-work blockchain with an EVM, GPU mining (Ethash), full node, wallet, ex",
+      "seen": "2026-11-20T05:17:41+00:00"
+    },
+    "gh-1361355156": {
+      "title": "[GitHub] dabitlex/YSKAR — Independent SHA-256d proof-of-work blockchain. No premine. Full node, wallet, pool and miners – all open sourc",
+      "seen": "2026-11-20T05:17:41+00:00"
+    },
+    "gh-1463351639": {
+      "title": "[GitHub] ennioyoyaku/denarius — A cryptocurrency node and wallet combining Tribus Proof of Work and Proof of Stake, with Fortuna Stakes, atomi",
+      "seen": "2026-11-20T05:17:41+00:00"
+    },
+    "gh-1370275458": {
+      "title": "[GitHub] 0xcWalter/awesome-crypto-mining — A curated list of Proof of Work (PoW) crypto mining resources: hardware, pools, software, calculators, and too",
+      "seen": "2026-11-20T05:17:41+00:00"
+    },
+    "gh-1237325658": {
+      "title": "[GitHub] DineroLabs/dinero-v8 — A Utreexo-based proof-of-work cryptocurrency — full node, Qt wallet, and mining stack in C++. AssumeUTXO fast ",
+      "seen": "2026-11-20T05:17:41+00:00"
+    },
+    "gh-1282417166": {
+      "title": "[GitHub] mdkhalid78690-bot/2026-blockchain — KawaidCoin (KWD) — Open-source SHA-256 Proof-of-Work blockchain in Python with Mainnet explorer, faucet, web w",
+      "seen": "2026-11-20T05:17:41+00:00"
+    },
+    "gh-1355042899": {
+      "title": "[GitHub] veldnetwork/Veld-Mainnet — Official Veld blockchain: CPU proof of work, staking, ML-DSA-65 signatures, and validator finality.",
+      "seen": "2026-11-20T05:17:41+00:00"
+    },
+    "gh-1448636616": {
+      "title": "[GitHub] paytonbullett/betium — Lightweight proof-of-work blockchain with native MetaMask support and custom tokens. Built for simplicity and ",
+      "seen": "2026-11-20T05:17:41+00:00"
+    },
+    "gh-1429546351": {
+      "title": "[GitHub] acxxcxx/armax-coin — Proof-of-Work Layer-1 testnet with NIST FIPS 204 (ML-DSA-65) post-quantum signatures.",
+      "seen": "2026-11-20T05:17:41+00:00"
+    },
+    "gh-1461345643": {
+      "title": "[GitHub] eXtremal-ik7/libpow — Proof-of-work, hashing, fixed-width bignum and ECDSA: the compute layer of a cryptocurrency node",
+      "seen": "2026-11-20T05:17:41+00:00"
+    },
+    "gh-1133024350": {
+      "title": "[GitHub] bartoszclapinski/BlockSmith — Complete blockchain implementation in Java: SHA-256 hashing, Proof-of-Work mining, ECDSA wallets, Merkle trees",
+      "seen": "2026-11-20T05:17:41+00:00"
+    },
+    "gh-1458023319": {
+      "title": "[GitHub] Sonic-Bound/Bound — A proof-of-work cryptocurrency written from scratch in C++20, with its own P2P network, wallet and Qt desktop ",
+      "seen": "2026-11-20T05:17:41+00:00"
+    },
+    "gh-941602165": {
+      "title": "[GitHub] gitswagata1/CoinKotlin — kCoin — a blockchain and cryptocurrency in Kotlin: proof of work, wallets, signed transactions, UTXO ledger",
+      "seen": "2026-11-20T05:17:41+00:00"
+    },
+    "gh-1458248410": {
+      "title": "[GitHub] Milkausikopistor/krevo — Proof-of-work BlockDAG cryptocurrency (10 blocks/s) with optional full-chain privacy, quantum-safe addresses a",
+      "seen": "2026-11-20T05:17:41+00:00"
+    },
+    "gh-1459152764": {
+      "title": "[GitHub] dhyabi2/nanotab — Metered payments on Nano (XNO) for AI agents: unlimited per-request payments with zero ledger blocks and zero ",
+      "seen": "2026-11-20T05:17:41+00:00"
+    },
+    "gh-1320069776": {
+      "title": "[GitHub] ignotusnemo/parano1d-site — Official website for Parano1d, a proof-native Layer 1 ordered by proof of work.",
+      "seen": "2026-11-20T05:17:41+00:00"
+    },
+    "gh-1457675396": {
+      "title": "[GitHub] SelenSeal/selen — SELEN — a private proof-of-work chain. Receivers and amounts sealed with ML-KEM-768 (FIPS 203). Node, explorer",
+      "seen": "2026-11-20T05:17:41+00:00"
+    },
+    "gh-1185497235": {
+      "title": "[GitHub] shemaiscard/digital-wallet-sim — Educational simulation of a digital wallet with BIP39 seed phrases, ECDSA key derivation, and Proof-of-Work mi",
+      "seen": "2026-11-20T05:17:41+00:00"
+    },
+    "gh-1402823357": {
+      "title": "[GitHub] rei-asanoha/Q21 — Post-quantum proof-of-work blockchain: ML-DSA-87 signatures, memory-hard proof of work, one vote per machine",
+      "seen": "2026-11-20T05:17:41+00:00"
+    },
+    "gh-1453732256": {
+      "title": "[GitHub] Regestrac/NovaCoin-NVAC — Minimal proof-of-work cryptocurrency prototype: an Express blockchain node with a zero-dependency browser wall",
+      "seen": "2026-11-20T05:17:41+00:00"
+    }
+  },
+  "initialized": true,
+  "baseline_done": true,
+  "last_scan": "2026-11-20T05:17:41+00:00"
+}
