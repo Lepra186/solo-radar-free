@@ -10589,7 +10589,7 @@
         "title": "[ANN] NEX Chain (NEXC) | Ethash PoW | GPU & CPU | Free Solo Miner | EVM + DEX",
         "url": "https://bitcointalk.org/index.php?topic=5599371.0",
         "source": "Bitcointalk",
-        "score": 5,
+        "score": 6,
         "status": "НАБЛЮДАТЬ",
         "published": null,
         "launch_claim": null,
@@ -10602,6 +10602,7 @@
         "unknown": [
           "дата публикации/создания не установлена либо старая",
           "нет проверенной даты mainnet",
+          "активность сообщена внешним каталогом, не собственной нодой",
           "не проверены блоки сети, награда, premine и сложность",
           "не проверены биржи, объёмы и возможность продажи"
         ]
