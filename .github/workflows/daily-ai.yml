@@ -1,0 +1,50 @@
+name: Daily OpenAI PoW Analyst
+on:
+  schedule:
+    - cron: '10 8 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: solo-radar-daily-agent
+  cancel-in-progress: false
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test analysis engine
+        run: python -m unittest -v test_research_agent.py test_daily_ai.py
+      - name: Run daily report and send to Telegram
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_EXTRA_CHAT_IDS: ${{ secrets.TELEGRAM_EXTRA_CHAT_IDS }}
+          SEND_REPORT: '1'
+        run: python daily_ai.py
+      - name: Save daily report
+        run: |
+          git config user.name 'solo-radar-bot'
+          git config user.email 'solo-radar-bot@users.noreply.github.com'
+          git add data/daily_analysis.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'chore: daily mining analysis [skip ci]'
+            for attempt in 1 2 3; do
+              git fetch origin main
+              if ! git rebase -X ours origin/main; then
+                git rebase --abort
+                echo "::warning::Could not rebase daily report"
+                exit 0
+              fi
+              if git push origin HEAD:main; then exit 0; fi
+            done
+            echo "::warning::Daily report could not be pushed"
+          fi
