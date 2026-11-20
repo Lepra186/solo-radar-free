@@ -134,7 +134,7 @@ def analyze(topics, now=None, limit=8):
         if not isinstance(item,dict): continue
         candidate = examine(key,item,now)
         if candidate: examined.append(candidate)
-    examined.sort(key=lambda c:(-c['score'],c['published'] or '',c['key']),reverse=False)
+    examined.sort(key=lambda c:(-c['score'], -(aware(c['published']).timestamp() if c['published'] else 0), c['key']))
     # Prevent one listing service from consuming all featured slots.
     chosen=[]; origin_counts={}
     for c in examined:
