@@ -20,6 +20,15 @@ class GPUAssessmentTests(unittest.TestCase):
         self.assertIsNone(extract_utc_launch("GPU PoW mainnet launch 2026-11-21 10:30 Moscow time"))
     def test_old_launch_not_early(self):
         self.assertNotEqual(signal("GPU proof of work mainnet launch 2026-10-21 10:30 UTC", NOW), "EARLY")
+    def test_pool_hold_without_solo(self):
+        sample = "New GPU proof of work coin mainnet launch with PPLNS pool and stratum"
+        self.assertEqual(signal(sample, NOW), "HOLD")
+        self.assertIn("Пул:", description(sample, NOW))
+    def test_early_mainnet_without_solo(self):
+        sample = "GPU proof of work mainnet launch 2026-11-21 10:30 UTC pool mining"
+        self.assertEqual(signal(sample, NOW), "EARLY")
+    def test_not_only_cpu(self):
+        self.assertIsNone(signal("CPU only RandomX proof of work mainnet launch with pool", NOW))
     def test_vendor_independent(self):
         self.assertNotIn("5070", description("GPU PoW mining", NOW))
 
