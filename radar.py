@@ -31,6 +31,7 @@ from network_evidence import update as update_network_evidence
 from chain_progress import reconcile as reconcile_chain_progress
 from explorer_source import verify as verify_public_explorers
 from explorer_progress import update as update_explorer_progress
+from evm_rpc_source import update as update_public_evm_rpc
 from discord_sources import fetch_channels as scan_discord
 from mining_scan_source import refresh as refresh_mining_scan, matches_for
 from pool_validation import update as update_pool_directory, match_pools, stratum_by_coin, parsed as parse_pool_time
@@ -364,6 +365,8 @@ def main():
                          "explorer_origin": old.get("explorer_origin") or {},
                          "explorer_evidence": old.get("explorer_evidence") or {},
                          "explorer_checked_at": old.get("explorer_checked_at"),
+                         "rpc_evidence":old.get("rpc_evidence") or {},
+                         "rpc_progress":old.get("rpc_progress") or {},
                          "coin_class": classify(key, item)[0],
                          "coin_reason": classify(key, item)[1]}
         if len(seen) > 6000:
@@ -458,6 +461,13 @@ def main():
     state["explorer_height_history"]=explorer_history
     state["explorer_progress_stats"]=explorer_changes
     print("Explorer height trend (identity not verified):",explorer_changes)
+
+    # Project-documented public JSON-RPC: read chain ID and recent head only.
+    # Direct reads are not proof of consensus or successful mining payouts.
+    rpc_networks,rpc_stats=update_public_evm_rpc(seen,state,NOW)
+    state["evm_rpc"]=rpc_networks
+    state["evm_rpc_stats"]=rpc_stats
+    print("Project public EVM RPC checks:",rpc_stats)
 
     # Two or more canonical network height snapshots are needed to report
     # chain progression; a single last-block claim is insufficient.
