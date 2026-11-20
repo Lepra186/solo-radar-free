@@ -3,6 +3,13 @@ on:
   schedule:
     - cron: '3,13,23,33,43,53 * * * *'
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'radar.py'
+      - 'telegram_sources.py'
+      - 'test_telegram_sources.py'
+      - '.github/workflows/solo-radar.yml'
 permissions:
   contents: write
 concurrency:
