@@ -81,9 +81,11 @@ def eligible(text):
     score = 0
     for regex, points in (
         (r"\b(pow|proof.of.work|mineable|mining)\b", 3),
-        (r"\b(gpu|nvidia|cuda|ethash|kawpow|progpow|blake3|autolykos)\b", 5),
+        (r"\b(gpu|nvidia|cuda|ethash|etchash|kawpow|progpow|blake3|autolykos)\b", 5),
         (r"\b(mainnet|genesis|launch|new.pool|solo)\b", 2),
         (r"\b(fair.launch|no.premine|0%.premine)\b", 2),
+        (r"coin name\s*:", 2),
+        (r"\balgo\s*:", 2),
     ):
         if re.search(regex, t):
             score += points
@@ -272,9 +274,9 @@ def main():
             if points < 8 or sent >= 3:
                 continue
             # Require both mining/PoW and GPU evidence; otherwise don't waste user alerts.
-            if not re.search(r"\b(pow|proof.of.work|mining|mineable)\b", item["body"], re.I):
+            if not re.search(r"\b(pow|proof.of.work|mining|mineable|coin name)\b", item["body"], re.I):
                 continue
-            if not re.search(r"\b(gpu|nvidia|cuda|ethash|kawpow|progpow|blake3|autolykos)\b", item["body"], re.I):
+            if not re.search(r"\b(gpu|nvidia|cuda|ethash|etchash|kawpow|progpow|blake3|autolykos)\b", item["body"], re.I):
                 continue
             notify(
                 "🔎 SOLO RADAR — КАНДИДАТ, НЕ ПРОВЕРЕН\n\n"
