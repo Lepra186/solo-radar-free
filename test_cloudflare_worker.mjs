@@ -147,3 +147,29 @@ test("source first-page gives useful preview even when timestamp absent",()=>{
   assert.match(page.text,/Алгоритм: KawPow/);
   assert.ok(projectSummary("btt:554",s.topics["btt:554"]).length>=2);
 });
+
+test("home /start shows project facts and direct project buttons",()=>{
+ const sample={topics:{
+  "gh:888":{title:"demo/gpuchain PoW GPU",body:"GPU proof of work Ethash mining",
+    kind:"repository",repo_created:"2026-11-18T10:00:00Z",seen:"2026-11-18T10:00:00Z",
+    facts:{repo_created_utc:"2026-11-18T10:00:00Z",algorithm:"Ethash"}},
+  "tg:miningrelease:31":{title:"Coin Name: TChain GPU KawPow",body:"Coin Name: TChain GPU KawPow mining SOLO",
+    date:"2026-11-19T09:00:00Z",seen:"2026-11-19T09:00:00Z",
+    facts:{publication_utc:"2026-11-19T09:00:00Z",algorithm:"KawPow",
+      launch_claim_utc:"2026-11-22T14:00:00Z",solo_mentioned:true}},
+  "btt:200":{title:"[ANN] Some GPU PoW new coin Ethash",seen:"2026-11-17T10:00:00Z"}
+ }};
+ const home=renderMenu("home",sample,now);
+ assert.match(home.text,/Репозиторий создан: 2026-11-18 10:00 UTC/);
+ assert.match(home.text,/Публикация: 2026-11-19 09:00 UTC/);
+ assert.match(home.text,/Заявлен mainnet: 2026-11-22 14:00 UTC/);
+ assert.match(home.text,/Алгоритм: KawPow/);
+ assert.ok(home.reply_markup.inline_keyboard.flat().some(x=>x.text==="🔎 Проект 1"));
+ assert.match(home.text,/Даты репозиториев ≠ даты запуска сети/);
+});
+test("home handles missing metadata without guessing dates",()=>{
+ const s={topics:{"gh:19":{title:"repo GPU PoW mining Ethash"}}};
+ const home=renderMenu("home",s,now);
+ assert.match(home.text,/дата не получена/);
+ assert.doesNotMatch(home.text,/Заявлен mainnet:/);
+});
