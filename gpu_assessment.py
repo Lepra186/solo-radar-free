@@ -11,6 +11,7 @@ POW = re.compile(r"\b(pow|proof[\s-]of[\s-]work|mineable|mining|minable|"
 START = re.compile(r"\b(mainnet|genesis|launch(?:ing|ed)?|network start|"
                    r"block\s*0|fair launch|starts? in)\b", re.I)
 SOLO = re.compile(r"\bsolo(?:[- ]mining|[- ]pool)?\b", re.I)
+POOL = re.compile(r"\b(pool|pool mining|pplns|pps\+?|stratum|miner|flight sheet|hiveos)\b", re.I)
 NEGATIVE = re.compile(r"\b(ico|presale|airdrop|staking|nft|testnet only)\b", re.I)
 CPU_ONLY = re.compile(r"\b(cpu.only|cpu[- ]only|randomx|yespower)\b", re.I)
 ASIC_ONLY = re.compile(r"\b(asic[- ]only|sha[- ]?256d?\s+asic)\b", re.I)
@@ -39,16 +40,17 @@ def assess(body, now=None):
     pow_ = bool(POW.search(body))
     solo = bool(SOLO.search(body))
     launch = bool(START.search(body))
+    pool = bool(POOL.search(body))
     exclude = bool(NEGATIVE.search(body)) or (bool(CPU_ONLY.search(body)) and not gpu) or (bool(ASIC_ONLY.search(body)) and not gpu)
     time = extract_utc_launch(body)
-    score = (5 if gpu else 0) + (3 if pow_ else 0) + (2 if launch else 0) + (2 if solo else 0) + (1 if NO_PREMINE.search(body) else 0)
+    score = (5 if gpu else 0) + (3 if pow_ else 0) + (2 if launch else 0) + (2 if solo else 0) + (2 if pool else 0) + (1 if NO_PREMINE.search(body) else 0)
     if time:
         delta = time - now
         if timedelta(hours=-24) <= delta <= timedelta(hours=72):
             score += 4
     if exclude:
         score -= 12
-    return {"gpu": gpu, "pow": pow_, "solo": solo, "launch": launch,
+    return {"gpu": gpu, "pow": pow_, "solo": solo, "pool": pool, "launch": launch,
             "launch_utc": time, "score": score, "excluded": exclude}
 
 def signal(body, now=None):
@@ -59,6 +61,8 @@ def signal(body, now=None):
         offset = v["launch_utc"] - now
         if timedelta(hours=-24) <= offset <= timedelta(hours=72):
             return "EARLY"
+    if v["score"] >= 10 and v["launch"] and v["pool"]:
+        return "HOLD"
     if v["score"] >= 10 and (v["launch"] or v["solo"]):
         return "WATCH"
     return None
@@ -68,10 +72,11 @@ def description(body, now=None):
     launch = v["launch_utc"].strftime("%Y-%m-%d %H:%M UTC") if v["launch_utc"] else "нет подтверждённого времени UTC"
     return (
         "GPU: " + ("есть признаки поддержки видеокарт (NVIDIA/AMD требуют отдельной проверки)" if v["gpu"] else "не подтверждено") + "\n"
-        "SOLO: " + ("упомянуто, доступность не подтверждена" if v["solo"] else "не подтверждено") + "\n"
+        "SOLO: " + ("упомянуто, доступность не подтверждена" if v["solo"] else "не обязательно / не подтверждено") + "\n"
+        "Пул: " + ("упоминается, выплаты не проверены" if v["pool"] else "не подтверждён") + "\n"
         "Mainnet: " + launch + " (из текста анонса, не проверено по блокчейну)\n"
         "Premine: " + ("автор заявляет отсутствие; не проверено" if NO_PREMINE.search(body) else "не проверен") + "\n"
         "Сложность/шанс блока: нет проверенных данных\n"
-        "Биржа/ликвидность: не проверены\n"
+        "Продажа/ликвидность: не проверены; накопление может оказаться неликвидным\n"
         "Действие: проверить официальный анонс, кошелёк, майнер и сеть перед майнингом"
     )
