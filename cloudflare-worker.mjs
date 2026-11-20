@@ -186,27 +186,55 @@ export function renderMenu(view, state = {}, now = new Date()) {
     };
   }
   if (view === "home") {
+    // Give the user an immediately useful preview instead of raw hyperlinks.
+    // Distribute picks across sources to avoid a wall of Bitcointalk topics.
+    const eligible=list.filter(x=>!EXCLUDE.test(String(x.item?.body||x.item?.title||"")));
+    const ranked=eligible.map(x=>{
+      const f=x.item?.facts||{};
+      const date=Date.parse(String(f.publication_utc||f.repo_created_utc||x.item?.date||x.item?.repo_created||x.item?.seen||""));
+      const age=Number.isFinite(date)?(now.getTime()-date)/86400000:Infinity;
+      const trustworthy=age>=0 && age<=30?5:0;
+      const score=(f.launch_claim_utc?3:0)+(f.algorithm?2:0)+(f.solo_mentioned||f.pool_mentioned?1:0)+trustworthy;
+      return {...x,score,date:Number.isFinite(date)?date:0};
+    }).sort((a,b)=>b.score-a.score||b.date-a.date);
+    const featured=[],picked=new Set();
+    for(const entry of ranked){
+      const group=sourceGroup(entry.key,entry.item);
+      if(!picked.has(group)){featured.push(entry);picked.add(group);}
+      if(featured.length>=3)break;
+    }
+    for(const entry of ranked){
+      if(featured.length>=3)break;
+      if(!featured.some(x=>x.key===entry.key))featured.push(entry);
+    }
+    const previews=featured.flatMap((x,i)=>[
+      (i+1)+". "+textFor(x.item.title).slice(0,80)+" • "+SOURCE_LABELS[sourceGroup(x.key,x.item)],
+      ...projectFactLines(x.key,x.item,{compact:true}),""
+    ]);
+    const rows=navRows();
+    if(featured.length){
+      rows.unshift(featured.map((x,i)=>btn("🔎 Проект "+(i+1),"coin:"+list.findIndex(y=>y.key===x.key)+":0:w")));
+    }
     return {
       text:[
-        "📡 SOLO RADAR",
-        "GPU PoW • NVIDIA / AMD",
+        "📡 SOLO RADAR • GPU PoW",
+        "NVIDIA / AMD • SOLO / пулы • накопление",
+        "🕒 Последний скан: "+info.text+(info.stale?" ⚠️":""),
+        "🪙 На наблюдении: "+list.length,
         "",
-        "🚀 Ранний майнинг • ⛏️ SOLO / пул",
-        "🪙 Накопление монет для возможной продажи",
+        "🔎 ПРОЕКТЫ ДЛЯ ИЗУЧЕНИЯ",
+        ...(previews.length?previews:["Подходящие записи пока не обнаружены."]),
+        "Даты репозиториев ≠ даты запуска сети.",
+        "Mainnet указывается только по заявлению разработчика.",
         "",
-        "📂 Проектов на наблюдении: " + list.length,
-        "📨 Telegram: " + sourceEntries(state,"tg").length +
-          "  •  💻 GitHub: " + sourceEntries(state,"gh").length,
-        "🗣️ Bitcointalk: " + sourceEntries(state,"btt").length +
-          "  •  ⛏️ Пулы: " + sourceEntries(state,"pool").length,
-        "📰 RSS: " + sourceEntries(state,"rss").length +
-          "  •  👥 Discord: " + sourceEntries(state,"dc").length,
-        "🕒 Последний скан: " + info.text + (info.stale ? " ⚠️" : ""),
+        "📨 Telegram: "+sourceEntries(state,"tg").length+
+          "  •  💻 GitHub: "+sourceEntries(state,"gh").length,
+        "🗣️ Bitcointalk: "+sourceEntries(state,"btt").length+
+          "  •  ⛏️ Пулы: "+sourceEntries(state,"pool").length,
         "",
-        "Выбери раздел кнопкой ниже.",
-        "⚠️ Это поиск кандидатов, не гарантия прибыли или запуска mainnet.",
-      ].join("\n"),
-      reply_markup:{inline_keyboard:navRows()},
+        "⚠️ GPU-совместимость, premine и возможность продажи не проверены."
+      ].join("\n").slice(0,3900),
+      reply_markup:{inline_keyboard:rows}
     };
   }
   const sourceMatch=/^source:(tg|gh|btt|pool|rss|dc|other):(\d{1,3})$/.exec(view);
