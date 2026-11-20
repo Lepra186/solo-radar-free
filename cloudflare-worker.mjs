@@ -256,6 +256,11 @@ export function renderMenu(view, state = {}, now = new Date()) {
           "ожидает подключения"),
         "⛏ Mining Scan: "+(state?.mining_scan_status?.available?
           "данные пулов получены":"нет свежих данных"),
+        "🏊 Пулы по монетам: "+(state?.pool_validation_status?.coin_matches||0)+
+           (state?.pool_directory?.status==="source_unavailable"?" (каталог недоступен/устарел)":""),
+        "🌐 CoinCalculators: "+(state?.coin_calculators?.status==="endpoint_gone"?
+           "API 410 — отключён на 7 дней":
+           state?.coin_calculators_status?.catalog_available?"доступен":"данных нет"),
         "",
         "Поиск монет выполняет GitHub Actions. Его запуск может задерживаться.",
       ].join("\n"),
