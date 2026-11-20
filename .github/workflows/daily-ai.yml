@@ -10,6 +10,8 @@ on:
       - "test_research_agent.py"
       - "test_daily_ai.py"
       - "daily_ai.py"
+      - "coin_filter.py"
+      - "research_agent.py"
 permissions:
   contents: write
 concurrency:
