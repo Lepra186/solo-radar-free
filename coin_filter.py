@@ -30,6 +30,9 @@ def classify(key,item):
         return 'non_coin','news_or_pool_service'
     if NONPOW.search(combined):
         return 'unsupported_mining','non_pow_or_token'
+    # Some software releases incorrectly include [ANN] and the word coin.
+    if re.search(r'^(?:\s*\[(?:ann|pre-ann)\]\s*)?(?:new\s+)?(?:gpu|cpu|nvidia|amd)?\s*miner\s+v?\d',title,re.I):
+        return 'non_coin','miner_release_announcement'
     if SERVICE.search(title) or SOFTWARE.search(title):
         # Explicit [ANN] coin announcement takes precedence over a feature
         # phrase like "Free Solo Miner" *only* if standalone coin is clear.
