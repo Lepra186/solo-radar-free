@@ -396,7 +396,7 @@
           "network": false
         },
         "chain_height_progression": false,
-        "checked_at": "2026-11-20T10:07+00:00"
+        "checked_at": "2026-11-20T10:08+00:00"
       },
       "economics": {
         "status": "insufficient_data",
@@ -2332,7 +2332,7 @@
     "pool:2026-11-19:0": {
       "title": "PoolPayCoin now has an announcement thread on BitcoinTalk -- specs, mining instructions and the real pool-pay.com Shop utility (NFTs, AI generation, p",
       "seen": "2026-11-20T05:22:56+00:00",
-      "last_seen": "2026-11-20T10:07:11+00:00",
+      "last_seen": "2026-11-20T10:08:02+00:00",
       "url": "https://pool-pay.com/",
       "links": {},
       "body": "PoolPayCoin now has an announcement thread on BitcoinTalk -- specs, mining instructions and the real pool-pay.com Shop utility (NFTs, AI generation, pool fee-waiver pass), all in one place.",
@@ -2411,7 +2411,7 @@
     "pool:2026-11-19:1": {
       "title": "Added a pool fee-waiver pass to the Shop at shop.pool-pay.com/subscription.html : pay with PPC or SOL (a week to a year, longer terms a bit cheaper pe",
       "seen": "2026-11-20T05:22:56+00:00",
-      "last_seen": "2026-11-20T10:07:11+00:00",
+      "last_seen": "2026-11-20T10:08:02+00:00",
       "url": "https://pool-pay.com/",
       "links": {},
       "body": "Added a pool fee-waiver pass to the Shop at shop.pool-pay.com/subscription.html : pay with PPC or SOL (a week to a year, longer terms a bit cheaper per day) and the pool fee is rebated straight back onto your balance as a bonus, automatically, every few minutes, on every coin you mine directly. Requires a free pool-pay.com account (same login as the main das",
@@ -2490,7 +2490,7 @@
     "pool:2026-11-18:2": {
       "title": "\"pool-pay.com Critters\" is now officially listed on Magic Eden , Solana's biggest NFT marketplace -- a real collection page with its own listings, off",
       "seen": "2026-11-20T05:22:56+00:00",
-      "last_seen": "2026-11-20T10:07:11+00:00",
+      "last_seen": "2026-11-20T10:08:02+00:00",
       "url": "https://pool-pay.com/",
       "links": {},
       "body": "\"pool-pay.com Critters\" is now officially listed on Magic Eden , Solana's biggest NFT marketplace -- a real collection page with its own listings, offers and trade history, not just an unverified mint. Minting new critters is still only through shop.pool-pay.com (pay with SOL or PPC); Magic Eden is for browsing and reselling what's already minted. Link added",
@@ -2569,7 +2569,7 @@
     "pool:2026-11-18:3": {
       "title": "Added AI generation to the Shop at shop.pool-pay.com/generate.html : buy a credit package with PPC or SOL, spend it on real Google AI generation (imag",
       "seen": "2026-11-20T05:22:56+00:00",
-      "last_seen": "2026-11-20T10:07:11+00:00",
+      "last_seen": "2026-11-20T10:08:02+00:00",
       "url": "https://pool-pay.com/",
       "links": {},
       "body": "Added AI generation to the Shop at shop.pool-pay.com/generate.html : buy a credit package with PPC or SOL, spend it on real Google AI generation (images, video, voice, music) — a redemption code is all you need, no account. Reference-image editing, a 9:16 mobile format toggle, a choice of 30 TTS voices, and a 360p/720p video resolution picker are all wired u",
@@ -2648,7 +2648,7 @@
     "pool:2026-11-19:4": {
       "title": "У PoolPayCoin появилась тема-анонс на BitcoinTalk — характеристики, инструкция по майнингу и реальная польза от магазина pool-pay.com (NFT, AI-генерац",
       "seen": "2026-11-20T05:22:56+00:00",
-      "last_seen": "2026-11-20T10:07:11+00:00",
+      "last_seen": "2026-11-20T10:08:02+00:00",
       "url": "https://pool-pay.com/",
       "links": {},
       "body": "У PoolPayCoin появилась тема-анонс на BitcoinTalk — характеристики, инструкция по майнингу и реальная польза от магазина pool-pay.com (NFT, AI-генерация, абонемент без комиссии на пуле) в одном месте.",
@@ -2727,7 +2727,7 @@
     "pool:2026-11-19:5": {
       "title": "В магазине появился абонемент без комиссии на пуле: shop.pool-pay.com/subscription.html . Оплата PPC или SOL (от недели до года, чем дольше срок — тем",
       "seen": "2026-11-20T05:22:56+00:00",
-      "last_seen": "2026-11-20T10:07:11+00:00",
+      "last_seen": "2026-11-20T10:08:02+00:00",
       "url": "https://pool-pay.com/",
       "links": {},
       "body": "В магазине появился абонемент без комиссии на пуле: shop.pool-pay.com/subscription.html . Оплата PPC или SOL (от недели до года, чем дольше срок — тем дешевле в пересчёте на день), комиссия пула автоматически возвращается бонусом на баланс каждые несколько минут, на любой монете, которую майните напрямую. Нужен бесплатный аккаунт pool-pay.com (тот же логин,",
@@ -2806,7 +2806,7 @@
     "pool:2026-11-18:6": {
       "title": "«pool-pay.com Critters» теперь официально в листинге на Magic Eden — крупнейшем NFT-маркетплейсе на Solana: настоящая страница коллекции со своими лис",
       "seen": "2026-11-20T05:22:56+00:00",
-      "last_seen": "2026-11-20T10:07:11+00:00",
+      "last_seen": "2026-11-20T10:08:02+00:00",
       "url": "https://pool-pay.com/",
       "links": {},
       "body": "«pool-pay.com Critters» теперь официально в листинге на Magic Eden — крупнейшем NFT-маркетплейсе на Solana: настоящая страница коллекции со своими листингами, офферами и историей сделок, а не непроверенный минт. Минтить новых критеров всё так же можно только через shop.pool-pay.com (оплата SOL или PPC); Magic Eden — для просмотра и перепродажи уже сминченног",
@@ -2885,7 +2885,7 @@
     "pool:2026-11-18:7": {
       "title": "Добавили AI-генерацию в магазин на shop.pool-pay.com/generate.html : покупаете пакет кредитов за PPC или SOL, тратите на настоящую генерацию через Goo",
       "seen": "2026-11-20T05:22:56+00:00",
-      "last_seen": "2026-11-20T10:07:11+00:00",
+      "last_seen": "2026-11-20T10:08:02+00:00",
       "url": "https://pool-pay.com/",
       "links": {},
       "body": "Добавили AI-генерацию в магазин на shop.pool-pay.com/generate.html : покупаете пакет кредитов за PPC или SOL, тратите на настоящую генерацию через Google AI (картинки, видео, голос, музыка) — нужен только код, аккаунт не требуется. Работают редактирование по референс-картинке, мобильный формат 9:16, выбор из 30 голосов озвучки и выбор разрешения видео (360p/",
@@ -3040,7 +3040,7 @@
     "tg:miningrelease:281": {
       "title": "‼️ Coin Name: Neural Engine Byte Ticker: $NEB Algo: Nebhash",
       "seen": "2026-11-20T05:27:58+00:00",
-      "last_seen": "2026-11-20T10:07:11+00:00",
+      "last_seen": "2026-11-20T10:08:02+00:00",
       "url": "https://t.me/miningrelease/281",
       "links": {
         "website": "https://neuralenginebyte.org/",
@@ -3911,7 +3911,7 @@
           "network": false
         },
         "chain_height_progression": false,
-        "checked_at": "2026-11-20T10:07+00:00"
+        "checked_at": "2026-11-20T10:08+00:00"
       },
       "economics": {
         "status": "insufficient_data",
@@ -7814,7 +7814,7 @@
           "network": false
         },
         "chain_height_progression": false,
-        "checked_at": "2026-11-20T10:07+00:00"
+        "checked_at": "2026-11-20T10:08+00:00"
       },
       "economics": {
         "status": "insufficient_data",
@@ -8406,7 +8406,7 @@
           "network": false
         },
         "chain_height_progression": false,
-        "checked_at": "2026-11-20T10:07+00:00"
+        "checked_at": "2026-11-20T10:08+00:00"
       },
       "economics": {
         "status": "insufficient_data",
@@ -9627,7 +9627,7 @@
     "gh:1457287638": {
       "title": "good-mining/good-miner",
       "seen": "2026-11-20T08:17:00+00:00",
-      "last_seen": "2026-11-20T10:07:11+00:00",
+      "last_seen": "2026-11-20T10:08:02+00:00",
       "url": "https://github.com/good-mining/good-miner",
       "links": {},
       "body": "good-mining/good-miner Rust cryptocurrency miner for NVIDIA, AMD and Intel GPUs and CPUs. One binary, auto profit switching, built-in dashboard. Windows and Linux.",
@@ -9712,7 +9712,7 @@
     "gh:1457186269": {
       "title": "Lakylife/quinvium",
       "seen": "2026-11-20T08:17:00+00:00",
-      "last_seen": "2026-11-20T10:07:11+00:00",
+      "last_seen": "2026-11-20T10:08:02+00:00",
       "url": "https://github.com/Lakylife/quinvium",
       "links": {},
       "body": "Lakylife/quinvium Quinvium (QU): a programmable proof-of-work blockchain with an EVM, GPU mining (Ethash), full node, wallet, explorer and miner.",
@@ -9797,7 +9797,7 @@
           "network": false
         },
         "chain_height_progression": false,
-        "checked_at": "2026-11-20T10:07+00:00"
+        "checked_at": "2026-11-20T10:08+00:00"
       },
       "economics": {
         "status": "insufficient_data",
@@ -9850,7 +9850,7 @@
     "gh:1449663269": {
       "title": "gacanga/crypto-connection-miner",
       "seen": "2026-11-20T08:17:00+00:00",
-      "last_seen": "2026-11-20T10:07:11+00:00",
+      "last_seen": "2026-11-20T10:08:02+00:00",
       "url": "https://github.com/gacanga/crypto-connection-miner",
       "links": {},
       "body": "gacanga/crypto-connection-miner Crypto Connection Miner (formerly GostMiner): free open-source miner, no dev fee - NVIDIA GPUs for GOSTcoin, Bitmark, Daler (Ting), Ycash, NEX Chain (Ethash) and Chipcoin; Chipcoin also on the CPU, including macOS on Apple Silicon. Windows, Linux, macOS. Made for the Crypto Connection pool (crypto-connection.net).",
@@ -9935,7 +9935,7 @@
     "gh:1455827083": {
       "title": "MrM002/NexusSwitch",
       "seen": "2026-11-20T08:17:00+00:00",
-      "last_seen": "2026-11-20T10:07:11+00:00",
+      "last_seen": "2026-11-20T10:08:02+00:00",
       "url": "https://github.com/MrM002/NexusSwitch",
       "links": {},
       "body": "MrM002/NexusSwitch ⚡ Open-Source Crypto Auto Profit-Switcher with a Self-Hosted Telegram Bot, Anti-Spike Filters & Live Profit Boost Tracking.",
@@ -10020,7 +10020,7 @@
     "gh:1457230305": {
       "title": "kobold-dev/kobold-miner",
       "seen": "2026-11-20T08:17:00+00:00",
-      "last_seen": "2026-11-20T10:07:11+00:00",
+      "last_seen": "2026-11-20T10:08:02+00:00",
       "url": "https://github.com/kobold-dev/kobold-miner",
       "links": {},
       "body": "kobold-dev/kobold-miner NVIDIA GPU miner for Pearl (PRL), Ravencoin (RVN), Parano1d (NOID) and Quantus (QTC), CPU miner for Monero and Zephyr (RandomX). Windows, Linux, HiveOS. GPG-signed builds.",
@@ -10259,7 +10259,7 @@
     "tg:rplant_pool_ann:300": {
       "title": "Nov 19 delist alphanumeric, cmusicai, bitmonero(BMR), kadikama, myt, zerqavon",
       "seen": "2026-11-20T08:50:53+00:00",
-      "last_seen": "2026-11-20T10:07:11+00:00",
+      "last_seen": "2026-11-20T10:08:02+00:00",
       "url": "https://t.me/rplant_pool_ann/300",
       "links": {
         "pool": "https://t.me/rplant_pool_ann"
@@ -10417,7 +10417,7 @@
     "gh:1452657235": {
       "title": "muhammad-ahmed-ssuet/muhammad-ahmed-ssuet.github.io",
       "seen": "2026-11-20T09:14:14+00:00",
-      "last_seen": "2026-11-20T10:07:11+00:00",
+      "last_seen": "2026-11-20T10:08:02+00:00",
       "url": "https://github.com/muhammad-ahmed-ssuet/muhammad-ahmed-ssuet.github.io",
       "links": {},
       "body": "muhammad-ahmed-ssuet/muhammad-ahmed-ssuet.github.io Secure a proof-of-useful-work GPU blockchain with auditable int8 matrix-product jobs for paid AI inference and rendering.",
@@ -10577,11 +10577,11 @@
       }
     }
   },
-  "last_scan": "2026-11-20T10:07:11+00:00",
+  "last_scan": "2026-11-20T10:08:02+00:00",
   "telegram_update_offset": 229240560,
   "second_user_welcomed": true,
   "agent": {
-    "updated_at": "2026-11-20T10:07:11+00:00",
+    "updated_at": "2026-11-20T10:08:02+00:00",
     "total_scanned": 134,
     "items": [
       {
@@ -10656,7 +10656,7 @@
       "name": "[ANN] NEX Chain (NEXC) | Ethash PoW | GPU & CPU | Free Solo Miner | EVM + DEX",
       "source": "Bitcointalk",
       "score": 5,
-      "last_reviewed": "2026-11-20T10:07:11+00:00",
+      "last_reviewed": "2026-11-20T10:08:02+00:00",
       "reason": "указан GPU-алгоритм: Ethash; упомянут SOLO",
       "status": "MONITOR"
     }
@@ -11364,27 +11364,27 @@
     "gh-1457186269": {
       "last_stage": "announcement_only",
       "last_alert_marker": "",
-      "checked_at": "2026-11-20T10:07:11+00:00"
+      "checked_at": "2026-11-20T10:08:02+00:00"
     },
     "btt:5599371": {
       "last_stage": "activity_reported",
       "last_alert_marker": "",
-      "checked_at": "2026-11-20T10:07:11+00:00"
+      "checked_at": "2026-11-20T10:08:02+00:00"
     },
     "btt:5600215": {
       "last_stage": "announcement_only",
       "last_alert_marker": "",
-      "checked_at": "2026-11-20T10:07:11+00:00"
+      "checked_at": "2026-11-20T10:08:02+00:00"
     },
     "btt:5592609": {
       "last_stage": "announcement_only",
       "last_alert_marker": "",
-      "checked_at": "2026-11-20T10:07:11+00:00"
+      "checked_at": "2026-11-20T10:08:02+00:00"
     },
     "gh:1457186269": {
       "last_stage": "announcement_only",
       "last_alert_marker": "",
-      "checked_at": "2026-11-20T10:07:11+00:00"
+      "checked_at": "2026-11-20T10:08:02+00:00"
     }
   },
   "pool_directory": {
