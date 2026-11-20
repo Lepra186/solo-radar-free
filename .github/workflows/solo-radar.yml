@@ -45,6 +45,20 @@ jobs:
             git add data/state.json
             if ! git diff --cached --quiet; then
               git commit -m 'chore: update scan state [skip ci]'
-              git push
+              for attempt in 1 2 3; do
+                git fetch origin main
+                if ! git rebase -X ours origin/main; then
+                  git rebase --abort
+                  echo "::warning::Could not rebase state; will retry on next scan"
+                  break
+                fi
+                if git push origin HEAD:main; then
+                  echo "Scan state saved"
+                  break
+                fi
+                if [ "$attempt" -eq 3 ]; then
+                  echo "::warning::State push conflicted repeatedly; next scan will retry"
+                fi
+              done
             fi
           fi
