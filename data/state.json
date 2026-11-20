@@ -342,10 +342,9 @@
         }
       ],
       "mining_readiness": {
-        "stage": "rpc_head_reported",
-        "label": "Публичный RPC вернул свежий блок и правильный Chain ID",
+        "stage": "announcement_only",
+        "label": "Только анонс или код проекта",
         "evidence": [
-          "Публичный RPC вернул блок 37066 (Chain ID проверен)",
           "Есть свежий релиз проекта на GitHub"
         ],
         "missing": [
@@ -398,7 +397,7 @@
         },
         "chain_height_progression": false,
         "rpc_height_progression": false,
-        "checked_at": "2026-11-20T11:00+00:00"
+        "checked_at": "2026-11-20T14:18+00:00"
       },
       "economics": {
         "status": "insufficient_data",
@@ -450,25 +449,13 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": "2026-11-20T09:54:48+00:00",
       "explorer_checked_at": "2026-11-20T10:37:11+00:00",
-      "rpc_evidence": {
-        "provider": "public project JSON-RPC",
-        "endpoint": "https://rpc.quinvium.com",
-        "chain_id": 52401,
-        "last_block_height": 37066,
-        "last_block_hash": "0x15c07716df33325434ca174396d34e5dc5d3feb93888bfdb34205646717634d7",
-        "last_block_time": "2026-11-20T10:43:35+00:00",
-        "difficulty_from_header": 101444680786,
-        "checked_at": "2026-11-20T10:44:32+00:00",
-        "source_reference": "https://github.com/Lakylife/quinvium/blob/main/README.md",
-        "note": "RPC chain ID совпал; это не независимый аудит PoW и не проверка выплат"
-      },
       "github": {
         "stars": 1,
         "forks": 1,
         "archived": false,
         "name": "Lakylife/quinvium"
       },
-      "last_repo_check": "2026-11-20T11:00:43+00:00",
+      "last_repo_check": "2026-11-20T14:18:37+00:00",
       "links": {
         "explorer": "https://explorer.quinvium.com"
       }
@@ -2357,7 +2344,7 @@
     "pool:2026-11-19:0": {
       "title": "PoolPayCoin now has an announcement thread on BitcoinTalk -- specs, mining instructions and the real pool-pay.com Shop utility (NFTs, AI generation, p",
       "seen": "2026-11-20T05:22:56+00:00",
-      "last_seen": "2026-11-20T11:00:43+00:00",
+      "last_seen": "2026-11-20T14:18:37+00:00",
       "url": "https://pool-pay.com/",
       "links": {},
       "body": "PoolPayCoin now has an announcement thread on BitcoinTalk -- specs, mining instructions and the real pool-pay.com Shop utility (NFTs, AI generation, pool fee-waiver pass), all in one place.",
@@ -2442,7 +2429,7 @@
     "pool:2026-11-19:1": {
       "title": "Added a pool fee-waiver pass to the Shop at shop.pool-pay.com/subscription.html : pay with PPC or SOL (a week to a year, longer terms a bit cheaper pe",
       "seen": "2026-11-20T05:22:56+00:00",
-      "last_seen": "2026-11-20T11:00:43+00:00",
+      "last_seen": "2026-11-20T14:18:37+00:00",
       "url": "https://pool-pay.com/",
       "links": {},
       "body": "Added a pool fee-waiver pass to the Shop at shop.pool-pay.com/subscription.html : pay with PPC or SOL (a week to a year, longer terms a bit cheaper per day) and the pool fee is rebated straight back onto your balance as a bonus, automatically, every few minutes, on every coin you mine directly. Requires a free pool-pay.com account (same login as the main das",
@@ -2527,7 +2514,7 @@
     "pool:2026-11-18:2": {
       "title": "\"pool-pay.com Critters\" is now officially listed on Magic Eden , Solana's biggest NFT marketplace -- a real collection page with its own listings, off",
       "seen": "2026-11-20T05:22:56+00:00",
-      "last_seen": "2026-11-20T11:00:43+00:00",
+      "last_seen": "2026-11-20T14:18:37+00:00",
       "url": "https://pool-pay.com/",
       "links": {},
       "body": "\"pool-pay.com Critters\" is now officially listed on Magic Eden , Solana's biggest NFT marketplace -- a real collection page with its own listings, offers and trade history, not just an unverified mint. Minting new critters is still only through shop.pool-pay.com (pay with SOL or PPC); Magic Eden is for browsing and reselling what's already minted. Link added",
@@ -2612,7 +2599,7 @@
     "pool:2026-11-18:3": {
       "title": "Added AI generation to the Shop at shop.pool-pay.com/generate.html : buy a credit package with PPC or SOL, spend it on real Google AI generation (imag",
       "seen": "2026-11-20T05:22:56+00:00",
-      "last_seen": "2026-11-20T11:00:43+00:00",
+      "last_seen": "2026-11-20T14:18:37+00:00",
       "url": "https://pool-pay.com/",
       "links": {},
       "body": "Added AI generation to the Shop at shop.pool-pay.com/generate.html : buy a credit package with PPC or SOL, spend it on real Google AI generation (images, video, voice, music) — a redemption code is all you need, no account. Reference-image editing, a 9:16 mobile format toggle, a choice of 30 TTS voices, and a 360p/720p video resolution picker are all wired u",
@@ -2697,7 +2684,7 @@
     "pool:2026-11-19:4": {
       "title": "У PoolPayCoin появилась тема-анонс на BitcoinTalk — характеристики, инструкция по майнингу и реальная польза от магазина pool-pay.com (NFT, AI-генерац",
       "seen": "2026-11-20T05:22:56+00:00",
-      "last_seen": "2026-11-20T11:00:43+00:00",
+      "last_seen": "2026-11-20T14:18:37+00:00",
       "url": "https://pool-pay.com/",
       "links": {},
       "body": "У PoolPayCoin появилась тема-анонс на BitcoinTalk — характеристики, инструкция по майнингу и реальная польза от магазина pool-pay.com (NFT, AI-генерация, абонемент без комиссии на пуле) в одном месте.",
@@ -2782,7 +2769,7 @@
     "pool:2026-11-19:5": {
       "title": "В магазине появился абонемент без комиссии на пуле: shop.pool-pay.com/subscription.html . Оплата PPC или SOL (от недели до года, чем дольше срок — тем",
       "seen": "2026-11-20T05:22:56+00:00",
-      "last_seen": "2026-11-20T11:00:43+00:00",
+      "last_seen": "2026-11-20T14:18:37+00:00",
       "url": "https://pool-pay.com/",
       "links": {},
       "body": "В магазине появился абонемент без комиссии на пуле: shop.pool-pay.com/subscription.html . Оплата PPC или SOL (от недели до года, чем дольше срок — тем дешевле в пересчёте на день), комиссия пула автоматически возвращается бонусом на баланс каждые несколько минут, на любой монете, которую майните напрямую. Нужен бесплатный аккаунт pool-pay.com (тот же логин,",
@@ -2867,7 +2854,7 @@
     "pool:2026-11-18:6": {
       "title": "«pool-pay.com Critters» теперь официально в листинге на Magic Eden — крупнейшем NFT-маркетплейсе на Solana: настоящая страница коллекции со своими лис",
       "seen": "2026-11-20T05:22:56+00:00",
-      "last_seen": "2026-11-20T11:00:43+00:00",
+      "last_seen": "2026-11-20T14:18:37+00:00",
       "url": "https://pool-pay.com/",
       "links": {},
       "body": "«pool-pay.com Critters» теперь официально в листинге на Magic Eden — крупнейшем NFT-маркетплейсе на Solana: настоящая страница коллекции со своими листингами, офферами и историей сделок, а не непроверенный минт. Минтить новых критеров всё так же можно только через shop.pool-pay.com (оплата SOL или PPC); Magic Eden — для просмотра и перепродажи уже сминченног",
@@ -2952,7 +2939,7 @@
     "pool:2026-11-18:7": {
       "title": "Добавили AI-генерацию в магазин на shop.pool-pay.com/generate.html : покупаете пакет кредитов за PPC или SOL, тратите на настоящую генерацию через Goo",
       "seen": "2026-11-20T05:22:56+00:00",
-      "last_seen": "2026-11-20T11:00:43+00:00",
+      "last_seen": "2026-11-20T14:18:37+00:00",
       "url": "https://pool-pay.com/",
       "links": {},
       "body": "Добавили AI-генерацию в магазин на shop.pool-pay.com/generate.html : покупаете пакет кредитов за PPC или SOL, тратите на настоящую генерацию через Google AI (картинки, видео, голос, музыка) — нужен только код, аккаунт не требуется. Работают редактирование по референс-картинке, мобильный формат 9:16, выбор из 30 голосов озвучки и выбор разрешения видео (360p/",
@@ -3113,7 +3100,7 @@
     "tg:miningrelease:281": {
       "title": "‼️ Coin Name: Neural Engine Byte Ticker: $NEB Algo: Nebhash",
       "seen": "2026-11-20T05:27:58+00:00",
-      "last_seen": "2026-11-20T11:00:43+00:00",
+      "last_seen": "2026-11-20T14:18:37+00:00",
       "url": "https://t.me/miningrelease/281",
       "links": {
         "website": "https://neuralenginebyte.org/",
@@ -3997,12 +3984,13 @@
         "note": "Каталог пулов, не независимая проверка mainnet или выплат"
       },
       "mining_readiness": {
-        "stage": "rpc_head_reported",
-        "label": "Публичный RPC вернул свежий блок и правильный Chain ID",
+        "stage": "rpc_height_advanced",
+        "label": "Публичный RPC сообщил рост высоты сети",
         "evidence": [
           "Пулы в каталоге Mining Scan: 2",
           "В каталоге есть недавняя отметка найденного блока",
-          "Публичный RPC вернул блок 97630 (Chain ID проверен)"
+          "Публичный RPC вернул блок 98344 (Chain ID проверен)",
+          "Высота RPC выросла на 714 между двумя чтениями"
         ],
         "missing": [
           "Совместимость GTX 10xx / RTX 20xx–50xx, Stratum и выплаты не проверены",
@@ -4051,8 +4039,8 @@
           "network": false
         },
         "chain_height_progression": false,
-        "rpc_height_progression": false,
-        "checked_at": "2026-11-20T11:00+00:00"
+        "rpc_height_progression": true,
+        "checked_at": "2026-11-20T14:18+00:00"
       },
       "economics": {
         "status": "insufficient_data",
@@ -4105,13 +4093,23 @@
         "provider": "public project JSON-RPC",
         "endpoint": "https://rpc.getnexwallet.com",
         "chain_id": 6396,
-        "last_block_height": 97630,
-        "last_block_hash": "0x8d15e3ea8b1a6a98a86dae9b80b33cfe2f8ad4ea1f23fbb4d15e1fb9405b7369",
-        "last_block_time": "2026-11-20T10:43:14+00:00",
-        "difficulty_from_header": 14210415213,
-        "checked_at": "2026-11-20T10:44:32+00:00",
+        "last_block_height": 98344,
+        "last_block_hash": "0x85c5c83c848882b3cbf735df1bd05cdd5957b6a2257cc872c23eb57fc783a85c",
+        "last_block_time": "2026-11-20T14:18:20+00:00",
+        "difficulty_from_header": 11828740549,
+        "checked_at": "2026-11-20T14:18:37+00:00",
         "source_reference": "https://bitcointalk.org/index.php?topic=5599371.0",
         "note": "RPC chain ID совпал; это не независимый аудит PoW и не проверка выплат"
+      },
+      "rpc_progress": {
+        "source": "project public JSON-RPC",
+        "chain_id": 6396,
+        "first_height": 97630,
+        "last_height": 98344,
+        "blocks_increased": 714,
+        "first_checked": "2026-11-20T10:44:32+00:00",
+        "last_checked": "2026-11-20T14:18:37+00:00",
+        "note": "Рост между чтениями RPC; PoW и получение выплат не проверены"
       }
     },
     "btt:5600283": {
@@ -8221,11 +8219,9 @@
       "coin_class": "coin_candidate",
       "coin_reason": "gpu_pow_coin_claim",
       "mining_readiness": {
-        "stage": "rpc_head_reported",
-        "label": "Публичный RPC вернул свежий блок и правильный Chain ID",
-        "evidence": [
-          "Публичный RPC вернул блок 37066 (Chain ID проверен)"
-        ],
+        "stage": "announcement_only",
+        "label": "Только анонс или код проекта",
+        "evidence": [],
         "missing": [
           "Рабочий пул не проверен",
           "Свежие блоки сети не подтверждены",
@@ -8276,7 +8272,7 @@
         },
         "chain_height_progression": false,
         "rpc_height_progression": false,
-        "checked_at": "2026-11-20T11:00+00:00"
+        "checked_at": "2026-11-20T14:18+00:00"
       },
       "economics": {
         "status": "insufficient_data",
@@ -8324,18 +8320,6 @@
           "проверенная цена продажи в EUR и ликвидность"
         ],
         "note": "Сценарии энергии — не измерение GPU/рига. Доходность и продажа не подтверждены."
-      },
-      "rpc_evidence": {
-        "provider": "public project JSON-RPC",
-        "endpoint": "https://rpc.quinvium.com",
-        "chain_id": 52401,
-        "last_block_height": 37066,
-        "last_block_hash": "0x15c07716df33325434ca174396d34e5dc5d3feb93888bfdb34205646717634d7",
-        "last_block_time": "2026-11-20T10:43:35+00:00",
-        "difficulty_from_header": 101444680786,
-        "checked_at": "2026-11-20T10:44:32+00:00",
-        "source_reference": "https://github.com/Lakylife/quinvium/blob/main/README.md",
-        "note": "RPC chain ID совпал; это не независимый аудит PoW и не проверка выплат"
       }
     },
     "btt:5598138": {
@@ -8927,7 +8911,7 @@
         },
         "chain_height_progression": false,
         "rpc_height_progression": false,
-        "checked_at": "2026-11-20T11:00+00:00"
+        "checked_at": "2026-11-20T14:18+00:00"
       },
       "economics": {
         "status": "insufficient_data",
@@ -10199,7 +10183,7 @@
     "gh:1457287638": {
       "title": "good-mining/good-miner",
       "seen": "2026-11-20T08:17:00+00:00",
-      "last_seen": "2026-11-20T11:00:43+00:00",
+      "last_seen": "2026-11-20T14:18:37+00:00",
       "url": "https://github.com/good-mining/good-miner",
       "links": {},
       "body": "good-mining/good-miner Rust cryptocurrency miner for NVIDIA, AMD and Intel GPUs and CPUs. One binary, auto profit switching, built-in dashboard. Windows and Linux.",
@@ -10290,7 +10274,7 @@
     "gh:1457186269": {
       "title": "Lakylife/quinvium",
       "seen": "2026-11-20T08:17:00+00:00",
-      "last_seen": "2026-11-20T11:00:43+00:00",
+      "last_seen": "2026-11-20T14:18:37+00:00",
       "url": "https://github.com/Lakylife/quinvium",
       "links": {
         "explorer": "https://explorer.quinvium.com"
@@ -10326,26 +10310,12 @@
       "explorer_origin": {},
       "explorer_evidence": {},
       "explorer_checked_at": null,
-      "rpc_evidence": {
-        "provider": "public project JSON-RPC",
-        "endpoint": "https://rpc.quinvium.com",
-        "chain_id": 52401,
-        "last_block_height": 37066,
-        "last_block_hash": "0x15c07716df33325434ca174396d34e5dc5d3feb93888bfdb34205646717634d7",
-        "last_block_time": "2026-11-20T10:43:35+00:00",
-        "difficulty_from_header": 101444680786,
-        "checked_at": "2026-11-20T10:44:32+00:00",
-        "source_reference": "https://github.com/Lakylife/quinvium/blob/main/README.md",
-        "note": "RPC chain ID совпал; это не независимый аудит PoW и не проверка выплат"
-      },
       "coin_class": "coin_candidate",
       "coin_reason": "gpu_pow_coin_claim",
       "mining_readiness": {
-        "stage": "rpc_head_reported",
-        "label": "Публичный RPC вернул свежий блок и правильный Chain ID",
-        "evidence": [
-          "Публичный RPC вернул блок 37066 (Chain ID проверен)"
-        ],
+        "stage": "announcement_only",
+        "label": "Только анонс или код проекта",
+        "evidence": [],
         "missing": [
           "Рабочий пул не проверен",
           "Свежие блоки сети не подтверждены",
@@ -10396,7 +10366,7 @@
         },
         "chain_height_progression": false,
         "rpc_height_progression": false,
-        "checked_at": "2026-11-20T11:00+00:00"
+        "checked_at": "2026-11-20T14:18+00:00"
       },
       "economics": {
         "status": "insufficient_data",
@@ -10445,12 +10415,12 @@
         ],
         "note": "Сценарии энергии — не измерение GPU/рига. Доходность и продажа не подтверждены."
       },
-      "last_repo_check": "2026-11-20T11:00:43+00:00"
+      "last_repo_check": "2026-11-20T14:18:37+00:00"
     },
     "gh:1449663269": {
       "title": "gacanga/crypto-connection-miner",
       "seen": "2026-11-20T08:17:00+00:00",
-      "last_seen": "2026-11-20T11:00:43+00:00",
+      "last_seen": "2026-11-20T14:18:37+00:00",
       "url": "https://github.com/gacanga/crypto-connection-miner",
       "links": {},
       "body": "gacanga/crypto-connection-miner Crypto Connection Miner (formerly GostMiner): free open-source miner, no dev fee - NVIDIA GPUs for GOSTcoin, Bitmark, Daler (Ting), Ycash, NEX Chain (Ethash) and Chipcoin; Chipcoin also on the CPU, including macOS on Apple Silicon. Windows, Linux, macOS. Made for the Crypto Connection pool (crypto-connection.net).",
@@ -10541,7 +10511,7 @@
     "gh:1455827083": {
       "title": "MrM002/NexusSwitch",
       "seen": "2026-11-20T08:17:00+00:00",
-      "last_seen": "2026-11-20T11:00:43+00:00",
+      "last_seen": "2026-11-20T14:18:37+00:00",
       "url": "https://github.com/MrM002/NexusSwitch",
       "links": {},
       "body": "MrM002/NexusSwitch ⚡ Open-Source Crypto Auto Profit-Switcher with a Self-Hosted Telegram Bot, Anti-Spike Filters & Live Profit Boost Tracking.",
@@ -10632,7 +10602,7 @@
     "gh:1457230305": {
       "title": "kobold-dev/kobold-miner",
       "seen": "2026-11-20T08:17:00+00:00",
-      "last_seen": "2026-11-20T11:00:43+00:00",
+      "last_seen": "2026-11-20T14:18:37+00:00",
       "url": "https://github.com/kobold-dev/kobold-miner",
       "links": {},
       "body": "kobold-dev/kobold-miner NVIDIA GPU miner for Pearl (PRL), Ravencoin (RVN), Parano1d (NOID) and Quantus (QTC), CPU miner for Monero and Zephyr (RandomX). Windows, Linux, HiveOS. GPG-signed builds.",
@@ -10889,7 +10859,7 @@
     "tg:rplant_pool_ann:300": {
       "title": "Nov 19 delist alphanumeric, cmusicai, bitmonero(BMR), kadikama, myt, zerqavon",
       "seen": "2026-11-20T08:50:53+00:00",
-      "last_seen": "2026-11-20T11:00:43+00:00",
+      "last_seen": "2026-11-20T14:18:37+00:00",
       "url": "https://t.me/rplant_pool_ann/300",
       "links": {
         "pool": "https://t.me/rplant_pool_ann"
@@ -11059,7 +11029,7 @@
     "gh:1452657235": {
       "title": "muhammad-ahmed-ssuet/muhammad-ahmed-ssuet.github.io",
       "seen": "2026-11-20T09:14:14+00:00",
-      "last_seen": "2026-11-20T11:00:43+00:00",
+      "last_seen": "2026-11-20T14:18:37+00:00",
       "url": "https://github.com/muhammad-ahmed-ssuet/muhammad-ahmed-ssuet.github.io",
       "links": {},
       "body": "muhammad-ahmed-ssuet/muhammad-ahmed-ssuet.github.io Secure a proof-of-useful-work GPU blockchain with auditable int8 matrix-product jobs for paid AI inference and rendering.",
@@ -11480,11 +11450,11 @@
       }
     }
   },
-  "last_scan": "2026-11-20T11:00:43+00:00",
+  "last_scan": "2026-11-20T14:18:37+00:00",
   "telegram_update_offset": 229240560,
   "second_user_welcomed": true,
   "agent": {
-    "updated_at": "2026-11-20T11:00:43+00:00",
+    "updated_at": "2026-11-20T14:18:37+00:00",
     "total_scanned": 137,
     "items": [
       {
@@ -11492,7 +11462,7 @@
         "title": "[ANN] NEX Chain (NEXC) | Ethash PoW | GPU & CPU | Free Solo Miner | EVM + DEX",
         "url": "https://bitcointalk.org/index.php?topic=5599371.0",
         "source": "Bitcointalk",
-        "score": 8,
+        "score": 11,
         "status": "ИЗУЧИТЬ",
         "published": null,
         "launch_claim": null,
@@ -11506,7 +11476,6 @@
         "unknown": [
           "дата публикации/создания не установлена либо старая",
           "нет проверенной даты mainnet",
-          "рост цепи и PoW-майнинг ещё не проверены",
           "не проверены блоки сети, награда, premine и сложность",
           "не проверены биржи, объёмы и возможность продажи"
         ]
@@ -11516,7 +11485,7 @@
         "title": "[GitHub] Lakylife/quinvium — Quinvium (QU): a programmable proof-of-work blockchain with an EVM, GPU mining (Ethash), full node, wallet, ex",
         "url": "https://github.com/Lakylife/quinvium",
         "source": "GitHub",
-        "score": 7,
+        "score": 5,
         "status": "НАБЛЮДАТЬ",
         "published": "2026-11-13T23:04+00:00",
         "launch_claim": null,
@@ -11524,12 +11493,10 @@
         "reasons": [
           "указан GPU-алгоритм: Ethash",
           "упомянут майнинг/пул",
-          "есть ссылка на обозреватель из объявления",
-          "официально указанный публичный RPC вернул свежий блок и Chain ID"
+          "есть ссылка на обозреватель из объявления"
         ],
         "unknown": [
           "нет проверенной даты mainnet",
-          "рост цепи и PoW-майнинг ещё не проверены",
           "репозиторий сам по себе не подтверждает mainnet",
           "не проверены блоки сети, награда, premine и сложность",
           "не проверены биржи, объёмы и возможность продажи"
@@ -11540,20 +11507,18 @@
         "title": "[ANN] Quinvium (QU) | GPU PoW (Ethash) | EVM smart contracts | No premine | Main",
         "url": "https://bitcointalk.org/index.php?topic=5600215.0",
         "source": "Bitcointalk",
-        "score": 6,
+        "score": 4,
         "status": "НАБЛЮДАТЬ",
         "published": null,
         "launch_claim": null,
         "algorithm": "Ethash",
         "reasons": [
           "указан GPU-алгоритм: Ethash",
-          "есть ссылка на обозреватель из объявления",
-          "официально указанный публичный RPC вернул свежий блок и Chain ID"
+          "есть ссылка на обозреватель из объявления"
         ],
         "unknown": [
           "дата публикации/создания не установлена либо старая",
           "нет проверенной даты mainnet",
-          "рост цепи и PoW-майнинг ещё не проверены",
           "не проверены блоки сети, награда, premine и сложность",
           "не проверены биржи, объёмы и возможность продажи"
         ]
@@ -11566,40 +11531,32 @@
     "btt:5599371": {
       "name": "[ANN] NEX Chain (NEXC) | Ethash PoW | GPU & CPU | Free Solo Miner | EVM + DEX",
       "source": "Bitcointalk",
-      "score": 8,
-      "last_reviewed": "2026-11-20T11:00:43+00:00",
+      "score": 11,
+      "last_reviewed": "2026-11-20T14:18:37+00:00",
       "reason": "указан GPU-алгоритм: Ethash; упомянут SOLO",
       "status": "MONITOR"
     },
     "gh-1457186269": {
       "name": "[GitHub] Lakylife/quinvium — Quinvium (QU): a programmable proof-of-work blockchain with an EVM, GPU mining (Ethash), full node, wallet, ex",
       "source": "GitHub",
-      "score": 7,
-      "last_reviewed": "2026-11-20T11:00:43+00:00",
+      "score": 5,
+      "last_reviewed": "2026-11-20T14:18:37+00:00",
       "reason": "указан GPU-алгоритм: Ethash; упомянут майнинг/пул",
-      "status": "MONITOR"
-    },
-    "btt:5600215": {
-      "name": "[ANN] Quinvium (QU) | GPU PoW (Ethash) | EVM smart contracts | No premine | Main",
-      "source": "Bitcointalk",
-      "score": 6,
-      "last_reviewed": "2026-11-20T11:00:43+00:00",
-      "reason": "указан GPU-алгоритм: Ethash; есть ссылка на обозреватель из объявления",
       "status": "MONITOR"
     },
     "gh:1457186269": {
       "name": "Lakylife/quinvium",
       "source": "GitHub",
-      "score": 7,
-      "last_reviewed": "2026-11-20T11:00:43+00:00",
+      "score": 5,
+      "last_reviewed": "2026-11-20T14:18:37+00:00",
       "reason": "указан GPU-алгоритм: Ethash; упомянут майнинг/пул",
       "status": "MONITOR"
     }
   },
   "tracking_stats": {
     "added": 0,
-    "removed": 0,
-    "active": 4,
+    "removed": 1,
+    "active": 3,
     "github_rechecked": 2
   },
   "coin_filter_stats": {
@@ -12269,8 +12226,8 @@
   },
   "mining_readiness_counts": {
     "excluded": 132,
-    "rpc_head_reported": 4,
-    "announcement_only": 1
+    "announcement_only": 4,
+    "rpc_height_advanced": 1
   },
   "mining_economics_counts": {
     "excluded": 132,
@@ -12297,39 +12254,39 @@
   },
   "evidence_history": {
     "gh-1457186269": {
-      "last_stage": "rpc_head_reported",
-      "project_group": "rpc-chain-52401",
+      "last_stage": "announcement_only",
+      "project_group": null,
       "last_alert_marker": "",
-      "checked_at": "2026-11-20T11:00:43+00:00"
+      "checked_at": "2026-11-20T14:18:37+00:00"
     },
     "btt:5599371": {
-      "last_stage": "rpc_head_reported",
+      "last_stage": "rpc_height_advanced",
       "project_group": "rpc-chain-6396",
-      "last_alert_marker": "",
-      "checked_at": "2026-11-20T11:00:43+00:00"
+      "last_alert_marker": "rpc-chain-6396",
+      "checked_at": "2026-11-20T14:18:37+00:00"
     },
     "btt:5600215": {
-      "last_stage": "rpc_head_reported",
-      "project_group": "rpc-chain-52401",
+      "last_stage": "announcement_only",
+      "project_group": null,
       "last_alert_marker": "",
-      "checked_at": "2026-11-20T11:00:43+00:00"
+      "checked_at": "2026-11-20T14:18:37+00:00"
     },
     "btt:5592609": {
       "last_stage": "announcement_only",
       "project_group": null,
       "last_alert_marker": "",
-      "checked_at": "2026-11-20T11:00:43+00:00"
+      "checked_at": "2026-11-20T14:18:37+00:00"
     },
     "gh:1457186269": {
-      "last_stage": "rpc_head_reported",
-      "project_group": "rpc-chain-52401",
+      "last_stage": "announcement_only",
+      "project_group": null,
       "last_alert_marker": "",
-      "checked_at": "2026-11-20T11:00:43+00:00"
+      "checked_at": "2026-11-20T14:18:37+00:00"
     }
   },
   "pool_directory": {
-    "fetched_at": "2026-11-20T10:44:32+00:00",
-    "retry_after": "2026-11-20T11:44:32+00:00",
+    "fetched_at": "2026-11-20T14:18:37+00:00",
+    "retry_after": "2026-11-20T15:18:37+00:00",
     "status": "source_unavailable",
     "pools": [],
     "source": "https://mining-scan.com/api/export/pools"
@@ -12369,8 +12326,8 @@
   },
   "evm_rpc": {
     "quinvium": {
-      "checked_at": "2026-11-20T10:44:32+00:00",
-      "status": "active",
+      "checked_at": "2026-11-20T14:18:37+00:00",
+      "status": "unavailable",
       "rpc": {
         "provider": "public project JSON-RPC",
         "endpoint": "https://rpc.quinvium.com",
@@ -12385,17 +12342,17 @@
       }
     },
     "nexchain": {
-      "checked_at": "2026-11-20T10:44:32+00:00",
+      "checked_at": "2026-11-20T14:18:37+00:00",
       "status": "active",
       "rpc": {
         "provider": "public project JSON-RPC",
         "endpoint": "https://rpc.getnexwallet.com",
         "chain_id": 6396,
-        "last_block_height": 97630,
-        "last_block_hash": "0x8d15e3ea8b1a6a98a86dae9b80b33cfe2f8ad4ea1f23fbb4d15e1fb9405b7369",
-        "last_block_time": "2026-11-20T10:43:14+00:00",
-        "difficulty_from_header": 14210415213,
-        "checked_at": "2026-11-20T10:44:32+00:00",
+        "last_block_height": 98344,
+        "last_block_hash": "0x85c5c83c848882b3cbf735df1bd05cdd5957b6a2257cc872c23eb57fc783a85c",
+        "last_block_time": "2026-11-20T14:18:20+00:00",
+        "difficulty_from_header": 11828740549,
+        "checked_at": "2026-11-20T14:18:37+00:00",
         "source_reference": "https://bitcointalk.org/index.php?topic=5599371.0",
         "note": "RPC chain ID совпал; это не независимый аудит PoW и не проверка выплат"
       }
@@ -12403,8 +12360,8 @@
   },
   "evm_rpc_stats": {
     "configured_networks": 2,
-    "rpc_checks": 0,
-    "available": 2,
-    "height_advanced": 0
+    "rpc_checks": 2,
+    "available": 1,
+    "height_advanced": 1
   }
 }
