@@ -20,7 +20,7 @@ class AgentTests(unittest.TestCase):
         self.assertIsNotNone(item)
         self.assertGreaterEqual(item["score"],8)
         self.assertIn("не проверены", " ".join(item["unknown"]))
-        self.assertIn("Заявлен",report([item],NOW))
+        self.assertIn("(заявлено)",report([item],NOW))
     def test_news_not_coin(self):
         item=dict(PROJECT,kind="news")
         self.assertIsNone(examine("pool:2026-11-20:0",item,NOW))
