@@ -155,6 +155,22 @@ function projectFactLines(key, item, options={}) {
       for(const point of (readiness.missing||[]).slice(0,2)) lines.push("• "+String(point).slice(0,110));
     }
   }
+  const economics=item?.economics;
+  if (economics && economics.status!=="excluded") {
+    if(!options.compact) {
+      lines.push("💶 Электричество: тариф "+Number(economics.tariff_eur_kwh??0.10).toFixed(2)+" €/кВт⋅ч");
+      const scenarios=Array.isArray(economics.energy_scenarios_eur_day)?
+        economics.energy_scenarios_eur_day.filter(x=>x&&Number.isFinite(x.wall_power_w)&&Number.isFinite(x.eur_day)):[];
+      if(scenarios.length) lines.push("🔌 Сценарии мощности рига (не замеры): "+
+        scenarios.map(x=>x.wall_power_w+" Вт → "+x.eur_day.toFixed(2)+" €/сут").join("; "));
+      if(Number.isFinite(economics.expected_coin_day)) lines.push(
+        "🪙 Ожидаемая добыча: "+economics.expected_coin_day+" монет/сут (условная оценка)");
+      else lines.push("🪙 Добыча за сутки: данных для расчёта недостаточно");
+      lines.push("💰 Чистая прибыль: нельзя определить без подтверждённой цены и ликвидности");
+      const missing=Array.isArray(economics.required)?economics.required:[];
+      if(missing.length) lines.push("📋 Не хватает: "+missing.slice(0,3).join(", "));
+    }
+  }
   const network=item?.network_evidence;
   if (network) {
     const age=Number.isFinite(Date.parse(network.fetched_at))?
@@ -207,6 +223,8 @@ export function renderMenu(view, state = {}, now = new Date()) {
         "🪙 GPU PoW на наблюдении: " + list.length,
         "🧪 Активность сети по внешним данным: "+
             Number(state?.mining_readiness_counts?.activity_reported||0),
+        "💶 Расчёты добычи: "+Number(state?.mining_economics_counts?.conditional_estimate||0)+
+           " с проверенными входными данными",
         "👥 Discord: "+(state?.discord_status?.status==="active"?
           "подключён, каналов "+state.discord_status.success:
           "ожидает подключения"),
