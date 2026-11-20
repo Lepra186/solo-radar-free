@@ -88,11 +88,11 @@ test("source tabs exist for all connected services",()=>{
     assert.ok(menu.reply_markup.inline_keyboard.flat().some(x=>x.callback_data==="source:"+key+":0"),key);
   }
 });
-test("source browser includes github and telegram records regardless of candidate score",()=>{
+test("source browser lists only GPU PoW coin candidates",()=>{
   const s={topics:{
-    "gh:99":{title:"Example cryptocurrency repository",seen:"2026-11-20T04:00:00Z",
+    "gh:99":{title:"Example GPU Ethash PoW cryptocurrency repository",body:"GPU Ethash proof of work blockchain",seen:"2026-11-20T04:00:00Z",
       source:"GitHub — repository",url:"https://github.com/example/coin"},
-    "tg:miningrelease:301":{title:"Coin Name NewCoin Algo: KawPow",seen:"2026-11-20T05:00:00Z",
+    "tg:miningrelease:301":{title:"Coin Name: NewCoin GPU KawPow PoW",seen:"2026-11-20T05:00:00Z",
       url:"https://t.me/miningrelease/301",links:{discord:"https://discord.gg/mycoin",pool:"https://pool.example.org"}},
     "btt:222":{title:"[ANN] GPU Mining PoW",seen:"2026-11-20T05:00:00Z"}
   }};
@@ -110,7 +110,7 @@ test("pool news are identified as publications, not coins",()=>{
     title:"GPU Mining newest pool update",body:"GPU Mining newest pool update",
     url:"https://pool-pay.com",seen:"2026-11-20T05:00:00Z",kind:"news"}}};
   assert.equal(candidatesFromState(s).length,0);
-  assert.equal(renderMenu("source:pool:0",s,now).reply_markup.inline_keyboard[0][0].callback_data,"entry:pool:0:0");
+  assert.match(renderMenu("source:pool:0",s,now).text,/Пока нет доступных публикаций/);
 });
 
 test("authorized second user can access interactive menu",()=>{
@@ -120,7 +120,7 @@ test("authorized second user can access interactive menu",()=>{
 
 test("GitHub list preview distinguishes repository creation from mainnet",()=>{
   const s={topics:{"gh:123":{title:"example/chain",kind:"repository",url:"https://github.com/example/chain",
-    body:"GPU Ethash PoW blockchain",seen:"2026-11-20T06:00:00Z",
+    body:"GPU Ethash PoW blockchain cryptocurrency",seen:"2026-11-20T06:00:00Z",
     facts:{repo_created_utc:"2026-11-17T12:00:00Z",algorithm:"Ethash"}}}};
   const page=renderMenu("source:gh:0",s,now);
   assert.match(page.text,/Репозиторий создан: 2026-11-17 12:00 UTC/);
@@ -130,8 +130,8 @@ test("GitHub list preview distinguishes repository creation from mainnet",()=>{
   assert.match(detail.text,/Mainnet: дата не указана/);
 });
 test("Telegram source list shows post timestamp and announced launch",()=>{
-  const s={topics:{"tg:miningrelease:301":{title:"NewCoin GPU KawPow",
-    body:"GPU KawPow PoW. Solo pool.",
+  const s={topics:{"tg:miningrelease:301":{title:"NewCoin GPU KawPow PoW coin",
+    body:"NewCoin GPU KawPow PoW coin. Solo pool.",
     date:"2026-11-20T04:00:00Z",seen:"2026-11-20T05:00:00Z",
     facts:{publication_utc:"2026-11-20T04:00:00Z",launch_claim_utc:"2026-11-22T17:00:00Z",
     algorithm:"KawPow",solo_mentioned:true,pool_mentioned:true}}}};
@@ -150,7 +150,7 @@ test("source first-page gives useful preview even when timestamp absent",()=>{
 
 test("home /start shows project facts and direct project buttons",()=>{
  const sample={topics:{
-  "gh:888":{title:"demo/gpuchain PoW GPU",body:"GPU proof of work Ethash mining",
+  "gh:888":{title:"demo/gpuchain PoW GPU",body:"GPU proof of work Ethash mining cryptocurrency blockchain",
     kind:"repository",repo_created:"2026-11-18T10:00:00Z",seen:"2026-11-18T10:00:00Z",
     facts:{repo_created_utc:"2026-11-18T10:00:00Z",algorithm:"Ethash"}},
   "tg:miningrelease:31":{title:"Coin Name: TChain GPU KawPow",body:"Coin Name: TChain GPU KawPow mining SOLO",
@@ -168,7 +168,7 @@ test("home /start shows project facts and direct project buttons",()=>{
  assert.match(home.text,/Даты репозиториев ≠ даты запуска сети/);
 });
 test("home handles missing metadata without guessing dates",()=>{
- const s={topics:{"gh:19":{title:"repo GPU PoW mining Ethash"}}};
+ const s={topics:{"gh:19":{title:"repo GPU PoW cryptocurrency mining Ethash",body:"GPU PoW cryptocurrency mining Ethash blockchain",kind:"repository"}}};
  const home=renderMenu("home",s,now);
  assert.match(home.text,/дата не получена/);
  assert.doesNotMatch(home.text,/Заявлен mainnet:/);
@@ -177,10 +177,10 @@ test("home handles missing metadata without guessing dates",()=>{
 test("daily AI menu and command show report with source links",()=>{
  const data={mode:"openai",generated_at:"2026-11-20T08:10:00Z",candidate_count:5,
   summary:"Отобрать несколько ранних PoW проектов",
-  picks:[{title:"ExampleCoin GPU KawPow",source:"Telegram",algorithm:"KawPow",
+  picks:[{key:"btt:111",title:"ExampleCoin GPU KawPow",source:"Telegram",algorithm:"KawPow",
           launch_claim:"2026-11-21T12:00:00Z",rationale:"есть новый анонс",
           risks:"нет реального хешрейта",url:"https://t.me/example/42"}]};
- const result=renderMenu("analysis",{daily_analysis:data},now);
+ const result=renderMenu("analysis",{...state,daily_analysis:data},now);
  assert.match(result.text,/OpenAI API/);
  assert.match(result.text,/ExampleCoin/);
  assert.ok(result.reply_markup.inline_keyboard.flat().some(x=>x.url==="https://t.me/example/42"));
@@ -189,7 +189,7 @@ test("daily AI menu and command show report with source links",()=>{
 });
 test("daily report without key is labeled not AI and hides unknown launch",()=>{
  const data={mode:"rules_only",generated_at:"2026-11-20T08:10:00Z",
-   summary:"Rule check",picks:[{title:"GPUPoW",source:"GitHub",risks:"unknown"}]};
+   summary:"Rule check",picks:[{key:"btt:111",title:"GPUPoW",source:"GitHub",risks:"unknown"}]};
  const result=renderMenu("analysis",{daily_analysis:data},now);
  assert.match(result.text,/Правила \(без ИИ\)/);
  assert.match(result.text,/Mainnet не подтверждён/);
@@ -206,4 +206,18 @@ test("active tracked list is accessible from main menu",()=>{
  const page=renderMenu("tracked:0",s,now);
  assert.match(page.text,/GPU KawPow PoW coin/);
  assert.ok(page.reply_markup.inline_keyboard.flat().some(x=>x.callback_data==="home"));
+});
+
+test("mining software and switching tools never appear as mineable coins",()=>{
+ const s={topics:{
+  "gh:1":{title:"good-mining/good-miner",body:"Rust cryptocurrency miner for NVIDIA AMD GPUs; auto profit switching",kind:"repository"},
+  "gh:2":{title:"kobold-dev/kobold-miner",body:"NVIDIA GPU miner for Pearl coin and Ravencoin",kind:"repository"},
+  "gh:3":{title:"MrM002/NexusSwitch",body:"GPU Crypto Auto Profit Switcher dashboard",kind:"repository"},
+  "btt:5":{title:"[ANN] Quinvium (QU) GPU PoW Ethash coin mainnet",kind:"announcement"}
+ }};
+ const found=candidatesFromState(s);
+ assert.equal(found.length,1);
+ assert.equal(found[0].key,"btt:5");
+ const gh=renderMenu("source:gh:0",s,now);
+ assert.match(gh.text,/Пока нет доступных публикаций/);
 });
