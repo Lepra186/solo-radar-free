@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-20T09:24:21+00:00",
+  "generated_at": "2026-11-20T09:30:00+00:00",
   "mode": "rules_only",
   "model": null,
   "candidate_count": 3,
-  "scan_updated_at": "2026-11-20T09:23:45+00:00",
+  "scan_updated_at": "2026-11-20T09:29:04+00:00",
   "summary": "Автоподбор по правилам без ИИ. Только кандидаты для дальнейшего изучения.",
   "picks": [
     {
@@ -31,7 +31,45 @@
           "pool": true,
           "network": false
         },
-        "checked_at": "2026-11-20T09:23+00:00"
+        "checked_at": "2026-11-20T09:29+00:00"
+      },
+      "economics": {
+        "status": "insufficient_data",
+        "expected_coin_day": null,
+        "net_eur_day": null,
+        "power_cost_eur_day": null,
+        "energy_scenarios_eur_day": [
+          {
+            "wall_power_w": 150,
+            "eur_day": 0.36
+          },
+          {
+            "wall_power_w": 200,
+            "eur_day": 0.48
+          },
+          {
+            "wall_power_w": 250,
+            "eur_day": 0.6
+          },
+          {
+            "wall_power_w": 300,
+            "eur_day": 0.72
+          }
+        ],
+        "tariff_eur_kwh": 0.1,
+        "power_scenarios_are_assumptions": true,
+        "network_fresh": false,
+        "gpu_measured": false,
+        "required": [
+          "свежие сетевые данные",
+          "хешрейт сети (H/s)",
+          "награда за блок",
+          "время блока",
+          "замер RTX 5070 Ti на этом алгоритме (HiveOS)",
+          "комиссия пула",
+          "проверенная цена продажи в EUR и ликвидность"
+        ],
+        "note": "Сценарии энергии — не измерение GPU/рига. Доходность и продажа не подтверждены."
       },
       "rationale": "указан GPU-алгоритм: Ethash; упомянут SOLO",
       "mining": "Работающий GPU-майнинг и выплаты не проверены",
@@ -63,7 +101,45 @@
           "pool": false,
           "network": false
         },
-        "checked_at": "2026-11-20T09:23+00:00"
+        "checked_at": "2026-11-20T09:29+00:00"
+      },
+      "economics": {
+        "status": "insufficient_data",
+        "expected_coin_day": null,
+        "net_eur_day": null,
+        "power_cost_eur_day": null,
+        "energy_scenarios_eur_day": [
+          {
+            "wall_power_w": 150,
+            "eur_day": 0.36
+          },
+          {
+            "wall_power_w": 200,
+            "eur_day": 0.48
+          },
+          {
+            "wall_power_w": 250,
+            "eur_day": 0.6
+          },
+          {
+            "wall_power_w": 300,
+            "eur_day": 0.72
+          }
+        ],
+        "tariff_eur_kwh": 0.1,
+        "power_scenarios_are_assumptions": true,
+        "network_fresh": false,
+        "gpu_measured": false,
+        "required": [
+          "свежие сетевые данные",
+          "хешрейт сети (H/s)",
+          "награда за блок",
+          "время блока",
+          "замер RTX 5070 Ti на этом алгоритме (HiveOS)",
+          "комиссия пула",
+          "проверенная цена продажи в EUR и ликвидность"
+        ],
+        "note": "Сценарии энергии — не измерение GPU/рига. Доходность и продажа не подтверждены."
       },
       "rationale": "указан GPU-алгоритм: Ethash; упомянут майнинг/пул",
       "mining": "Работающий GPU-майнинг и выплаты не проверены",
@@ -93,7 +169,45 @@
           "pool": false,
           "network": false
         },
-        "checked_at": "2026-11-20T09:23+00:00"
+        "checked_at": "2026-11-20T09:29+00:00"
+      },
+      "economics": {
+        "status": "insufficient_data",
+        "expected_coin_day": null,
+        "net_eur_day": null,
+        "power_cost_eur_day": null,
+        "energy_scenarios_eur_day": [
+          {
+            "wall_power_w": 150,
+            "eur_day": 0.36
+          },
+          {
+            "wall_power_w": 200,
+            "eur_day": 0.48
+          },
+          {
+            "wall_power_w": 250,
+            "eur_day": 0.6
+          },
+          {
+            "wall_power_w": 300,
+            "eur_day": 0.72
+          }
+        ],
+        "tariff_eur_kwh": 0.1,
+        "power_scenarios_are_assumptions": true,
+        "network_fresh": false,
+        "gpu_measured": false,
+        "required": [
+          "свежие сетевые данные",
+          "хешрейт сети (H/s)",
+          "награда за блок",
+          "время блока",
+          "замер RTX 5070 Ti на этом алгоритме (HiveOS)",
+          "комиссия пула",
+          "проверенная цена продажи в EUR и ликвидность"
+        ],
+        "note": "Сценарии энергии — не измерение GPU/рига. Доходность и продажа не подтверждены."
       },
       "rationale": "указан GPU-алгоритм: Ethash",
       "mining": "Работающий GPU-майнинг и выплаты не проверены",
