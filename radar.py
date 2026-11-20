@@ -78,9 +78,10 @@ def score(title):
 
 def main():
     if not BOT_TOKEN or not CHAT_ID:
-        print("Missing TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID in GitHub Actions secrets.")
-        print("Skipping Telegram and scan; no notification configured.")
-        return
+        raise RuntimeError(
+            "Telegram is not configured: check both GitHub Actions secrets "
+            "TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID."
+        )
 
     state = {"topics": {}, "initialized": False}
     if STATE_FILE.exists():
