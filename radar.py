@@ -18,6 +18,7 @@ from telegram_commands import process_commands
 from project_links import from_text, format_links
 from telegram_recipients import parse_recipients
 from project_facts import get_facts
+from coin_filter import classify, is_coin
 from research_agent import analyze, report
 from github_discovery import gather as discover_github, refresh_tracked
 from project_watch import reconcile
@@ -263,14 +264,17 @@ def main():
                              for key, item in unseen), key=lambda x: x[0], reverse=True)
         sent = 0
         for points, key, item in candidates:
-            tier = signal(item["body"], NOW)
+            classification, exclusion = classify(key, item)
+            tier = signal(item["body"], NOW) if classification == "coin_candidate" else None
             reason = None
             if sent >= 3:
                 reason = "limit 3 alerts per run"
             elif any(name in item["body"].lower() for name in PREVIOUSLY_REPORTED):
                 reason = "already discussed project"
+            elif classification != "coin_candidate":
+                reason = "not a GPU PoW coin: " + exclusion
             elif not tier:
-                reason = "no enough GPU/PoW and launch, pool or SOLO evidence"
+                reason = "not enough evidence for alert"
             print("Candidate review:", item["source"], "| score:", points,
                   "|", "rejected: " + reason if reason else "alert: " + tier,
                   "|", item["url"])
@@ -368,9 +372,21 @@ def main():
                              kind=item.get("kind") or old.get("kind") or ""),
                          "repo_created": item.get("repo_created") or old.get("repo_created"),
                          "repo_updated": item.get("repo_updated") or old.get("repo_updated"),
-                         "github": item.get("github") or old.get("github") or {}}
+                         "github": item.get("github") or old.get("github") or {},
+                         "coin_class": classify(key, item)[0],
+                         "coin_reason": classify(key, item)[1]}
         if len(seen) > 6000:
             seen = dict(sorted(seen.items(), key=lambda x: x[1]["seen"], reverse=True)[:6000])
+    # Reclassify historical records so legacy miners never remain in shortlists.
+    breakdown = {}
+    for historic_key, historic_item in seen.items():
+        coin_class, coin_reason = classify(historic_key, historic_item)
+        historic_item["coin_class"] = coin_class
+        historic_item["coin_reason"] = coin_reason
+        breakdown[coin_class] = breakdown.get(coin_class, 0) + 1
+    state["coin_filter_stats"] = breakdown
+    print("Coin-only classification:", breakdown)
+
     previous_watch = state.get("tracked_projects") or {}
     # Check selected GitHub projects for repository activity before deciding if
     # they remain worth monitoring. No external subscriptions are created.
