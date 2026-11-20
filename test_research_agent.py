@@ -19,7 +19,7 @@ class AgentTests(unittest.TestCase):
         item=examine("tg:miningrelease:123",PROJECT,NOW)
         self.assertIsNotNone(item)
         self.assertGreaterEqual(item["score"],8)
-        self.assertIn("не подтверждены", " ".join(item["unknown"]))
+        self.assertIn("не проверены", " ".join(item["unknown"]))
         self.assertIn("Заявлен",report([item],NOW))
     def test_news_not_coin(self):
         item=dict(PROJECT,kind="news")
