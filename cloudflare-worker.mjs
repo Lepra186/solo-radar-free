@@ -166,21 +166,24 @@ function projectFactLines(key, item, options={}) {
     lines.push("🧪 Проверка добычи: "+String(readiness.label||"неизвестно"));
     if(!options.compact) {
       for(const point of (readiness.evidence||[]).slice(0,3)) lines.push("✓ "+String(point).slice(0,110));
-      lines.push("🎮 RTX 5070 Ti: совместимость и выплаты не проверены");
+      lines.push("🎮 GTX 10xx / RTX 20xx, 30xx, 40xx, 50xx: совместимость поколений отдельно не проверена");
+      const families=readiness?.gpu_family_coverage?.family_status||[];
+      const models=families.filter(x=>x.status!=="not_verified").map(x=>x.family+" ("+x.models.slice(0,2).join(", ")+", "+x.status+")");
+      if(models.length)lines.push("🧪 Заявленные/проверенные модели: "+models.join("; ").slice(0,240));
       for(const point of (readiness.missing||[]).slice(0,2)) lines.push("• "+String(point).slice(0,110));
     }
   }
   const economics=item?.economics;
   if (economics && economics.status!=="excluded") {
     if(!options.compact) {
-      lines.push("💶 Электричество: тариф "+Number(economics.tariff_eur_kwh??0.10).toFixed(2)+" €/кВт⋅ч");
+      lines.push("💶 Электричество любого GPU-рига: тариф "+Number(economics.tariff_eur_kwh??0.10).toFixed(2)+" €/кВт⋅ч");
       const scenarios=Array.isArray(economics.energy_scenarios_eur_day)?
         economics.energy_scenarios_eur_day.filter(x=>x&&Number.isFinite(x.wall_power_w)&&Number.isFinite(x.eur_day)):[];
       if(scenarios.length) lines.push("🔌 Сценарии мощности рига (не замеры): "+
         scenarios.map(x=>x.wall_power_w+" Вт → "+x.eur_day.toFixed(2)+" €/сут").join("; "));
       if(Number.isFinite(economics.expected_coin_day)) lines.push(
         "🪙 Ожидаемая добыча: "+economics.expected_coin_day+" монет/сут (условная оценка)");
-      else lines.push("🪙 Добыча за сутки: данных для расчёта недостаточно");
+      else lines.push("🪙 Добыча за сутки: нет замеров карт и/или сетевых данных");
       lines.push("💰 Чистая прибыль: нельзя определить без подтверждённой цены и ликвидности");
       const missing=Array.isArray(economics.required)?economics.required:[];
       if(missing.length) lines.push("📋 Не хватает: "+missing.slice(0,3).join(", "));
