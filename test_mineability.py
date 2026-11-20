@@ -33,6 +33,24 @@ class MineabilityTests(unittest.TestCase):
   record=dict(COIN,network_evidence={"fetched_at":"2026-11-20T08:00:00Z",
             "last_block_height":1234,"difficulty":654})
   self.assertEqual(evaluate("btt:1",record,NOW)["stage"],"activity_reported")
+ def test_reported_chain_growth_has_separate_stage(self):
+  record=dict(COIN,
+    network_evidence={"fetched_at":"2026-11-20T09:00:00Z",
+       "coin_id":"NovaCoin","last_block_height":120},
+    chain_progress={"source":"BackPoW","coin_id":"NovaCoin",
+       "blocks_increased":20,"last_observed_at":"2026-11-20T09:00:00Z"})
+  result=evaluate("btt:1",record,NOW)
+  self.assertEqual(result["stage"],"height_advanced")
+  self.assertTrue(result["chain_height_progression"])
+  self.assertTrue(any("выросла" in x for x in result["evidence"]))
+ def test_foreign_chain_progress_does_not_upgrade(self):
+  record=dict(COIN,
+    network_evidence={"fetched_at":"2026-11-20T09:00:00Z",
+       "coin_id":"NovaCoin","last_block_height":120},
+    chain_progress={"source":"BackPoW","coin_id":"OtherCoin",
+       "blocks_increased":20,"last_observed_at":"2026-11-20T09:00:00Z"})
+  result=evaluate("btt:1",record,NOW)
+  self.assertNotEqual(result["stage"],"height_advanced")
  def test_no_coin_miner_application(self):
   record={"kind":"repository","title":"x/good-miner",
            "body":"NVIDIA GPU miner for Ethash coin and pool"}
