@@ -37,6 +37,20 @@ class EvidenceAlerts(unittest.TestCase):
   self.assertIn("BackPoW",notices[0][2])
   confirmed(next_state,notices[0][0],notices[0][1])
   self.assertEqual(transitions({"btt:1":stronger},next_state,NOW)[0],[])
+ def test_duplicate_qunivium_ann_and_github_only_one_rpc_growth_alert(self):
+  base={"title":"[ANN] Quinvium (QU) GPU PoW Ethash blockchain",
+   "body":"GPU Ethash PoW cryptocurrency blockchain",
+   "kind":"announcement",
+   "rpc_evidence":{"chain_id":52401,"last_block_height":120},
+   "rpc_progress":{"source":"project public JSON-RPC","blocks_increased":10},
+   "mining_readiness":{"stage":"rpc_height_advanced",
+                       "evidence":["Публичный RPC сообщил рост высоты"]}}
+  entries={"gh:1457186269":dict(base),"btt:5600215":dict(base)}
+  prior={key:{"last_stage":"rpc_head_reported","last_alert_marker":""} for key in entries}
+  alerts,known=transitions(entries,prior,NOW)
+  self.assertEqual(len(alerts),1)
+  confirmed(known,alerts[0][0],alerts[0][1])
+  self.assertTrue(all(v["last_alert_marker"]=="rpc-chain-52401" for v in known.values()))
  def test_no_miner_software(self):
   bad={"title":"goodminer/gpu-miner","body":"GPU miner for Ethash coin",
        "kind":"repository","mining_readiness":{"stage":"activity_reported"}}
