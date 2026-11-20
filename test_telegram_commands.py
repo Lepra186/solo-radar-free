@@ -21,7 +21,7 @@ class TelegramCommandTests(unittest.TestCase):
         self.assertIn("FlintChain", answer)
         self.assertIn("предыдущих сканирований", answer)
     def test_empty_digest(self):
-        self.assertIn("пока нет",digest({},NOW))
+        self.assertIn("не найдено",digest({},NOW))
     def test_private_owner_only(self):
         state={}
         messages=[
