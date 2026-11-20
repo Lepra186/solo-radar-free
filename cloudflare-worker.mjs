@@ -146,6 +146,22 @@ function projectFactLines(key, item, options={}) {
     if (Number.isFinite(pools)) lines.push("🏊 Пулов в каталоге: "+pools);
     lines.push("🕒 Данные каталога: "+(shortDate(poolEvidence.checked_at)||"время неизвестно"));
   }
+  const discussion=item?.thread_evidence;
+  if(discussion && discussion.posts_read && !options.compact) {
+    lines.push("🗣️ Bitcointalk: просмотрено сообщений "+discussion.posts_read);
+    if(Number.isFinite(discussion.premine_percent_claimed_by_announcement))
+      lines.push("⚠️ Премайн по заявлению разработчика: "+discussion.premine_percent_claimed_by_announcement+"%");
+    const descriptions={
+      withdrawal_complaint:"Есть жалобы на вывод средств (не подтверждены)",
+      liquidity_concern:"Участники обсуждают недостаточную ликвидность",
+      fraud_allegation:"Есть обвинения в мошенничестве (не подтверждены)"
+    };
+    for(const warning of (discussion.discussion_warnings||[]).slice(0,3)){
+      const message=descriptions[warning?.type];
+      if(message)lines.push("⚠️ "+message);
+    }
+    lines.push("Форумные сообщения — не доказательство, требуется независимая проверка.");
+  }
   const poolValidation=item?.pool_validation;
   if(poolValidation && !options.compact) {
     lines.push("🏊 Пулы по данным Mining Scan (кандидаты по тикеру; не подтверждение работы):");
