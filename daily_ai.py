@@ -106,7 +106,7 @@ def main():
     snapshot=json.loads(STATE.read_text(encoding="utf-8"))
     items=candidates(snapshot,now)
     token=os.getenv("OPENAI_API_KEY","").strip()
-    model=os.getenv("OPENAI_MODEL","gpt-4.1-mini").strip()
+    model=os.getenv("OPENAI_MODEL","").strip() or "gpt-4.1-mini"
     mode="rules_only"
     outcome=rules_only(items)
     if token and items:
