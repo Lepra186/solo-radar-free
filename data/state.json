@@ -396,7 +396,7 @@
           "network": false
         },
         "chain_height_progression": false,
-        "checked_at": "2026-11-20T10:40+00:00"
+        "checked_at": "2026-11-20T10:41+00:00"
       },
       "economics": {
         "status": "insufficient_data",
@@ -2333,7 +2333,7 @@
     "pool:2026-11-19:0": {
       "title": "PoolPayCoin now has an announcement thread on BitcoinTalk -- specs, mining instructions and the real pool-pay.com Shop utility (NFTs, AI generation, p",
       "seen": "2026-11-20T05:22:56+00:00",
-      "last_seen": "2026-11-20T10:40:32+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://pool-pay.com/",
       "links": {},
       "body": "PoolPayCoin now has an announcement thread on BitcoinTalk -- specs, mining instructions and the real pool-pay.com Shop utility (NFTs, AI generation, pool fee-waiver pass), all in one place.",
@@ -2416,7 +2416,7 @@
     "pool:2026-11-19:1": {
       "title": "Added a pool fee-waiver pass to the Shop at shop.pool-pay.com/subscription.html : pay with PPC or SOL (a week to a year, longer terms a bit cheaper pe",
       "seen": "2026-11-20T05:22:56+00:00",
-      "last_seen": "2026-11-20T10:40:32+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://pool-pay.com/",
       "links": {},
       "body": "Added a pool fee-waiver pass to the Shop at shop.pool-pay.com/subscription.html : pay with PPC or SOL (a week to a year, longer terms a bit cheaper per day) and the pool fee is rebated straight back onto your balance as a bonus, automatically, every few minutes, on every coin you mine directly. Requires a free pool-pay.com account (same login as the main das",
@@ -2499,7 +2499,7 @@
     "pool:2026-11-18:2": {
       "title": "\"pool-pay.com Critters\" is now officially listed on Magic Eden , Solana's biggest NFT marketplace -- a real collection page with its own listings, off",
       "seen": "2026-11-20T05:22:56+00:00",
-      "last_seen": "2026-11-20T10:40:32+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://pool-pay.com/",
       "links": {},
       "body": "\"pool-pay.com Critters\" is now officially listed on Magic Eden , Solana's biggest NFT marketplace -- a real collection page with its own listings, offers and trade history, not just an unverified mint. Minting new critters is still only through shop.pool-pay.com (pay with SOL or PPC); Magic Eden is for browsing and reselling what's already minted. Link added",
@@ -2582,7 +2582,7 @@
     "pool:2026-11-18:3": {
       "title": "Added AI generation to the Shop at shop.pool-pay.com/generate.html : buy a credit package with PPC or SOL, spend it on real Google AI generation (imag",
       "seen": "2026-11-20T05:22:56+00:00",
-      "last_seen": "2026-11-20T10:40:32+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://pool-pay.com/",
       "links": {},
       "body": "Added AI generation to the Shop at shop.pool-pay.com/generate.html : buy a credit package with PPC or SOL, spend it on real Google AI generation (images, video, voice, music) — a redemption code is all you need, no account. Reference-image editing, a 9:16 mobile format toggle, a choice of 30 TTS voices, and a 360p/720p video resolution picker are all wired u",
@@ -2665,7 +2665,7 @@
     "pool:2026-11-19:4": {
       "title": "У PoolPayCoin появилась тема-анонс на BitcoinTalk — характеристики, инструкция по майнингу и реальная польза от магазина pool-pay.com (NFT, AI-генерац",
       "seen": "2026-11-20T05:22:56+00:00",
-      "last_seen": "2026-11-20T10:40:32+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://pool-pay.com/",
       "links": {},
       "body": "У PoolPayCoin появилась тема-анонс на BitcoinTalk — характеристики, инструкция по майнингу и реальная польза от магазина pool-pay.com (NFT, AI-генерация, абонемент без комиссии на пуле) в одном месте.",
@@ -2748,7 +2748,7 @@
     "pool:2026-11-19:5": {
       "title": "В магазине появился абонемент без комиссии на пуле: shop.pool-pay.com/subscription.html . Оплата PPC или SOL (от недели до года, чем дольше срок — тем",
       "seen": "2026-11-20T05:22:56+00:00",
-      "last_seen": "2026-11-20T10:40:32+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://pool-pay.com/",
       "links": {},
       "body": "В магазине появился абонемент без комиссии на пуле: shop.pool-pay.com/subscription.html . Оплата PPC или SOL (от недели до года, чем дольше срок — тем дешевле в пересчёте на день), комиссия пула автоматически возвращается бонусом на баланс каждые несколько минут, на любой монете, которую майните напрямую. Нужен бесплатный аккаунт pool-pay.com (тот же логин,",
@@ -2831,7 +2831,7 @@
     "pool:2026-11-18:6": {
       "title": "«pool-pay.com Critters» теперь официально в листинге на Magic Eden — крупнейшем NFT-маркетплейсе на Solana: настоящая страница коллекции со своими лис",
       "seen": "2026-11-20T05:22:56+00:00",
-      "last_seen": "2026-11-20T10:40:32+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://pool-pay.com/",
       "links": {},
       "body": "«pool-pay.com Critters» теперь официально в листинге на Magic Eden — крупнейшем NFT-маркетплейсе на Solana: настоящая страница коллекции со своими листингами, офферами и историей сделок, а не непроверенный минт. Минтить новых критеров всё так же можно только через shop.pool-pay.com (оплата SOL или PPC); Magic Eden — для просмотра и перепродажи уже сминченног",
@@ -2914,7 +2914,7 @@
     "pool:2026-11-18:7": {
       "title": "Добавили AI-генерацию в магазин на shop.pool-pay.com/generate.html : покупаете пакет кредитов за PPC или SOL, тратите на настоящую генерацию через Goo",
       "seen": "2026-11-20T05:22:56+00:00",
-      "last_seen": "2026-11-20T10:40:32+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://pool-pay.com/",
       "links": {},
       "body": "Добавили AI-генерацию в магазин на shop.pool-pay.com/generate.html : покупаете пакет кредитов за PPC или SOL, тратите на настоящую генерацию через Google AI (картинки, видео, голос, музыка) — нужен только код, аккаунт не требуется. Работают редактирование по референс-картинке, мобильный формат 9:16, выбор из 30 голосов озвучки и выбор разрешения видео (360p/",
@@ -3073,7 +3073,7 @@
     "tg:miningrelease:281": {
       "title": "‼️ Coin Name: Neural Engine Byte Ticker: $NEB Algo: Nebhash",
       "seen": "2026-11-20T05:27:58+00:00",
-      "last_seen": "2026-11-20T10:40:32+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://t.me/miningrelease/281",
       "links": {
         "website": "https://neuralenginebyte.org/",
@@ -3240,7 +3240,7 @@
     "btt:718124": {
       "title": "Advertising spam is not allowed",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=718124.0",
       "links": {},
       "body": "Advertising spam is not allowed",
@@ -3265,6 +3265,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "insufficient",
       "coin_reason": "gpu_not_established",
       "mining_readiness": {
@@ -3320,7 +3323,7 @@
     "btt:2559282": {
       "title": "Incentivising posting within one or more threads is not allowed",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=2559282.0",
       "links": {},
       "body": "Incentivising posting within one or more threads is not allowed",
@@ -3345,6 +3348,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "insufficient",
       "coin_reason": "gpu_not_established",
       "mining_readiness": {
@@ -3400,7 +3406,7 @@
     "btt:2284373": {
       "title": "Users posting \"joined\" type posts when not required or allowed will be BANNED",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=2284373.0",
       "links": {},
       "body": "Users posting \"joined\" type posts when not required or allowed will be BANNED",
@@ -3425,6 +3431,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "insufficient",
       "coin_reason": "gpu_not_established",
       "mining_readiness": {
@@ -3480,7 +3489,7 @@
     "btt:1042324": {
       "title": "Unofficial list of (official) Bitcointalk.org rules, guidelines, FAQ",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=1042324.0",
       "links": {},
       "body": "Unofficial list of (official) Bitcointalk.org rules, guidelines, FAQ",
@@ -3505,6 +3514,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "insufficient",
       "coin_reason": "gpu_not_established",
       "mining_readiness": {
@@ -3560,7 +3572,7 @@
     "btt:936724": {
       "title": "Beware of Increasingly Sophisticated Malware Infection Attempts",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=936724.0",
       "links": {},
       "body": "Beware of Increasingly Sophisticated Malware Infection Attempts",
@@ -3585,6 +3597,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "insufficient",
       "coin_reason": "gpu_not_established",
       "mining_readiness": {
@@ -3640,7 +3655,7 @@
     "btt:780979": {
       "title": "Giveaway threads are not allowed",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=780979.0",
       "links": {},
       "body": "Giveaway threads are not allowed",
@@ -3665,6 +3680,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "insufficient",
       "coin_reason": "gpu_not_established",
       "mining_readiness": {
@@ -3720,7 +3738,7 @@
     "btt:5576596": {
       "title": "[ANN] $HODL - A Search for Higher Meming",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5576596.0",
       "links": {},
       "body": "[ANN] $HODL - A Search for Higher Meming",
@@ -3745,6 +3763,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "insufficient",
       "coin_reason": "gpu_not_established",
       "mining_readiness": {
@@ -3800,7 +3821,7 @@
     "btt:3015517": {
       "title": "[ANN] IXCoin [IXC] The Original Bitcoin Sidechain",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=3015517.0",
       "links": {},
       "body": "[ANN] IXCoin [IXC] The Original Bitcoin Sidechain",
@@ -3825,6 +3846,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "insufficient",
       "coin_reason": "gpu_not_established",
       "mining_readiness": {
@@ -3880,7 +3904,7 @@
     "btt:5599371": {
       "title": "[ANN] NEX Chain (NEXC) | Ethash PoW | GPU & CPU | Free Solo Miner | EVM + DEX",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5599371.0",
       "links": {},
       "body": "[ANN] NEX Chain (NEXC) | Ethash PoW | GPU & CPU | Free Solo Miner | EVM + DEX",
@@ -3909,6 +3933,9 @@
         "checked_at": "2026-11-20T10:11:49+00:00",
         "status": "could_not_parse"
       },
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "coin_candidate",
       "coin_reason": "gpu_pow_coin_claim",
       "pool_evidence": {
@@ -3979,7 +4006,7 @@
           "network": false
         },
         "chain_height_progression": false,
-        "checked_at": "2026-11-20T10:40+00:00"
+        "checked_at": "2026-11-20T10:41+00:00"
       },
       "economics": {
         "status": "insufficient_data",
@@ -4032,7 +4059,7 @@
     "btt:5600283": {
       "title": "[ANN] NEB (Neural Engine Byte) - mainnet live",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5600283.0",
       "links": {},
       "body": "[ANN] NEB (Neural Engine Byte) - mainnet live",
@@ -4057,6 +4084,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "insufficient",
       "coin_reason": "gpu_not_established",
       "mining_readiness": {
@@ -4112,7 +4142,7 @@
     "btt:5600276": {
       "title": "[Pre-ANN] Monario (MONAR) � A CPU-Mineable Privacy Coin | RandomX | No Premine",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5600276.0",
       "links": {},
       "body": "[Pre-ANN] Monario (MONAR) � A CPU-Mineable Privacy Coin | RandomX | No Premine",
@@ -4137,6 +4167,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "unsupported_mining",
       "coin_reason": "cpu_or_asic_dominated",
       "mining_readiness": {
@@ -4192,7 +4225,7 @@
     "btt:5590138": {
       "title": "[ANN] KpowBIT (KPOW) | PoW | KpowBIT Exchange | Mining Rental | New Ethash",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5590138.0",
       "links": {},
       "body": "[ANN] KpowBIT (KPOW) | PoW | KpowBIT Exchange | Mining Rental | New Ethash",
@@ -4217,6 +4250,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "non_coin",
       "coin_reason": "miner_software_or_service",
       "mining_readiness": {
@@ -4272,7 +4308,7 @@
     "btt:2089941": {
       "title": "[ANN] WojakCoin",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=2089941.0",
       "links": {},
       "body": "[ANN] WojakCoin",
@@ -4297,6 +4333,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "insufficient",
       "coin_reason": "gpu_not_established",
       "mining_readiness": {
@@ -4352,7 +4391,7 @@
     "btt:5591473": {
       "title": "[ANN] Nightfall (NIGHT) � privacy L1, provable supply, 0 premine, CPU mine",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5591473.0",
       "links": {},
       "body": "[ANN] Nightfall (NIGHT) � privacy L1, provable supply, 0 premine, CPU mine",
@@ -4377,6 +4416,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "insufficient",
       "coin_reason": "gpu_not_established",
       "mining_readiness": {
@@ -4432,7 +4474,7 @@
     "btt:5592720": {
       "title": "[ANN][ZCD] Zycord | A P2P network of self-certifying state | Full Reward PoW 🔥",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5592720.0",
       "links": {},
       "body": "[ANN][ZCD] Zycord | A P2P network of self-certifying state | Full Reward PoW 🔥",
@@ -4457,6 +4499,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "insufficient",
       "coin_reason": "gpu_not_established",
       "mining_readiness": {
@@ -4512,7 +4557,7 @@
     "btt:5594978": {
       "title": "[ANN] Orange (OAG) | RandomX CPU-only | No premine | Solo mining | Rust",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5594978.0",
       "links": {},
       "body": "[ANN] Orange (OAG) | RandomX CPU-only | No premine | Solo mining | Rust",
@@ -4537,6 +4582,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "unsupported_mining",
       "coin_reason": "cpu_or_asic_dominated",
       "mining_readiness": {
@@ -4592,7 +4640,7 @@
     "btt:5598598": {
       "title": "H.Bit: A Peer-to-Peer Intellectual Event Network",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5598598.0",
       "links": {},
       "body": "H.Bit: A Peer-to-Peer Intellectual Event Network",
@@ -4617,6 +4665,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "insufficient",
       "coin_reason": "gpu_not_established",
       "mining_readiness": {
@@ -4672,7 +4723,7 @@
     "btt:5599608": {
       "title": "[ANN][NORTH] TrueNorth | CPU-mined Bitcoin Core fork | RandomX | No premine",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5599608.0",
       "links": {},
       "body": "[ANN][NORTH] TrueNorth | CPU-mined Bitcoin Core fork | RandomX | No premine",
@@ -4697,6 +4748,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "unsupported_mining",
       "coin_reason": "cpu_or_asic_dominated",
       "mining_readiness": {
@@ -4752,7 +4806,7 @@
     "btt:5600398": {
       "title": "[ANN][PRE-LAUNCH] Ullarium (ULL) � Open-Source Layer-1 Blockchain | LWMA-60 | 4.",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5600398.0",
       "links": {},
       "body": "[ANN][PRE-LAUNCH] Ullarium (ULL) � Open-Source Layer-1 Blockchain | LWMA-60 | 4.",
@@ -4777,6 +4831,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "insufficient",
       "coin_reason": "gpu_not_established",
       "mining_readiness": {
@@ -4832,7 +4889,7 @@
     "btt:5600319": {
       "title": "[ANN] Orien (ORN) | Quantum-proof, instant payments | No premine | RandomX CPU",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5600319.0",
       "links": {},
       "body": "[ANN] Orien (ORN) | Quantum-proof, instant payments | No premine | RandomX CPU",
@@ -4857,6 +4914,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "unsupported_mining",
       "coin_reason": "cpu_or_asic_dominated",
       "mining_readiness": {
@@ -4912,7 +4972,7 @@
     "btt:5599947": {
       "title": "[ANN][MAINNET] NEB: mining trains a neural network, starts Nov 18, 14:00 UTC",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5599947.0",
       "links": {},
       "body": "[ANN][MAINNET] NEB: mining trains a neural network, starts Nov 18, 14:00 UTC",
@@ -4937,6 +4997,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "insufficient",
       "coin_reason": "gpu_not_established",
       "mining_readiness": {
@@ -4992,7 +5055,7 @@
     "btt:5597781": {
       "title": "[ANN] FlintChain (FLINT) | Gaming-Focused L1 | GPU Mining | PoW | EVM",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5597781.0",
       "links": {},
       "body": "[ANN] FlintChain (FLINT) | Gaming-Focused L1 | GPU Mining | PoW | EVM",
@@ -5017,6 +5080,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "insufficient",
       "coin_reason": "coin_identity_missing",
       "mining_readiness": {
@@ -5072,7 +5138,7 @@
     "btt:5587715": {
       "title": "[ANN][BCBO] BitcoBoost - PoW X16RV2 | 21M cap | No ICO | v1.0.0 released",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5587715.0",
       "links": {},
       "body": "[ANN][BCBO] BitcoBoost - PoW X16RV2 | 21M cap | No ICO | v1.0.0 released",
@@ -5097,6 +5163,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "unsupported_mining",
       "coin_reason": "non_pow_or_token",
       "mining_readiness": {
@@ -5152,7 +5221,7 @@
     "btt:5598514": {
       "title": "[ANN][BIG] BigCoin - independent PoW chain. yespower (CPU) from 19,500. No ICO",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5598514.0",
       "links": {},
       "body": "[ANN][BIG] BigCoin - independent PoW chain. yespower (CPU) from 19,500. No ICO",
@@ -5177,6 +5246,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "unsupported_mining",
       "coin_reason": "non_pow_or_token",
       "mining_readiness": {
@@ -5232,7 +5304,7 @@
     "btt:5598308": {
       "title": "[ANN] MFAI (Music Film AI) on Robinhood Chain | Openfair launch this week",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5598308.0",
       "links": {},
       "body": "[ANN] MFAI (Music Film AI) on Robinhood Chain | Openfair launch this week",
@@ -5257,6 +5329,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "insufficient",
       "coin_reason": "gpu_not_established",
       "mining_readiness": {
@@ -5312,7 +5387,7 @@
     "btt:5600164": {
       "title": "[ANN] (PSY) PSYROB - block-DAG network with CPU mining (Argon2d/Fair launch)",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5600164.0",
       "links": {},
       "body": "[ANN] (PSY) PSYROB - block-DAG network with CPU mining (Argon2d/Fair launch)",
@@ -5337,6 +5412,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "insufficient",
       "coin_reason": "gpu_not_established",
       "mining_readiness": {
@@ -5392,7 +5470,7 @@
     "btt:5594762": {
       "title": "[ANN] VENERA (VNR) | Omnivera Layer-1 | CPU Mined | Privacy Stablecoin",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5594762.0",
       "links": {},
       "body": "[ANN] VENERA (VNR) | Omnivera Layer-1 | CPU Mined | Privacy Stablecoin",
@@ -5417,6 +5495,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "insufficient",
       "coin_reason": "gpu_not_established",
       "mining_readiness": {
@@ -5472,7 +5553,7 @@
     "btt:5595967": {
       "title": "[MAINNET DEC 1] Mercatura (MCA) | MercaHash | ML-DSA-65 PQ | Adaptive Emission",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5595967.0",
       "links": {},
       "body": "[MAINNET DEC 1] Mercatura (MCA) | MercaHash | ML-DSA-65 PQ | Adaptive Emission",
@@ -5497,6 +5578,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "insufficient",
       "coin_reason": "gpu_not_established",
       "mining_readiness": {
@@ -5552,7 +5636,7 @@
     "btt:5575917": {
       "title": "[ANN] TokenKickstarter | No-Code. Multi-Chain. Secure",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5575917.0",
       "links": {},
       "body": "[ANN] TokenKickstarter | No-Code. Multi-Chain. Secure",
@@ -5577,6 +5661,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "insufficient",
       "coin_reason": "gpu_not_established",
       "mining_readiness": {
@@ -5632,7 +5719,7 @@
     "btt:5599821": {
       "title": "[ANN] ZaiMiner 1.0 | NVIDIA GPU miner | 25+ algorithms | 1% fee | Multi-GPU",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5599821.0",
       "links": {},
       "body": "[ANN] ZaiMiner 1.0 | NVIDIA GPU miner | 25+ algorithms | 1% fee | Multi-GPU",
@@ -5657,6 +5744,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "non_coin",
       "coin_reason": "miner_software_or_service",
       "mining_readiness": {
@@ -5712,7 +5802,7 @@
     "btt:5597361": {
       "title": "[ANN] RIGOR � Not More Consensus, but a Different Allocation of Monetary Role",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5597361.0",
       "links": {},
       "body": "[ANN] RIGOR � Not More Consensus, but a Different Allocation of Monetary Role",
@@ -5737,6 +5827,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "insufficient",
       "coin_reason": "gpu_not_established",
       "mining_readiness": {
@@ -5792,7 +5885,7 @@
     "btt:5600335": {
       "title": "A quantum-proof cryptocurrency with no blocks. CPU-POW",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5600335.0",
       "links": {},
       "body": "A quantum-proof cryptocurrency with no blocks. CPU-POW",
@@ -5817,6 +5910,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "insufficient",
       "coin_reason": "gpu_not_established",
       "mining_readiness": {
@@ -5872,7 +5968,7 @@
     "btt:5600090": {
       "title": "[ANN][NVL] Nival | RandomX PoW | RingCT privacy | Zero premine | Conditional pay",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5600090.0",
       "links": {},
       "body": "[ANN][NVL] Nival | RandomX PoW | RingCT privacy | Zero premine | Conditional pay",
@@ -5897,6 +5993,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "unsupported_mining",
       "coin_reason": "cpu_or_asic_dominated",
       "mining_readiness": {
@@ -5952,7 +6051,7 @@
     "btt:5600321": {
       "title": "[ANN] ARMax ($ARM) - fair-launch PoW Layer 1 for Android phones - PUBLIC TESTNET",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5600321.0",
       "links": {},
       "body": "[ANN] ARMax ($ARM) - fair-launch PoW Layer 1 for Android phones - PUBLIC TESTNET",
@@ -5977,6 +6076,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "insufficient",
       "coin_reason": "gpu_not_established",
       "mining_readiness": {
@@ -6032,7 +6134,7 @@
     "btt:5600316": {
       "title": "[ANN] [PPC] PoolPayCoin -NO PREMINE- RandomX + ASERT / Fair-Launch CPU-Only Coin",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5600316.0",
       "links": {},
       "body": "[ANN] [PPC] PoolPayCoin -NO PREMINE- RandomX + ASERT / Fair-Launch CPU-Only Coin",
@@ -6057,6 +6159,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "unsupported_mining",
       "coin_reason": "cpu_or_asic_dominated",
       "mining_readiness": {
@@ -6112,7 +6217,7 @@
     "btt:1165615": {
       "title": "[ANN]█▅ AurumCoin AU ▅█ Welcome to Aurumcoin(AU) Project █▅ 2014-2017 ▅█",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=1165615.0",
       "links": {},
       "body": "[ANN]█▅ AurumCoin AU ▅█ Welcome to Aurumcoin(AU) Project █▅ 2014-2017 ▅█",
@@ -6137,6 +6242,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "insufficient",
       "coin_reason": "gpu_not_established",
       "mining_readiness": {
@@ -6192,7 +6300,7 @@
     "btt:5598593": {
       "title": "[PRE-ANN] TitanForge (TFN) | Shielded-only PoW | 1 block/s | No premine",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5598593.0",
       "links": {},
       "body": "[PRE-ANN] TitanForge (TFN) | Shielded-only PoW | 1 block/s | No premine",
@@ -6217,6 +6325,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "insufficient",
       "coin_reason": "gpu_not_established",
       "mining_readiness": {
@@ -6272,7 +6383,7 @@
     "btt:5600075": {
       "title": "[ANN] BOUND | CPU-mined, no premine | launched 16 Nov 2026 | written from scratc",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5600075.0",
       "links": {},
       "body": "[ANN] BOUND | CPU-mined, no premine | launched 16 Nov 2026 | written from scratc",
@@ -6297,6 +6408,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "insufficient",
       "coin_reason": "gpu_not_established",
       "mining_readiness": {
@@ -6352,7 +6466,7 @@
     "btt:5599717": {
       "title": "[ANN] Grox (GROX) | Fair CPU solo mining | RandomX | 1-min blocks | 21M cap",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5599717.0",
       "links": {},
       "body": "[ANN] Grox (GROX) | Fair CPU solo mining | RandomX | 1-min blocks | 21M cap",
@@ -6377,6 +6491,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "unsupported_mining",
       "coin_reason": "cpu_or_asic_dominated",
       "mining_readiness": {
@@ -6432,7 +6549,7 @@
     "btt:5598979": {
       "title": "[ANN][TESTNET] NEB (Neural Engine Byte)",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5598979.0",
       "links": {},
       "body": "[ANN][TESTNET] NEB (Neural Engine Byte)",
@@ -6457,6 +6574,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "insufficient",
       "coin_reason": "gpu_not_established",
       "mining_readiness": {
@@ -6512,7 +6632,7 @@
     "btt:5599778": {
       "title": "[ANN] Bitcoin Coin Series (Half/Quarter/Dime/Nickel/Cent) | CPU, no premine",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5599778.0",
       "links": {},
       "body": "[ANN] Bitcoin Coin Series (Half/Quarter/Dime/Nickel/Cent) | CPU, no premine",
@@ -6537,6 +6657,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "insufficient",
       "coin_reason": "gpu_not_established",
       "mining_readiness": {
@@ -6592,7 +6715,7 @@
     "btt:5600277": {
       "title": "BitChatChain (BCC)",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5600277.0",
       "links": {},
       "body": "BitChatChain (BCC)",
@@ -6617,6 +6740,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "insufficient",
       "coin_reason": "gpu_not_established",
       "mining_readiness": {
@@ -6672,7 +6798,7 @@
     "btt:5590832": {
       "title": "Parano1d ① Proof-native Layer 1 ordered by PoW",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5590832.0",
       "links": {},
       "body": "Parano1d ① Proof-native Layer 1 ordered by PoW",
@@ -6697,6 +6823,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "insufficient",
       "coin_reason": "gpu_not_established",
       "mining_readiness": {
@@ -6752,7 +6881,7 @@
     "btt:5596438": {
       "title": "GENORYN (GNR) � New Privacy-Focused PoW Cryptocurrency | Halo 2 | RandomX",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5596438.0",
       "links": {},
       "body": "GENORYN (GNR) � New Privacy-Focused PoW Cryptocurrency | Halo 2 | RandomX",
@@ -6777,6 +6906,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "unsupported_mining",
       "coin_reason": "cpu_or_asic_dominated",
       "mining_readiness": {
@@ -6832,7 +6964,7 @@
     "btt:5587095": {
       "title": "[ANN] TKMCHAIN RX: TOR Network, RK,C++ Contracts, Phone & Email Services 🛡️",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5587095.0",
       "links": {},
       "body": "[ANN] TKMCHAIN RX: TOR Network, RK,C++ Contracts, Phone & Email Services 🛡️",
@@ -6857,6 +6989,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "insufficient",
       "coin_reason": "gpu_not_established",
       "mining_readiness": {
@@ -6912,7 +7047,7 @@
     "btt:5584502": {
       "title": "[ANN] (PRL) Pearl network - Proof-of-Useful-Work L1 protocol (Pearlhash+AMD)",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5584502.0",
       "links": {},
       "body": "[ANN] (PRL) Pearl network - Proof-of-Useful-Work L1 protocol (Pearlhash+AMD)",
@@ -6937,6 +7072,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "insufficient",
       "coin_reason": "gpu_not_established",
       "mining_readiness": {
@@ -6992,7 +7130,7 @@
     "btt:5600266": {
       "title": "[ANN] Aurum Crypto Gold (ACG) 2.4.0 � community rescue fork | ASERT + StallGuard",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5600266.0",
       "links": {},
       "body": "[ANN] Aurum Crypto Gold (ACG) 2.4.0 � community rescue fork | ASERT + StallGuard",
@@ -7017,6 +7155,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "insufficient",
       "coin_reason": "gpu_not_established",
       "mining_readiness": {
@@ -7072,7 +7213,7 @@
     "btt:2169457": {
       "title": "[ANN] SmartHoldem Web 4.0: The Decentralized, Peer-to-Peer Physical Internet.",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=2169457.0",
       "links": {},
       "body": "[ANN] SmartHoldem Web 4.0: The Decentralized, Peer-to-Peer Physical Internet.",
@@ -7097,6 +7238,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "insufficient",
       "coin_reason": "gpu_not_established",
       "mining_readiness": {
@@ -7152,7 +7296,7 @@
     "btt:5599218": {
       "title": "NEB roadmap: testnet 2 to mainnet",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5599218.0",
       "links": {},
       "body": "NEB roadmap: testnet 2 to mainnet",
@@ -7177,6 +7321,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "insufficient",
       "coin_reason": "gpu_not_established",
       "mining_readiness": {
@@ -7232,7 +7379,7 @@
     "btt:5597333": {
       "title": "[ANN] EncryptLock (LOCK) | New blockchain, built with AI | Your PC earns LOCK",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5597333.0",
       "links": {},
       "body": "[ANN] EncryptLock (LOCK) | New blockchain, built with AI | Your PC earns LOCK",
@@ -7257,6 +7404,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "insufficient",
       "coin_reason": "gpu_not_established",
       "mining_readiness": {
@@ -7312,7 +7462,7 @@
     "btt:5487938": {
       "title": "[ANN][HTN] Hoosat Network",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5487938.0",
       "links": {},
       "body": "[ANN][HTN] Hoosat Network",
@@ -7337,6 +7487,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "insufficient",
       "coin_reason": "gpu_not_established",
       "mining_readiness": {
@@ -7392,7 +7545,7 @@
     "btt:5573065": {
       "title": "VICEVERSACHAIN \"In a world of ascending blockchains, dare to descend.\"",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5573065.0",
       "links": {},
       "body": "VICEVERSACHAIN \"In a world of ascending blockchains, dare to descend.\"",
@@ -7417,6 +7570,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "insufficient",
       "coin_reason": "gpu_not_established",
       "mining_readiness": {
@@ -7472,7 +7628,7 @@
     "btt:5537764": {
       "title": "[ANN] RinCoin (RIN) | CPU & GPU Friendly | ASIC Resistant RinHash",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5537764.0",
       "links": {},
       "body": "[ANN] RinCoin (RIN) | CPU & GPU Friendly | ASIC Resistant RinHash",
@@ -7497,6 +7653,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "insufficient",
       "coin_reason": "pow_not_established",
       "mining_readiness": {
@@ -7552,7 +7711,7 @@
     "btt:5591796": {
       "title": "[ANN][TAR] TARCOIN | SHA-256d PoW | 1st PoW with Stratum .tar Mining ⛏️🚀",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5591796.0",
       "links": {},
       "body": "[ANN][TAR] TARCOIN | SHA-256d PoW | 1st PoW with Stratum .tar Mining ⛏️🚀",
@@ -7577,6 +7736,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "unsupported_mining",
       "coin_reason": "cpu_or_asic_dominated",
       "mining_readiness": {
@@ -7632,7 +7794,7 @@
     "btt:5594823": {
       "title": "[ANN][TESTNET] Slithy Tove (SLTHY) | CPU mining | Windows and Linux beta",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5594823.0",
       "links": {},
       "body": "[ANN][TESTNET] Slithy Tove (SLTHY) | CPU mining | Windows and Linux beta",
@@ -7657,6 +7819,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "insufficient",
       "coin_reason": "gpu_not_established",
       "mining_readiness": {
@@ -7712,7 +7877,7 @@
     "btt:5596113": {
       "title": "[ANN][YSR] YSKAR - SHA-256d PoW | No premine | Mine on phone, CPU or GPU",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5596113.0",
       "links": {},
       "body": "[ANN][YSR] YSKAR - SHA-256d PoW | No premine | Mine on phone, CPU or GPU",
@@ -7737,6 +7902,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "unsupported_mining",
       "coin_reason": "cpu_or_asic_dominated",
       "mining_readiness": {
@@ -7792,7 +7960,7 @@
     "btt:5600208": {
       "title": "[PRE-ANN] Spek | Post-quantum unbonded proof of stake | Testnet soon",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5600208.0",
       "links": {},
       "body": "[PRE-ANN] Spek | Post-quantum unbonded proof of stake | Testnet soon",
@@ -7817,6 +7985,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "unsupported_mining",
       "coin_reason": "non_pow_or_token",
       "mining_readiness": {
@@ -7872,7 +8043,7 @@
     "btt:5588001": {
       "title": "[REVIEW] Byte Exchange Ecosystem And Passive Income Ways",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5588001.0",
       "links": {},
       "body": "[REVIEW] Byte Exchange Ecosystem And Passive Income Ways",
@@ -7897,6 +8068,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "non_coin",
       "coin_reason": "miner_software_or_service",
       "mining_readiness": {
@@ -7952,7 +8126,7 @@
     "btt:5600215": {
       "title": "[ANN] Quinvium (QU) | GPU PoW (Ethash) | EVM smart contracts | No premine | Main",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5600215.0",
       "links": {},
       "body": "[ANN] Quinvium (QU) | GPU PoW (Ethash) | EVM smart contracts | No premine | Main",
@@ -7981,6 +8155,9 @@
         "checked_at": "2026-11-20T10:11:49+00:00",
         "status": "could_not_parse"
       },
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "coin_candidate",
       "coin_reason": "gpu_pow_coin_claim",
       "mining_readiness": {
@@ -8036,7 +8213,7 @@
           "network": false
         },
         "chain_height_progression": false,
-        "checked_at": "2026-11-20T10:40+00:00"
+        "checked_at": "2026-11-20T10:41+00:00"
       },
       "economics": {
         "status": "insufficient_data",
@@ -8089,7 +8266,7 @@
     "btt:5598138": {
       "title": "[ANN] H2OGONE | AI Water Crisis Meme Coin | Solana | Fair Launch | Pump.fun",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5598138.0",
       "links": {},
       "body": "[ANN] H2OGONE | AI Water Crisis Meme Coin | Solana | Fair Launch | Pump.fun",
@@ -8114,6 +8291,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "unsupported_mining",
       "coin_reason": "non_pow_or_token",
       "mining_readiness": {
@@ -8169,7 +8349,7 @@
     "btt:5599411": {
       "title": "[ANN] Chipcoin (CHC) | Mainnet Live | PoW, Post-Quantum Signatures & Node Reward",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5599411.0",
       "links": {},
       "body": "[ANN] Chipcoin (CHC) | Mainnet Live | PoW, Post-Quantum Signatures & Node Reward",
@@ -8194,6 +8374,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "insufficient",
       "coin_reason": "gpu_not_established",
       "mining_readiness": {
@@ -8249,7 +8432,7 @@
     "btt:1467050": {
       "title": "- AURORACOIN -",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=1467050.0",
       "links": {},
       "body": "- AURORACOIN -",
@@ -8274,6 +8457,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "insufficient",
       "coin_reason": "gpu_not_established",
       "mining_readiness": {
@@ -8329,7 +8515,7 @@
     "btt:5597191": {
       "title": "[ANN] NULL � Shielded-only privacy coin, written from scratch in Rust | Privacy",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5597191.0",
       "links": {},
       "body": "[ANN] NULL � Shielded-only privacy coin, written from scratch in Rust | Privacy",
@@ -8354,6 +8540,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "insufficient",
       "coin_reason": "gpu_not_established",
       "mining_readiness": {
@@ -8409,7 +8598,7 @@
     "btt:5488748": {
       "title": "X1 Coin Crypto Currency",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5488748.0",
       "links": {},
       "body": "X1 Coin Crypto Currency",
@@ -8434,6 +8623,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "insufficient",
       "coin_reason": "gpu_not_established",
       "mining_readiness": {
@@ -8489,7 +8681,7 @@
     "btt:5593547": {
       "title": "[ANN] ReSatoshi | Bitcoin Core + 100-Year UTXO Recycling | No Premine",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5593547.0",
       "links": {},
       "body": "[ANN] ReSatoshi | Bitcoin Core + 100-Year UTXO Recycling | No Premine",
@@ -8514,6 +8706,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "insufficient",
       "coin_reason": "gpu_not_established",
       "mining_readiness": {
@@ -8569,7 +8764,7 @@
     "btt:5592609": {
       "title": "[ANN]BitQube (BTQ) � GPU-Mineable PoW Coin | Official Project",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5592609.0",
       "links": {},
       "body": "[ANN]BitQube (BTQ) � GPU-Mineable PoW Coin | Official Project",
@@ -8598,6 +8793,9 @@
         "checked_at": "2026-11-20T10:11:49+00:00",
         "status": "could_not_parse"
       },
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "coin_candidate",
       "coin_reason": "gpu_pow_coin_claim",
       "mining_readiness": {
@@ -8653,7 +8851,7 @@
           "network": false
         },
         "chain_height_progression": false,
-        "checked_at": "2026-11-20T10:40+00:00"
+        "checked_at": "2026-11-20T10:41+00:00"
       },
       "economics": {
         "status": "insufficient_data",
@@ -8706,7 +8904,7 @@
     "btt:5586152": {
       "title": "[ANN] Block Zero (BLOZ) | A Second Chance at Genesis | RandomX CPU PoW | No Prem",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5586152.0",
       "links": {},
       "body": "[ANN] Block Zero (BLOZ) | A Second Chance at Genesis | RandomX CPU PoW | No Prem",
@@ -8731,6 +8929,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "unsupported_mining",
       "coin_reason": "cpu_or_asic_dominated",
       "mining_readiness": {
@@ -8786,7 +8987,7 @@
     "btt:1563601": {
       "title": "--- ChainWorks Industries ---",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=1563601.0",
       "links": {},
       "body": "--- ChainWorks Industries ---",
@@ -8811,6 +9012,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "insufficient",
       "coin_reason": "gpu_not_established",
       "mining_readiness": {
@@ -8866,7 +9070,7 @@
     "btt:5600175": {
       "title": "SunLend - TRON Energy rental for USDT (TRC-20) transfers",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5600175.0",
       "links": {},
       "body": "SunLend - TRON Energy rental for USDT (TRC-20) transfers",
@@ -8891,6 +9095,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "non_coin",
       "coin_reason": "miner_software_or_service",
       "mining_readiness": {
@@ -8946,7 +9153,7 @@
     "btt:47417": {
       "title": "[ANN] Litecoin - a lite version of Bitcoin. Launched!",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=47417.0",
       "links": {},
       "body": "[ANN] Litecoin - a lite version of Bitcoin. Launched!",
@@ -8971,6 +9178,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "insufficient",
       "coin_reason": "gpu_not_established",
       "mining_readiness": {
@@ -9026,7 +9236,7 @@
     "btt:5597037": {
       "title": "[ANN] Monzero (XMZ) | RandomX CPU privacy coin | DEX | LISTED | Mineable",
       "seen": "2026-11-20T05:32:30+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5597037.0",
       "links": {},
       "body": "[ANN] Monzero (XMZ) | RandomX CPU privacy coin | DEX | LISTED | Mineable",
@@ -9051,6 +9261,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "unsupported_mining",
       "coin_reason": "cpu_or_asic_dominated",
       "mining_readiness": {
@@ -9661,7 +9874,7 @@
     "btt:5593282": {
       "title": "[PRE-ANN][WEC] Wcash - Merge-Mined with Zcash | 21M | No Premine | No Dev tax",
       "seen": "2026-11-20T07:06:12+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5593282.0",
       "links": {},
       "body": "[PRE-ANN][WEC] Wcash - Merge-Mined with Zcash | 21M | No Premine | No Dev tax",
@@ -9686,6 +9899,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "insufficient",
       "coin_reason": "gpu_not_established",
       "mining_readiness": {
@@ -9741,7 +9957,7 @@
     "btt:5575171": {
       "title": "[ANN] OrdexGold (OXG) - Scrypt",
       "seen": "2026-11-20T07:06:12+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5575171.0",
       "links": {},
       "body": "[ANN] OrdexGold (OXG) - Scrypt",
@@ -9766,6 +9982,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "unsupported_mining",
       "coin_reason": "cpu_or_asic_dominated",
       "mining_readiness": {
@@ -9821,7 +10040,7 @@
     "btt:1626185": {
       "title": "[ZEC] ZCASH - All coins are created equal. Discussion Thread (Unofficial)",
       "seen": "2026-11-20T07:25:09+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=1626185.0",
       "links": {},
       "body": "[ZEC] ZCASH - All coins are created equal. Discussion Thread (Unofficial)",
@@ -9846,6 +10065,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "insufficient",
       "coin_reason": "gpu_not_established",
       "mining_readiness": {
@@ -9901,7 +10123,7 @@
     "gh:1457287638": {
       "title": "good-mining/good-miner",
       "seen": "2026-11-20T08:17:00+00:00",
-      "last_seen": "2026-11-20T10:40:32+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://github.com/good-mining/good-miner",
       "links": {},
       "body": "good-mining/good-miner Rust cryptocurrency miner for NVIDIA, AMD and Intel GPUs and CPUs. One binary, auto profit switching, built-in dashboard. Windows and Linux.",
@@ -9990,7 +10212,7 @@
     "gh:1457186269": {
       "title": "Lakylife/quinvium",
       "seen": "2026-11-20T08:17:00+00:00",
-      "last_seen": "2026-11-20T10:40:32+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://github.com/Lakylife/quinvium",
       "links": {},
       "body": "Lakylife/quinvium Quinvium (QU): a programmable proof-of-work blockchain with an EVM, GPU mining (Ethash), full node, wallet, explorer and miner.",
@@ -10079,7 +10301,7 @@
           "network": false
         },
         "chain_height_progression": false,
-        "checked_at": "2026-11-20T10:40+00:00"
+        "checked_at": "2026-11-20T10:41+00:00"
       },
       "economics": {
         "status": "insufficient_data",
@@ -10132,7 +10354,7 @@
     "gh:1449663269": {
       "title": "gacanga/crypto-connection-miner",
       "seen": "2026-11-20T08:17:00+00:00",
-      "last_seen": "2026-11-20T10:40:32+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://github.com/gacanga/crypto-connection-miner",
       "links": {},
       "body": "gacanga/crypto-connection-miner Crypto Connection Miner (formerly GostMiner): free open-source miner, no dev fee - NVIDIA GPUs for GOSTcoin, Bitmark, Daler (Ting), Ycash, NEX Chain (Ethash) and Chipcoin; Chipcoin also on the CPU, including macOS on Apple Silicon. Windows, Linux, macOS. Made for the Crypto Connection pool (crypto-connection.net).",
@@ -10221,7 +10443,7 @@
     "gh:1455827083": {
       "title": "MrM002/NexusSwitch",
       "seen": "2026-11-20T08:17:00+00:00",
-      "last_seen": "2026-11-20T10:40:32+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://github.com/MrM002/NexusSwitch",
       "links": {},
       "body": "MrM002/NexusSwitch ⚡ Open-Source Crypto Auto Profit-Switcher with a Self-Hosted Telegram Bot, Anti-Spike Filters & Live Profit Boost Tracking.",
@@ -10310,7 +10532,7 @@
     "gh:1457230305": {
       "title": "kobold-dev/kobold-miner",
       "seen": "2026-11-20T08:17:00+00:00",
-      "last_seen": "2026-11-20T10:40:32+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://github.com/kobold-dev/kobold-miner",
       "links": {},
       "body": "kobold-dev/kobold-miner NVIDIA GPU miner for Pearl (PRL), Ravencoin (RVN), Parano1d (NOID) and Quantus (QTC), CPU miner for Monero and Zephyr (RandomX). Windows, Linux, HiveOS. GPG-signed builds.",
@@ -10399,7 +10621,7 @@
     "btt:5599796": {
       "title": "[ANN] QIE Blockchain | The identity and trust layer of Web3",
       "seen": "2026-11-20T08:36:27+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5599796.0",
       "links": {},
       "body": "[ANN] QIE Blockchain | The identity and trust layer of Web3",
@@ -10424,6 +10646,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "insufficient",
       "coin_reason": "gpu_not_established",
       "mining_readiness": {
@@ -10479,7 +10704,7 @@
     "btt:5600447": {
       "title": "Obsidio: A Post-Quantum Privacy Chain � Mainnet v2 Live with, DEX, Messenger",
       "seen": "2026-11-20T08:36:27+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5600447.0",
       "links": {},
       "body": "Obsidio: A Post-Quantum Privacy Chain � Mainnet v2 Live with, DEX, Messenger",
@@ -10504,6 +10729,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "insufficient",
       "coin_reason": "gpu_not_established",
       "mining_readiness": {
@@ -10559,7 +10787,7 @@
     "tg:rplant_pool_ann:300": {
       "title": "Nov 19 delist alphanumeric, cmusicai, bitmonero(BMR), kadikama, myt, zerqavon",
       "seen": "2026-11-20T08:50:53+00:00",
-      "last_seen": "2026-11-20T10:40:32+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://t.me/rplant_pool_ann/300",
       "links": {
         "pool": "https://t.me/rplant_pool_ann"
@@ -10644,7 +10872,7 @@
     "btt:5600452": {
       "title": "[ANN] [NXC] NexCoin - Pure CPU Mineable | Yespower PoW | 5s Block Time | 0% Prem",
       "seen": "2026-11-20T09:12:10+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5600452.0",
       "links": {},
       "body": "[ANN] [NXC] NexCoin - Pure CPU Mineable | Yespower PoW | 5s Block Time | 0% Prem",
@@ -10669,6 +10897,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "unsupported_mining",
       "coin_reason": "cpu_or_asic_dominated",
       "mining_readiness": {
@@ -10724,7 +10955,7 @@
     "gh:1452657235": {
       "title": "muhammad-ahmed-ssuet/muhammad-ahmed-ssuet.github.io",
       "seen": "2026-11-20T09:14:14+00:00",
-      "last_seen": "2026-11-20T10:40:32+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://github.com/muhammad-ahmed-ssuet/muhammad-ahmed-ssuet.github.io",
       "links": {},
       "body": "muhammad-ahmed-ssuet/muhammad-ahmed-ssuet.github.io Secure a proof-of-useful-work GPU blockchain with auditable int8 matrix-product jobs for paid AI inference and rendering.",
@@ -10813,7 +11044,7 @@
     "btt:5596413": {
       "title": "Re: List Your Own Coin o...",
       "seen": "2026-11-20T09:24:57+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5596413.0",
       "links": {},
       "body": "Re: List Your Own Coin o...",
@@ -10838,6 +11069,9 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "insufficient",
       "coin_reason": "gpu_not_established",
       "mining_readiness": {
@@ -10893,7 +11127,7 @@
     "btt:5572671": {
       "title": "[ANN][HRC] Hypercoin - An Innovative PoW Coin",
       "seen": "2026-11-20T10:12:47+00:00",
-      "last_seen": "2026-11-20T10:12:47+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
       "url": "https://bitcointalk.org/index.php?topic=5572671.0",
       "links": {},
       "body": "[ANN][HRC] Hypercoin - An Innovative PoW Coin",
@@ -10918,6 +11152,175 @@
       "gpu_support_evidence": [],
       "gpu_support_checked_at": null,
       "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
+      "coin_class": "insufficient",
+      "coin_reason": "gpu_not_established",
+      "mining_readiness": {
+        "stage": "excluded",
+        "label": "Не GPU PoW-монета",
+        "evidence": [],
+        "missing": [],
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
+      }
+    },
+    "btt:1608859": {
+      "title": "Obyte: Totally new consensus algorithm + private untraceable payments",
+      "seen": "2026-11-20T10:41:24+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
+      "url": "https://bitcointalk.org/index.php?topic=1608859.0",
+      "links": {},
+      "body": "Obyte: Totally new consensus algorithm + private untraceable payments",
+      "source": "Bitcointalk ANN — дата первого сообщения не проверена",
+      "kind": "announcement",
+      "date": null,
+      "facts": {
+        "algorithm": null,
+        "ticker": null,
+        "coin_name": null,
+        "gpu_mentioned": false,
+        "solo_mentioned": false,
+        "pool_mentioned": false,
+        "launch_claim_utc": null,
+        "publication_utc": null,
+        "repo_created_utc": null,
+        "repo_updated_utc": null
+      },
+      "repo_created": null,
+      "repo_updated": null,
+      "github": {},
+      "gpu_support_evidence": [],
+      "gpu_support_checked_at": null,
+      "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
+      "coin_class": "insufficient",
+      "coin_reason": "gpu_not_established",
+      "mining_readiness": {
+        "stage": "excluded",
+        "label": "Не GPU PoW-монета",
+        "evidence": [],
+        "missing": [],
+        "gpu_family_coverage": {
+          "scope": [
+            "GTX 10xx",
+            "RTX 20xx",
+            "RTX 30xx",
+            "RTX 40xx",
+            "RTX 50xx"
+          ],
+          "family_status": [
+            {
+              "family": "GTX 10xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 20xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 30xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 40xx",
+              "status": "not_verified",
+              "models": []
+            },
+            {
+              "family": "RTX 50xx",
+              "status": "not_verified",
+              "models": []
+            }
+          ],
+          "evidence": [],
+          "note": "В поиске все поколения; совместимость каждого GPU, майнера и памяти проверяется отдельно"
+        }
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
+      }
+    },
+    "btt:5499359": {
+      "title": "Proxima - a DAG-based cooperative distributed ledger",
+      "seen": "2026-11-20T10:41:24+00:00",
+      "last_seen": "2026-11-20T10:41:24+00:00",
+      "url": "https://bitcointalk.org/index.php?topic=5499359.0",
+      "links": {},
+      "body": "Proxima - a DAG-based cooperative distributed ledger",
+      "source": "Bitcointalk ANN — дата первого сообщения не проверена",
+      "kind": "announcement",
+      "date": null,
+      "facts": {
+        "algorithm": null,
+        "ticker": null,
+        "coin_name": null,
+        "gpu_mentioned": false,
+        "solo_mentioned": false,
+        "pool_mentioned": false,
+        "launch_claim_utc": null,
+        "publication_utc": null,
+        "repo_created_utc": null,
+        "repo_updated_utc": null
+      },
+      "repo_created": null,
+      "repo_updated": null,
+      "github": {},
+      "gpu_support_evidence": [],
+      "gpu_support_checked_at": null,
+      "thread_evidence": {},
+      "explorer_origin": {},
+      "explorer_evidence": {},
+      "explorer_checked_at": null,
       "coin_class": "insufficient",
       "coin_reason": "gpu_not_established",
       "mining_readiness": {
@@ -10971,12 +11374,12 @@
       }
     }
   },
-  "last_scan": "2026-11-20T10:40:32+00:00",
+  "last_scan": "2026-11-20T10:41:24+00:00",
   "telegram_update_offset": 229240560,
   "second_user_welcomed": true,
   "agent": {
-    "updated_at": "2026-11-20T10:40:32+00:00",
-    "total_scanned": 135,
+    "updated_at": "2026-11-20T10:41:24+00:00",
+    "total_scanned": 137,
     "items": [
       {
         "key": "btt:5599371",
@@ -11051,7 +11454,7 @@
       "name": "[ANN] NEX Chain (NEXC) | Ethash PoW | GPU & CPU | Free Solo Miner | EVM + DEX",
       "source": "Bitcointalk",
       "score": 6,
-      "last_reviewed": "2026-11-20T10:40:32+00:00",
+      "last_reviewed": "2026-11-20T10:41:24+00:00",
       "reason": "указан GPU-алгоритм: Ethash; упомянут SOLO",
       "status": "MONITOR"
     }
@@ -11063,7 +11466,7 @@
     "github_rechecked": 0
   },
   "coin_filter_stats": {
-    "insufficient": 85,
+    "insufficient": 87,
     "unsupported_mining": 29,
     "coin_candidate": 5,
     "non_coin": 16
@@ -11711,7 +12114,7 @@
   },
   "github_release_status": {
     "checked": 1,
-    "projects_with_releases": 1
+    "projects_with_releases": 0
   },
   "backpow": {
     "checked_at": "2026-11-20T09:20:01+00:00",
@@ -11728,12 +12131,12 @@
     "source": "BackPoW"
   },
   "mining_readiness_counts": {
-    "excluded": 130,
+    "excluded": 132,
     "announcement_only": 4,
     "activity_reported": 1
   },
   "mining_economics_counts": {
-    "excluded": 130,
+    "excluded": 132,
     "insufficient_data": 5
   },
   "pool_validation_status": {
@@ -11759,27 +12162,27 @@
     "gh-1457186269": {
       "last_stage": "announcement_only",
       "last_alert_marker": "",
-      "checked_at": "2026-11-20T10:40:32+00:00"
+      "checked_at": "2026-11-20T10:41:24+00:00"
     },
     "btt:5599371": {
       "last_stage": "activity_reported",
       "last_alert_marker": "",
-      "checked_at": "2026-11-20T10:40:32+00:00"
+      "checked_at": "2026-11-20T10:41:24+00:00"
     },
     "btt:5600215": {
       "last_stage": "announcement_only",
       "last_alert_marker": "",
-      "checked_at": "2026-11-20T10:40:32+00:00"
+      "checked_at": "2026-11-20T10:41:24+00:00"
     },
     "btt:5592609": {
       "last_stage": "announcement_only",
       "last_alert_marker": "",
-      "checked_at": "2026-11-20T10:40:32+00:00"
+      "checked_at": "2026-11-20T10:41:24+00:00"
     },
     "gh:1457186269": {
       "last_stage": "announcement_only",
       "last_alert_marker": "",
-      "checked_at": "2026-11-20T10:40:32+00:00"
+      "checked_at": "2026-11-20T10:41:24+00:00"
     }
   },
   "pool_directory": {
