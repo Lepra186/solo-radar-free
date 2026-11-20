@@ -11,6 +11,7 @@ from pathlib import Path
 from datetime import datetime, timezone, timedelta
 from email.utils import parsedate_to_datetime
 from urllib.parse import quote
+from telegram_sources import CHANNELS, parse_public_channel
 
 TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
 CHAT = os.getenv("TELEGRAM_CHAT_ID", "").strip()
@@ -206,6 +207,17 @@ def main():
             print("Pool operator news OK:", count)
         except Exception as exc:
             print("Pool operator source unavailable:", type(exc).__name__)
+
+    # Public Telegram mining launch channels; not equivalent to verified mainnet.
+    for channel in CHANNELS:
+        url = "https://t.me/s/" + channel
+        try:
+            posts = parse_public_channel(fetch(url), channel, now=NOW)
+            results.update(posts)
+            ok += 1
+            print("Telegram public channel:", channel, "recent posts:", len(posts))
+        except Exception as exc:
+            print("Telegram public source unavailable:", channel, type(exc).__name__)
 
     # Optional Discord integration. Requires a bot invited to each selected
     # channel with View Channel, Read Message History and message content access.
