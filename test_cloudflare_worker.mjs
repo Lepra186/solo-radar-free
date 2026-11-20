@@ -15,7 +15,7 @@ const state={last_scan:"2026-11-20T05:00:00+00:00",
     "btt:666":{title:"[ANN] NVIDIA GPU miner 1.0 software release",seen:"2026-11-20T00:00:00+00:00"},
   }};
 const now=new Date("2026-11-20T06:00:00Z");
-test("authorized recipients",()=>assert.deepEqual([...parseAllowed(env)],["123","456"]));
+test("authorized recipients",()=>assert.deepEqual([...parseAllowed(env)],["123","456","812612452"]));
 test("recognized commands",()=>{
   assert.equal(commandOf({text:"/start@solo_radar_hunter_bot"}),"/start");
   assert.equal(commandOf({text:"/latest"}),"/latest");
@@ -111,4 +111,9 @@ test("pool news are identified as publications, not coins",()=>{
     url:"https://pool-pay.com",seen:"2026-11-20T05:00:00Z",kind:"news"}}};
   assert.equal(candidatesFromState(s).length,0);
   assert.equal(renderMenu("source:pool:0",s,now).reply_markup.inline_keyboard[0][0].callback_data,"entry:pool:0:0");
+});
+
+test("authorized second user can access interactive menu",()=>{
+  assert.ok(parseAllowed(env).has("812612452"));
+  assert.ok(renderMenu("home",state,now).reply_markup.inline_keyboard.length>0);
 });
