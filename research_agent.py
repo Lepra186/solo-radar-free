@@ -112,6 +112,15 @@ def examine(key, item, now):
     if valid_url(links.get('explorer')):
         score += 1
         good.append('есть ссылка на обозреватель из объявления')
+    # Prefer measured *growth* in height to marketing claims. Single
+    # pool-catalog timestamps carry much weaker evidence.
+    readiness=item.get("mining_readiness") or {}
+    if readiness.get("stage")=="height_advanced":
+        score+=4
+        good.append("высота сети выросла между двумя снимками агрегатора")
+    elif readiness.get("stage")=="activity_reported":
+        score+=1
+        unknown.append("активность сообщена внешним каталогом, не собственной нодой")
     if origin(key) == 'GitHub':
         score = max(0, score - 1)
         unknown.append('репозиторий сам по себе не подтверждает mainnet')
