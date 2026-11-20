@@ -9,7 +9,8 @@ class MineabilityTests(unittest.TestCase):
  def test_announcement_not_mineable_proof(self):
   r=evaluate("btt:1",dict(COIN),NOW)
   self.assertEqual(r["stage"],"announcement_only")
-  self.assertEqual(r["gpu_5070ti"],"не проверена")
+  self.assertEqual(len(r["gpu_family_coverage"]["family_status"]),5)
+  self.assertTrue(all(x["status"]=="not_verified" for x in r["gpu_family_coverage"]["family_status"]))
  def test_catalog_listing_not_proof(self):
   record=dict(COIN,pool_evidence={"checked_at":"2026-11-20T09:00:00Z",
                                   "pools_reported":2,"blocks_48h_reported":0})
