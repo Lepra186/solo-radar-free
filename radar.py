@@ -12,6 +12,7 @@ from datetime import datetime, timezone, timedelta
 from email.utils import parsedate_to_datetime
 from urllib.parse import quote
 from telegram_sources import CHANNELS, parse_public_channel
+from gpu_assessment import assess, signal, description
 
 TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
 CHAT = os.getenv("TELEGRAM_CHAT_ID", "").strip()
@@ -73,39 +74,6 @@ def ts(value):
             return parsedate_to_datetime(value).astimezone(timezone.utc)
         except (ValueError, TypeError, IndexError):
             return None
-
-def eligible(text):
-    t = text.lower()
-    if re.search(r"\b(ico|presale|airdrop|meme.?token|staking|nft)\b", t):
-        return -10
-    score = 0
-    for regex, points in (
-        (r"\b(pow|proof.of.work|mineable|mining)\b", 3),
-        (r"\b(gpu|nvidia|cuda|ethash|etchash|kawpow|progpow|blake3|autolykos)\b", 5),
-        (r"\b(mainnet|genesis|launch|new.pool|solo)\b", 2),
-        (r"\b(fair.launch|no.premine|0%.premine)\b", 2),
-        (r"coin name\s*:", 2),
-        (r"\balgo\s*:", 2),
-    ):
-        if re.search(regex, t):
-            score += points
-    if re.search(r"\b(cpu.only|randomx|yespower|sha.?256.asic)\b", t) and "gpu" not in t:
-        score -= 8
-    return score
-
-def analyze(text):
-    t = text.lower()
-    gpu = bool(re.search(r"\b(gpu|nvidia|cuda|ethash|kawpow|progpow|blake3|autolykos)\b", t))
-    solo = bool(re.search(r"\bsolo\b", t))
-    premine = "заявлено отсутствие" if re.search(r"(no.premine|0%.premine|zero.premine)", t) else "не проверен"
-    return (
-        f"RTX 5070 Ti: {'GPU упоминается; совместимость НЕ проверена' if gpu else 'совместимость не подтверждена'}\n"
-        f"SOLO: {'упоминается; доступность НЕ проверена' if solo else 'не подтверждено'}\n"
-        f"Premine: {premine}\n"
-        "Mainnet и точное время: не подтверждены\n"
-        "Сложность и шанс блока: нет измерений\n"
-        "Биржа и ликвидность: не проверены"
-    )
 
 def main():
     if not TOKEN or not CHAT:
@@ -267,33 +235,31 @@ def main():
     seen = state.setdefault("topics", {})
     unseen = [(key, item) for key, item in results.items() if key not in seen]
     if ok and state.get("baseline_done"):
-        candidates = sorted(((eligible(item["body"]), key, item)
+        candidates = sorted(((assess(item["body"], NOW)["score"], key, item)
                              for key, item in unseen), key=lambda x: x[0], reverse=True)
         sent = 0
         for points, key, item in candidates:
+            tier = signal(item["body"], NOW)
             reason = None
             if sent >= 3:
                 reason = "limit 3 alerts per run"
-            elif points < 8:
-                reason = "low score"
             elif any(name in item["body"].lower() for name in PREVIOUSLY_REPORTED):
                 reason = "already discussed project"
-            elif not re.search(r"\b(pow|proof.of.work|mining|mineable|coin name)\b", item["body"], re.I):
-                reason = "PoW/mining not confirmed by keywords"
-            elif not re.search(r"\b(gpu|nvidia|cuda|ethash|etchash|kawpow|progpow|blake3|autolykos)\b", item["body"], re.I):
-                reason = "GPU algorithm not confirmed by keywords"
+            elif not tier:
+                reason = "no combined GPU/PoW and launch-or-SOLO evidence"
             print("Candidate review:", item["source"], "| score:", points,
-                  "|", "rejected: " + reason if reason else "alert",
+                  "|", "rejected: " + reason if reason else "alert: " + tier,
                   "|", item["url"])
             if reason:
                 continue
             notify(
-                "🔎 SOLO RADAR — КАНДИДАТ, НЕ ПРОВЕРЕН\n\n"
+                ("🚀 РАННИЙ GPU PoW-КАНДИДАТ — НЕ ПРОВЕРЕН" if tier == "EARLY" else
+                 "🔎 GPU PoW-КАНДИДАТ — НЕ ПРОВЕРЕН") + "\n\n"
                 + item["title"][:160] + "\n"
                 + "Источник: " + item["source"] + "\n"
                 + "Дата публикации/создания: " + (item["date"] or "не определена") + "\n\n"
-                + analyze(item["body"]) + "\n\n"
-                + "⚠️ Это повод изучить проект, НЕ сигнал начинать майнинг.\n"
+                + description(item["body"], NOW) + "\n\n"
+                + "⚠️ Это не подтверждённый запуск и не совет майнить.\n"
                 + item["url"]
             )
             sent += 1
