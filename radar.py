@@ -30,6 +30,7 @@ from discord_sources import fetch_channels as scan_discord
 from mining_scan_source import refresh as refresh_mining_scan, matches_for
 from pool_validation import update as update_pool_directory, match_pools, stratum_by_coin, parsed as parse_pool_time
 from coincalculators_source import update as update_coin_calculators, matched as match_coin_calculators
+from evidence_alerts import transitions as evidence_transitions, confirmed as confirm_evidence_alert
 
 TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
 CHAT = os.getenv("TELEGRAM_CHAT_ID", "").strip()
@@ -465,6 +466,19 @@ def main():
     readiness_counts=evaluate_all(seen,NOW)
     state["mining_readiness_counts"]=readiness_counts
     print("GPU mining readiness:",readiness_counts)
+
+    # Alert only after a previously seen coin gains fresh activity evidence.
+    # Persist the baseline before sending; mark alerted only after delivery.
+    new_evidence, evidence_history = evidence_transitions(
+        seen,state.get("evidence_history"),NOW,max_messages=2)
+    for key,marker_id,announcement in new_evidence:
+        try:
+            notify(announcement)
+            confirm_evidence_alert(evidence_history,key,marker_id)
+            print("New mining evidence notified:",key)
+        except Exception as exc:
+            print("Evidence alert delivery failed:",type(exc).__name__)
+    state["evidence_history"]=evidence_history
 
     economic_counts=calculate_all(seen,NOW)
     state["mining_economics_counts"]=economic_counts
