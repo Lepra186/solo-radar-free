@@ -29,7 +29,29 @@ def command_name(message):
     text = text.split("@", 1)[0]
     return text if text in ("/start", "/latest", "/status", "/help") else None
 
-def digest(results, now):
+def _history_candidates(state, limit=5):
+    """Titles seen in past scans. Not fresh, and not current network evidence."""
+    if not isinstance(state, dict):
+        return []
+    found = []
+    for key, item in (state.get("topics") or {}).items():
+        title = str(item.get("title") or "")
+        if not title or len(title) < 12:
+            continue
+        a = assess(title)
+        if a["excluded"] or not a["gpu"] or not a["pow"]:
+            continue
+        if key.startswith("btt:"):
+            url = "https://bitcointalk.org/index.php?topic=" + key[4:] + ".0"
+        elif key.startswith("gh:"):
+            url = ""  # Historical GitHub numeric ID cannot be turned into a valid repo URL.
+        else:
+            url = ""
+        found.append((a["score"], str(item.get("seen") or ""), title, url))
+    found.sort(key=lambda x: (x[0], x[1]), reverse=True)
+    return found[:limit]
+
+def digest(results, now, state=None):
     ranked = []
     for item in results.values():
         if not isinstance(item, dict):
@@ -40,23 +62,32 @@ def digest(results, now):
             ranked.append((assess(body, now)["score"], category, item))
     ranked.sort(key=lambda entry: entry[0], reverse=True)
     recent = ranked[:5]
-    lines = ["📡 SOLO RADAR — ОБЗОР GPU PoW",
-             "Поиск NVIDIA и AMD, без привязки к модели карты.",
+    lines = ["📡 SOLO RADAR — GPU PoW",
+             "NVIDIA и AMD; SOLO и обычный пул-майнинг.",
              f"Записей в текущем скане: {len(results)}",
-             f"Предварительных GPU PoW-кандидатов: {len(ranked)}",
+             f"Кандидатов текущего скана: {len(ranked)}",
              ""]
     if recent:
         for i, (_, category, item) in enumerate(recent, 1):
-            lines.append(f"{i}. {'🚀 Ранний анонс' if category == 'EARLY' else '🪙 Пул / накопление' if category == 'HOLD' else '🔎 Кандидат'}")
-            lines.append(str(item.get("title", "Без названия"))[:125])
-            lines.append(str(item.get("url") or "Нет ссылки")[:300])
-            lines.append("")
+            label = "🚀 Ранний анонс" if category == "EARLY" else "🪙 Пул / накопление" if category == "HOLD" else "🔎 Кандидат"
+            lines += [f"{i}. {label}",
+                      str(item.get("title", "Без названия"))[:125],
+                      str(item.get("url") or "Нет ссылки")[:300], ""]
     else:
-        lines += ["Подходящих кандидатов в доступных источниках пока нет.",
-                  "Это не означает, что новые монеты не запускаются: часть площадок может быть недоступна.", ""]
-    lines += ["⚠️ Накопление не гарантирует продажу с прибылью; сложность, premine и ликвидность не подтверждены.",
+        lines.append("Новых подтверждённых кандидатов в доступных источниках нет.")
+        historical = _history_candidates(state)
+        if historical:
+            lines += ["", "📂 На наблюдении — записи из предыдущих сканирований:",
+                      "Не являются свежими анонсами и не означают работающий майнинг."]
+            for index, (points, seen_at, title, url) in enumerate(historical, 1):
+                lines.append(f"{index}. {title[:135]}")
+                if url:
+                    lines.append(url)
+        else:
+            lines.append("Исторических GPU PoW-кандидатов тоже не найдено.")
+    lines += ["", "⚠️ Время mainnet, premine, ликвидность и поддержка GPU требуют проверки.",
               "Команды: /start, /latest, /status, /help.",
-              "Ответ приходит после ближайшей проверки GitHub Actions."]
+              "Ответ — после ближайшего GitHub Actions; возможны задержки."]
     return "\n".join(lines)[:3900]
 
 def process_commands(token, owner_chat, state, results, now, send):
@@ -76,7 +107,7 @@ def process_commands(token, owner_chat, state, results, now, send):
         command = command_name(msg)
         if chat_id == str(owner_chat) and command:
             if command in ("/start", "/latest"):
-                reply = digest(results, now)
+                reply = digest(results, now, state)
             elif command == "/status":
                 reply = ("📡 SOLO Radar активен\n"
                          f"Последняя проверка: {now.strftime('%Y-%m-%d %H:%M UTC')}\n"
