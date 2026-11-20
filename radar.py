@@ -271,14 +271,21 @@ def main():
                              for key, item in unseen), key=lambda x: x[0], reverse=True)
         sent = 0
         for points, key, item in candidates:
-            if points < 8 or sent >= 3:
-                continue
-            if any(name in item["body"].lower() for name in PREVIOUSLY_REPORTED):
-                continue
-            # Require both mining/PoW and GPU evidence; otherwise don't waste user alerts.
-            if not re.search(r"\b(pow|proof.of.work|mining|mineable|coin name)\b", item["body"], re.I):
-                continue
-            if not re.search(r"\b(gpu|nvidia|cuda|ethash|etchash|kawpow|progpow|blake3|autolykos)\b", item["body"], re.I):
+            reason = None
+            if sent >= 3:
+                reason = "limit 3 alerts per run"
+            elif points < 8:
+                reason = "low score"
+            elif any(name in item["body"].lower() for name in PREVIOUSLY_REPORTED):
+                reason = "already discussed project"
+            elif not re.search(r"\b(pow|proof.of.work|mining|mineable|coin name)\b", item["body"], re.I):
+                reason = "PoW/mining not confirmed by keywords"
+            elif not re.search(r"\b(gpu|nvidia|cuda|ethash|etchash|kawpow|progpow|blake3|autolykos)\b", item["body"], re.I):
+                reason = "GPU algorithm not confirmed by keywords"
+            print("Candidate review:", item["source"], "| score:", points,
+                  "|", "rejected: " + reason if reason else "alert",
+                  "|", item["url"])
+            if reason:
                 continue
             notify(
                 "🔎 SOLO RADAR — КАНДИДАТ, НЕ ПРОВЕРЕН\n\n"
