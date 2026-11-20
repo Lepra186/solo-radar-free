@@ -102,7 +102,7 @@ def message(data):
                   "Майнинг: "+p["mining"][:110],
                   "Риски: "+p["risks"][:150],
                   "Проверка добычи: "+str((p.get("mining_readiness") or {}).get("label") or "нет свежих доказательств"),
-                  "Экономика RTX 5070 Ti: "+("условная оценка "+str(p["economics"]["expected_coin_day"])+" монет/сут" if isinstance((p.get("economics") or {}).get("expected_coin_day"),(float,int)) else "нет измеренного хешрейта/сетевых данных"),
+                  "Экономика GPU-рига GTX 10xx / RTX 20xx–50xx: "+("условная оценка "+str(p["economics"]["expected_coin_day"])+" монет/сут" if isinstance((p.get("economics") or {}).get("expected_coin_day"),(float,int)) else "нет измеренного хешрейта/сетевых данных"),
                   "Чистая прибыль: не подтверждена (нет достоверной цены продажи)",
                   "Mainnet: "+(p["launch_claim"][:16].replace("T"," ")+" UTC (заявлено)" if p["launch_claim"] else "не подтверждён"),
                   p["url"] or "Адрес не получен",""]
