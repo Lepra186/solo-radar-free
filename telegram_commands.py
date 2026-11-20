@@ -48,7 +48,8 @@ def _history_candidates(state, limit=5):
             url = ""  # Historical GitHub numeric ID cannot be turned into a valid repo URL.
         else:
             url = ""
-        found.append((a["score"], str(item.get("seen") or ""), title, url))
+        url = str(item.get("url") or url)
+        found.append((a["score"], str(item.get("seen") or ""), title, url, item.get("links") or {}))
     found.sort(key=lambda x: (x[0], x[1]), reverse=True)
     return found[:limit]
 
@@ -83,10 +84,12 @@ def digest(results, now, state=None):
         if historical:
             lines += ["", "📂 На наблюдении — записи из предыдущих сканирований:",
                       "Не являются свежими анонсами и не означают работающий майнинг."]
-            for index, (points, seen_at, title, url) in enumerate(historical, 1):
+            for index, (points, seen_at, title, url, links) in enumerate(historical, 1):
                 lines.append(f"{index}. {title[:135]}")
                 if url:
                     lines.append(url)
+                if format_links(links):
+                    lines.append(format_links(links))
         else:
             lines.append("Исторических GPU PoW-кандидатов тоже не найдено.")
     lines += ["", "⚠️ Время mainnet, premine, ликвидность и поддержка GPU требуют проверки.",
