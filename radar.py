@@ -3,7 +3,7 @@
 import os, re, json, html, urllib.request
 from html.parser import HTMLParser
 from pathlib import Path
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 
 BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
 CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "").strip()
@@ -112,11 +112,12 @@ def main():
     # GitHub commits are NOT evidence of a mainnet launch.
     try:
         from urllib.parse import quote
-        query = quote('"proof of work" cryptocurrency pushed:>2026-11-01', safe='')
+        since = (datetime.now(timezone.utc) - timedelta(days=10)).date().isoformat()
+        query = quote(f'"proof of work" cryptocurrency pushed:>{since}', safe='')
         data = json.loads(request("https://api.github.com/search/repositories?q=" + query + "&sort=updated&order=desc&per_page=30"))
         for item in data.get("items", []):
             name = item.get("full_name", "")
-            desc = (item.get("description") or "").replace("\\n", " ")
+            desc = (item.get("description") or "").replace("\n", " ")
             if name:
                 found["gh-" + str(item["id"])] = "[GitHub] " + name + " — " + desc[:110]
         good += 1
@@ -138,11 +139,11 @@ def main():
                 else:
                     url = "https://github.com/" + title.split(" — ", 1)[0].replace("[GitHub] ", "")
                 send(
-                    "🔎 НОВЫЙ PoW-КАНДИДАТ — НЕ ПРОВЕРЕН\\n\\n"
-                    + title + "\\n"
-                    + "Оценка заголовка: " + str(points) + " (не прогноз прибыли).\\n\\n"
+                    "🔎 НОВЫЙ PoW-КАНДИДАТ — НЕ ПРОВЕРЕН\n\n"
+                    + title + "\n"
+                    + "Оценка заголовка: " + str(points) + " (не прогноз прибыли).\n\n"
                     + "⚠️ Не подтверждены время mainnet, GPU/SOLO, premine, сложность и возможность продажи. "
-                    + "Наличие репозитория не означает запуск монеты.\\n"
+                    + "Наличие репозитория не означает запуск монеты.\n"
                     + url
                 )
     else:
