@@ -279,6 +279,8 @@ export function renderMenu(view, state = {}, now = new Date()) {
         "🧪 Активность сети по внешним данным: "+
             Number(state?.mining_readiness_counts?.activity_reported||0),
         "📈 Рост высоты между снимками: "+Number(state?.mining_readiness_counts?.height_advanced||0),
+        "📡 Сетевые снимки: "+Number(state?.chain_progress_stats?.eligible||0)+
+          " доступно для сравнения",
         "💶 Расчёты добычи: "+Number(state?.mining_economics_counts?.conditional_estimate||0)+
            " с проверенными входными данными",
         "👥 Discord: "+(state?.discord_status?.status==="active"?
@@ -286,6 +288,9 @@ export function renderMenu(view, state = {}, now = new Date()) {
           "ожидает подключения"),
         "⛏ Mining Scan: "+(state?.mining_scan_status?.available?
           "данные пулов получены":"нет свежих данных"),
+        "🗣️ Разборы Bitcointalk: "+Number(state?.bitcointalk_thread_status?.threads_parsed||0)+
+          " сообщений тем прочитано; "+Number(state?.bitcointalk_thread_status?.threads_with_warnings||0)+
+          " тем с предупреждениями",
         "🏊 Пулы по монетам: "+(state?.pool_validation_status?.coin_matches||0)+
            (state?.pool_directory?.status==="source_unavailable"?" (каталог недоступен/устарел)":""),
         "🌐 CoinCalculators: "+(state?.coin_calculators?.status==="endpoint_gone"?
