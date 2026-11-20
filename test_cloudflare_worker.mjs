@@ -81,3 +81,34 @@ test("reject unknown callback without disclosure",async()=>{
       body:JSON.stringify({callback_query:{message:{chat:{id:123},message_id:5},data:"admin:secret"}})});
   assert.equal((await worker.fetch(req,env)).status,200);
 });
+
+test("source tabs exist for all connected services",()=>{
+  const menu=renderMenu("home",state,now);
+  for (const key of ["tg","gh","btt","pool","rss","dc"]) {
+    assert.ok(menu.reply_markup.inline_keyboard.flat().some(x=>x.callback_data==="source:"+key+":0"),key);
+  }
+});
+test("source browser includes github and telegram records regardless of candidate score",()=>{
+  const s={topics:{
+    "gh:99":{title:"Example cryptocurrency repository",seen:"2026-11-20T04:00:00Z",
+      source:"GitHub — repository",url:"https://github.com/example/coin"},
+    "tg:miningrelease:301":{title:"Coin Name NewCoin Algo: KawPow",seen:"2026-11-20T05:00:00Z",
+      url:"https://t.me/miningrelease/301",links:{discord:"https://discord.gg/mycoin",pool:"https://pool.example.org"}},
+    "btt:222":{title:"[ANN] GPU Mining PoW",seen:"2026-11-20T05:00:00Z"}
+  }};
+  const gh=renderMenu("source:gh:0",s,now);
+  const tg=renderMenu("source:tg:0",s,now);
+  assert.match(gh.text,/1 • Страница/);
+  assert.equal(gh.reply_markup.inline_keyboard[0][0].callback_data,"entry:gh:0:0");
+  assert.equal(tg.reply_markup.inline_keyboard[0][0].callback_data,"entry:tg:0:0");
+  const detail=renderMenu("entry:tg:0:0",s,now);
+  assert.ok(detail.reply_markup.inline_keyboard.flat().some(x=>x.url==="https://discord.gg/mycoin"));
+  assert.ok(detail.reply_markup.inline_keyboard.flat().some(x=>x.url==="https://pool.example.org/"));
+});
+test("pool news are identified as publications, not coins",()=>{
+  const s={topics:{"pool:2026-11-20:0":{
+    title:"GPU Mining newest pool update",body:"GPU Mining newest pool update",
+    url:"https://pool-pay.com",seen:"2026-11-20T05:00:00Z",kind:"news"}}};
+  assert.equal(candidatesFromState(s).length,0);
+  assert.equal(renderMenu("source:pool:0",s,now).reply_markup.inline_keyboard[0][0].callback_data,"entry:pool:0:0");
+});
