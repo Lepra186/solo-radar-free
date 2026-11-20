@@ -41,6 +41,10 @@ def parse_directory(payload):
           "pools":raw.get("pool_count"),
           "blocks_48h":raw.get("blocks_48h"),
           "last_block_at":raw.get("last_block_at"),
+          "network_hashrate":raw.get("network_hashrate"),
+          "network_hashrate_unit":raw.get("network_hashrate_unit"),
+          "total_miners":raw.get("total_miners"),
+          "asset_key":str(raw.get("asset_key") or "")[:100],
           "slug":str(raw.get("slug") or "")[:100]
         })
     return {"checked_at":meta.get("generated_at"),"stale":False,
@@ -64,6 +68,9 @@ def matches_for(topics,listing):
                         "algorithm":coin["algorithm"],"pools_reported":coin["pools"],
                         "blocks_48h_reported":coin["blocks_48h"],
                         "last_block_at":coin["last_block_at"],
+                        "network_hashrate_reported":coin.get("network_hashrate"),
+                        "network_hashrate_unit":coin.get("network_hashrate_unit"),
+                        "total_miners_reported":coin.get("total_miners"),
                         "note":"Каталог пулов, не независимая проверка mainnet или выплат"}
             break
     return found
