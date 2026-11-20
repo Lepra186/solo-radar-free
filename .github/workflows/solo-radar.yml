@@ -1,0 +1,37 @@
+name: SOLO Radar — Telegram
+on:
+  schedule:
+    - cron: '7,22,37,52 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: solo-radar-scan
+  cancel-in-progress: false
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check announcements and notify Telegram
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python radar.py
+      - name: Remember seen announcements
+        run: |
+          if [ -f data/state.json ]; then
+            git config user.name 'solo-radar-bot'
+            git config user.email 'solo-radar-bot@users.noreply.github.com'
+            git add data/state.json
+            if ! git diff --cached --quiet; then
+              git commit -m 'chore: update scan state [skip ci]'
+              git push
+            fi
+          fi
