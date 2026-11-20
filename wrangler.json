@@ -1,0 +1,6 @@
+{
+  "name": "solo-radar-telegram",
+  "main": "cloudflare-worker.mjs",
+  "compatibility_date": "2026-11-20",
+  "workers_dev": true
+}
