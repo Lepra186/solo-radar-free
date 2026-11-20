@@ -83,7 +83,7 @@ function potentialCoin(key,item) {
   if(/\b(cpu[- ]only|randomx|yespower|asic[- ]only|sha[- ]?256d?|scrypt)\b/i.test(content)&&!algo) return false;
   const gpu=algo||/\b(gpu[- ]?mineable|gpu[- ]?mining|gpu[- ]?pow|gpu[- ]?friendly|gpu[- ]?coin|gpu[- ]?mined|gpu[- ]?based|gpu[- ]?and[- ]?cpu|graphics cards?)\b/i.test(content);
   const pow=/\b(proof[- ]of[- ]work|pow|mineable|block reward|gpu mining)\b/i.test(content)||algo;
-  return Boolean(gpu&&pow&&standaloneCoin);
+  return Boolean(gpu&&pow&&(standaloneCoin||(announced&&algo)));
 }
 export function sourceEntries(state, group) {
   return Object.entries(state?.topics || {})
