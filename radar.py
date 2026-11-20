@@ -248,7 +248,7 @@ def main():
             elif any(name in item["body"].lower() for name in PREVIOUSLY_REPORTED):
                 reason = "already discussed project"
             elif not tier:
-                reason = "no combined GPU/PoW and launch-or-SOLO evidence"
+                reason = "no enough GPU/PoW and launch, pool or SOLO evidence"
             print("Candidate review:", item["source"], "| score:", points,
                   "|", "rejected: " + reason if reason else "alert: " + tier,
                   "|", item["url"])
@@ -256,6 +256,7 @@ def main():
                 continue
             notify(
                 ("🚀 РАННИЙ GPU PoW-КАНДИДАТ — НЕ ПРОВЕРЕН" if tier == "EARLY" else
+                 "🪙 ПУЛ / НАКОПЛЕНИЕ — КАНДИДАТ, НЕ ПРОВЕРЕН" if tier == "HOLD" else
                  "🔎 GPU PoW-КАНДИДАТ — НЕ ПРОВЕРЕН") + "\n\n"
                 + item["title"][:160] + "\n"
                 + "Источник: " + item["source"] + "\n"
