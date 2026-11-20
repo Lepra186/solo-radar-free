@@ -29,6 +29,7 @@ from bitcointalk_threads import enrich as enrich_btt_threads
 from github_releases_source import check_releases
 from network_evidence import update as update_network_evidence
 from chain_progress import reconcile as reconcile_chain_progress
+from explorer_source import verify as verify_public_explorers
 from discord_sources import fetch_channels as scan_discord
 from mining_scan_source import refresh as refresh_mining_scan, matches_for
 from pool_validation import update as update_pool_directory, match_pools, stratum_by_coin, parsed as parse_pool_time
@@ -359,6 +360,9 @@ def main():
                          "gpu_support_evidence": old.get("gpu_support_evidence") or [],
                          "gpu_support_checked_at": old.get("gpu_support_checked_at"),
                          "thread_evidence": old.get("thread_evidence") or {},
+                         "explorer_origin": old.get("explorer_origin") or {},
+                         "explorer_evidence": old.get("explorer_evidence") or {},
+                         "explorer_checked_at": old.get("explorer_checked_at"),
                          "coin_class": classify(key, item)[0],
                          "coin_reason": classify(key, item)[1]}
         if len(seen) > 6000:
@@ -443,6 +447,10 @@ def main():
         "updated_this_run":backpow_updated,
         "source":"BackPoW"}
     print("Network evidence:",state["network_evidence_status"])
+
+    explorer_stats=verify_public_explorers(fetch,seen,state,NOW)
+    state["public_explorer_status"]=explorer_stats
+    print("Public Blockscout explorer:",explorer_stats)
 
     # Two or more canonical network height snapshots are needed to report
     # chain progression; a single last-block claim is insufficient.
