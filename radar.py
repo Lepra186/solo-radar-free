@@ -207,6 +207,46 @@ def main():
         except Exception as exc:
             print("Pool operator source unavailable:", type(exc).__name__)
 
+    # Optional Discord integration. Requires a bot invited to each selected
+    # channel with View Channel, Read Message History and message content access.
+    discord_token = os.getenv("DISCORD_BOT_TOKEN", "").strip()
+    discord_channels = [v.strip() for v in os.getenv("DISCORD_CHANNEL_IDS", "").split(",") if v.strip()]
+    if discord_token and discord_channels:
+        for channel in discord_channels[:10]:
+            if not channel.isdigit():
+                print("Discord invalid channel ID (must be numeric)")
+                continue
+            try:
+                req = urllib.request.Request(
+                    f"https://discord.com/api/v10/channels/{channel}/messages?limit=30",
+                    headers={"Authorization": "Bot " + discord_token,
+                             "User-Agent": "SOLO-Radar/1.2"})
+                with urllib.request.urlopen(req, timeout=20) as res:
+                    messages = json.load(res)
+                count = 0
+                for msg in messages:
+                    published = ts(msg.get("timestamp"))
+                    if not published or not timedelta(0) <= NOW - published <= timedelta(days=7):
+                        continue
+                    contents = [msg.get("content") or ""]
+                    for embed in msg.get("embeds", [])[:3]:
+                        contents.extend((embed.get("title") or "", embed.get("description") or ""))
+                    body = " ".join(contents).strip()[:1500]
+                    if len(body) < 15:
+                        continue
+                    results["dc:" + channel + ":" + msg["id"]] = {
+                        "title": body[:160], "body": body,
+                        "url": f"https://discord.com/channels/{msg.get('guild_id', '@me')}/{channel}/{msg['id']}",
+                        "source": "Discord — сообщение выбранного канала",
+                        "date": published.isoformat(), "kind": "announcement"}
+                    count += 1
+                ok += 1
+                print("Discord channel available:", channel, "messages:", count)
+            except Exception as exc:
+                print("Discord channel unavailable:", channel, type(exc).__name__)
+    else:
+        print("Discord not configured; optional DISCORD_BOT_TOKEN and DISCORD_CHANNEL_IDS")
+
     if ok == 0:
         print("All discovery sources unavailable; no state baseline change")
         # Still write connection state so greeting isn't repeated.
