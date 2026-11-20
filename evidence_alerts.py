@@ -16,28 +16,40 @@ def evidence_id(item):
         str(net.get("last_block_height") or "")]
     progress=item.get("chain_progress") or {}
     parts.extend([str(progress.get("coin_id") or ""),str(progress.get("last_height") or "")])
+    rpc=item.get("rpc_evidence") or {}
+    parts.extend([str(rpc.get("chain_id") or ""),str(rpc.get("last_block_height") or "")])
     return "|".join(parts)
 
 def transitions(topics,previous,now,max_messages=2):
     known=dict(previous) if isinstance(previous,dict) else {}
     notices=[]
+    observed_groups=set()
     for key,item in topics.items():
         if not isinstance(item,dict) or not is_coin(key,item):continue
         verdict=item.get("mining_readiness") or {}
         current=str(verdict.get("stage") or "announcement_only")
-        marker=evidence_id(item) if current in ("activity_reported","height_advanced") else ""
+        marker=evidence_id(item) if current in ("activity_reported","height_advanced","rpc_height_advanced") else ""
+        # One RPC growth notification per network, not one per reposted ANN.
+        rpc=item.get("rpc_evidence") or {}
+        if current=="rpc_height_advanced" and isinstance(rpc.get("chain_id"),int):
+            marker="rpc-chain-"+str(rpc["chain_id"])
+        group=("rpc",str(rpc.get("chain_id"))) if current=="rpc_height_advanced" and rpc.get("chain_id") else ("record",key)
         old=known.get(key)
         # Initial scan is a baseline, not a claimed new on-chain event.
-        if isinstance(old,dict) and current in ("activity_reported","height_advanced") and marker:
+        if isinstance(old,dict) and current in ("activity_reported","height_advanced","rpc_height_advanced") and marker:
             prior=str(old.get("last_stage") or "")
             announced=str(old.get("last_alert_marker") or "")
-            is_upgrade=(current=="height_advanced" and prior!="height_advanced") or (
-                current=="activity_reported" and prior not in ("activity_reported","height_advanced"))
-            if is_upgrade and marker!=announced and len(notices)<max_messages:
+            is_upgrade=(current=="rpc_height_advanced" and prior!="rpc_height_advanced") or (
+                current=="height_advanced" and prior!="height_advanced") or (
+                current=="activity_reported" and prior not in
+                   ("activity_reported","height_advanced","rpc_height_advanced"))
+            if is_upgrade and marker!=announced and group not in observed_groups and len(notices)<max_messages:
+                observed_groups.add(group)
                 evidence=verdict.get("evidence") or []
                 note=("🧪 SOLO RADAR • ИЗМЕНИЛАСЬ АКТИВНОСТЬ\n\n"+
                     str(item.get("title") or "GPU PoW монета")[:150]+"\n"+
-                    "Источник данных: "+str((item.get("chain_progress") or {}).get("source")
+                    "Источник данных: "+str((item.get("rpc_progress") or {}).get("source")
+                        or (item.get("chain_progress") or {}).get("source")
                         or (item.get("pool_evidence") or {}).get("source")
                         or (item.get("network_evidence") or {}).get("source") or "не уточнён")+"\n"+
                     "Сообщается: "+("; ".join(str(x)[:130] for x in evidence[:3]) or
