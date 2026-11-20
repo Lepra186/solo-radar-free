@@ -10,7 +10,7 @@ on:
       - 'project_links.py'
       - 'test_project_links.py'
       - 'telegram_commands.py'
-      - 'test_telegram_commands.py test_project_links.py'
+      - 'test_telegram_commands.py'
       - 'telegram_sources.py'
       - 'gpu_assessment.py'
       - 'solo_intel.py'
@@ -35,7 +35,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Test announcement parser
-        run: python -m unittest -v test_telegram_sources.py test_gpu_assessment.py test_solo_intel.py test_telegram_commands.py
+        run: python -m unittest -v test_telegram_sources.py test_gpu_assessment.py test_solo_intel.py test_telegram_commands.py test_project_links.py
       - name: Check announcements and notify Telegram
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
