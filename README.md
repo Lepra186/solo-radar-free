@@ -73,3 +73,19 @@ SOLO **не обязателен**. SOLO Radar отдельно сообщает
 ## Второй пользователь Telegram
 
 Бот поддерживает несколько **разрешённых** личных чатов. Существующий `TELEGRAM_CHAT_ID` сохраняется без изменения. Новый человек открывает https://t.me/solo_radar_hunter_bot и нажимает `Start`; затем узнаёт свой **числовой** Telegram Chat ID (например, у @userinfobot) и передаёт его владельцу. Владелец добавляет в GitHub → Settings → Secrets and variables → Actions секрет `TELEGRAM_EXTRA_CHAT_IDS` со значением этого ID. Для нескольких новых людей вводят ID через запятую. Не нужно заменять исходный `TELEGRAM_CHAT_ID` и нельзя публиковать токен Telegram-бота. Новые пользователи получают те же уведомления и могут вызывать `/start`, `/latest`, `/status` и `/help` после ближайшего запуска Actions. Если человек не запускал диалог с ботом, Telegram не разрешит отправку сообщений. Неавторизованные ID игнорируются.
+
+## Убрать задержки ответов /start: бесплатный Telegram webhook (Cloudflare Workers)
+
+GitHub Actions может задерживать `schedule` на десятки минут; время ответов команд нельзя гарантировать при опросе `getUpdates` только через Actions. Поэтому создан отдельный `cloudflare-worker.mjs`: он отвечает на `/start`, `/latest`, `/status` и `/help` по webhook почти сразу. История монет берётся из **последнего** публичного `data/state.json` данного репозитория: скорость ответов и свежесть информации — разные вещи.
+
+### Первоначальное подключение (однократно)
+
+1. Создать бесплатный аккаунт на https://dash.cloudflare.com/ → **Workers & Pages** → **Create Worker** → открыть редактор Worker. Вставить **весь** код из файла `cloudflare-worker.mjs` и нажать Deploy. Полученный URL будет иметь вид `https://имя.workers.dev`.
+2. В Cloudflare Worker → **Settings → Variables and Secrets** создать **секреты** (не обычные публичные переменные): `TELEGRAM_BOT_TOKEN` (существующий токен BotFather), `TELEGRAM_CHAT_ID` (цифровой ID владельца), `TELEGRAM_WEBHOOK_SECRET` (самостоятельно придуманная случайная строка из латинских букв/цифр, `_` и `-`, 24+ символа). Дополнительно `TELEGRAM_EXTRA_CHAT_IDS` (цифровые ID через запятую, если нужны). Никогда не вставлять секреты в исходный код.
+3. В GitHub → **Settings → Secrets and variables → Actions** добавить ещё два репозиторных секрета: `TELEGRAM_WEBHOOK_URL` = полный `https://имя.workers.dev/webhook`, и `TELEGRAM_WEBHOOK_SECRET` = **точно та же** секретная строка из Cloudflare. Существующий `TELEGRAM_BOT_TOKEN` уже настроен, его не менять.
+4. В GitHub → **Actions → Activate instant Telegram replies → Run workflow** выполнить регистрацию webhook с Telegram. В журнале должна появиться строка `Telegram webhook configured successfully`.
+5. Проверить `https://имя.workers.dev/health` в браузере: ответ `SOLO Radar webhook online`. Написать `/status` в Telegram: ответ теперь приходит без ожидания следующего GitHub-сканирования.
+
+После подключения GitHub Actions **автоматически перестаёт вызывать `getUpdates`**, если определён секрет `TELEGRAM_WEBHOOK_URL`; поиск монет и рассылка продолжаются по GitHub Actions. Webhook принимает только Telegram-события с правильным секретным заголовком и отвечает только на числовые Chat ID из списка разрешённых.
+
+Важно: не активировать webhook до развёртывания Worker с нужными секретами. После активации бот отвечает из последнего сохранённого снимка — в нём могут быть старые анонсы, что будет явно видно по времени последней проверки. Работа Cloudflare Workers Free и GitHub Actions зависит от их доступности и лимитов.
