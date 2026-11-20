@@ -26,6 +26,7 @@ def measure(item,now):
     if isinstance(h,bool) or not isinstance(h,int) or h<=0:return None
     if not checked or not block_time or not timedelta(0)<=now-checked<timedelta(hours=6):return None
     if not timedelta(0)<=now-block_time<timedelta(hours=48):return None
+    if block_time>checked+timedelta(minutes=5):return None
     return {"source":domain,"height":h,"observed_at":checked.isoformat(timespec="seconds"),
             "block_time":block_time.isoformat(timespec="seconds")}
 
@@ -51,6 +52,13 @@ def update(topics,history,now):
         if not MIN_GAP<=delta<=MAX_GAP or new["height"]<old_height:
             continue
         if new["height"]==old_height:
+            counts["stalled"]+=1
+            continue
+        # Index catch-up or a misleading index height is not evidence of
+        # newly produced blocks unless the explorer's block timestamp advances.
+        old_block_time=as_time(old.get("block_time"))
+        new_block_time=as_time(new.get("block_time"))
+        if not old_block_time or not new_block_time or new_block_time<=old_block_time:
             counts["stalled"]+=1
             continue
         counts["increased"]+=1
