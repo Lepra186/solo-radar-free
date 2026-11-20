@@ -40,7 +40,9 @@ try:
         "https://api.telegram.org/bot" + os.environ["TELEGRAM_BOT_TOKEN"] + "/getWebhookInfo",
         headers={"User-Agent": "SOLO-Radar-Setup"})
     with urllib.request.urlopen(req, timeout=20) as response:
-        current = json.load(response).get("result", {}).get("url", "")
+        info = json.load(response).get("result", {})
+        current = info.get("url", "")
+        current_updates = info.get("allowed_updates") or []
     if current == url and "callback_query" in current_updates:
         print("Webhook already active with callback_query updates")
         sys.exit(0)
