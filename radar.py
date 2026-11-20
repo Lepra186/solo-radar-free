@@ -18,6 +18,7 @@ from telegram_commands import process_commands
 from project_links import from_text, format_links
 from telegram_recipients import parse_recipients
 from project_facts import get_facts
+from research_agent import analyze, report
 
 TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
 CHAT = os.getenv("TELEGRAM_CHAT_ID", "").strip()
@@ -385,6 +386,29 @@ def main():
                          "repo_updated": item.get("repo_updated") or old.get("repo_updated")}
         if len(seen) > 6000:
             seen = dict(sorted(seen.items(), key=lambda x: x[1]["seen"], reverse=True)[:6000])
+    # Autonomous watchlist evaluation runs on EVERY scan; summary messages are
+    # rate-limited to at most once every six hours, not once per cron tick.
+    shortlist = analyze(seen, NOW, limit=8)
+    previous_report = ts(state.get("agent_last_digest"))
+    state["agent"] = {
+        "updated_at": stamp,
+        "total_scanned": len(seen),
+        "items": shortlist,
+        "engine": "rule_based_v1",
+        "disclaimer": "GPU evidence and project claims only; no verified network or market data",
+    }
+    strong = [entry for entry in shortlist if entry["score"] >= 6]
+    if strong and (not previous_report or NOW - previous_report >= timedelta(hours=6)):
+        try:
+            notify(report(strong, NOW, max_items=3))
+            state["agent_last_digest"] = stamp
+            print("Research agent: digest delivered; viable watchlist:", len(strong))
+        except Exception as exc:
+            print("Research agent: digest not delivered:", type(exc).__name__)
+    else:
+        print("Research agent: analyzed", len(seen), "records, candidates:", len(shortlist),
+              "digest skipped (no qualifying projects or cooldown)")
+
     state["last_scan"] = stamp
     STATE.parent.mkdir(parents=True, exist_ok=True)
     STATE.write_text(json.dumps(state, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
