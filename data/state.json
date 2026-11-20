@@ -342,8 +342,8 @@
         }
       ],
       "mining_readiness": {
-        "stage": "announcement_only",
-        "label": "Только анонс или код проекта",
+        "stage": "rpc_head_reported",
+        "label": "Публичный RPC вернул свежий блок и правильный Chain ID",
         "evidence": [
           "Публичный RPC вернул блок 37066 (Chain ID проверен)",
           "Есть свежий релиз проекта на GitHub"
@@ -3985,8 +3985,8 @@
         "note": "Каталог пулов, не независимая проверка mainnet или выплат"
       },
       "mining_readiness": {
-        "stage": "activity_reported",
-        "label": "Есть сообщения об активности сети",
+        "stage": "rpc_head_reported",
+        "label": "Публичный RPC вернул свежий блок и правильный Chain ID",
         "evidence": [
           "Пулы в каталоге Mining Scan: 2",
           "В каталоге есть недавняя отметка найденного блока",
@@ -8207,8 +8207,8 @@
       "coin_class": "coin_candidate",
       "coin_reason": "gpu_pow_coin_claim",
       "mining_readiness": {
-        "stage": "announcement_only",
-        "label": "Только анонс или код проекта",
+        "stage": "rpc_head_reported",
+        "label": "Публичный RPC вернул свежий блок и правильный Chain ID",
         "evidence": [
           "Публичный RPC вернул блок 37066 (Chain ID проверен)"
         ],
@@ -10325,8 +10325,8 @@
       "coin_class": "coin_candidate",
       "coin_reason": "gpu_pow_coin_claim",
       "mining_readiness": {
-        "stage": "announcement_only",
-        "label": "Только анонс или код проекта",
+        "stage": "rpc_head_reported",
+        "label": "Публичный RPC вернул свежий блок и правильный Chain ID",
         "evidence": [
           "Публичный RPC вернул блок 37066 (Chain ID проверен)"
         ],
@@ -11475,7 +11475,7 @@
         "title": "[ANN] NEX Chain (NEXC) | Ethash PoW | GPU & CPU | Free Solo Miner | EVM + DEX",
         "url": "https://bitcointalk.org/index.php?topic=5599371.0",
         "source": "Bitcointalk",
-        "score": 6,
+        "score": 5,
         "status": "НАБЛЮДАТЬ",
         "published": null,
         "launch_claim": null,
@@ -11488,7 +11488,6 @@
         "unknown": [
           "дата публикации/создания не установлена либо старая",
           "нет проверенной даты mainnet",
-          "активность сообщена внешним каталогом, не собственной нодой",
           "не проверены блоки сети, награда, premine и сложность",
           "не проверены биржи, объёмы и возможность продажи"
         ]
@@ -12221,8 +12220,8 @@
   },
   "mining_readiness_counts": {
     "excluded": 132,
-    "announcement_only": 4,
-    "activity_reported": 1
+    "rpc_head_reported": 4,
+    "announcement_only": 1
   },
   "mining_economics_counts": {
     "excluded": 132,
@@ -12249,17 +12248,17 @@
   },
   "evidence_history": {
     "gh-1457186269": {
-      "last_stage": "announcement_only",
+      "last_stage": "rpc_head_reported",
       "last_alert_marker": "",
       "checked_at": "2026-11-20T10:47:23+00:00"
     },
     "btt:5599371": {
-      "last_stage": "activity_reported",
+      "last_stage": "rpc_head_reported",
       "last_alert_marker": "",
       "checked_at": "2026-11-20T10:47:23+00:00"
     },
     "btt:5600215": {
-      "last_stage": "announcement_only",
+      "last_stage": "rpc_head_reported",
       "last_alert_marker": "",
       "checked_at": "2026-11-20T10:47:23+00:00"
     },
@@ -12269,7 +12268,7 @@
       "checked_at": "2026-11-20T10:47:23+00:00"
     },
     "gh:1457186269": {
-      "last_stage": "announcement_only",
+      "last_stage": "rpc_head_reported",
       "last_alert_marker": "",
       "checked_at": "2026-11-20T10:47:23+00:00"
     }
