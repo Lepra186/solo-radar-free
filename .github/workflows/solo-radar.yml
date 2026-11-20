@@ -7,6 +7,8 @@ on:
     branches: [main]
     paths:
       - 'radar.py'
+      - 'project_facts.py'
+      - 'test_project_facts.py'
       - 'cloudflare-worker.mjs'
       - 'test_cloudflare_worker.mjs'
       - 'configure_webhook.py'
@@ -42,7 +44,7 @@ jobs:
       - name: Test instant webhook
         run: node --test test_cloudflare_worker.mjs
       - name: Test announcement parser
-        run: python -m unittest -v test_telegram_sources.py test_gpu_assessment.py test_solo_intel.py test_telegram_commands.py test_project_links.py test_telegram_recipients.py
+        run: python -m unittest -v test_telegram_sources.py test_gpu_assessment.py test_solo_intel.py test_telegram_commands.py test_project_links.py test_telegram_recipients.py test_project_facts.py
       - name: Check announcements and notify Telegram
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
