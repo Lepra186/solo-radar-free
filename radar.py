@@ -19,6 +19,8 @@ from project_links import from_text, format_links
 from telegram_recipients import parse_recipients
 from project_facts import get_facts
 from research_agent import analyze, report
+from github_discovery import gather as discover_github, refresh_tracked
+from project_watch import reconcile
 
 TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
 CHAT = os.getenv("TELEGRAM_CHAT_ID", "").strip()
@@ -126,29 +128,11 @@ def main():
     results = {}
     ok = 0
 
-    # GitHub: newly created repos only. An update is not mainnet evidence.
-    try:
-        since = (NOW - timedelta(days=7)).date().isoformat()
-        q = quote(f'cryptocurrency proof of work created:>{since}')
-        data = json.loads(fetch("https://api.github.com/search/repositories?q=" + q
-                                + "&sort=created&order=desc&per_page=50"))
-        for item in data.get("items", []):
-            name = item.get("full_name", "")
-            created = ts(item.get("created_at"))
-            if not name or not created or NOW - created > timedelta(days=7):
-                continue
-            description = (item.get("description") or "")[:350]
-            results["gh:" + str(item["id"])] = {
-                "title": name, "body": f"{name} {description}",
-                "url": item.get("html_url") or "https://github.com/" + name,
-                "source": "GitHub — новый репозиторий, НЕ запуск сети",
-                "date": created.isoformat(), "kind": "repository",
-                "repo_created": item.get("created_at"),
-                "repo_updated": item.get("pushed_at") or item.get("updated_at") }
-        ok += 1
-        print("GitHub source OK:", len(results))
-    except Exception as exc:
-        print("GitHub source unavailable:", repr(exc)[:140])
+    # Multiple bounded GitHub searches. Creation ≠ launch; do not star/watch repositories.
+    github_results, github_ok = discover_github(fetch, NOW)
+    results.update(github_results)
+    ok += github_ok
+    print("GitHub discovery: sources:", github_ok, "repos:", len(github_results))
 
     # Bitcointalk: these pages are frequently blocked to scheduled cloud workers.
     for url in BTT:
@@ -383,9 +367,20 @@ def main():
                              repo_updated=item.get("repo_updated") or old.get("repo_updated"),
                              kind=item.get("kind") or old.get("kind") or ""),
                          "repo_created": item.get("repo_created") or old.get("repo_created"),
-                         "repo_updated": item.get("repo_updated") or old.get("repo_updated")}
+                         "repo_updated": item.get("repo_updated") or old.get("repo_updated"),
+                         "github": item.get("github") or old.get("github") or {}}
         if len(seen) > 6000:
             seen = dict(sorted(seen.items(), key=lambda x: x[1]["seen"], reverse=True)[:6000])
+    previous_watch = state.get("tracked_projects") or {}
+    # Check selected GitHub projects for repository activity before deciding if
+    # they remain worth monitoring. No external subscriptions are created.
+    tracked_git = [k for k in previous_watch if k.startswith(("gh:","gh-"))]
+    refreshed = refresh_tracked(fetch, seen, tracked_git, NOW, limit=3)
+    tracked, changes = reconcile(seen, previous_watch, NOW)
+    state["tracked_projects"] = tracked
+    state["tracking_stats"] = {**changes, "github_rechecked":refreshed}
+    print("Project watchlist:", state["tracking_stats"])
+
     # Autonomous watchlist evaluation runs on EVERY scan; summary messages are
     # rate-limited to at most once every six hours, not once per cron tick.
     shortlist = analyze(seen, NOW, limit=8)
