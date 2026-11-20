@@ -27,7 +27,8 @@ def candidates(state, now):
     return [{"key":x["key"],"title":x["title"][:145],"source":x["source"],
              "publication_or_creation":x["published"],"claimed_mainnet":x["launch_claim"],
              "algorithm":x["algorithm"],"score":x["score"],"reasons":x["reasons"][:3],
-             "unknown":x["unknown"][:3],"url":x["url"]} for x in entries]
+             "unknown":x["unknown"][:3],"url":x["url"],
+             "mining_readiness":(state.get("topics") or {}).get(x["key"],{}).get("mining_readiness",{})} for x in entries]
 
 def api_request(items, token, model):
     payload=json.dumps({
@@ -60,6 +61,7 @@ def validate(raw,items):
             "url":src["url"],"algorithm":src["algorithm"],
             "published":src["publication_or_creation"],"launch_claim":src["claimed_mainnet"],
             "score":src["score"],
+            "mining_readiness":src.get("mining_readiness",{}),
             "rationale":str(pick.get("rationale") or "")[:220],
             "mining":str(pick.get("mining") or "")[:130],
             "risks":str(pick.get("risks") or "")[:200]})
@@ -76,7 +78,8 @@ def rules_only(items):
             "key":x["key"],"title":x["title"],"source":x["source"],
             "url":x["url"],"algorithm":x["algorithm"],
             "published":x["publication_or_creation"],"launch_claim":x["claimed_mainnet"],
-            "score":x["score"],"rationale":"; ".join(x["reasons"][:2]),
+            "score":x["score"],"mining_readiness":x.get("mining_readiness",{}),
+            "rationale":"; ".join(x["reasons"][:2]),
             "mining":"Работающий GPU-майнинг и выплаты не проверены",
             "risks":"; ".join(x["unknown"][:2])})
     return {"summary":"Автоподбор по правилам без ИИ. Только кандидаты для дальнейшего изучения.",
@@ -96,6 +99,7 @@ def message(data):
                   "Почему: "+p["rationale"][:170],
                   "Майнинг: "+p["mining"][:110],
                   "Риски: "+p["risks"][:150],
+                  "Проверка добычи: "+str((p.get("mining_readiness") or {}).get("label") or "нет свежих доказательств"),
                   "Mainnet: "+(p["launch_claim"][:16].replace("T"," ")+" UTC (заявлено)" if p["launch_claim"] else "не подтверждён"),
                   p["url"] or "Адрес не получен",""]
     lines.append("⚠️ Это не инвестиционная рекомендация и не проверка блокчейна.")
