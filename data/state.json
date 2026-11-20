@@ -33,6 +33,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "gh-1454673734": {
@@ -66,6 +71,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "gh-1259091135": {
@@ -99,6 +109,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "gh-1319606050": {
@@ -132,6 +147,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "gh-1457186269": {
@@ -190,7 +210,45 @@
           "pool": false,
           "network": false
         },
-        "checked_at": "2026-11-20T09:24+00:00"
+        "checked_at": "2026-11-20T09:28+00:00"
+      },
+      "economics": {
+        "status": "insufficient_data",
+        "expected_coin_day": null,
+        "net_eur_day": null,
+        "power_cost_eur_day": null,
+        "energy_scenarios_eur_day": [
+          {
+            "wall_power_w": 150,
+            "eur_day": 0.36
+          },
+          {
+            "wall_power_w": 200,
+            "eur_day": 0.48
+          },
+          {
+            "wall_power_w": 250,
+            "eur_day": 0.6
+          },
+          {
+            "wall_power_w": 300,
+            "eur_day": 0.72
+          }
+        ],
+        "tariff_eur_kwh": 0.1,
+        "power_scenarios_are_assumptions": true,
+        "network_fresh": false,
+        "gpu_measured": false,
+        "required": [
+          "свежие сетевые данные",
+          "хешрейт сети (H/s)",
+          "награда за блок",
+          "время блока",
+          "замер RTX 5070 Ti на этом алгоритме (HiveOS)",
+          "комиссия пула",
+          "проверенная цена продажи в EUR и ликвидность"
+        ],
+        "note": "Сценарии энергии — не измерение GPU/рига. Доходность и продажа не подтверждены."
       }
     },
     "gh-1361355156": {
@@ -224,6 +282,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "gh-1463351639": {
@@ -257,6 +320,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "gh-1370275458": {
@@ -290,6 +358,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "gh-1237325658": {
@@ -323,6 +396,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "gh-1282417166": {
@@ -356,6 +434,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "gh-1355042899": {
@@ -389,6 +472,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "gh-1448636616": {
@@ -422,6 +510,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "gh-1429546351": {
@@ -455,6 +548,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "gh-1461345643": {
@@ -488,6 +586,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "gh-1133024350": {
@@ -521,6 +624,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "gh-1458023319": {
@@ -554,6 +662,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "gh-941602165": {
@@ -587,6 +700,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "gh-1458248410": {
@@ -620,6 +738,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "gh-1459152764": {
@@ -653,6 +776,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "gh-1320069776": {
@@ -686,6 +814,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "gh-1457675396": {
@@ -719,6 +852,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "gh-1185497235": {
@@ -752,6 +890,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "gh-1402823357": {
@@ -785,6 +928,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "gh-1453732256": {
@@ -818,6 +966,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "gh:1463351639": {
@@ -852,6 +1005,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "gh:1458023319": {
@@ -886,6 +1044,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "gh:1461345643": {
@@ -920,6 +1083,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "gh:1458248410": {
@@ -954,6 +1122,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "gh:1457675396": {
@@ -988,6 +1161,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "gh:1459152764": {
@@ -1022,12 +1200,17 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "pool:2026-11-19:0": {
       "title": "PoolPayCoin now has an announcement thread on BitcoinTalk -- specs, mining instructions and the real pool-pay.com Shop utility (NFTs, AI generation, p",
       "seen": "2026-11-20T05:22:56+00:00",
-      "last_seen": "2026-11-20T09:24:21+00:00",
+      "last_seen": "2026-11-20T09:28:40+00:00",
       "url": "https://pool-pay.com/",
       "links": {},
       "body": "PoolPayCoin now has an announcement thread on BitcoinTalk -- specs, mining instructions and the real pool-pay.com Shop utility (NFTs, AI generation, pool fee-waiver pass), all in one place.",
@@ -1057,12 +1240,17 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "pool:2026-11-19:1": {
       "title": "Added a pool fee-waiver pass to the Shop at shop.pool-pay.com/subscription.html : pay with PPC or SOL (a week to a year, longer terms a bit cheaper pe",
       "seen": "2026-11-20T05:22:56+00:00",
-      "last_seen": "2026-11-20T09:24:21+00:00",
+      "last_seen": "2026-11-20T09:28:40+00:00",
       "url": "https://pool-pay.com/",
       "links": {},
       "body": "Added a pool fee-waiver pass to the Shop at shop.pool-pay.com/subscription.html : pay with PPC or SOL (a week to a year, longer terms a bit cheaper per day) and the pool fee is rebated straight back onto your balance as a bonus, automatically, every few minutes, on every coin you mine directly. Requires a free pool-pay.com account (same login as the main das",
@@ -1092,12 +1280,17 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "pool:2026-11-18:2": {
       "title": "\"pool-pay.com Critters\" is now officially listed on Magic Eden , Solana's biggest NFT marketplace -- a real collection page with its own listings, off",
       "seen": "2026-11-20T05:22:56+00:00",
-      "last_seen": "2026-11-20T09:24:21+00:00",
+      "last_seen": "2026-11-20T09:28:40+00:00",
       "url": "https://pool-pay.com/",
       "links": {},
       "body": "\"pool-pay.com Critters\" is now officially listed on Magic Eden , Solana's biggest NFT marketplace -- a real collection page with its own listings, offers and trade history, not just an unverified mint. Minting new critters is still only through shop.pool-pay.com (pay with SOL or PPC); Magic Eden is for browsing and reselling what's already minted. Link added",
@@ -1127,12 +1320,17 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "pool:2026-11-18:3": {
       "title": "Added AI generation to the Shop at shop.pool-pay.com/generate.html : buy a credit package with PPC or SOL, spend it on real Google AI generation (imag",
       "seen": "2026-11-20T05:22:56+00:00",
-      "last_seen": "2026-11-20T09:24:21+00:00",
+      "last_seen": "2026-11-20T09:28:40+00:00",
       "url": "https://pool-pay.com/",
       "links": {},
       "body": "Added AI generation to the Shop at shop.pool-pay.com/generate.html : buy a credit package with PPC or SOL, spend it on real Google AI generation (images, video, voice, music) — a redemption code is all you need, no account. Reference-image editing, a 9:16 mobile format toggle, a choice of 30 TTS voices, and a 360p/720p video resolution picker are all wired u",
@@ -1162,12 +1360,17 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "pool:2026-11-19:4": {
       "title": "У PoolPayCoin появилась тема-анонс на BitcoinTalk — характеристики, инструкция по майнингу и реальная польза от магазина pool-pay.com (NFT, AI-генерац",
       "seen": "2026-11-20T05:22:56+00:00",
-      "last_seen": "2026-11-20T09:24:21+00:00",
+      "last_seen": "2026-11-20T09:28:40+00:00",
       "url": "https://pool-pay.com/",
       "links": {},
       "body": "У PoolPayCoin появилась тема-анонс на BitcoinTalk — характеристики, инструкция по майнингу и реальная польза от магазина pool-pay.com (NFT, AI-генерация, абонемент без комиссии на пуле) в одном месте.",
@@ -1197,12 +1400,17 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "pool:2026-11-19:5": {
       "title": "В магазине появился абонемент без комиссии на пуле: shop.pool-pay.com/subscription.html . Оплата PPC или SOL (от недели до года, чем дольше срок — тем",
       "seen": "2026-11-20T05:22:56+00:00",
-      "last_seen": "2026-11-20T09:24:21+00:00",
+      "last_seen": "2026-11-20T09:28:40+00:00",
       "url": "https://pool-pay.com/",
       "links": {},
       "body": "В магазине появился абонемент без комиссии на пуле: shop.pool-pay.com/subscription.html . Оплата PPC или SOL (от недели до года, чем дольше срок — тем дешевле в пересчёте на день), комиссия пула автоматически возвращается бонусом на баланс каждые несколько минут, на любой монете, которую майните напрямую. Нужен бесплатный аккаунт pool-pay.com (тот же логин,",
@@ -1232,12 +1440,17 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "pool:2026-11-18:6": {
       "title": "«pool-pay.com Critters» теперь официально в листинге на Magic Eden — крупнейшем NFT-маркетплейсе на Solana: настоящая страница коллекции со своими лис",
       "seen": "2026-11-20T05:22:56+00:00",
-      "last_seen": "2026-11-20T09:24:21+00:00",
+      "last_seen": "2026-11-20T09:28:40+00:00",
       "url": "https://pool-pay.com/",
       "links": {},
       "body": "«pool-pay.com Critters» теперь официально в листинге на Magic Eden — крупнейшем NFT-маркетплейсе на Solana: настоящая страница коллекции со своими листингами, офферами и историей сделок, а не непроверенный минт. Минтить новых критеров всё так же можно только через shop.pool-pay.com (оплата SOL или PPC); Magic Eden — для просмотра и перепродажи уже сминченног",
@@ -1267,12 +1480,17 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "pool:2026-11-18:7": {
       "title": "Добавили AI-генерацию в магазин на shop.pool-pay.com/generate.html : покупаете пакет кредитов за PPC или SOL, тратите на настоящую генерацию через Goo",
       "seen": "2026-11-20T05:22:56+00:00",
-      "last_seen": "2026-11-20T09:24:21+00:00",
+      "last_seen": "2026-11-20T09:28:40+00:00",
       "url": "https://pool-pay.com/",
       "links": {},
       "body": "Добавили AI-генерацию в магазин на shop.pool-pay.com/generate.html : покупаете пакет кредитов за PPC или SOL, тратите на настоящую генерацию через Google AI (картинки, видео, голос, музыка) — нужен только код, аккаунт не требуется. Работают редактирование по референс-картинке, мобильный формат 9:16, выбор из 30 голосов озвучки и выбор разрешения видео (360p/",
@@ -1302,6 +1520,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "gh:1465019884": {
@@ -1336,12 +1559,17 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "tg:miningrelease:281": {
       "title": "‼️ Coin Name: Neural Engine Byte Ticker: $NEB Algo: Nebhash",
       "seen": "2026-11-20T05:27:58+00:00",
-      "last_seen": "2026-11-20T09:24:21+00:00",
+      "last_seen": "2026-11-20T09:28:40+00:00",
       "url": "https://t.me/miningrelease/281",
       "links": {
         "website": "https://neuralenginebyte.org/",
@@ -1378,6 +1606,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5500380": {
@@ -1413,6 +1646,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:718124": {
@@ -1448,6 +1686,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:2559282": {
@@ -1483,6 +1726,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:2284373": {
@@ -1518,6 +1766,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:1042324": {
@@ -1553,6 +1806,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:936724": {
@@ -1588,6 +1846,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:780979": {
@@ -1623,6 +1886,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5576596": {
@@ -1658,6 +1926,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:3015517": {
@@ -1693,6 +1966,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5599371": {
@@ -1752,7 +2030,45 @@
           "pool": true,
           "network": false
         },
-        "checked_at": "2026-11-20T09:24+00:00"
+        "checked_at": "2026-11-20T09:28+00:00"
+      },
+      "economics": {
+        "status": "insufficient_data",
+        "expected_coin_day": null,
+        "net_eur_day": null,
+        "power_cost_eur_day": null,
+        "energy_scenarios_eur_day": [
+          {
+            "wall_power_w": 150,
+            "eur_day": 0.36
+          },
+          {
+            "wall_power_w": 200,
+            "eur_day": 0.48
+          },
+          {
+            "wall_power_w": 250,
+            "eur_day": 0.6
+          },
+          {
+            "wall_power_w": 300,
+            "eur_day": 0.72
+          }
+        ],
+        "tariff_eur_kwh": 0.1,
+        "power_scenarios_are_assumptions": true,
+        "network_fresh": false,
+        "gpu_measured": false,
+        "required": [
+          "свежие сетевые данные",
+          "хешрейт сети (H/s)",
+          "награда за блок",
+          "время блока",
+          "замер RTX 5070 Ti на этом алгоритме (HiveOS)",
+          "комиссия пула",
+          "проверенная цена продажи в EUR и ликвидность"
+        ],
+        "note": "Сценарии энергии — не измерение GPU/рига. Доходность и продажа не подтверждены."
       }
     },
     "btt:5600283": {
@@ -1788,6 +2104,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5600276": {
@@ -1823,6 +2144,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5590138": {
@@ -1858,6 +2184,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:2089941": {
@@ -1893,6 +2224,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5591473": {
@@ -1928,6 +2264,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5592720": {
@@ -1963,6 +2304,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5594978": {
@@ -1998,6 +2344,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5598598": {
@@ -2033,6 +2384,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5599608": {
@@ -2068,6 +2424,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5600398": {
@@ -2103,6 +2464,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5600319": {
@@ -2138,6 +2504,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5599947": {
@@ -2173,6 +2544,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5597781": {
@@ -2208,6 +2584,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5587715": {
@@ -2243,6 +2624,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5598514": {
@@ -2278,6 +2664,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5598308": {
@@ -2313,6 +2704,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5600164": {
@@ -2348,6 +2744,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5594762": {
@@ -2383,6 +2784,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5595967": {
@@ -2418,6 +2824,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5575917": {
@@ -2453,6 +2864,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5599821": {
@@ -2488,6 +2904,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5597361": {
@@ -2523,6 +2944,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5600335": {
@@ -2558,6 +2984,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5600090": {
@@ -2593,6 +3024,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5600321": {
@@ -2628,6 +3064,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5600316": {
@@ -2663,6 +3104,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:1165615": {
@@ -2698,6 +3144,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5598593": {
@@ -2733,6 +3184,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5600075": {
@@ -2768,6 +3224,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5599717": {
@@ -2803,6 +3264,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5598979": {
@@ -2838,6 +3304,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5599778": {
@@ -2873,6 +3344,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5600277": {
@@ -2908,6 +3384,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5590832": {
@@ -2943,6 +3424,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5596438": {
@@ -2978,6 +3464,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5587095": {
@@ -3013,6 +3504,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5584502": {
@@ -3048,6 +3544,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5600266": {
@@ -3083,6 +3584,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:2169457": {
@@ -3118,6 +3624,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5599218": {
@@ -3153,6 +3664,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5597333": {
@@ -3188,6 +3704,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5487938": {
@@ -3223,6 +3744,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5573065": {
@@ -3258,6 +3784,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5537764": {
@@ -3293,6 +3824,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5591796": {
@@ -3328,6 +3864,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5594823": {
@@ -3363,6 +3904,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5596113": {
@@ -3398,6 +3944,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5600208": {
@@ -3433,6 +3984,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5588001": {
@@ -3468,6 +4024,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5600215": {
@@ -3512,7 +4073,45 @@
           "pool": false,
           "network": false
         },
-        "checked_at": "2026-11-20T09:24+00:00"
+        "checked_at": "2026-11-20T09:28+00:00"
+      },
+      "economics": {
+        "status": "insufficient_data",
+        "expected_coin_day": null,
+        "net_eur_day": null,
+        "power_cost_eur_day": null,
+        "energy_scenarios_eur_day": [
+          {
+            "wall_power_w": 150,
+            "eur_day": 0.36
+          },
+          {
+            "wall_power_w": 200,
+            "eur_day": 0.48
+          },
+          {
+            "wall_power_w": 250,
+            "eur_day": 0.6
+          },
+          {
+            "wall_power_w": 300,
+            "eur_day": 0.72
+          }
+        ],
+        "tariff_eur_kwh": 0.1,
+        "power_scenarios_are_assumptions": true,
+        "network_fresh": false,
+        "gpu_measured": false,
+        "required": [
+          "свежие сетевые данные",
+          "хешрейт сети (H/s)",
+          "награда за блок",
+          "время блока",
+          "замер RTX 5070 Ti на этом алгоритме (HiveOS)",
+          "комиссия пула",
+          "проверенная цена продажи в EUR и ликвидность"
+        ],
+        "note": "Сценарии энергии — не измерение GPU/рига. Доходность и продажа не подтверждены."
       }
     },
     "btt:5598138": {
@@ -3548,6 +4147,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5599411": {
@@ -3583,6 +4187,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:1467050": {
@@ -3618,6 +4227,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5597191": {
@@ -3653,6 +4267,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5488748": {
@@ -3688,6 +4307,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5593547": {
@@ -3723,6 +4347,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5592609": {
@@ -3767,7 +4396,45 @@
           "pool": false,
           "network": false
         },
-        "checked_at": "2026-11-20T09:24+00:00"
+        "checked_at": "2026-11-20T09:28+00:00"
+      },
+      "economics": {
+        "status": "insufficient_data",
+        "expected_coin_day": null,
+        "net_eur_day": null,
+        "power_cost_eur_day": null,
+        "energy_scenarios_eur_day": [
+          {
+            "wall_power_w": 150,
+            "eur_day": 0.36
+          },
+          {
+            "wall_power_w": 200,
+            "eur_day": 0.48
+          },
+          {
+            "wall_power_w": 250,
+            "eur_day": 0.6
+          },
+          {
+            "wall_power_w": 300,
+            "eur_day": 0.72
+          }
+        ],
+        "tariff_eur_kwh": 0.1,
+        "power_scenarios_are_assumptions": true,
+        "network_fresh": false,
+        "gpu_measured": false,
+        "required": [
+          "свежие сетевые данные",
+          "хешрейт сети (H/s)",
+          "награда за блок",
+          "время блока",
+          "замер RTX 5070 Ti на этом алгоритме (HiveOS)",
+          "комиссия пула",
+          "проверенная цена продажи в EUR и ликвидность"
+        ],
+        "note": "Сценарии энергии — не измерение GPU/рига. Доходность и продажа не подтверждены."
       }
     },
     "btt:5586152": {
@@ -3803,6 +4470,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:1563601": {
@@ -3838,6 +4510,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5600175": {
@@ -3873,6 +4550,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:47417": {
@@ -3908,6 +4590,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5597037": {
@@ -3943,6 +4630,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5599158": {
@@ -3978,6 +4670,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5488832": {
@@ -4013,6 +4710,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5575371": {
@@ -4048,6 +4750,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5598415": {
@@ -4082,6 +4789,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5592489": {
@@ -4116,6 +4828,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5578457": {
@@ -4131,6 +4848,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5598320": {
@@ -4144,6 +4866,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5600305": {
@@ -4159,6 +4886,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5593282": {
@@ -4194,6 +4926,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5575171": {
@@ -4229,6 +4966,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:1626185": {
@@ -4264,12 +5006,17 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "gh:1457287638": {
       "title": "good-mining/good-miner",
       "seen": "2026-11-20T08:17:00+00:00",
-      "last_seen": "2026-11-20T09:24:21+00:00",
+      "last_seen": "2026-11-20T09:28:40+00:00",
       "url": "https://github.com/good-mining/good-miner",
       "links": {},
       "body": "good-mining/good-miner Rust cryptocurrency miner for NVIDIA, AMD and Intel GPUs and CPUs. One binary, auto profit switching, built-in dashboard. Windows and Linux.",
@@ -4305,12 +5052,17 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "gh:1457186269": {
       "title": "Lakylife/quinvium",
       "seen": "2026-11-20T08:17:00+00:00",
-      "last_seen": "2026-11-20T09:24:21+00:00",
+      "last_seen": "2026-11-20T09:28:40+00:00",
       "url": "https://github.com/Lakylife/quinvium",
       "links": {},
       "body": "Lakylife/quinvium Quinvium (QU): a programmable proof-of-work blockchain with an EVM, GPU mining (Ethash), full node, wallet, explorer and miner.",
@@ -4355,13 +5107,51 @@
           "pool": false,
           "network": false
         },
-        "checked_at": "2026-11-20T09:24+00:00"
+        "checked_at": "2026-11-20T09:28+00:00"
+      },
+      "economics": {
+        "status": "insufficient_data",
+        "expected_coin_day": null,
+        "net_eur_day": null,
+        "power_cost_eur_day": null,
+        "energy_scenarios_eur_day": [
+          {
+            "wall_power_w": 150,
+            "eur_day": 0.36
+          },
+          {
+            "wall_power_w": 200,
+            "eur_day": 0.48
+          },
+          {
+            "wall_power_w": 250,
+            "eur_day": 0.6
+          },
+          {
+            "wall_power_w": 300,
+            "eur_day": 0.72
+          }
+        ],
+        "tariff_eur_kwh": 0.1,
+        "power_scenarios_are_assumptions": true,
+        "network_fresh": false,
+        "gpu_measured": false,
+        "required": [
+          "свежие сетевые данные",
+          "хешрейт сети (H/s)",
+          "награда за блок",
+          "время блока",
+          "замер RTX 5070 Ti на этом алгоритме (HiveOS)",
+          "комиссия пула",
+          "проверенная цена продажи в EUR и ликвидность"
+        ],
+        "note": "Сценарии энергии — не измерение GPU/рига. Доходность и продажа не подтверждены."
       }
     },
     "gh:1449663269": {
       "title": "gacanga/crypto-connection-miner",
       "seen": "2026-11-20T08:17:00+00:00",
-      "last_seen": "2026-11-20T09:24:21+00:00",
+      "last_seen": "2026-11-20T09:28:40+00:00",
       "url": "https://github.com/gacanga/crypto-connection-miner",
       "links": {},
       "body": "gacanga/crypto-connection-miner Crypto Connection Miner (formerly GostMiner): free open-source miner, no dev fee - NVIDIA GPUs for GOSTcoin, Bitmark, Daler (Ting), Ycash, NEX Chain (Ethash) and Chipcoin; Chipcoin also on the CPU, including macOS on Apple Silicon. Windows, Linux, macOS. Made for the Crypto Connection pool (crypto-connection.net).",
@@ -4397,12 +5187,17 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "gh:1455827083": {
       "title": "MrM002/NexusSwitch",
       "seen": "2026-11-20T08:17:00+00:00",
-      "last_seen": "2026-11-20T09:24:21+00:00",
+      "last_seen": "2026-11-20T09:28:40+00:00",
       "url": "https://github.com/MrM002/NexusSwitch",
       "links": {},
       "body": "MrM002/NexusSwitch ⚡ Open-Source Crypto Auto Profit-Switcher with a Self-Hosted Telegram Bot, Anti-Spike Filters & Live Profit Boost Tracking.",
@@ -4438,12 +5233,17 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "gh:1457230305": {
       "title": "kobold-dev/kobold-miner",
       "seen": "2026-11-20T08:17:00+00:00",
-      "last_seen": "2026-11-20T09:24:21+00:00",
+      "last_seen": "2026-11-20T09:28:40+00:00",
       "url": "https://github.com/kobold-dev/kobold-miner",
       "links": {},
       "body": "kobold-dev/kobold-miner NVIDIA GPU miner for Pearl (PRL), Ravencoin (RVN), Parano1d (NOID) and Quantus (QTC), CPU miner for Monero and Zephyr (RandomX). Windows, Linux, HiveOS. GPG-signed builds.",
@@ -4479,6 +5279,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5599796": {
@@ -4514,6 +5319,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5600447": {
@@ -4549,12 +5359,17 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "tg:rplant_pool_ann:300": {
       "title": "Nov 19 delist alphanumeric, cmusicai, bitmonero(BMR), kadikama, myt, zerqavon",
       "seen": "2026-11-20T08:50:53+00:00",
-      "last_seen": "2026-11-20T09:24:21+00:00",
+      "last_seen": "2026-11-20T09:28:40+00:00",
       "url": "https://t.me/rplant_pool_ann/300",
       "links": {
         "pool": "https://t.me/rplant_pool_ann"
@@ -4586,6 +5401,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5600452": {
@@ -4621,12 +5441,17 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "gh:1452657235": {
       "title": "muhammad-ahmed-ssuet/muhammad-ahmed-ssuet.github.io",
       "seen": "2026-11-20T09:14:14+00:00",
-      "last_seen": "2026-11-20T09:24:21+00:00",
+      "last_seen": "2026-11-20T09:28:40+00:00",
       "url": "https://github.com/muhammad-ahmed-ssuet/muhammad-ahmed-ssuet.github.io",
       "links": {},
       "body": "muhammad-ahmed-ssuet/muhammad-ahmed-ssuet.github.io Secure a proof-of-useful-work GPU blockchain with auditable int8 matrix-product jobs for paid AI inference and rendering.",
@@ -4662,6 +5487,11 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     },
     "btt:5596413": {
@@ -4697,15 +5527,20 @@
         "evidence": [],
         "missing": [],
         "gpu_5070ti": "не проверена"
+      },
+      "economics": {
+        "status": "excluded",
+        "expected_coin_day": null,
+        "net_eur_day": null
       }
     }
   },
-  "last_scan": "2026-11-20T09:24:21+00:00",
+  "last_scan": "2026-11-20T09:28:40+00:00",
   "telegram_update_offset": 229240560,
   "second_user_welcomed": true,
   "agent": {
-    "updated_at": "2026-11-20T09:24:21+00:00",
-    "total_scanned": 133,
+    "updated_at": "2026-11-20T09:28:40+00:00",
+    "total_scanned": 134,
     "items": [
       {
         "key": "btt:5599371",
@@ -4779,7 +5614,7 @@
       "name": "[ANN] NEX Chain (NEXC) | Ethash PoW | GPU & CPU | Free Solo Miner | EVM + DEX",
       "source": "Bitcointalk",
       "score": 5,
-      "last_reviewed": "2026-11-20T09:24:21+00:00",
+      "last_reviewed": "2026-11-20T09:28:40+00:00",
       "reason": "указан GPU-алгоритм: Ethash; упомянут SOLO",
       "status": "MONITOR"
     }
@@ -5439,7 +6274,7 @@
   },
   "github_release_status": {
     "checked": 1,
-    "projects_with_releases": 0
+    "projects_with_releases": 1
   },
   "backpow": {
     "checked_at": "2026-11-20T09:20:01+00:00",
@@ -5459,5 +6294,9 @@
     "excluded": 129,
     "announcement_only": 4,
     "activity_reported": 1
+  },
+  "mining_economics_counts": {
+    "excluded": 129,
+    "insufficient_data": 5
   }
 }
