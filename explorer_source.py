@@ -94,7 +94,7 @@ def verify(fetch,topics,state,now):
         # For source transparency, let existing copies retain the same
         # source URL only when explicitly present in that candidate's links.
         found=(item.get("links") or {}).get("explorer")
-        candidate=official_blockscout(found)
+        candidate=official_blockscout(found) or official_blockscout((item.get("explorer_origin") or {}).get("url"))
         if not candidate and stats["readmes_checked"]<MAX_READMES:
             last=date(item.get("explorer_checked_at"))
             if not last or now-last>=timedelta(days=1):
