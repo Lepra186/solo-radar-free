@@ -51,7 +51,7 @@ def classify(key,item):
         return 'insufficient','gpu_not_established'
     if not (POW.search(combined) or GPU_ALGO.search(combined)):
         return 'insufficient','pow_not_established'
-    if not COIN.search(combined):
+    if not (COIN.search(combined) or (ANN.search(title) and GPU_ALGO.search(combined) and POW.search(combined))):
         return 'insufficient','coin_identity_missing'
     # A repository creation date alone is never coin evidence.
     if is_repo and not re.search(r'\b(cryptocurrency|blockchain|coin|mainnet|full node|genesis|native currency)\b',body,re.I):
