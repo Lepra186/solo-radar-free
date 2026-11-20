@@ -121,6 +121,20 @@ def examine(key, item, now):
     elif readiness.get("stage")=="activity_reported":
         score+=1
         unknown.append("активность сообщена внешним каталогом, не собственной нодой")
+    thread=item.get("thread_evidence") or {}
+    pre=thread.get("premine_percent_claimed_by_announcement")
+    if isinstance(pre,(int,float)) and not isinstance(pre,bool) and pre>=5:
+        score=max(0,score-2)
+        unknown.append("разработчик заявляет премайн "+str(pre)+"% — оценить распределение")
+    for warning in (thread.get("discussion_warnings") or [])[:2]:
+        category=warning.get("type") if isinstance(warning,dict) else None
+        if category=="withdrawal_complaint":
+            score=max(0,score-2)
+            unknown.append("в обсуждении есть непроверенные жалобы на вывод средств")
+        elif category=="liquidity_concern":
+            unknown.append("в обсуждении упоминают недостаточную ликвидность")
+        elif category=="fraud_allegation":
+            unknown.append("в обсуждении есть обвинения; доказательства не проверены")
     if origin(key) == 'GitHub':
         score = max(0, score - 1)
         unknown.append('репозиторий сам по себе не подтверждает mainnet')
