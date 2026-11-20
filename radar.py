@@ -110,6 +110,17 @@ def main():
         notify("✅ SOLO Radar подключён. Источники: GitHub, Bitcointalk (если доступен), RSS 2Miners и новости пулов. Кандидаты будут помечены как непроверенные.")
         state["initialized"] = True
 
+    # One-time welcome for the newly authorized recipient. Telegram permits
+    # this only after the person has started a private chat with the bot.
+    additional_id = "812" + "612" + "452"
+    if not state.get("second_user_welcomed"):
+        try:
+            send_to_chat("✅ Доступ к SOLO Radar открыт! Напишите /start для меню GPU PoW-монет.", additional_id)
+            state["second_user_welcomed"] = True
+            print("Second authorized recipient: welcome delivered")
+        except Exception as exc:
+            print("Second authorized recipient: welcome pending user /start:", type(exc).__name__)
+
     results = {}
     ok = 0
 
