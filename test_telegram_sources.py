@@ -1,6 +1,6 @@
 import unittest
 from datetime import datetime, timezone
-from telegram_sources import parse_public_channel
+from telegram_sources import parse_public_channel, CHANNELS
 
 class TelegramPublicTests(unittest.TestCase):
     def test_current_announcement(self):
@@ -18,6 +18,9 @@ class TelegramPublicTests(unittest.TestCase):
         items = parse_public_channel(body, "miningrelease",
                                      datetime(2026,11,20,tzinfo=timezone.utc))
         self.assertEqual(items, {})
+    def test_new_mining_channels_are_monitored(self):
+        self.assertTrue({"MiningPoolStatsApp", "woolypooly_news_eng", "rplant_pool_ann"}.issubset(set(CHANNELS)))
+
     def test_landing_page_not_processed(self):
         self.assertEqual(parse_public_channel("<h1>Mining Release</h1>","miningrelease"), {})
 
